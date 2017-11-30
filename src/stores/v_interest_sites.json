@@ -1,0 +1,27 @@
+[
+  {
+    "user_id": 1,
+    "date": "1 January 2016 00:00",
+    "cat_id": 30,
+    "group_name": "Social Media/Twitter",
+    "ics_score": 8,
+    "site_id": 4,
+    "name": "Tesco Temple Meads",
+    "lng": -2.58791,
+    "lat": 51.454513
+  },
+
+
+  {
+    "user_id": 1,
+    "date": "2 January 2016 00:00",
+    "cat_id": 30,
+    "group_name": "Social Media/Instagram",
+    "ics_score": 8,
+    "site_id": 5,
+    "name": "AN OTherwhere",
+    "lng": -2.58791,
+    "lat": 41.454513
+  }
+
+]

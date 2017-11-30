@@ -1,0 +1,20 @@
+@import "~antd/lib/style/themes/default.less";
+
+.comparisonCard {
+  padding: 20px 24px 24px 48px;
+  font-size: 0;
+  & > a {
+    color: @text-color;
+    display: inline-block;
+    font-size: @font-size-base;
+    margin-bottom: 13px;
+    width: 25%;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .dc-chart .grid-line, .dc-chart .axis .grid-line, .dc-chart .grid-line line, .dc-chart .axis .grid-line line {
+    opacity: 0.1;
+  }
+}
