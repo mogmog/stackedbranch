@@ -3,9 +3,11 @@ import { Form, Input, Button, Alert, Divider } from 'antd';
 import { routerRedux } from 'dva/router';
 import { digitUppercase } from '../../../utils/utils';
 import styles from './style.less';
+import { DatePicker } from 'antd';
 
 export default ({ formItemLayout, form, data, dispatch, submitting }) => {
   const { getFieldDecorator, validateFields } = form;
+  const { MonthPicker, RangePicker } = DatePicker;
 
   const onPrev = () => {
     dispatch(routerRedux.push('/dwell'));
@@ -15,20 +17,10 @@ export default ({ formItemLayout, form, data, dispatch, submitting }) => {
     dispatch(routerRedux.push('/dwell/summary'));
   };
 
-  const onValidateForm = (e) => {
-    e.preventDefault();
-    validateFields((err, values) => {
-      if (!err) {
-        dispatch({
-          type: 'form/submitStepForm',
-          payload: {
-            ...data,
-            ...values,
-          },
-        });
-      }
-    });
-  };
+  function onChange(date, dateString) {
+    console.log(date, dateString);
+  }
+
   return (
     <Form layout="horizontal" className={styles.stepForm}>
 
@@ -36,14 +28,14 @@ export default ({ formItemLayout, form, data, dispatch, submitting }) => {
         {...formItemLayout}
         label="From date"
         required={true}
-      >     <Input type="date" autoComplete="off" style={{ width: '80%' }} />
+      >     <DatePicker onChange={onChange} />
       </Form.Item>
 
       <Form.Item
         {...formItemLayout}
         label="To date"
         required={true}
-      >     <Input type="date" autoComplete="off" style={{ width: '80%' }} />
+      >    <DatePicker onChange={onChange} />
       </Form.Item>
 
       <Form.Item

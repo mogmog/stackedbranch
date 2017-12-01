@@ -27,7 +27,11 @@ class SiteSelectMap extends PureComponent {
 
           {
             this.props.data.list.map((site, i) =>
-              <SiteSelectMarker site={site} key={i} selectedRows={this.props.selectedRows} onSelectMarker={this.props.onSelectMarker}></SiteSelectMarker>
+              <SiteSelectMarker
+                site={site}
+                key={site.key}
+                selectedRows={this.props.selectedRows}
+                onSelectMarker={this.props.onSelectMarker} />
             )
           }
 
@@ -35,6 +39,12 @@ class SiteSelectMap extends PureComponent {
       </div>
     )
   }
+}
+
+SiteSelectMap.defaultProps = {
+  data: {
+    list: [],
+  },
 }
 
 export default SiteSelectMap;

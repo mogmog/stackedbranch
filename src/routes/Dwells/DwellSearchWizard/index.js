@@ -10,7 +10,7 @@ import styles from './style.less';
 const { Step } = Steps;
 
 @Form.create()
-class StepForm extends PureComponent {
+class DwellSearchWizard extends PureComponent {
   getCurrentStep() {
     const { location } = this.props;
     const { pathname } = location;
@@ -33,8 +33,6 @@ class StepForm extends PureComponent {
   render() {
 
     const { form, stepFormData, submitting, dispatch } = this.props;
-
-    console.log(stepFormData);
 
     const formItemLayout = {
       labelCol: {
@@ -74,4 +72,4 @@ class StepForm extends PureComponent {
 export default connect(state => ({
   stepFormData: state.form.step,
   submitting: state.form.stepFormSubmitting,
-}))(StepForm);
+}))(DwellSearchWizard);
