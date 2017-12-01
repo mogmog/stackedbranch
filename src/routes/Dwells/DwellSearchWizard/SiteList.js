@@ -54,9 +54,16 @@ export default class SiteList extends PureComponent {
   }
 
   handleSelectRows = (rows) => {
+
     this.setState({
       selectedRows: rows,
     });
+  }
+
+  selectMarker(site) {
+    const  newArray = this.state.selectedRows.slice();
+    newArray.push(site);
+    this.setState({selectedRows:newArray});
   }
 
   render() {
@@ -80,8 +87,9 @@ export default class SiteList extends PureComponent {
             />
           </TabPane>
 
+
           <TabPane tab="Map" key="Map">
-            <SiteSelectMap data={data} onSelectMarker={this.handleSelectRows} />
+            <SiteSelectMap data={data} onSelectMarker={this.selectMarker.bind(this)} />
           </TabPane>
         </Tabs>
 

@@ -26,11 +26,11 @@ class SiteMarker extends React.Component {
     this.setState({ open: true });
   }
 
-  handleAdd() {
+  handleAdd(site) {
     this.setState({ open: false, selected: true })
     //console.log(this.props.selectedRows);
     //this.props.selectedRows.push(this.props.site);
-    this.props.onSelectMarker([]);
+    this.props.onSelectMarker(site);
   }
 
   render() {
@@ -53,7 +53,9 @@ class SiteMarker extends React.Component {
           <Popup>
             <div>
               <p>{this.props.site.description}</p>
-              <button onClick={this.handleAdd.bind(this)}>Add to site list</button>
+              <button onClick={() => {this.handleAdd.bind(this)(this.props.site)}}>
+                Add to site list
+              </button>
             </div>
           </Popup>
         ) : null

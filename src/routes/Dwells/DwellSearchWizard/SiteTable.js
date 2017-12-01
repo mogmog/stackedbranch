@@ -11,9 +11,16 @@ class SiteTable extends PureComponent {
 
   componentWillReceiveProps(nextProps) {
     // clean state
+
+    //alert(nextProps.selectedRows.length);
+
     if (nextProps.selectedRows.length === 0) {
       this.setState({
         selectedRowKeys: [],
+      });
+    } else {
+      this.setState({
+        selectedRowKeys: nextProps.selectedRows.map(x=> x.key),
       });
     }
   }
@@ -44,8 +51,6 @@ class SiteTable extends PureComponent {
 
     const status = ['Live', 'Offline'];
 
-    console.log("this.state.selectedRowKeys");
-    console.log(this.state.selectedRowKeys);
     const columns = [
       {
         title: 'Site ID',
@@ -92,7 +97,6 @@ class SiteTable extends PureComponent {
       <div className={styles.SiteTable}>
         <Table
           loading={loading}
-          rowKey={record => record.key}
           rowSelection={rowSelection}
           dataSource={list}
           columns={columns}
