@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Row, Col, Icon, Card, Tabs, Table, Radio, DatePicker, Tooltip, Menu, Dropdown, Steps } from 'antd';
 import numeral from 'numeral';
 import {
-  ChartCard, yuan, MiniArea, MiniBar, MiniProgress, Field, Bar, Pie, TimelineChart, FunnelChart
+  ChartCard, yuan, MiniArea, MiniBar, MiniProgress, Field, Bar, Pie, TimelineChart, FunnelChart, Radar
 } from '../../components/Charts';
 import Trend from '../../components/Trend';
 import NumberInfo from '../../components/NumberInfo';
@@ -225,6 +225,48 @@ export default class Analysis extends Component {
       style: { marginBottom: 24 },
     };
 
+    const radarOriginData = [
+
+      {
+        name: 'London',
+        ref: 3,
+        koubei: 9,
+        output: 6,
+        contribute: 3,
+        hot: 1,
+      },
+      {
+        name: 'Cambridge',
+        ref: 4,
+        koubei: 1,
+        output: 6,
+        contribute: 5,
+        hot: 7,
+      },
+    ];
+
+//
+    const radarData = [];
+    const radarTitleMap = {
+      ref: 'Food',
+      koubei: 'Cooking',
+      output: 'Travel',
+      contribute: 'Fitness',
+      hot: 'Eating Out',
+    };
+    radarOriginData.forEach((item) => {
+      Object.keys(item).forEach((key) => {
+        if (key !== 'name') {
+          radarData.push({
+            name: item.name,
+            label: radarTitleMap[key],
+            value: item[key],
+          });
+        }
+      });
+    });
+
+
     return (
       <div>
 
@@ -245,6 +287,24 @@ export default class Analysis extends Component {
 
             </Card>
           </Col>
+
+          <Col xl={12} lg={12} md={12} sm={12} xs={12}>
+            <Card
+              loading={loading}
+              bordered={false}
+              title="Radar"
+              style={{ marginTop: 14, height: 450 }}
+            >
+
+              <Radar
+                data={radarData}
+                height={400}
+                titleMap={{ y1: 'Y1', y2: 'Y2' }}
+              />
+
+            </Card>
+          </Col>
+
         </Row>
 
         <Card
