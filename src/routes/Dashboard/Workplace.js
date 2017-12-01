@@ -13,21 +13,7 @@ import CardStoreFactory from './../../stores/CardStoreFactory';
 
 import styles from './Workplace.less';
 
-const links = [
-  {
-    title: 'Item A',
-    href: '',
-  },
-  {
-    title: 'Item B',
-    href: '',
-  },
-];
-
 @connect(state => ({
-  project: state.project,
-  activities: state.activities,
-  chart: state.chart,
 }))
 export default class Workplace extends PureComponent {
 
@@ -41,30 +27,15 @@ export default class Workplace extends PureComponent {
   }
 
   componentDidMount() {
-    const {dispatch} = this.props;
-    dispatch({
-      type: 'project/fetchNotice',
-    });
-    dispatch({
-      type: 'activities/fetchList',
-    });
-    dispatch({
-      type: 'chart/fetch',
-    });
+
   }
 
   componentWillUnmount() {
-    const {dispatch} = this.props;
-    dispatch({
-      type: 'chart/clear',
-    });
+
   }
 
   render() {
     const {
-      project: {loading: projectLoading, notice},
-      activities: {loading: activitiesLoading},
-      chart: {radarData},
     } = this.props;
 
     const pageHeaderContent = (

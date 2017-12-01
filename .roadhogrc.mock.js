@@ -48,7 +48,7 @@ const proxy = {
   }],
   'GET /api/project/notice': getNotice,
   'GET /api/activities': getActivities,
-  'GET /api/rule': getRule,
+  'GET /api/sites': getRule,
   'POST /api/rule': {
     $params: {
       pageSize: {
