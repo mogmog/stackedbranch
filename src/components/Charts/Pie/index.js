@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import G2 from 'g2';
-import { Divider } from 'antd';
+import {Divider} from 'antd';
 import classNames from 'classnames';
 import ReactFitText from 'react-fittext';
 import Debounce from 'lodash-decorators/debounce';
@@ -38,7 +38,7 @@ class Pie extends Component {
   @Bind()
   @Debounce(300)
   resize() {
-    const { hasLegend } = this.props;
+    const {hasLegend} = this.props;
     if (!hasLegend || !this.root) {
       window.removeEventListener('resize', this.resize);
       return;
@@ -72,7 +72,7 @@ class Pie extends Component {
     const newItem = item;
     newItem.checked = !newItem.checked;
 
-    const { legendData } = this.state;
+    const {legendData} = this.state;
     legendData[i] = newItem;
 
     if (this.chart) {
@@ -137,7 +137,7 @@ class Pie extends Component {
     // clean
     this.node.innerHTML = '';
 
-    const { Stat } = G2;
+    const {Stat} = G2;
 
     const chart = new G2.Chart({
       container: this.node,
@@ -177,7 +177,7 @@ class Pie extends Component {
     chart
       .intervalStack()
       .position(Stat.summary.percent('y'))
-      .style({ lineWidth, stroke: '#fff' })
+      .style({lineWidth, stroke: '#fff'})
       .color('x', percent ? formatColor : defaultColors)
       .selected(selected);
 
@@ -204,8 +204,8 @@ class Pie extends Component {
   }
 
   render() {
-    const { valueFormat, subTitle, total, hasLegend, className, style } = this.props;
-    const { legendData, legendBlock } = this.state;
+    const {valueFormat, subTitle, total, hasLegend, className, style} = this.props;
+    const {legendData, legendBlock} = this.state;
     const pieClassName = classNames(styles.pie, className, {
       [styles.hasLegend]: !!hasLegend,
       [styles.legendBlock]: legendBlock,
@@ -215,14 +215,14 @@ class Pie extends Component {
       <div ref={this.handleRoot} className={pieClassName} style={style}>
         <ReactFitText maxFontSize={25}>
           <div className={styles.chart}>
-            <div ref={this.handleRef} style={{ fontSize: 0 }} />
+            <div ref={this.handleRef} style={{fontSize: 0}}/>
             {
               (subTitle || total) && (
                 <div className={styles.total}>
                   {subTitle && <h4 className="pie-sub-title">{subTitle}</h4>}
                   {
                     // eslint-disable-next-line
-                    total && <div className="pie-stat" dangerouslySetInnerHTML={{ __html: total }} />
+                    total && <div className="pie-stat" dangerouslySetInnerHTML={{__html: total}}/>
                   }
                 </div>
               )
@@ -236,9 +236,9 @@ class Pie extends Component {
               {
                 legendData.map((item, i) => (
                   <li key={item.x} onClick={() => this.handleLegendClick(item, i)}>
-                    <span className={styles.dot} style={{ backgroundColor: !item.checked ? '#aaa' : item.color }} />
+                    <span className={styles.dot} style={{backgroundColor: !item.checked ? '#aaa' : item.color}}/>
                     <span className={styles.legendTitle}>{item.x}</span>
-                    <Divider type="vertical" />
+                    <Divider type="vertical"/>
                     <span className={styles.percent}>{`${(item['..percent'] * 100).toFixed(2)}%`}</span>
                     <span
                       className={styles.value}

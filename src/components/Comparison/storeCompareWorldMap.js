@@ -1,5 +1,4 @@
 import React from 'react'
-import  MarkerCluster from './../Mapping/MarkerCluster';
 import TopoJSON from './../Mapping/TopoJSON';
 
 import {Map, TileLayer} from 'react-leaflet';

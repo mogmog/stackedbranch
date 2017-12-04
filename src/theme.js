@@ -2,8 +2,8 @@
 module.exports = {
 
   // Layout
-  'layout-body-background'      : '#292929',
-  'layout-header-background'    : '#292929',
-  'layout-footer-background'    : '#292929',
+  'layout-body-background' : '#292929',
+  'layout-header-background' : '#292929',
+  'layout-footer-background' : '#292929',
 
 };
