@@ -272,19 +272,18 @@ export default class Analysis extends Component {
 
         <Row gutter={24}>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>
+
             <Card
               loading={loading}
               bordered={false}
               title="Funnel"
-              style={{ marginTop: 14, height: 450 }}
+              style={{ marginTop: 14, height: 500 }}
             >
-
               <FunnelChart
                 data={funnel}
-                height={250}
+                height={300}
                 titleMap={{ y1: 'Y1', y2: 'Y2' }}
               />
-
             </Card>
           </Col>
 
@@ -293,150 +292,12 @@ export default class Analysis extends Component {
               loading={loading}
               bordered={false}
               title="Radar"
-              style={{ marginTop: 14, height: 450 }}
+              style={{ marginTop: 14, height: 500 }}
             >
-
-              <Radar
-                data={radarData}
-                height={400}
-                titleMap={{ y1: 'Y1', y2: 'Y2' }}
-              />
-
+              <Radar  height={400} />
             </Card>
           </Col>
 
-        </Row>
-
-        <Card
-          loading={loading}
-          className={styles.offlineCard}
-          bordered={false}
-          bodyStyle={{ padding: '0 0 32px 0' }}
-          style={{ marginTop: 32 }}
-        >
-          <Tabs
-            activeKey={activeKey}
-            onChange={this.handleTabChange}
-          >
-            {
-              offlineData.map(shop => (
-                <TabPane
-                  tab={<CustomTab data={shop} currentTabKey={activeKey} />}
-                  key={shop.name}
-                >
-
-                  <FormattedMessage id="app.welcome" />
-
-                  <div style={{ padding: '0 24px' }}>
-                    <TimelineChart
-                      data={offlineChartData}
-                      titleMap={{ y1: '客流量', y2: '支付笔数' }}
-                    />
-                  </div>
-                </TabPane>)
-              )
-            }
-          </Tabs>
-        </Card>
-
-        <Card bordered={false} style={{ marginTop: 32 }}>
-          <Steps progressDot current={3}>
-            <Step title={<span style={{ fontSize: 14 }}><FormattedMessage id="app.welcome" /></span>} description={desc1} />
-            <Step title={<span style={{ fontSize: 14 }}><FormattedMessage id="app.welcome_2" /></span>} description={desc2} />
-            <Step title={<span style={{ fontSize: 14 }}>Dest 3</span>} />
-            <Step title={<span style={{ fontSize: 14 }}>Dest 4</span>} />
-            <Step title={<span style={{ fontSize: 14 }}>Dest 5</span>} />
-          </Steps>
-        </Card>
-
-        <Row gutter={24}>
-          <Col xl={12} lg={24} md={24} sm={24} xs={24}>
-            <Card
-              loading={loading}
-              bordered={false}
-              title="Compare"
-              extra={iconGroup}
-              style={{ marginTop: 24 }}
-            >
-              <Row gutter={68}>
-                <Col sm={12} xs={24} style={{ marginBottom: 24 }}>
-                  <NumberInfo
-                    subTitle={
-                      <span>
-                        Store A
-                      </span>
-                    }
-                    gap={8}
-                    total={numeral(12321).format('0,0')}
-                    status="up"
-                    subTotal={17.1}
-                  />
-                  <MiniArea
-                    line
-                    height={45}
-                    data={visitData2}
-                  />
-                </Col>
-                <Col sm={12} xs={24} style={{ marginBottom: 24 }}>
-                  <NumberInfo
-                    subTitle="Down"
-                    total={2.7}
-                    status="down"
-                    subTotal={26.2}
-                    gap={8}
-                  />
-                  <MiniArea
-                    line
-                    height={45}
-                    data={visitData2}
-                  />
-                </Col>
-              </Row>
-              <Table
-                rowKey={record => record.index}
-                size="small"
-                columns={columns}
-                dataSource={searchData}
-                pagination={{
-                  style: { marginBottom: 0 },
-                  pageSize: 5,
-                }}
-              />
-            </Card>
-          </Col>
-          <Col xl={12} lg={24} md={24} sm={24} xs={24}>
-            <Card
-              loading={loading}
-              className={styles.salesCard}
-              bordered={false}
-              title="Sales"
-              bodyStyle={{ padding: 24 }}
-              extra={(
-                <div className={styles.salesCardExtra}>
-                  {iconGroup}
-                  <div className={styles.salesTypeRadio}>
-                    <Radio.Group value={salesType} onChange={this.handleChangeSalesType}>
-                      <Radio.Button value="all">All</Radio.Button>
-                      <Radio.Button value="online">Online</Radio.Button>
-                      <Radio.Button value="offline">Offline</Radio.Button>
-                    </Radio.Group>
-                  </div>
-                </div>
-              )}
-              style={{ marginTop: 24, minHeight: 509 }}
-            >
-              <h4 style={{ marginTop: 8, marginBottom: 32 }}>Thing</h4>
-              <Pie
-                hasLegend
-                subTitle="XXX"
-                total={(salesPieData.reduce((pre, now) => now.y + pre, 0))}
-                data={salesPieData}
-                valueFormat={val => (val)}
-                height={248}
-                lineWidth={4}
-              />
-            </Card>
-          </Col>
         </Row>
       </div>
     );

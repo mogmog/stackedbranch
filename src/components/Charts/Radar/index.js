@@ -48,104 +48,78 @@ class Radar extends PureComponent {
     });
   }
 
-  renderChart(data) {
-    const { height = 0,
-      hasLegend = true,
-      fit = true,
-      tickCount = 4,
-      margin = [24, 30, 16, 30] } = this.props;
+  renderChart() {
 
-    const colors = [
-      '#1890FF', '#FACC14', '#2FC25B', '#8543E0', '#F04864', '#13C2C2', '#fa8c16', '#a0d911',
+    const { DataView } = DataSet;
+    const data = [
+      { item: 'Design', a: 70, b: 30 },
+      { item: 'Development', a: 60, b: 70 },
+      { item: 'Marketing', a: 50, b: 60 },
+      { item: 'Users', a: 40, b: 50 },
+      { item: 'Test', a: 60, b: 70 },
+      { item: 'Language', a: 70, b: 50 },
+      { item: 'Technology', a: 50, b: 40 },
+      { item: 'Support', a: 30, b: 40 },
+      { item: 'Sales', a: 60, b: 40 },
+      { item: 'UX', a: 50, b: 60 }
+
     ];
-
-    if (!data || (data && data.length < 1)) {
-      return;
-    }
-
-    // clean
-    this.node.innerHTML = '';
-
+    const dv = new DataView().source(data);
+    dv.transform({
+      type: 'fold',
+      fields: [ 'a', 'b' ], // 展开字段集
+      key: 'user', // key字段
+      value: 'score', // value字段
+    });
     const chart = new G2.Chart({
       container: this.node,
-      forceFit: fit,
-      height: height - (hasLegend ? 80 : 22),
-      plotCfg: {
-        margin,
-      },
+      forceFit: true,
+      height: 385,
+      padding: [ 20, 20, 20, 20 ]
     });
-
-    this.chart = chart;
-
-    chart.source(data, {
-      value: {
+    chart.source(dv, {
+      score: {
         min: 0,
-        tickCount,
-      },
+        max: 80
+      }
     });
-
-    chart.coord('polar');
-    chart.legend(false);
-
-    chart.axis('label', {
+    chart.coord('polar', {
+      radius: 0.5
+    });
+    chart.axis('item', {
       line: null,
-      labelOffset: 8,
-      labels: {
-        label: {
-          fill: 'rgba(0, 0, 0, .65)',
-        },
-      },
+      tickLine: null,
       grid: {
-        line: {
-          stroke: '#e9e9e9',
-          lineWidth: 1,
-          lineDash: [0, 0],
+        lineStyle: {
+          lineDash: null
         },
-      },
+        hideFirstLine: false
+      }
     });
-
-    chart.axis('value', {
+    chart.axis('score', {
+      line: null,
+      tickLine: null,
       grid: {
         type: 'polygon',
-        line: {
-          stroke: '#e9e9e9',
-          lineWidth: 1,
-          lineDash: [0, 0],
-        },
-      },
-      labels: {
-        label: {
-          fill: 'rgba(0, 0, 0, .65)',
-        },
-      },
+        lineStyle: {
+          lineDash: null
+        }
+      }
     });
-
-    chart.line().position('label*value').color('name', colors);
-    chart.point().position('label*value').color('name', colors).shape('circle')
-      .size(3);
-
+    chart.legend('user', {
+      marker: 'circle',
+      offset: 30
+    });
+    chart.line().position('item*score').color('user').size(2);
+    chart.point().position('item*score').color('user').shape('circle').size(4).style({
+      stroke: '#fff',
+      lineWidth: 1,
+      fillOpacity: 1
+    });
+    chart.area().position('item*score').color('user');
     chart.render();
 
-    if (hasLegend) {
-      const geom = chart.getGeoms()[0]; // 获取所有的图形
-      const items = geom.getData(); // 获取图形对应的数据
-      const legendData = items.map((item) => {
-        /* eslint no-underscore-dangle:0 */
-        const origin = item._origin;
-        const result = {
-          name: origin[0].name,
-          color: item.color,
-          checked: true,
-          value: origin.reduce((p, n) => p + n.value, 0),
-        };
 
-        return result;
-      });
-
-      this.setState({
-        legendData,
-      });
-    }
   }
 
   render() {

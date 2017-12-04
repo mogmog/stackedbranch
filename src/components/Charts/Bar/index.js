@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import G2 from 'g2';
+import G2 from '@antv/g2';
 import Debounce from 'lodash-decorators/debounce';
 import Bind from 'lodash-decorators/bind';
 import equal from '../equal';
@@ -138,7 +138,7 @@ class Bar extends PureComponent {
     const { height, title } = this.props;
 
     return (
-      <div className={styles.chart} style={{ height }}>
+      <div>
         <div>
           { title && <h4>{title}</h4>}
           <div ref={this.handleRef} />

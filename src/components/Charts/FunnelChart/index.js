@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import G2 from '@antv/g2';
 import equal from '../equal';
 
 class FunnelChart extends PureComponent {

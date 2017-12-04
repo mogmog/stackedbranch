@@ -1,11 +1,13 @@
 import 'babel-polyfill';
 import dva from 'dva';
 import 'moment/locale/zh-cn';
-import './g2';
 import './rollbar';
+import G2 from '@antv/g2';
 // import browserHistory from 'history/createBrowserHistory';
 import './index.less';
 import router from './router';
+
+G2.Global.setTheme('dark');
 
 // 1. Initialize
 const app = dva({
@@ -27,3 +29,5 @@ app.router(router);
 
 // 5. Start
 app.start('#root');
+
+
