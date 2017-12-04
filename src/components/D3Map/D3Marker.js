@@ -39,7 +39,7 @@ class D3MarkerCluster extends MapLayer {
       var citiesUpd = sel.selectAll('circle').data(cities);
       citiesUpd.enter()
         .append('circle')
-        .attr('r',function(d){return Math.log2(d.population) - minLogPop + 2;})
+        .attr('r',function(d){return 1 * Math.log2(d.population) - minLogPop + 2;})
         .attr('cx',function(d){return proj.latLngToLayerPoint(d.latLng).x;})
         .attr('cy',function(d){return proj.latLngToLayerPoint(d.latLng).y;})
         .attr('stroke','black')
