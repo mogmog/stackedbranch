@@ -3,7 +3,6 @@ import Leaflet from 'leaflet';
 import { MapLayer } from 'react-leaflet';
 import 'leaflet.markercluster';
 import 'leaflet-d3-svg-overlay';
-//import citiesdata from './../../assets/cities.csv';
 
 class D3MarkerCluster extends MapLayer {
   componentWillMount() {
