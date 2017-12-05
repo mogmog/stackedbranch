@@ -7,10 +7,55 @@
   <title>Hurricane </title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
   <link rel="stylesheet" type="text/css" href="http://dc-js.github.io/dc.js/css/dc.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
 
   <script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.7.0/data-set.min.js"></script>
 
-  
+  <script src="https://d3js.org/queue.v1.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+  <style>
+
+    .sr-only {
+      display: none;
+    }
+
+    .countries {
+      fill: #b0d0ab;
+      stroke: #6cb0e0;
+      stroke-width: 0.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+    .airports {
+      fill: #036;
+      stroke: #6cb0e0;
+      stroke-width: 10.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+    .route {
+      fill: none;
+      stroke-width: 0;
+    }
+    .plane {
+      fill: #fff;
+      stroke-width: 0;
+    }
+    @media(max-width: 768px) {
+      #map {
+        margin-top: -100px;
+      }
+    }
+    @media(min-width: 768px) {
+      #map {
+        margin-top: -300px;
+      }
+    }
+  </style>
+
   <style>
 
     .leaflet-container {
