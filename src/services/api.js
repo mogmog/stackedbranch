@@ -9,6 +9,20 @@ export async function queryActivities() {
   return request('/api/activities');
 }
 
+export async function queryAreas() {
+  return request('/api/areas');
+}
+
+export async function saveArea(params) {
+  return request('/api/areas/create', {
+    method: 'POST',
+    body: {
+      ...params
+    },
+  });
+}
+
+
 export async function queryRule(params) {
   return request(`/api/sites?${stringify(params)}`);
 }
