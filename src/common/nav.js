@@ -18,6 +18,13 @@ export const getNavData = app => [
     children: [
 
       {
+        name: 'Areas',
+        icon: 'compass',
+        path: 'areas',
+        component: dynamicWrapper(app, ['area'], () => import('../routes/AreaDefinition/AreaDefinitionTable')),
+      },
+
+      {
         name: 'Dwell Dashboard',
         icon: 'dashboard',
         path: 'dwell',

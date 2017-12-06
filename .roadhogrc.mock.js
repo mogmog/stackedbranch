@@ -1,5 +1,6 @@
 import mockjs from 'mockjs';
 import { getRule, postRule } from './mock/rule';
+import { getArea} from './mock/area';
 import { getActivities, getNotice, getFakeList } from './mock/api';
 import { getFakeChartData } from './mock/chart';
 import { imgMap } from './mock/utils';
@@ -15,7 +16,7 @@ const noProxy = process.env.NO_PROXY === 'true';
 const proxy = {
   // 支持值为 Object 和 Array
   'GET /api/currentUser': {
-    $desc: "获取当前用户接口",
+    $desc: "Graham",
     $params: {
       pageSize: {
         desc: '分页',
@@ -48,6 +49,16 @@ const proxy = {
   }],
   'GET /api/project/notice': getNotice,
   'GET /api/activities': getActivities,
+  'GET /api/areas': getArea,
+  'POST /api/areas': {
+    $params: {
+      pageSize: {
+        desc: 'No idea',
+        exp: 2,
+      },
+    },
+    $body: getArea,
+  },
   'GET /api/sites': getRule,
   'POST /api/rule': {
     $params: {
@@ -81,4 +92,4 @@ const proxy = {
   'GET /api/notices': getNotices,
 };
 
-export default noProxy ? {} : delay(proxy, 1000);
+export default noProxy ? {} : delay(proxy, 100);
