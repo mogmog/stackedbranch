@@ -7,6 +7,7 @@ import {Map, TileLayer, Circle, FeatureGroup, Polygon} from 'react-leaflet';
 import {EditControl} from 'react-leaflet-draw';
 
 import D3Map from './../../components/D3Map/D3Map';
+import AreaMapThumbnail from './../../components/Areas/AreaMapThumbnail';
 import {connect} from "dva";
 
 const statusMap = ['default', 'processing', 'success', 'error'];
@@ -15,6 +16,7 @@ const FormItem = Form.Item;
 @connect(state => ({
   area: state.area,
 }))
+
 class AreaDefinitionTable extends PureComponent {
 
   state = {
@@ -39,17 +41,13 @@ class AreaDefinitionTable extends PureComponent {
 
   handleOk = () => {
 
-    this.setState({
-      visible: false,
-    });
-
     const {dispatch} = this.props;
 
+
     this.setState({
+      visible: false,
       confirmLoading: true,
     });
-
-    console.log(this.state);
 
     dispatch({
       type: 'area/saveandfetch',
@@ -64,7 +62,7 @@ class AreaDefinitionTable extends PureComponent {
   }
 
   onAreaDefine = (layer) => {
-    this.setState({payload: { ...this.state.payload, coords: layer.layer.getLatLngs() } });
+    this.setState({payload: { ...this.state.payload, geodata: layer.layer.toGeoJSON(), zoom :  layer.layer._map._zoom, center_lat: layer.layer.getCenter().lat, center_lng: layer.layer.getCenter().lng } });
   }
 
   onNameChange = (event) => {
@@ -76,12 +74,21 @@ class AreaDefinitionTable extends PureComponent {
     const {data: {list}, loading} = this.props.area;
     const {visible, confirmLoading} = this.state;
 
+
+
     const columns = [
 
       {
         title: 'Name',
         dataIndex: 'name',
-      }
+      },
+
+      {
+        align: 'right',
+        render: (area) => {
+          return <AreaMapThumbnail zoom={area.zoom} geodata={area.geodata } center_lat={ area.center_lat } center_lng={ area.center_lng } />
+        },
+      },
 
     ];
 
@@ -108,9 +115,13 @@ class AreaDefinitionTable extends PureComponent {
 
           <Modal title="Create new Area by drawing a shape"
                  visible={visible}
-                 onOk={this.handleOk.bind(this)}
                  confirmLoading={confirmLoading}
                  onCancel={this.handleCancel}
+                 footer={[
+                   <Button key="submit" type="primary" loading={loading} onClick={this.handleOk.bind(this)} disabled={!this.state.payload.name}>
+                     Submit
+                   </Button>,
+                 ]}
           >
 
             <FormItem
