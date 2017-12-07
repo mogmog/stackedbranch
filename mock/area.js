@@ -3,7 +3,7 @@ import { getUrlParams } from './utils';
 // mock tableListDataSource
 let tableListDataSource = [];
 
-tableListDataSource.push({name : 'Beak Street', size : 1.2, latlngs : [[{"lat":51.52616326077225,"lng":-0.08830239755483361},{"lat":51.52359997992331,"lng":-0.09911706430288049},{"lat":51.52060930322446,"lng":-0.09705712777944298},{"lat":51.51740478880791,"lng":-0.08898904306264611},{"lat":51.517938890201805,"lng":-0.08521249276967735}]]});
+tableListDataSource.push({id : 1, name : 'Beak Street', size : 1.2, coords : [[{"lat":51.52616326077225,"lng":-0.08830239755483361},{"lat":51.52359997992331,"lng":-0.09911706430288049},{"lat":51.52060930322446,"lng":-0.09705712777944298},{"lat":51.51740478880791,"lng":-0.08898904306264611},{"lat":51.517938890201805,"lng":-0.08521249276967735}]]});
 
 export function getArea(req, res, u) {
   let url = u;
