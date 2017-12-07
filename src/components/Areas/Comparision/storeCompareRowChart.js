@@ -1,5 +1,5 @@
 import React from 'react'
-import RowChart from './../DCChartWrappers/RowChart'
+import RowChart from '../../DCChartWrappers/RowChart'
 import d3 from 'd3'
 
 const options = {

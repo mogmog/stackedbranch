@@ -1,5 +1,5 @@
 import React from 'react'
-import TopoJSON from './../Mapping/TopoJSON';
+import TopoJSON from '../../Mapping/TopoJSON';
 
 import {Map, TileLayer} from 'react-leaflet';
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
