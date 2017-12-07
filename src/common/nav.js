@@ -18,10 +18,17 @@ export const getNavData = app => [
     children: [
 
       {
-        name: 'Areas',
+        name: 'Area Definition',
         icon: 'compass',
         path: 'areas',
         component: dynamicWrapper(app, ['area'], () => import('../routes/AreaDefinition/AreaDefinitionTable')),
+      },
+
+      {
+        name: 'Compare areas',
+        icon: 'profile',
+        path: 'comparison',
+        component: dynamicWrapper(app, ['project', 'activities', 'chart'], () => import('../routes/AreaComparison/AreaComparison')),
       },
 
       {
@@ -48,12 +55,7 @@ export const getNavData = app => [
         component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
       },
 
-      {
-        name: 'Comparison',
-        icon: 'profile',
-        path: 'comparison',
-        component: dynamicWrapper(app, ['project', 'activities', 'chart'], () => import('../routes/Dashboard/Workplace')),
-      },
+
     ],
 
     childrenOld: [

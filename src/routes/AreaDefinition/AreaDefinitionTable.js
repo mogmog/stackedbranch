@@ -7,7 +7,7 @@ import {Map, TileLayer, Circle, FeatureGroup, Polygon} from 'react-leaflet';
 import {EditControl} from 'react-leaflet-draw';
 
 import D3Map from './../../components/D3Map/D3Map';
-import AreaMapThumbnail from './../../components/Areas/AreaMapThumbnail';
+import AreaMapThumbnail from '../../components/Areas/Definition/AreaMapThumbnail';
 import {connect} from "dva";
 
 const statusMap = ['default', 'processing', 'success', 'error'];
