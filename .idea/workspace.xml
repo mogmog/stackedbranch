@@ -2,61 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/.coveragerc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/app/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/app/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/data/networks.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/dbinit.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/habitat/default.toml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/habitat/instance/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/habitat/instance/config.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/habitat/plan.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/instance/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/instance/config.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/manage.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/README" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/alembic.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/env.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/script.py.mako" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/versions/3534ee9d0deb_.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/versions/3c1de29f174c_.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/versions/4a64777d3334_.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/versions/4df2fcbbc0b5_.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/versions/88b2d0066862_.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/migrations/versions/d00d8a73d31e_.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/requirements.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/gitgik-flask-rest-api-1.0.1-20170529100756-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/gitgik-flask-rest-api-1.0.1-20170529102613-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/gitgik-flask-rest-api-1.0.1-20170529104213-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/last_build.env" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/nerd-flask-rest-api-1.0.0-20170523153048-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/nerd-flask-rest-api-1.0.0-20170525051546-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/nerd-flask-rest-api-1.0.0-20170526130444-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/results/nerd-flask-rest-api-1.0.0-20170528104223-x86_64-linux.hart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/run.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/tests/test_auth.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/tests/test_bucketlist.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/venv/bin/flask" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/venv/bin/jwt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/venv/bin/pip" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/venv/bin/pip3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/venv/bin/pip3.5" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/venv/bin/wheel" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/src/common/nav.js" afterPath="$PROJECT_DIR$/src/common/nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js" />
-      <change beforePath="$PROJECT_DIR$/src/models/area.js" afterPath="$PROJECT_DIR$/src/models/area.js" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" afterPath="$PROJECT_DIR$/src/models/user.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" afterPath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
-      <change beforePath="$PROJECT_DIR$/src/stores/DataHandler.js" afterPath="$PROJECT_DIR$/src/stores/DataHandler.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -103,8 +50,8 @@
       <file leaf-file-name="ComparisonCard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+            <state relative-caret-position="357">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -511,7 +458,7 @@
       <workItem from="1512403500036" duration="6499000" />
       <workItem from="1512468716948" duration="30177000" />
       <workItem from="1512569364525" duration="35255000" />
-      <workItem from="1512748974475" duration="6829000" />
+      <workItem from="1512748974475" duration="7091000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -583,11 +530,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512662767896</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="safety checkin">
+      <created>1512756319514</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1512756319514</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190511000" />
+    <option name="totallyTimeSpent" value="190773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="589" y="80" width="1963" height="1522" extended-state="0" />
@@ -636,7 +590,8 @@
     <MESSAGE value="area list" />
     <MESSAGE value="add geojson" />
     <MESSAGE value="add more geojson" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more geojson" />
+    <MESSAGE value="safety checkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="safety checkin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -878,6 +833,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
