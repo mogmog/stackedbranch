@@ -1,46 +1,40 @@
 import crossfilter from 'crossfilter2'
 import _ from 'lodash'
+
 class DataHandler {
-  constructor (data = []) {
+  constructor(data = []) {
 
     this.data = data;
 
     // Create crossfilter object
-    this.ndx = crossfilter([])
-
-
+    this.ndx = crossfilter([]);
 
   }
 
-  add (data) {
+  add(data) {
+    this.data = _.concat(this.data, data);
+    this.ndx.add(data);
 
-    console.log(data);
-
-    this.data = _.concat(this.data, data)
-    this.ndx.add(data)
-
-    //console.log(this.ndx.size())
-
-    return this
+    return this;
   }
 
-  getGeoData () {
+  getGeoData() {
 
     return this.ndx.dimension((d) => d).top(Infinity).map(x => {
 
-          return {
-              lat: x.lat,
-              lng: x.lng,
-              data: {
-                  country: 'v.value.country',
-                  userName: 'v.value.userName',
-                  id: 'v.value.id',
-              },
-          }
-      })
+      return {
+        lat: x.lat,
+        lng: x.lng,
+        data: {
+          country: 'v.value.country',
+          userName: 'v.value.userName',
+          id: 'v.value.id',
+        },
+      }
+    })
   }
 
-  updateGroups () {
+  updateGroups() {
     //do something with groups
 
 
