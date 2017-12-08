@@ -15,10 +15,10 @@ export default {
         type: 'changeLoading',
         payload: true,
       });
-      const response = yield call(queryUsers);
+      //const response = yield call(queryUsers);
       yield put({
         type: 'save',
-        payload: response,
+        payload: {},
       });
       yield put({
         type: 'changeLoading',
@@ -26,10 +26,10 @@ export default {
       });
     },
     *fetchCurrent(_, { call, put }) {
-      const response = yield call(queryCurrent);
+      //const response = yield call(queryCurrent);
       yield put({
         type: 'saveCurrentUser',
-        payload: response,
+        payload: {},
       });
     },
   },

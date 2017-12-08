@@ -25,10 +25,10 @@ export const getNavData = app => [
       },
 
       {
-        name: 'Compare areas',
+        name: 'Compare my areas',
         icon: 'profile',
         path: 'comparison',
-        component: dynamicWrapper(app, ['project', 'activities', 'chart'], () => import('../routes/AreaComparison/AreaComparison')),
+        component: dynamicWrapper(app, ['area'], () => import('../routes/AreaComparison/AreaComparison')),
       },
 
       {
