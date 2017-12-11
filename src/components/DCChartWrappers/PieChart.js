@@ -1,19 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import dc from 'dc/dc' // Use dc/dc.js instead of dc/index.js for crossfilter2 compatibility
-import _ from 'lodash'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import dc from 'dc/dc';
+import _ from 'lodash';
 
-class RowChart extends React.Component {
-  componentDidMount () {
-    const {width, height, dimension, group, options} = this.props
-    let DOMNode = ReactDOM.findDOMNode(this)
+class PieChart extends React.Component {
+  componentDidMount() {
+    const { width, height, dimension, group, options } = this.props;
+    const DOMNode = ReactDOM.findDOMNode(this);
 
     // Create a dc.js rowChart
-    let chart = dc.rowChart(DOMNode)
-    chart.ordinalColors(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628']);
+    let chart = dc.pieChart(DOMNode)
+    chart.ordinalColors(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628']);
 
     this.chart = this.setChartProperties(chart, width, height, dimension, group, options)
-    this.chart.render()
+    this.chart.render();
   }
 
   componentDidUpdate () {
@@ -27,13 +27,15 @@ class RowChart extends React.Component {
       height: height,
       width: width,
       margins: margins || {
-          top: 20,
-          right: 20,
-          bottom: 30,
-          left: 20,
+        top: 20,
+        right: 20,
+        bottom: 30,
+        left: 20,
       },
       dimension: dimension,
       group: group,
+      slicesCap : 4,
+      innerRadius : 100,
       elasticX: elasticX || true,
       label: label || (d => d.key)
     }
@@ -52,7 +54,7 @@ class RowChart extends React.Component {
 
 
 
-RowChart.defaultProps = {
+PieChart.defaultProps = {
   height: 300,
   width: 400,
   options: {
@@ -67,4 +69,4 @@ RowChart.defaultProps = {
   },
 }
 
-export default RowChart
+export default PieChart;

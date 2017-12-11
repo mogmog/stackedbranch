@@ -4,10 +4,12 @@ export default {
   namespace: 'area',
 
   state: {
-    data: {
+    areas: {
       list: [],
       pagination: {},
     },
+    cards: [],
+    comparisoncards: [],
     loading: true,
   },
 
@@ -54,7 +56,7 @@ export default {
     save(state, action) {
       return {
         ...state,
-        data: action.payload,
+        areas: action.payload,
       };
     },
     changeLoading(state, action) {
