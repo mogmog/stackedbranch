@@ -2,8 +2,8 @@ import { getUrlParams } from './utils';
 
 // mock tableListDataSource
 let tableListDataSource = [];
-
-tableListDataSource.push({id : 1, name : 'Beak Street', size : 1.2, coords : [[{"lat":51.52616326077225,"lng":-0.08830239755483361},{"lat":51.52359997992331,"lng":-0.09911706430288049},{"lat":51.52060930322446,"lng":-0.09705712777944298},{"lat":51.51740478880791,"lng":-0.08898904306264611},{"lat":51.517938890201805,"lng":-0.08521249276967735}]]});
+let geodata = {"geometry": {"coordinates": [[[-0.107803, 51.537153], [-0.118446, 51.53096], [-0.109863, 51.524552], [-0.0951, 51.527115], [-0.107803, 51.537153]]], "type": "Polygon"}, "properties": {}, "type": "Feature"};
+tableListDataSource.push({id : 1, name : 'Angel', 'size' : 1.2, 'geodata' : geodata, 'center_lat' : 51.530122108232824, 'center_lng' :  -0.10738169105308559, 'zoom' : 12 });
 
 export function getArea(req, res, u) {
   let url = u;
