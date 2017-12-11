@@ -7,7 +7,6 @@ import {Row, Col, Card, List, Avatar} from 'antd';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import EditableLinkGroup from '../../components/EditableLinkGroup';
 import {Radar} from '../../components/Charts';
-import ComparisonCard   from '../../components/Areas/Comparision/ComparisonCard';
 
 import CardStoreFactory from './../../stores/CardStoreFactory';
 
@@ -59,7 +58,6 @@ export default class Workplace extends PureComponent {
                 bordered={true}
                 bodyStyle={{padding: 0}}
               >
-                <ComparisonCard store={store} key={i} />
               </Card>
             </Col>
           ))}

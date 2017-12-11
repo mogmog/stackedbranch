@@ -7,8 +7,6 @@ import cloneDeep from 'lodash/cloneDeep';
 import { getNavData } from './common/nav';
 import { getPlainNode } from './utils/utils';
 
-import ProductsRoute from './routes/Products';
-
 import styles from './index.less';
 
 /* react-intl imports */
@@ -54,7 +52,6 @@ function getLayout(navData, path) {
 
 function RouterConfig({ history, app }) {
   const navData = getNavData(app);
-  const UserLayout = getLayout(navData, 'UserLayout').component;
   const BasicLayout = getLayout(navData, 'BasicLayout').component;
 
   const passProps = {
@@ -70,8 +67,6 @@ function RouterConfig({ history, app }) {
       <LocaleProvider locale={enGB}>
         <Router history={history}>
           <Switch>
-            <Route path="/user" render={props => <UserLayout {...props} {...passProps} />} />
-            <Route path="/products" exact component={ProductsRoute} {...passProps} />
             <Route path="/" render={props => <BasicLayout {...props} {...passProps} />} />
 
           </Switch>

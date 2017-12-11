@@ -6,12 +6,15 @@ import AreaHighlightPolygon from './AreaHighlightPolygon';
 class AreaSelectMap extends PureComponent {
 
   render() {
+
+    const { areas } = this.props;
+
     return (
-      <Map zoomControl={false} center={[51.522416, -0.185394]} zoom={10}>
+      <Map zoomControl={false} center={[51.522416, -0.185394]} zoom={12}>
         <TileLayer url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
         {
-          this.props.areas.map( (area, i) => <AreaHighlightPolygon key={i} onClickArea={this.props.onClickArea.bind(this)} area={area}/>)
+          areas.list.map( (area, i) => <AreaHighlightPolygon key={i} onClickArea={this.props.onClickArea.bind(this)} area={area}/>)
         }
 
       </Map>

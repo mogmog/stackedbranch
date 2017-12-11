@@ -4,12 +4,9 @@ import {connect} from 'dva';
 import {Link} from 'dva/router';
 import {Button, Row, Col, Card, List, Avatar, Divider} from 'antd';
 import AnimateHeight from 'react-animate-height';
-
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
-
-import CardStoreFactory from './../../stores/CardStoreFactory';
 import AreaSelectMap from '../../components/Areas/Comparision/AreaSelectMap';
-import ComparisonCard from '../../components/Areas/Comparision/ComparisonCard';
+import ComparisonCardNew from '../../components/Areas/Comparision/ComparisonCardNew';
 
 @connect(state => ({
   area: state.area,
@@ -20,9 +17,8 @@ export default class Workplace extends PureComponent {
     super(props);
 
     this.state = {
-      cards: [],        //initialise there to be default one card
       height: 400,
-      height2: 600
+      cards : []
     };
   }
 
@@ -35,27 +31,22 @@ export default class Workplace extends PureComponent {
   }
 
   onClickArea(area) {
-    //alert("on click area " + area.id);
     this.setState({ cards: [...this.state.cards, area.id] });
   }
 
   render() {
+    const areas = this.props.area.areas;
 
-    const {data: {list}, loading} = this.props.area;
-
-    const {
-      height,
-      height2
-
-    } = this.state;
+    const { area :{areas : list } } = this.props;
+    const { cards, height }   = this.state;
 
     const pageHeaderContent = (
       <div>
         <div>
-          <button className='btn btn-sm' onClick={ () => this.setState({ height: 100 }) }>
+          <button className='btn btn-sm' onClick={() => this.setState({ height: 100 })}>
             Hide
           </button>
-          <button className='btn btn-sm' onClick={ () => this.setState({ height: 500 }) }>
+          <button className='btn btn-sm' onClick={() => this.setState({ height: 500 })}>
             Increase
           </button>
         </div>
@@ -73,7 +64,7 @@ export default class Workplace extends PureComponent {
                 bordered={true} >
 
                 <AnimateHeight height={ height } >
-                    <AreaSelectMap areas={list} onClickArea={this.onClickArea.bind(this)}/>
+                    <AreaSelectMap areas={list} onClickArea={this.onClickArea.bind(this)} />
                 </AnimateHeight>
 
               </Card>
@@ -82,20 +73,20 @@ export default class Workplace extends PureComponent {
 
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-            <Divider></Divider>
+            <Divider/>
           </Col>
         </Row>
 
         <Row gutter={24}>
-          {this.state.cards.map((areaid, i) => (
+          {cards.map((areaid, i) => (
             <Col xl={12} lg={12} md={12} sm={24} xs={24} key={i}>
               <Card
                 style={{marginBottom: 24}}
-                title={ 'Store ' + i}
+                title={ 'Store index ' + i}
                 bordered={true}
                 bodyStyle={{padding: 0}}
               >
-                <ComparisonCard area={areaid} key={i} />
+                <ComparisonCardNew area={areaid} />
               </Card>
             </Col>
           ))}

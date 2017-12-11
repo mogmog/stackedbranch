@@ -70,11 +70,8 @@ class AreaDefinitionTable extends PureComponent {
   }
 
   render() {
-
-    const {data: {list}, loading} = this.props.area;
+    const {areas: {list}, loading} = this.props.area;
     const {visible, confirmLoading} = this.state;
-
-
 
     const columns = [
 
