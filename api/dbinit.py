@@ -1,28 +1,33 @@
 import os
+import csv
 from flask_api import FlaskAPI, status
 from flask_sqlalchemy import SQLAlchemy
 from app import db, create_app
-from app.models import Area, Site, Sensor, LTESighting, Network
+from app.models import Area, Site, SmallCell, LTESighting, Network
 
 create_app(config_name=os.getenv('APP_SETTINGS')).app_context().push()
 
-print (Site.get_all().all())
-
-Site('Carnaby Street').save()
-
-Site('Carnaby Street').save()
-
-import csv
-
+#delete everything.
+LTESighting.delete_all()
+SmallCell.delete_all()
+Site.delete_all()
+Area.delete_all()
+Network.delete_all()
 
 
-with open('data/networks.csv') as csvfile:
+site1 = Site('Tesco Oxford Street')
+site1.save()
+site2 = Site('Tesco Regent Street')
+site2.save()
 
-    reader = csv.reader(csvfile)
-    for row in list(reader):
-     network =  (Network(row[1], row[0], row[2]))
-     network.save()
 
+if True:
+  with open('data/networks.csv', 'r') as csvfile:
+
+      reader = csv.reader(csvfile)
+      for row in list(reader):
+        network =  (Network(row[0], row[5], row[2], row[7]))
+        network.save()
 
 with open('data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv') as csvfile:
 
@@ -30,14 +35,23 @@ with open('data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv
 
     reader = csv.reader(csvfile)
     for row in list(reader):
-     sighting =  (LTESighting(row[1], row[2], row[3], row[5], row[6]))
-     sighting.save()
 
-     sensor = Sensor.query.filter_by(id=row[2]).first()
-     if sensor:
-        _s = sensor
+     smallcell = SmallCell.query.filter_by(id=row[2]).first()
+     if smallcell:
+        _s = smallcell
      else:
-        _s = Sensor(row[2], uniform(-180,180), uniform(-90, 90))
+        _s = SmallCell(site1, row[2], uniform(-0.132132,-0.123463), uniform(51.511453, 51.515460))
         _s.save()
 
-     print (_s)
+     print row[6]
+     network = Network.query.filter_by(id=row[6]).first()
+
+     if network:
+      sighting =  (LTESighting(row[1], row[2], row[3], row[5], row[6]))
+      sighting.save()
+
+    #try :
+    #  sighting =  (LTESighting(row[1], row[2], row[3], row[5], row[6]))
+    #  sighting.save()
+    #except:
+    #  pass

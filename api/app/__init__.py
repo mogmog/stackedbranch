@@ -19,7 +19,7 @@ db = SQLAlchemy()
 
 def create_app(config_name):
 
-    from app.models import Area, LTESighting
+    from app.models import Area, LTESighting, SmallCell, Site
 
     app = FlaskAPI(__name__, instance_relative_config=True)
     # overriding Werkzeugs built-in password hashing utilities using Bcrypt.
@@ -54,13 +54,31 @@ def create_app(config_name):
 
         return make_response(response), 201
 
+    @app.route('/api/sites', methods=['GET'])
+    def get_sites():
+      # get all the areas
+      sites   = Site.get_all()
+      results = []
+      for site in sites:
+         results.append(site.serialise())
+
+      return make_response(jsonify({ 'list' : results })), 200
+
     @app.route('/api/areas', methods=['GET'])
     def get_areas():
         # get all the areas
-        areas = Area.get_all()
+        areas         = Area.get_all()
+        allSmallCells = SmallCell.get_all()
+
         results = []
 
         for area in areas:
+
+            smallcellInArea = []
+            for smallcell in allSmallCells:
+              #if shape(area.geodata['geometry']).contains(Point(smallcell.lng, smallcell.lat)):
+              smallcellInArea.append({'lat' : smallcell.lat, 'lng' : smallcell.lng})
+
             obj = {
                 'id': area.id,
                 'name': area.name,
@@ -69,7 +87,8 @@ def create_app(config_name):
                 'center_lat' : area.center_lat,
                 'center_lng' : area.center_lng,
                 'zoom' : area.zoom,
-                'geodata': area.geodata
+                'geodata': area.geodata,
+                'smallcells' : smallcellInArea
             }
             results.append(obj)
 
@@ -89,9 +108,10 @@ def create_app(config_name):
             obj = {
                 'id' : sighting.id,
                 'timestamp' : sighting.timestamp,
-                'sensor' : {
-                    'id' : sighting.sensor.id,
-                    'latlng' : [sighting.sensor.lat, sighting.sensor.lng],
+                'smallcell' : {
+                    'id' : sighting.smallcell.id,
+                    'latlng' : [sighting.smallcell.lat, sighting.smallcell.lng],
+                    'site' : sighting.site.serialise()
                 },
                 'network': {
                     'country' : sighting.hplmn.country,
@@ -100,8 +120,31 @@ def create_app(config_name):
                 }
             }
 
-            if area_polygon.contains(Point(sighting.sensor.lng, sighting.sensor.lat)):
+            if area_polygon.contains(Point(sighting.smallcell.lng, sighting.smallcell.lat)):
                 results.append(obj)
+
+        return make_response(jsonify({ 'list' : results })), 200
+
+    @app.route('/api/sighting', methods=['GET'])
+    def get_sightings():
+
+        results = []
+        for sighting in LTESighting.get_all():
+
+            obj = {
+                'id' : sighting.id,
+                'timestamp' : sighting.timestamp,
+                'smallcell' : {
+                    'id' : sighting.smallcell.id,
+                    'latlng' : [sighting.smallcell.lat, sighting.smallcell.lng]
+                },
+                'network': {
+                    'country' : sighting.hplmn.country,
+                    'network' : sighting.hplmn.network,
+                    'id' : sighting.hplmn.id
+                }
+            }
+            results.append(obj)
 
         return make_response(jsonify({ 'list' : results })), 200
 

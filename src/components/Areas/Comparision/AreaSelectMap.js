@@ -14,7 +14,9 @@ class AreaSelectMap extends PureComponent {
         <TileLayer url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
         {
-          areas.list.map( (area, i) => <AreaHighlightPolygon key={i} onClickArea={this.props.onClickArea.bind(this)} area={area}/>)
+          areas.list.map((area, i) =>
+            <AreaHighlightPolygon key={i} onClickArea={this.props.onClickArea.bind(this)} area={area}/>
+          )
         }
 
       </Map>

@@ -33,6 +33,11 @@ class Area(db.Model):
     def get_all():
         return Area.query
 
+    @staticmethod
+    def delete_all():
+        db.session.query(Area).delete()
+        db.session.commit()
+
     def delete(self):
         db.session.delete(self)
         db.session.commit()
@@ -45,61 +50,48 @@ class Area(db.Model):
 class Network(db.Model):
     __tablename__ = 'networks'
     id = db.Column(db.Integer, primary_key=True)
+
+    mcc_id = db.Column(db.Integer)
     country = db.Column(db.String)
+
+    mnc_id = db.Column(db.Integer)
     network = db.Column(db.String)
 
-    def __init__(self, id, country, network):
-       self.id = id
+    def __init__(self, mcc_id, country, mnc_id, network):
+       print (mcc_id)
+       print (mnc_id)
+       self.id = int(str(mcc_id) + str(mnc_id))
+       self.mcc_id  = mcc_id
        self.country = country
+       self.mnc_id  = mnc_id
        self.network = network
 
     def save(self):
-        db.session.add(self)
+        db.session.merge(self)
         db.session.commit()
 
     @staticmethod
     def get_all():
         return Network.query
 
-    def delete(self):
-        db.session.delete(self)
-        db.session.commit()
-
-    def __repr__(self):
-        return "<Network: {}>".format(self.id)
-
-class Sensor(db.Model):
-    __tablename__ = 'sensors'
-    id = db.Column(db.String, primary_key=True)
-    lat = db.Column(db.Float)
-    lng = db.Column(db.Float)
-
-    def __init__(self, id, lat, lng):
-       self.id = id
-       self.lat = lat
-       self.lng = lng
-
-    def save(self):
-        db.session.add(self)
-        db.session.commit()
-
     @staticmethod
-    def get_all():
-        return Sensor.query
+    def delete_all():
+        db.session.query(Network).delete()
+        db.session.commit()
 
     def delete(self):
         db.session.delete(self)
         db.session.commit()
 
     def __repr__(self):
-        return "<Sensor: {}>".format(self.id)
-
+        return "<Network: {}>".format(self.mcc_id)
 
 
 class Site(db.Model):
     __tablename__ = 'sites'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255))
+    id          = db.Column(db.Integer, primary_key=True)
+    name        = db.Column(db.String(255))
+    smallcells  = db.relationship(SmallCell)
 
     def __init__(self, name):
        self.name = name
@@ -112,6 +104,11 @@ class Site(db.Model):
     def get_all():
         return Site.query
 
+    @staticmethod
+    def delete_all():
+        db.session.query(Site).delete()
+        db.session.commit()
+
     def delete(self):
         db.session.delete(self)
         db.session.commit()
@@ -119,22 +116,28 @@ class Site(db.Model):
     def __repr__(self):
         return "<Site: {}>".format(self.name)
 
+    def serialise(self):
 
+      return  {
+                 'id': self.id,
+                 'name': self.name,
+                 'smallcells' : [(i.serialise()) for i in self.smallcells ]
+              }
 
 class LTESighting(db.Model):
     __tablename__ = 'ltesighting'
 
     id = db.Column(db.Integer, primary_key=True)
     timestamp   = db.Column(db.DateTime)
-    sensor_id   = db.Column(db.Text, db.ForeignKey('sensors.id'))
+    smallcell_id   = db.Column(db.Text, db.ForeignKey('smallcells.id'))
     imsi_hash   = db.Column(db.Text)
     hplmn_id    = db.Column(db.Integer, db.ForeignKey('networks.id'))
     hplmn       = db.relationship(Network, uselist=False)
-    sensor      = db.relationship(Sensor, uselist=False)
+    smallcell   = db.relationship(SmallCell, uselist=False)
 
-    def __init__(self, timestamp, sensor_id, site_id, imsi_hash, hplmn_id):
+    def __init__(self, timestamp, smallcell_id, site_id, imsi_hash, hplmn_id):
         self.timestamp = timestamp
-        self.sensor_id = sensor_id
+        self.smallcell_id = smallcell_id
         self.site_id = site_id
         self.imsi_hash = imsi_hash
         self.hplmn_id = hplmn_id
@@ -147,10 +150,25 @@ class LTESighting(db.Model):
     def get_all():
         return LTESighting.query
 
+    @staticmethod
+    def delete_all():
+        db.session.query(LTESighting).delete()
+        db.session.commit()
+
     def delete(self):
         db.session.delete(self)
         db.session.commit()
 
     def __repr__(self):
         return "<LTESighting: {}>".format(self.id)
+
+    def serialise(self):
+
+            return  {
+                       'id': self.id,
+                       'timestamp' : self.timestamp,
+                       'timestamp' : self.timestamp,
+                       'smallcell' : self.smallcell.serialise()
+
+                    }
 
