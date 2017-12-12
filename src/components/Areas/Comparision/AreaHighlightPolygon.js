@@ -1,5 +1,7 @@
 import React, {PureComponent} from 'react';
-import {Map, TileLayer, GeoJSON} from 'react-leaflet';
+import {Map, TileLayer, GeoJSON, Marker, Popup, Circle, CircleMarker} from 'react-leaflet';
+
+import SmallCellIcon from './SmallCellIcon';
 
 class AreaHighlightPolygon extends PureComponent {
 
@@ -14,13 +16,24 @@ class AreaHighlightPolygon extends PureComponent {
 
   onEachFeature(feature, layer) {
     layer.on({
-      click: (e) => {this.onLayerClick(layer)}
+      click: (e) => {
+        this.onLayerClick(layer)
+      }
     });
   }
 
   render() {
     return (
-      <GeoJSON data={this.props.area.geodata} onEachFeature={this.onEachFeature.bind(this)} />
+      <span>
+      <GeoJSON data={this.props.area.geodata} onEachFeature={this.onEachFeature.bind(this)}/>
+
+        {
+          this.props.area.smallcells.map((smallcell, i) => <span key={i}>
+             <SmallCellIcon smallcell={smallcell} />
+          </span>)
+        }
+
+      </span>
     );
   }
 }

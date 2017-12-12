@@ -44,6 +44,7 @@
     "react": "^16.2.0",
     "react-animate-height": "^0.10.9",
     "react-container-query": "^0.9.1",
+    "react-dc": "^1.0.6",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.2.0",
     "react-fittext": "^1.0.0",
