@@ -1,9 +1,10 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
-import {Card, Divider, Modal, Form, Tabs, Button} from 'antd';
+import {Card, Divider, Modal, Form, Tabs, Button, Switch} from 'antd';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import SiteTable from '../../components/Sites/SiteTable';
-import SiteEventsChartsHolder from '../../components/Sites/SiteEventChartsHolder';
+import SiteEventsChartsHolderCombined from '../../components/Sites/SiteEventsChartsHolderCombined';
+import SiteEventsChartsHolderIndividual from '../../components/Sites/SiteEventsChartsHolderIndividual';
 
 const FormItem = Form.Item;
 const TabPane = Tabs.TabPane;
@@ -12,7 +13,7 @@ class SiteComparison extends PureComponent {
 
   constructor(props) {
     super(props);
-    this.state = {selectedRows: [], modalVisible: true, siteIdsToLoad: []};
+    this.state = {selectedRows: [], modalVisible: true, combinedSites : true};
   }
 
   componentDidMount() {
@@ -28,44 +29,46 @@ class SiteComparison extends PureComponent {
     this.setState({selectedRows});
   }
 
+  toggleSitesCombined(combinedSites) {
+    this.setState({ combinedSites :  combinedSites});
+  }
+
   handleOk() {
-    this.setState({modalVisible: false, siteIdsToLoad: this.state.selectedRows.map(x => x.id)});
+    this.setState({modalVisible: false});
   }
 
   render() {
 
     const {sites} = this.props;
-    const {modalVisible, siteIdsToLoad} = this.state;
-    const modalFooter = <Button key="submit" disabled={this.state.selectedRows.length === 0} type="primary"
-                                onClick={this.handleOk.bind(this)}>Submit</Button>;
+    const {modalVisible, selectedRows, combinedSites } = this.state;
+    const modalFooter = [<Button key="submit" disabled={this.state.selectedRows.length === 0} type="primary" onClick={this.handleOk.bind(this)}>Submit</Button>];
 
     return (
       <PageHeaderLayout>
         <Card bordered>
           <div>
 
+            <Switch checkedChildren="Separate Sites" unCheckedChildren="Combine Sites" defaultChecked={combinedSites} onChange={this.toggleSitesCombined.bind(this)} />
+
+
             <Modal
               title="Define your filters"
               visible={modalVisible}
-              footer={[modalFooter]}>
+              footer={modalFooter} >
 
               <Tabs defaultActiveKey="1">
                 <TabPane tab="Select Sites" key="1">
                   <SiteTable onRowSelect={this.onRowSelect.bind(this)} data={sites}/>
                 </TabPane>
-                <TabPane tab="Select Date Range" key="2">Lets do some dates
+                <TabPane tab="Select Date Range" key="2">
                   <SiteTable onRowSelect={this.onRowSelect.bind(this)} data={sites}/>
                 </TabPane>
               </Tabs>
 
             </Modal>
 
-            {
-              (this.state.siteIdsToLoad.length ?
-                <SiteEventsChartsHolder site_ids={this.state.siteIdsToLoad} /> : <span>Nothing</span>)
-            }
 
-            what is here
+            {combinedSites ? (selectedRows.map((x) => <span><h1> {x.name} </h1><SiteEventsChartsHolderIndividual site_ids={[x.id] } /></span>)) : <span><SiteEventsChartsHolderIndividual site_ids={selectedRows.map(x=>x.id) } /></span>}
 
           </div>
         </Card>
