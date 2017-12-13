@@ -117,4 +117,16 @@ def create_app(config_name):
 
         return make_response(jsonify({ 'list' : results })), 200
 
+    @app.route('/api/sighting/bysite', methods=['GET'])
+    def get_sightings_by_site():
+
+        site_ids = (request.args.getlist('site_id'))
+
+        results = []
+        #should do this better with joins!
+        for sighting in LTESighting.query:
+            if (str(sighting.smallcell.site_id)) in site_ids : results.append(sighting.serialise())
+
+        return make_response(jsonify({ 'list' : results })), 200
+
     return app

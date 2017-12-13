@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/SiteEventChartsHolder.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/models/site.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/routes/SiteComparison/style.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderCombined.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/common/nav.js" afterPath="$PROJECT_DIR$/src/common/nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteList.js" afterPath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteList.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteTable.js" afterPath="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step1.js" afterPath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step1.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step2.js" afterPath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step2.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.js" afterPath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.js" afterPath="$PROJECT_DIR$/src/services/api.js" />
+      <change beforePath="$PROJECT_DIR$/api/app/__init__.py" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteEventChartsHolder.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" afterPath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,14 +20,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.72216934">
+    <splitter split-orientation="horizontal" split-proportion="0.8726394">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="813">
-                  <caret line="64" column="48" lean-forward="false" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="48" />
+                <state relative-caret-position="399">
+                  <caret line="61" column="17" lean-forward="false" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#43#0" expanded="true" />
                   </folding>
@@ -42,26 +35,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ComparisonCardNew.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
+          <file leaf-file-name="SiteEventsChartsHolderIndividual.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1023">
-                  <caret line="93" column="20" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SiteEventChartsHolder.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventChartsHolder.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
-                  <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="693">
+                  <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -86,6 +65,36 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="778">
+                  <caret line="119" column="16" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/app/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2562">
+                  <caret line="194" column="13" lean-forward="false" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="316">
+                  <caret line="4076" column="48" lean-forward="false" selection-start-line="4076" selection-start-column="48" selection-end-line="4076" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/common/nav.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -103,8 +112,8 @@
           <file leaf-file-name="scratch_2.json" pinned="false" current-in-tab="true">
             <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="43" selection-end-column="2" />
+                <state relative-caret-position="851">
+                  <caret line="51" column="140" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="140" />
                   <folding />
                 </state>
               </provider>
@@ -116,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coords`</find>
       <find>height</find>
       <find>store</find>
       <find>confirmLoading</find>
@@ -146,6 +154,7 @@
       <find>hplmn</find>
       <find>RangePicker</find>
       <find>modal</find>
+      <find>siteIdsToLoad</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -190,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/assets/airports2.topo.json" />
         <option value="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
         <option value="$PROJECT_DIR$/src/components/D3Map/D3Polygon.js" />
@@ -227,20 +235,21 @@
         <option value="$PROJECT_DIR$/api/data/networks.csv" />
         <option value="$PROJECT_DIR$/api/dbinit.py" />
         <option value="$PROJECT_DIR$/api/app/models.py" />
-        <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step2.js" />
         <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.js" />
         <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step1.js" />
         <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteTable.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json" />
         <option value="$PROJECT_DIR$/src/common/nav.js" />
         <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteList.js" />
         <option value="$PROJECT_DIR$/src/services/api.js" />
         <option value="$PROJECT_DIR$/src/models/site.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
-        <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
+        <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteEventChartsHolder.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json" />
+        <option value="$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js" />
+        <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
       </list>
     </option>
   </component>
@@ -262,10 +271,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="154" />
-    <option name="y" value="28" />
+    <option name="x" value="74" />
     <option name="width" value="2486" />
-    <option name="height" value="1757" />
+    <option name="height" value="1675" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -290,6 +298,23 @@
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -429,11 +454,11 @@
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Definition" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Sites" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\SiteComparison" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\assets\mapping\Icons" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Comparision" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\DCChartWrappers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -549,7 +574,7 @@
       <workItem from="1512569364525" duration="35255000" />
       <workItem from="1512748974475" duration="7134000" />
       <workItem from="1512765071961" duration="599000" />
-      <workItem from="1512986243708" duration="61449000" />
+      <workItem from="1512986243708" duration="68486000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -663,23 +688,30 @@
       <option name="project" value="LOCAL" />
       <updated>1513159742910</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add site comparison page">
+      <created>1513174468200</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1513174468200</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252864000" />
+    <option name="totallyTimeSpent" value="259901000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="154" y="28" width="2486" height="1757" extended-state="0" />
+    <frame x="74" y="0" width="2486" height="1675" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293023" sideWeight="0.49791232" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2908745" sideWeight="0.509059" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27952263" sideWeight="0.45592457" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.294702" sideWeight="0.45592457" order="16" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16523165" sideWeight="0.14472537" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27952263" sideWeight="0.5440754" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16523165" sideWeight="0.8552746" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06642067" sideWeight="0.14460094" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.294702" sideWeight="0.5440754" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06642067" sideWeight="0.8553991" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32339236" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -723,7 +755,8 @@
     <MESSAGE value="adding comparison cards and dc" />
     <MESSAGE value="safety checkin" />
     <MESSAGE value="refactoring apis" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring apis" />
+    <MESSAGE value="Add site comparison page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add site comparison page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,32 +781,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/User/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/User/Login.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/User/RegisterResult.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1021,22 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="34" column="56" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5103">
@@ -1111,14 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="43" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1161,16 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="93" column="20" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1179,22 +1152,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
+    <entry file="file://$PROJECT_DIR$/api/migrations/versions/b86b1eea8a6d_.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="64" column="48" lean-forward="false" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="48" />
+        <state relative-caret-position="651">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="4076" column="48" lean-forward="false" selection-start-line="4076" selection-start-column="48" selection-end-line="4076" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2562">
+          <caret line="194" column="13" lean-forward="false" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="119" column="16" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="74" column="6" lean-forward="true" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventChartsHolder.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        <state relative-caret-position="851">
+          <caret line="51" column="140" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderCombined.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="61" column="17" lean-forward="false" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
