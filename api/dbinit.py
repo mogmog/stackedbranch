@@ -1,5 +1,6 @@
 import os
 import csv
+from random import *
 from flask_api import FlaskAPI, status
 from flask_sqlalchemy import SQLAlchemy
 from app import db, create_app
@@ -29,7 +30,7 @@ if True:
         network =  (Network(row[0], row[5], row[2], row[7]))
         network.save()
 
-with open('data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv') as csvfile:
+with open('data/lteSghtlogs_20171124.0000+0000-20171205.0000+0000_vdc21_181775.csv') as csvfile:
 
     from random import uniform
 
@@ -40,18 +41,18 @@ with open('data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv
      if smallcell:
         _s = smallcell
      else:
-        _s = SmallCell(site1, row[2], uniform(-0.132132,-0.123463), uniform(51.511453, 51.515460))
+        if randint(1, 2) == 1 :
+          site = site1
+        else:
+          site = site2
+
+        _s = SmallCell(site, row[2], uniform(-0.132132,-0.123463), uniform(51.511453, 51.515460))
         _s.save()
 
-     print row[6]
      network = Network.query.filter_by(id=row[6]).first()
 
      if network:
       sighting =  (LTESighting(row[1], row[2], row[3], row[5], row[6]))
       sighting.save()
 
-    #try :
-    #  sighting =  (LTESighting(row[1], row[2], row[3], row[5], row[6]))
-    #  sighting.save()
-    #except:
-    #  pass
+
