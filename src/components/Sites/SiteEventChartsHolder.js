@@ -4,10 +4,10 @@ import crossfilter from 'crossfilter2';
 import { Spin, Row, Col } from 'antd';
 import moment from 'moment';
 
-import request from '../../../utils/request';
-import PieChart from '../../DCChartWrappers/PieChart';
+import request from '../../utils/request';
+import PieChart from '../DCChartWrappers/PieChart';
 
-class ComparisonCardNew extends React.Component {
+class SiteEventsChartsHolder extends React.Component {
   constructor() {
     super();
 
@@ -20,7 +20,7 @@ class ComparisonCardNew extends React.Component {
 
   componentDidMount() {
 
-    return request('/api/sighting/byarea/' + this.props.area, {
+    return request('/api/sighting/byarea/' + this.props.site_ids, {
       method: 'GET',
     }).then((res) => {
       this.setState({sightings: res.list, loading : false});
@@ -87,8 +87,4 @@ class ComparisonCardNew extends React.Component {
   }
 }
 
-export default ComparisonCardNew;
-
-//React.PropTypes
-
-//define prop type3s
+export default SiteEventsChartsHolder;

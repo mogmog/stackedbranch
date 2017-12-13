@@ -9,10 +9,12 @@ export default ({ formItemLayout, form, rule, dispatch, data }) => {
     dispatch(routerRedux.push('/dwell/date'));
   };
 
+  console.log(data);
+
   return (
     <div>
 
-      <SiteList />
+      <SiteList form={form} data={data}/>
 
       <Button type="primary" onClick={onValidateForm}>
         Next

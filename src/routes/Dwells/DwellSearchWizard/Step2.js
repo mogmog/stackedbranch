@@ -6,7 +6,6 @@ import styles from './style.less';
 import { DatePicker } from 'antd';
 
 export default ({ formItemLayout, form, data, dispatch, submitting }) => {
-  const { getFieldDecorator, validateFields } = form;
   const { MonthPicker, RangePicker } = DatePicker;
 
   const onPrev = () => {
@@ -26,16 +25,24 @@ export default ({ formItemLayout, form, data, dispatch, submitting }) => {
 
       <Form.Item
         {...formItemLayout}
-        label="From date"
         required={true}
-      >     <DatePicker onChange={onChange} />
-      </Form.Item>
+      >
+        <RangePicker
+          dateRender={(current) => {
 
-      <Form.Item
-        {...formItemLayout}
-        label="To date"
-        required={true}
-      >    <DatePicker onChange={onChange} />
+            const style = {};
+            if (current.month() === 11 && (current.date() === 25 || current.date() === 26)) {
+              style.border = '1px solid #1890ff';
+              style.borderRadius = '50%';
+            }
+            return (
+              <div className="ant-calendar-date" style={style}>
+                {current.date()}
+              </div>
+            );
+          }}
+        />
+
       </Form.Item>
 
       <Form.Item
