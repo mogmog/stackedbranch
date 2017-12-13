@@ -34,6 +34,7 @@ class DwellSearchWizard extends PureComponent {
 
     const { form, stepFormData, submitting, dispatch } = this.props;
 
+    console.log(stepFormData);
     const formItemLayout = {
       labelCol: {
         span: 5,
