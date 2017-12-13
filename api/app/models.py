@@ -4,6 +4,7 @@ from flask import current_app
 import jwt
 from datetime import datetime, timedelta
 from sqlalchemy.dialects.postgresql import JSON
+from shapely.geometry import shape, Point
 
 class Area(db.Model):
     __tablename__ = 'areas'
@@ -29,6 +30,10 @@ class Area(db.Model):
         db.session.add(self)
         db.session.commit()
 
+    def contains(self, smallcell):
+      area_polygon = shape(self.geodata['geometry'])
+      return area_polygon.contains(Point(smallcell.lat, smallcell.lng))
+
     @staticmethod
     def get_all():
         return Area.query
@@ -44,6 +49,90 @@ class Area(db.Model):
 
     def __repr__(self):
         return "<Area: {}>".format(self.name)
+
+
+
+
+
+class Site(db.Model):
+    __tablename__ = 'sites'
+    id          = db.Column(db.Integer, primary_key=True)
+    name        = db.Column(db.String(255))
+
+    def __init__(self, name):
+       self.name = name
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return Site.query
+
+    @staticmethod
+    def delete_all():
+        db.session.query(Site).delete()
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return "<Site: {}>".format(self.name)
+
+    def serialise(self):
+
+      return  {
+                 'id': self.id,
+                 'name': self.name
+              }
+
+class SmallCell(db.Model):
+    __tablename__ = 'smallcells'
+    id      = db.Column(db.String, primary_key=True)
+    lat     = db.Column(db.Float)
+    lng     = db.Column(db.Float)
+    site_id = db.Column(db.Integer, db.ForeignKey('sites.id'))
+    site    = db.relationship(Site)
+
+    def __init__(self, site, id, lat, lng):
+       self.id = id
+       self.lat = lat
+       self.lng = lng
+       self.site_id = site.id
+       self.site = site
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return SmallCell.query
+
+    @staticmethod
+    def delete_all():
+        db.session.query(SmallCell).delete()
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return "<SmallCell: id : {} lat : {}, lng : {}>".format(self.id, self.lat, self.lng)
+
+    def serialise(self):
+
+        return  {
+                   'id': self.id,
+                   'site_id' : self.site_id,
+                   'lat' : self.lat,
+                   'lng' : self.lng
+                }
+
 
 
 
@@ -87,42 +176,12 @@ class Network(db.Model):
         return "<Network: {}>".format(self.mcc_id)
 
 
-class Site(db.Model):
-    __tablename__ = 'sites'
-    id          = db.Column(db.Integer, primary_key=True)
-    name        = db.Column(db.String(255))
-    smallcells  = db.relationship(SmallCell)
-
-    def __init__(self, name):
-       self.name = name
-
-    def save(self):
-        db.session.add(self)
-        db.session.commit()
-
-    @staticmethod
-    def get_all():
-        return Site.query
-
-    @staticmethod
-    def delete_all():
-        db.session.query(Site).delete()
-        db.session.commit()
-
-    def delete(self):
-        db.session.delete(self)
-        db.session.commit()
-
-    def __repr__(self):
-        return "<Site: {}>".format(self.name)
-
     def serialise(self):
+        return {
+                'country' : self.country,
+                'network' : self.network
+                }
 
-      return  {
-                 'id': self.id,
-                 'name': self.name,
-                 'smallcells' : [(i.serialise()) for i in self.smallcells ]
-              }
 
 class LTESighting(db.Model):
     __tablename__ = 'ltesighting'
@@ -132,7 +191,7 @@ class LTESighting(db.Model):
     smallcell_id   = db.Column(db.Text, db.ForeignKey('smallcells.id'))
     imsi_hash   = db.Column(db.Text)
     hplmn_id    = db.Column(db.Integer, db.ForeignKey('networks.id'))
-    hplmn       = db.relationship(Network, uselist=False)
+    network       = db.relationship(Network, uselist=False)
     smallcell   = db.relationship(SmallCell, uselist=False)
 
     def __init__(self, timestamp, smallcell_id, site_id, imsi_hash, hplmn_id):
@@ -165,10 +224,9 @@ class LTESighting(db.Model):
     def serialise(self):
 
             return  {
-                       'id': self.id,
-                       'timestamp' : self.timestamp,
-                       'timestamp' : self.timestamp,
-                       'smallcell' : self.smallcell.serialise()
-
-                    }
+                                    'id' : self.id,
+                                    'timestamp' : self.timestamp,
+                                    'smallcell' : self.smallcell.serialise(),
+                                    'network': self.network.serialise()
+                                }
 

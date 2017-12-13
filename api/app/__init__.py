@@ -76,8 +76,7 @@ def create_app(config_name):
 
             smallcellInArea = []
             for smallcell in allSmallCells:
-              #if shape(area.geodata['geometry']).contains(Point(smallcell.lng, smallcell.lat)):
-              smallcellInArea.append({'lat' : smallcell.lat, 'lng' : smallcell.lng})
+              smallcellInArea.append(smallcell.serialise())
 
             obj = {
                 'id': area.id,
@@ -94,34 +93,18 @@ def create_app(config_name):
 
         return make_response(jsonify({ 'list' : results })), 200
 
+
+
     @app.route('/api/sighting/byarea/<areaid>', methods=['GET'])
     def get_sighting(areaid):
 
         area = Area.query.filter_by(id=areaid).first()
         if area is None : return make_response(jsonify({ 'list' : [] })), 200
 
-        area_polygon = shape(area.geodata['geometry'])
-
         results = []
         for sighting in LTESighting.get_all():
-
-            obj = {
-                'id' : sighting.id,
-                'timestamp' : sighting.timestamp,
-                'smallcell' : {
-                    'id' : sighting.smallcell.id,
-                    'latlng' : [sighting.smallcell.lat, sighting.smallcell.lng],
-                    'site' : sighting.site.serialise()
-                },
-                'network': {
-                    'country' : sighting.hplmn.country,
-                    'network' : sighting.hplmn.network,
-                    'id' : sighting.hplmn.id
-                }
-            }
-
-            if area_polygon.contains(Point(sighting.smallcell.lng, sighting.smallcell.lat)):
-                results.append(obj)
+          if area.contains(sighting.smallcell):
+            results.append(sighting.serialise())
 
         return make_response(jsonify({ 'list' : results })), 200
 
@@ -130,21 +113,7 @@ def create_app(config_name):
 
         results = []
         for sighting in LTESighting.get_all():
-
-            obj = {
-                'id' : sighting.id,
-                'timestamp' : sighting.timestamp,
-                'smallcell' : {
-                    'id' : sighting.smallcell.id,
-                    'latlng' : [sighting.smallcell.lat, sighting.smallcell.lng]
-                },
-                'network': {
-                    'country' : sighting.hplmn.country,
-                    'network' : sighting.hplmn.network,
-                    'id' : sighting.hplmn.id
-                }
-            }
-            results.append(obj)
+            results.append(sighting.serialise())
 
         return make_response(jsonify({ 'list' : results })), 200
 
