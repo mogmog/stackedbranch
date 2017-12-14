@@ -1,9 +1,14 @@
 # app/__init__.py
 import json
 from flask_api import FlaskAPI, status
+import graphene
+from graphene import relay
+from graphene_sqlalchemy import SQLAlchemyConnectionField, SQLAlchemyObjectType
 from flask_sqlalchemy import SQLAlchemy
 
 from flask import request, jsonify, abort, make_response
+
+from flask_graphql import GraphQLView
 
 from shapely.geometry import shape, Point
 
@@ -17,13 +22,28 @@ from flask_bcrypt import Bcrypt
 # initialize db
 db = SQLAlchemy()
 
-def create_app(config_name):
+from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry
+from app.models import Department as DepartmentModel
 
-    from app.models import Area, LTESighting, SmallCell, Site
+class Department(SQLAlchemyObjectType):
+
+  class Meta:
+     model = DepartmentModel
+     interfaces = (relay.Node, )
+
+class Query(graphene.ObjectType):
+    node = relay.Node.Field()
+    all_employees = SQLAlchemyConnectionField(Department)
+
+def create_app(config_name):
 
     app = FlaskAPI(__name__, instance_relative_config=True)
     # overriding Werkzeugs built-in password hashing utilities using Bcrypt.
     bcrypt = Bcrypt(app)
+
+    schema = graphene.Schema(query=Query)
+
+    app.add_url_rule('/graphql', view_func=GraphQLView.as_view('graphql', schema=schema, graphiql=True))
 
     app.config.from_object(app_config[config_name])
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -53,6 +73,16 @@ def create_app(config_name):
         })
 
         return make_response(response), 201
+
+    @app.route('/api/sightingsperhour', methods=['GET'])
+    def get_sightingsperhour():
+      # get all the areas
+      sightings   = SightingsPerHourPerCountry.query.all()
+      results = []
+      for sighting in sightings:
+         results.append({'country' : sighting.country, 'hour' : sighting.hour, 'count' : sighting.count})
+
+      return make_response(jsonify({ 'list' : results })), 200
 
     @app.route('/api/sites', methods=['GET'])
     def get_sites():

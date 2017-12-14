@@ -230,3 +230,18 @@ class LTESighting(db.Model):
                                     'network': self.network.serialise()
                                 }
 
+
+
+class Department(db.Model):
+    __tablename__ = 'department'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+
+
+class SightingsPerHourPerCountry(db.Model):
+    __table__ = db.Table('sightingsperhourpercountry', db.Model.metadata,
+        db.Column('country', db.String, primary_key=True),
+        db.Column('hour', db.Integer, primary_key=True),
+        db.Column('count', db.Integer, primary_key=False)
+        )
+

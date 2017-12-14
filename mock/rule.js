@@ -2,11 +2,11 @@ import { getUrlParams } from './utils';
 
 // mock tableListDataSource
 let tableListDataSource = [];
-for (let i = 0; i < 46; i += 1) {
+for (let i = 0; i < 3; i += 1) {
   tableListDataSource.push({
-    key: i,
+    id: i,
     no: `Site ${i}`,
-    description: 'Tesco',
+    name: 'Tesco',
     longitude: -0.01 + Math.random(),
     latitude: 51.545 + Math.random(),
     status: Math.floor(Math.random() * 10) % 2,
