@@ -3,7 +3,6 @@ import {connect} from 'dva';
 import {Card, Divider, Modal, Form, Tabs, Button, Switch} from 'antd';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import SiteTable from '../../components/Sites/SiteTable';
-import SiteEventsChartsHolderCombined from '../../components/Sites/SiteEventsChartsHolderCombined';
 import SiteEventsChartsHolderIndividual from '../../components/Sites/SiteEventsChartsHolderIndividual';
 
 const FormItem = Form.Item;
