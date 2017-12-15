@@ -34,6 +34,7 @@
     "no-bitwise": [0],
     "no-cond-assign": [0],
     "import/no-unresolved": [0],
+    "no-multi-spaces" : ["error", { "exceptions": { "ImportDeclaration": true, "Property": true  } }],
     "comma-dangle": ["error", {
       "arrays": "always-multiline",
       "objects": "always-multiline",

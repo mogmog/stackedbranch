@@ -37,7 +37,7 @@ export default class Workplace extends PureComponent {
   render() {
     const areas = this.props.area.areas;
 
-    const { area :{areas : list } } = this.props;
+    const { area :{ areas : list } } = this.props;
     const { cards, height }   = this.state;
 
     const pageHeaderContent = (
