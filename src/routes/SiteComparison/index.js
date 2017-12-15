@@ -36,11 +36,11 @@ class SiteComparison extends PureComponent {
   }
 
   doSplit() {
-    this.setState({split: true});
+    this.setState({ split: true });
   }
 
   doUnSplit() {
-    this.setState({split: false});
+    this.setState({ split: false });
   }
 
   toggleSitesCombined(isCombined) {
@@ -63,13 +63,14 @@ class SiteComparison extends PureComponent {
   render() {
 
     const { sites } = this.props;
-    const { modalVisible, combinedSites, split } = this.state;
+    const { modalVisible, combinedSites } = this.state;
     const { selectedRow, selectedDates } = this.state.filter;
 
     const modalFooter = [<Button key="submit"
                                  disabled={(selectedRow.length === 0 || selectedDates.length === 0)}
                                  type="primary"
-                                 onClick={this.handleFilterSubmit.bind(this)}>
+                                 onClick={this.handleFilterSubmit.bind(this)}
+                          >
                           Submit
                         </Button>];
 
@@ -5241,61 +5242,65 @@ class SiteComparison extends PureComponent {
     const data = _.groupBy(data_src.list, 'country');
 
     return (
-      <PageHeaderLayout>
-        <Card bordered>
-          <div>
 
-            <Switch checkedChildren="Separate Sites" unCheckedChildren="Combine Sites" defaultChecked={combinedSites}
-                    onChange={this.toggleSitesCombined.bind(this)}/>
+      <span>
+        <Modal
+          title="Define your filters"
+          visible={modalVisible}
+          footer={modalFooter}
+        >
 
-            <Modal
-              title="Define your filters"
-              visible={modalVisible}
-              footer={modalFooter}>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab="Select Sites" key="1">
+              <SiteTable onRowSelect={this.onRowSelect.bind(this)} data={sites} />
+            </TabPane>
+            <TabPane tab="Select Date Range" key="2">
+              <SiteDateSelect onDateSelect={this.onDateSelect.bind(this)} />
+            </TabPane>
+          </Tabs>
 
-              <Tabs defaultActiveKey="1">
-                <TabPane tab="Select Sites" key="1">
-                  <SiteTable onRowSelect={this.onRowSelect.bind(this)} data={sites}/>
-                </TabPane>
-                <TabPane tab="Select Date Range" key="2">
-                  <SiteDateSelect onDateSelect={this.onDateSelect.bind(this)} />
-                </TabPane>
-              </Tabs>
+        </Modal>
 
-            </Modal>
-
+        <PageHeaderLayout>
+          <Card bordered>
             <div>
-            {/*{combinedSites ? (selectedRows.map((x) => <span><h1> {x.name} </h1><SiteEventsChartsHolderIndividual*/}
-                {/*site_ids={[x.id]}/></span>)) :*/}
-              {/*<span><SiteEventsChartsHolderIndividual site_ids={selectedRows.map(x => x.id)}/></span>}*/}
+
+              <Switch
+                checkedChildren="Separate Sites"
+                unCheckedChildren="Combine Sites"
+                defaultChecked={combinedSites}
+                onChange={this.toggleSitesCombined.bind(this)}
+              />
+              <div>
+                <SiteEventsChartsHolderIndividual site_ids={selectedRow.map(x => x.id)} />
+              </div>
             </div>
+          </Card>
 
-          </div>
-        </Card>
+          <Card bordered >
 
-        <Card bordered >
-
-          <Button onClick={this.doSplit.bind(this)}> Down </Button>
-          <Button onClick={this.doUnSplit.bind(this)}> Up</Button>
+            <Button onClick={this.doSplit.bind(this)}> Down </Button>
+            <Button onClick={this.doUnSplit.bind(this)}> Up</Button>
 
 
-          {/*<svg width={'100%'} height={800}>*/}
+            {/*<svg width={'100%'} height={800}>*/}
 
-            {/*{*/}
-              {/*Object.keys(data).map((e, i) => {*/}
-                  {/*if (e !== 'United Kingdom') {*/}
-                    {/*return <HourlyCountryThing key={i} split={split} index={i} data={data[e]} />*/}
-                  {/*}*/}
-                  {/*return <span>UK</span>;*/}
+              {/*{*/}
+                {/*Object.keys(data).map((e, i) => {*/}
+                    {/*if (e !== 'United Kingdom') {*/}
+                      {/*return <HourlyCountryThing key={i} split={split} index={i} data={data[e]} />*/}
+                    {/*}*/}
+                    {/*return <span>UK</span>;*/}
+                {/*}*/}
+                {/*)*/}
               {/*}*/}
-              {/*)*/}
-            {/*}*/}
 
-          {/*</svg>)*/}
+            {/*</svg>)*/}
 
-        </Card>
+          </Card>
 
-      </PageHeaderLayout>
+        </PageHeaderLayout>
+      </span>
     );
   }
 }

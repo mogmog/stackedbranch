@@ -14,7 +14,7 @@ export async function querySitesComparison(params) {
     method: 'POST',
     body: {
       selectedDates: params.selectedDates.map(x => x.toDate()),
-      selectedRow  : params.selectedRow.map(x => x.id)
+      selectedRow  : params.selectedRow.map(x => x.id),
     },
   });
 }
