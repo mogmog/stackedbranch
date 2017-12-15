@@ -224,13 +224,11 @@ class LTESighting(db.Model):
     def serialise(self):
 
             return  {
-                                    'id' : self.id,
-                                    'timestamp' : self.timestamp,
-                                    'smallcell' : self.smallcell.serialise(),
-                                    'network': self.network.serialise()
-                                }
-
-
+                    'id' : self.id,
+                    'timestamp' : self.timestamp,
+                    'smallcell' : self.smallcell.serialise(),
+                    'network': self.network.serialise()
+                    }
 
 class Department(db.Model):
     __tablename__ = 'department'
@@ -244,4 +242,16 @@ class SightingsPerHourPerCountry(db.Model):
         db.Column('hour', db.Integer, primary_key=True),
         db.Column('count', db.Integer, primary_key=False)
         )
+
+
+class SightingsNew(db.Model):
+    __table__ = db.Table('uniquecountryhandsetsightings', db.Model.metadata,
+        db.Column('day', db.DateTime, primary_key=True),
+        db.Column('network', db.String, primary_key=True),
+        db.Column('country', db.String, primary_key=True),
+         db.Column('site_id', db.Integer, primary_key=False),
+        db.Column('count', db.Integer, primary_key=False)
+        )
+
+
 

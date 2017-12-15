@@ -22,7 +22,7 @@ from flask_bcrypt import Bcrypt
 # initialize db
 db = SQLAlchemy()
 
-from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry
+from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew
 from app.models import Department as DepartmentModel
 
 class Department(SQLAlchemyObjectType):
@@ -83,6 +83,17 @@ def create_app(config_name):
          results.append({'country' : sighting.country, 'hour' : sighting.hour, 'count' : sighting.count})
 
       return make_response(jsonify({ 'list' : results })), 200
+
+    @app.route('/api/sightingsnew', methods=['GET'])
+    def sightingsnew():
+      # get all the areas
+      sightings   = SightingsNew.query.all()
+      results = []
+      for sighting in sightings:
+         results.append({'country' : sighting.country, 'network' : sighting.network, 'day' : sighting.day, 'count' : sighting.count})
+
+      return make_response(jsonify({ 'list' : results })), 200
+
 
     @app.route('/api/sites', methods=['GET'])
     def get_sites():
@@ -146,6 +157,15 @@ def create_app(config_name):
             results.append(sighting.serialise())
 
         return make_response(jsonify({ 'list' : results })), 200
+
+    @app.route('/api/sitescomparison', methods=['POST'])
+    def get_sitescomparison():
+
+        sightings = LTESighting.query\
+                    .filter(LTESighting.smallcell.has(SmallCell.site_id.in_(request.data['selectedRow'])))\
+                    .filter(LTESighting.timestamp.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))
+
+        return make_response(jsonify({ 'list' : [sighting.serialise() for sighting in sightings] })), 200
 
     @app.route('/api/sighting/bysite', methods=['GET'])
     def get_sightings_by_site():
