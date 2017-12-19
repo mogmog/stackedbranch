@@ -1,4 +1,4 @@
-import { queryAreas, saveArea} from '../services/api';
+import { queryAreas, saveArea, deleteArea } from '../services/api';
 
 export default {
   namespace: 'area',
@@ -50,6 +50,27 @@ export default {
         payload: false,
       });
     },
+
+    *deleteandfetch({ payload }, { call, put }) {
+      yield put({
+        type: 'changeLoading',
+        payload: true,
+      });
+
+      yield call(deleteArea, payload);
+
+      const queryresponse = yield call(queryAreas, payload);
+
+      yield put({
+        type: 'save',
+        payload: queryresponse,
+      });
+      yield put({
+        type: 'changeLoading',
+        payload: false,
+      });
+    },
+
   },
 
   reducers: {
