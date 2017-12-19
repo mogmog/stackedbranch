@@ -10,7 +10,7 @@ export async function querySites() {
 }
 
 export async function querySitesComparison(params) {
-  return request('/api/sitescomparison', {
+  return request('/api/sightingsnew', {
     method: 'POST',
     body: {
       selectedDates: params.selectedDates.map(x => x.toDate()),

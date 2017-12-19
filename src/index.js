@@ -7,8 +7,6 @@ import G2 from '@antv/g2';
 import './index.less';
 import router from './router';
 
-G2.Global.setTheme('dark');
-
 // 1. Initialize
 const app = dva({
   //history: browserHistory(),
