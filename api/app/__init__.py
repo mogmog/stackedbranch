@@ -74,6 +74,18 @@ def create_app(config_name):
 
         return make_response(response), 201
 
+    @app.route('/api/areas/delete', methods=['POST'])
+    def delete_areas():
+        # get the access token
+        id    = request.data.get('id', 0)
+        area = Area.query.filter_by(id=id).first()
+
+        if (area is not None):
+          area.delete()
+
+        return make_response(jsonify({'id':id})), 200
+
+
     @app.route('/api/sightingsperhour', methods=['GET'])
     def get_sightingsperhour():
       # get all the areas

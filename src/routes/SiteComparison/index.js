@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
-import {Row, Col, Card, Modal, Form, Tabs, Button, Switch,} from 'antd';
+import {Row, Col, Card, Modal, Form, Tabs, Button, Switch, Alert} from 'antd';
 import _ from 'lodash';
 
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
@@ -123,6 +123,7 @@ class SiteComparison extends PureComponent {
           <Tabs defaultActiveKey="1">
             <TabPane tab="Select Sites" key="1">
               <SiteTable onRowSelect={this.onRowSelect.bind(this)} data={sites}/>
+               <Alert message="Remember to select a date range on next tab" type="error" />
             </TabPane>
             <TabPane tab="Select Date Range" key="2">
               <SiteDateSelect onDateSelect={this.onDateSelect.bind(this)}/>

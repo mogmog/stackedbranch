@@ -28,3 +28,14 @@ export async function saveArea(params) {
   });
 }
 
+export async function deleteArea(params) {
+console.log(params);
+  return request('/api/areas/delete', {
+    method: 'POST',
+    body: {
+      ...params,
+      id: params.id,
+    },
+  });
+}
+
