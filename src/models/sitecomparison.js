@@ -4,7 +4,7 @@ export default {
   namespace: 'sitecomparison_namespace',
 
   state: {
-    sitecomparison: [],
+    sitecomparison: {list : [], grouped : []},
 
     filter : {
       selectedRow : [],
@@ -21,7 +21,6 @@ export default {
         payload: true,
       });
       const response = yield call(querySitesComparison, payload);
-
       yield put({
         type: 'store',
         payload: response,
@@ -44,6 +43,18 @@ export default {
       return {
         ...state,
         loading: action.payload,
+      };
+    },
+    clear() {
+
+      return {
+        sitecomparison: {list : [], grouped : []},
+
+        filter : {
+          selectedRow : [],
+          selectedDates : [],
+        },
+        loading: true,
       };
     },
   },

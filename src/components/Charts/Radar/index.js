@@ -74,7 +74,7 @@ class Radar extends PureComponent {
     const chart = new G2.Chart({
       container: this.node,
       forceFit: true,
-      height: 385,
+      height: 300,
       padding: [ 20, 20, 20, 20 ]
     });
     chart.source(dv, {

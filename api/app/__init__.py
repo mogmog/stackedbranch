@@ -5,7 +5,7 @@ import graphene
 from graphene import relay
 from graphene_sqlalchemy import SQLAlchemyConnectionField, SQLAlchemyObjectType
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy import func
 from flask import request, jsonify, abort, make_response
 
 from flask_graphql import GraphQLView
@@ -84,15 +84,34 @@ def create_app(config_name):
 
       return make_response(jsonify({ 'list' : results })), 200
 
-    @app.route('/api/sightingsnew', methods=['GET'])
+    @app.route('/api/sightingsnew', methods=['POST'])
     def sightingsnew():
-      # get all the areas
-      sightings   = SightingsNew.query.all()
+
+      #remembert to keep the keep the filters in sync
+      #TODO is there a better way to do this
+      sightings = SightingsNew.query\
+                        .filter(SightingsNew.site_id.in_(request.data['selectedRow']))\
+                        .filter(SightingsNew.day.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))
+
+
+      groupedsightings = db.session.query(SightingsNew.country, SightingsNew.site_id, func.count(SightingsNew.country))\
+                        .filter(SightingsNew.site_id.in_(request.data['selectedRow']))\
+                        .filter(SightingsNew.day.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))\
+                        .group_by(SightingsNew.country, SightingsNew.site_id).all()
+
+      groupedresults = []
+      for element in groupedsightings:
+        obj = {}
+        obj['label'] = (element)[0]
+        obj[str((element)[1])] = (element)[2]
+        groupedresults.append(obj)
+
       results = []
       for sighting in sightings:
-         results.append({'country' : sighting.country, 'network' : sighting.network, 'day' : sighting.day, 'count' : sighting.count})
+         results.append({'country' : sighting.country, 'network' : sighting.network, 'day' : sighting.day, 'count' : sighting.count, 'site_id' : sighting.site_id})
 
-      return make_response(jsonify({ 'list' : results })), 200
+
+      return make_response(jsonify({ 'list' : results, 'grouped' : groupedresults })), 200
 
 
     @app.route('/api/sites', methods=['GET'])
