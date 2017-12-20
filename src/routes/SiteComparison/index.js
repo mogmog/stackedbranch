@@ -1,7 +1,10 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
-import {Row, Col, Card, Modal, Form, Tabs, Button, Switch, Alert} from 'antd';
+import {Row, Col, Card, Modal, Form, Tabs, Button, Switch, Alert, Tooltip, Icon} from 'antd';
+
 import _ from 'lodash';
+
+import {ChartCard, Field} from '../../components/Charts';
 
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import SiteTable from '../../components/Sites/SiteTable';
@@ -10,6 +13,10 @@ import SiteEventsChartsHolderIndividual from '../../components/Sites/SiteEventsC
 import SiteDateSelect from '../../components/Sites/SiteDateSelect';
 import SiteTotalSightings from '../../components/Sites/SiteTotalSightings';
 import SiteCountryBarChart from '../../components/Sites/SiteCountryBarChart';
+
+import Trend from '../../components/Trend';
+
+import styles from './style.less';
 
 const FormItem = Form.Item;
 const TabPane = Tabs.TabPane;
@@ -21,7 +28,7 @@ class SiteComparison extends PureComponent {
       loading: false,
       visible: true,
       combinedSites: true,
-      filter: { selectedDates: [], selectedRow: [] }
+      filter: {selectedDates: [], selectedRow: []}
     };
 
   }
@@ -37,7 +44,7 @@ class SiteComparison extends PureComponent {
 
   /*clear the results of the site comparison when the component is unmounted*/
   componentWillUnmount() {
-    const { dispatch } = this.props;
+    const {dispatch} = this.props;
     dispatch({
       type: 'sitecomparison_namespace/clear',
     });
@@ -85,7 +92,7 @@ class SiteComparison extends PureComponent {
     const {dispatch, loading} = this.props;
     const {filter} = this.state;
 
-    this.setState({ visible: false});
+    this.setState({visible: false});
 
     /* The reducer in sitecomparison_namespace will populate the prop property ''*/
     dispatch({
@@ -93,14 +100,14 @@ class SiteComparison extends PureComponent {
       payload: filter,
     });
 
-    this.setState({ visible: false });
+    this.setState({visible: false});
 
   }
 
   render() {
 
-    const { sites, sitecomparison, loading } = this.props;
-    const { combinedSites } = this.state;
+    const {sites, sitecomparison, loading} = this.props;
+    const {combinedSites} = this.state;
     const {selectedRow, selectedDates} = this.state.filter;
 
     const modalFooter = [<Button key="submit"
@@ -108,7 +115,9 @@ class SiteComparison extends PureComponent {
                                  type="primary"
                                  onClick={this.handleFilterSubmit.bind(this)}> Submit </Button>];
 
-    console.log(loading);
+
+    const data = _(sites).groupBy(x => x.country).value();
+
     return (
 
       <span>
@@ -123,7 +132,7 @@ class SiteComparison extends PureComponent {
           <Tabs defaultActiveKey="1">
             <TabPane tab="Select Sites" key="1">
               <SiteTable onRowSelect={this.onRowSelect.bind(this)} data={sites}/>
-               <Alert message="Remember to select a date range on next tab" type="error" />
+               <Alert message="Remember to select a date range on next tab" type="error"/>
             </TabPane>
             <TabPane tab="Select Date Range" key="2">
               <SiteDateSelect onDateSelect={this.onDateSelect.bind(this)}/>
@@ -134,64 +143,71 @@ class SiteComparison extends PureComponent {
         <PageHeaderLayout>
 
           <a onClick={this.showFilter}>edit filters</a>
-           <Row gutter={24}>
-              <Col xl={10} lg={10} md={12} sm={24} xs={24}>
-                <Card bordered loading={loading}>
-                  <SiteTotalSightings data={sitecomparison.list} />
-                </Card>
+
+          {(selectedDates.length ? (
+            <Row gutter={24}>
+              <Col xl={10} lg={24} md={24} sm={24} xs={24} style={{ marginBottom: 24 }}>
+                <SiteTotalSightings data={sitecomparison.list} dates={selectedDates} />
               </Col>
 
-              <Col xl={14} lg={14} md={12} sm={24} xs={24}>
-                <Card bordered loading={loading}>
-                  <SiteCountryBarChart data={sitecomparison.grouped}/>
-                </Card>
+              <Col xl={14} lg={24} md={24} sm={24} xs={24}>
+               &nbsp;
               </Col>
-          </Row>
+            </Row>
+          ) :  <Row gutter={24}><Col xl={10} lg={24} md={24} sm={24} xs={24} style={{ marginBottom: 24 }}></Col></Row>)}
 
-         {/*  <Row gutter={24}>
-              <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                <Card bordered loading={this.state.loading}>
-                  <div>
+          {
+            <Row gutter={24}>
+              <Col xl={24} style={{ marginBottom: 24 }}>
+                <SiteCountryBarChart data={sitecomparison} />
+              </Col>
+            </Row>
+          }
 
-                    <Switch
-                      checkedChildren="Separate Sites"
-                      unCheckedChildren="Combine Sites"
-                      defaultChecked={combinedSites}
-                      onChange={this.toggleSitesCombined.bind(this)}
-                    />
-                    <div>
-                      <SiteEventsChartsHolderIndividual site_ids={selectedRow.map(x => x.id)}/>
-                    </div>
-                  </div>
-                </Card>
-            </Col>
-          </Row>*/}
+          {/*{<Row gutter={24}>*/}
+            {/*<Col xl={24} lg={24} md={24} sm={24} xs={24}>*/}
+              {/*<Card bordered loading={this.state.loading}>*/}
+                {/*<div>*/}
 
-          <Row>
-            <Col>
-              <Card bordered>
+                  {/*<Switch*/}
+                    {/*checkedChildren="Separate Sites"*/}
+                    {/*unCheckedChildren="Combine Sites"*/}
+                    {/*defaultChecked={combinedSites}*/}
+                    {/*onChange={this.toggleSitesCombined.bind(this)}*/}
+                  {/*/>*/}
+                  {/*<div>*/}
+                    {/*<SiteEventsChartsHolderIndividual site_ids={selectedRow.map(x => x.id)}/>*/}
+                  {/*</div>*/}
+                {/*</div>*/}
+              {/*</Card>*/}
+            {/*</Col>*/}
+          {/*</Row>}*/}
 
-                <Button onClick={this.doSplit.bind(this)}> Down </Button>
-                <Button onClick={this.doUnSplit.bind(this)}> Up</Button>
+          {/*<Row>*/}
+            {/*<Col>*/}
+              {/*<Card bordered>*/}
+
+                {/*<Button onClick={this.doSplit.bind(this)}> Down </Button>*/}
+                {/*<Button onClick={this.doUnSplit.bind(this)}> Up</Button>*/}
 
 
                 {/*<svg width={'100%'} height={800}>*/}
 
-                {/*{*/}
-                {/*Object.keys(data).map((e, i) => {*/}
-                {/*if (e !== 'United Kingdom') {*/}
-                {/*return <HourlyCountryThing key={i} split={split} index={i} data={data[e]} />*/}
-                {/*}*/}
-                {/*return <span>UK</span>;*/}
-                {/*}*/}
-                {/*)*/}
-                {/*}*/}
+                {/*/!*{*!/*/}
+                {/*/!*Object.keys(data).map((e, i) => {*!/*/}
+                {/*/!*if (e !== 'United Kingdom') {*!/*/}
+                {/*/!*return <HourlyCountryThing key={i}  index={i} data={data[e]} />*!/*/}
+                {/*/!*}*!/*/}
+                {/*/!*return <span>UK</span>;*!/*/}
+                {/*/!*}*!/*/}
+                {/*/!*)*!/*/}
+                {/*/!*}*!/*/}
 
                 {/*</svg>)*/}
 
-              </Card>
-            </Col>
-          </Row>
+              {/*</Card>*/}
+            {/*</Col>*/}
+          {/*</Row>*/}
 
 
 
@@ -208,7 +224,7 @@ class SiteComparison extends PureComponent {
 export default connect((state) => {
 
   return {
-    loading : state.sitecomparison_namespace.loading,
+    loading: state.sitecomparison_namespace.loading,
     sites: state.site_namespace.sites,
     sitecomparison: state.sitecomparison_namespace.sitecomparison
   }
