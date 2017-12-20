@@ -1,29 +1,64 @@
-import React, { PureComponent } from 'react';
-import { Chart, Axis, Bar, Coord } from 'viser-react';
-
+import React, {PureComponent} from 'react';
+import {Chart, Axis, Bar, Coord} from 'viser-react';
+import {Row, Col, Card, Tabs, Tooltip} from 'antd';
 import _ from 'lodash';
 
-const dataPre = {
-  transform: {
-    type: 'fold',
-    fields: [ 30 ],
-    key: 'type',
-    value: 'value',
-  },
-};
+import styles from './SiteCountryBarChart.less';
+
+const TabPane = Tabs.TabPane;
+
 
 class SiteCountryBarChart extends PureComponent {
   render() {
 
-    const data2 = this.props.data;
+    const groupedBySite = _(this.props.data.list).groupBy('site_id').value()
 
     return (
-      <Chart width={600} height={600} data={data2} dataPre={dataPre}>
-        <Coord type="rect" direction="LT" />
-        <Axis dataKey="value" position="right" />
 
-        <Bar position="label*value" color="type"  />
-      </Chart>
+      <Card
+        bordered={false}
+        bodyStyle={{padding: 0}}
+      >
+        <div className={styles.salesCard}>
+          <Tabs size="large" tabBarStyle={{marginBottom: 24}}>
+            {Object.keys(groupedBySite).map((site) => {
+
+              return (<TabPane tab={site} key={site}>
+                <Row>
+
+                  <Col xl={18} lg={12} md={12} sm={24} xs={24}>
+                    <div className={styles.salesBar}>
+                      <Chart forceFit height={700} data={ groupedBySite[site] }>
+                        <Coord type="rect" direction="RB" />
+                        <Tooltip/>
+                        <Axis dataKey="country" offset={{left: 10}} label={{offset: 10}} />
+                        <Bar position="country*count" />
+                      </Chart>
+                    </div>
+                  </Col>
+
+                  <Col xl={6} lg={12} md={12} sm={24} xs={24}>
+                    <div className={styles.salesRank}>
+                      <h4 className={styles.rankingTitle}>Number of visits</h4>
+                      <ul className={styles.rankingList}>
+
+                        {(groupedBySite[site].map((row, i) => {
+                          return (<li key={i}><span>{row.count}</span><span>{row.country}</span></li>)
+                        }))}
+
+                      </ul>
+                    </div>
+                  </Col>
+                </Row>
+              </TabPane>)
+            })}
+
+
+          </Tabs>
+        </div>
+      </Card>
+
+
     );
   }
 }

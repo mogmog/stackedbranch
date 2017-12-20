@@ -235,14 +235,12 @@ class Department(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
 
-
 class SightingsPerHourPerCountry(db.Model):
     __table__ = db.Table('sightingsperhourpercountry', db.Model.metadata,
         db.Column('country', db.String, primary_key=True),
         db.Column('hour', db.Integer, primary_key=True),
         db.Column('count', db.Integer, primary_key=False)
         )
-
 
 class SightingsNew(db.Model):
     __table__ = db.Table('uniquecountryhandsetsightings', db.Model.metadata,
@@ -252,6 +250,16 @@ class SightingsNew(db.Model):
          db.Column('site_id', db.Integer, primary_key=False),
         db.Column('count', db.Integer, primary_key=False)
         )
+
+class SightingsBase(db.Model):
+    __table__ = db.Table('basehandsetsightings', db.Model.metadata,
+        db.Column('roundedtohour', db.DateTime, primary_key=True),
+        db.Column('network', db.String, primary_key=True),
+        db.Column('country', db.String, primary_key=True),
+        db.Column('roundedtoday', db.DateTime, primary_key=False),
+        db.Column('site_id', db.Integer, primary_key=False),
+        )
+
 
 
 

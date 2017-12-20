@@ -22,7 +22,7 @@ from flask_bcrypt import Bcrypt
 # initialize db
 db = SQLAlchemy()
 
-from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew
+from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase
 from app.models import Department as DepartmentModel
 
 class Department(SQLAlchemyObjectType):
@@ -97,6 +97,21 @@ def create_app(config_name):
       return make_response(jsonify({ 'list' : results })), 200
 
     @app.route('/api/sightingsnew', methods=['POST'])
+    def sightingsnewW():
+
+      sightings = db.session.query(SightingsBase.site_id, SightingsBase.country, func.count(SightingsBase.roundedtoday))\
+                        .filter(SightingsBase.site_id.in_(request.data['selectedRow']))\
+                        .filter(SightingsBase.roundedtoday.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))\
+                        .group_by(SightingsBase.site_id, SightingsBase.country)\
+                        .order_by(SightingsBase.site_id, func.count(SightingsBase.roundedtoday).desc())\
+
+      results = []
+      for sighting in sightings.all():
+         results.append({'country' : sighting.country, 'site_id' : sighting.site_id, 'count' : sighting[2]})
+
+      return make_response(jsonify({ 'list' : results })), 200
+
+    @app.route('/api/sightingsnewold', methods=['POST'])
     def sightingsnew():
 
       #remembert to keep the keep the filters in sync
@@ -109,7 +124,9 @@ def create_app(config_name):
       groupedsightings = db.session.query(SightingsNew.country, SightingsNew.site_id, func.count(SightingsNew.country))\
                         .filter(SightingsNew.site_id.in_(request.data['selectedRow']))\
                         .filter(SightingsNew.day.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))\
-                        .group_by(SightingsNew.country, SightingsNew.site_id).all()
+                        .group_by(SightingsNew.country, SightingsNew.site_id)\
+                        .order_by(func.count(SightingsNew.country).desc())\
+                        .all()
 
       groupedresults = []
       for element in groupedsightings:
