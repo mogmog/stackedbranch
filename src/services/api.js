@@ -9,6 +9,19 @@ export async function querySites() {
   return request('/api/sites');
 }
 
+export async function querySmallcells() {
+  return request('/api/smallcells');
+}
+
+export async function saveSmallCell(params) {
+  return request('/api/smallcells/update', {
+    method: 'POST',
+    body: {
+      ...params,
+    },
+  });
+}
+
 export async function querySitesComparison(params) {
   return request('/api/sightingsnew', {
     method: 'POST',

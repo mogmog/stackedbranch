@@ -85,6 +85,7 @@ class AreaDefinitionTable extends PureComponent {
     const { dispatch } = this.props;
 
     /*We have to use the callback of setState here as otherwise state might not have beene updated? IS THIS RIGHT?!?!*/
+    //why are you bothering with state at all here - could just create payloasd object from scratch!?!?!?
     this.setState({
       payload: {
         id : id

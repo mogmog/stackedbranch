@@ -182,7 +182,26 @@ def create_app(config_name):
 
         return make_response(jsonify({ 'list' : results })), 200
 
+    @app.route('/api/smallcells', methods=['GET'])
+    def get_smallcells():
+        allSmallCells = SmallCell.query.order_by(SmallCell.id).all()
 
+        results = []
+        for smallcell in allSmallCells:
+          results.append(smallcell.serialise())
+
+        return make_response(jsonify({ 'list' : results })), 200
+
+    @app.route('/api/smallcells/update', methods=['POST'])
+    def update_smallcell():
+        smallcell_id    = request.data.get('id', '')
+        site_id  = request.data.get('site_id', '')
+
+        smallcell = SmallCell.query.filter_by(id=smallcell_id).first()
+        smallcell.site_id = site_id
+        smallcell.save()
+
+        return make_response(jsonify({ 'smallcell_id' : smallcell.id, 'site_id' : smallcell.site_id })), 200
 
     @app.route('/api/sighting/byarea/<areaid>', methods=['GET'])
     def get_sighting(areaid):

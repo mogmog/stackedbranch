@@ -32,7 +32,14 @@ export const getNavData = app => [
       },
 
       {
-        name: 'Site Stuff',
+        name: 'Small cells',
+        icon: 'api',
+        path: 'smallcells',
+        component: dynamicWrapper(app, ['smallcell', 'site'], () => import('../routes/SmallCell')),
+      },
+
+      {
+        name: 'Site Dashboard',
         icon: 'shopping-cart',
         path: 'sites',
         component: dynamicWrapper(app, ['site', 'sitecomparison'], () => import('../routes/SiteComparison')),
