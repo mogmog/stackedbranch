@@ -482,7 +482,7 @@
       <workItem from="1512986243708" duration="70676000" />
       <workItem from="1513244063252" duration="39474000" />
       <workItem from="1513351166071" duration="8849000" />
-      <workItem from="1513677224991" duration="49189000" />
+      <workItem from="1513677224991" duration="49244000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -666,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513856695466</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Site titles">
+      <created>1513858508986</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1513858508986</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359603000" />
+    <option name="totallyTimeSpent" value="359658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="151" y="44" width="2416" height="1685" extended-state="0" />
@@ -741,7 +748,8 @@
     <MESSAGE value="working site comparison page" />
     <MESSAGE value="wip" />
     <MESSAGE value="adding small cell interface with site select" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding small cell interface with site select" />
+    <MESSAGE value="Site titles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Site titles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
