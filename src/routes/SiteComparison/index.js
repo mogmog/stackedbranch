@@ -143,10 +143,8 @@ class SiteComparison extends PureComponent {
         <PageHeaderLayout>
 
           <a onClick={this.showFilter}>edit filters</a>
-
-          {(selectedDates.length ? (
             <Row gutter={24}>
-              <Col xl={10} lg={24} md={24} sm={24} xs={24} style={{ marginBottom: 24 }}>
+              <Col xl={8} lg={24} md={24} sm={24} xs={24} style={{ marginBottom: 24 }}>
                 <SiteTotalSightings data={sitecomparison.list} dates={selectedDates} />
               </Col>
 
@@ -154,12 +152,11 @@ class SiteComparison extends PureComponent {
                &nbsp;
               </Col>
             </Row>
-          ) :  <Row gutter={24}><Col xl={10} lg={24} md={24} sm={24} xs={24} style={{ marginBottom: 24 }}></Col></Row>)}
 
           {
             <Row gutter={24}>
               <Col xl={24} style={{ marginBottom: 24 }}>
-                <SiteCountryBarChart data={sitecomparison} />
+                <SiteCountryBarChart sites={sites} data={sitecomparison} />
               </Col>
             </Row>
           }

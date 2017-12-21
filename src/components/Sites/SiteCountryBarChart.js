@@ -11,7 +11,8 @@ const TabPane = Tabs.TabPane;
 class SiteCountryBarChart extends PureComponent {
   render() {
 
-    const groupedBySite = _(this.props.data.list).groupBy('site_id').value()
+    const sitesMap      = _(this.props.sites.list).keyBy('id').value();
+    const groupedBySite = _(this.props.data.list).groupBy('site_id').value();
 
     return (
 
@@ -23,10 +24,10 @@ class SiteCountryBarChart extends PureComponent {
           <Tabs size="large" tabBarStyle={{marginBottom: 24}}>
             {Object.keys(groupedBySite).map((site) => {
 
-              return (<TabPane tab={site} key={site}>
+              return (<TabPane tab={ sitesMap[site].name } key={site}>
                 <Row>
 
-                  <Col xl={18} lg={12} md={12} sm={24} xs={24}>
+                  <Col xl={16} lg={12} md={12} sm={24} xs={24}>
                     <div className={styles.salesBar}>
                       <Chart forceFit height={700} data={ groupedBySite[site] }>
                         <Coord type="rect" direction="RB" />
@@ -37,7 +38,7 @@ class SiteCountryBarChart extends PureComponent {
                     </div>
                   </Col>
 
-                  <Col xl={6} lg={12} md={12} sm={24} xs={24}>
+                  <Col xl={8} lg={12} md={12} sm={24} xs={24}>
                     <div className={styles.salesRank}>
                       <h4 className={styles.rankingTitle}>Number of visits</h4>
                       <ul className={styles.rankingList}>
