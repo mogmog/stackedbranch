@@ -40,7 +40,7 @@ export const getNavData = app => [
 
       {
         name: 'Site Dashboard',
-        icon: 'shopping-cart',
+        icon: 'shop',
         path: 'sites',
         component: dynamicWrapper(app, ['site', 'sitecomparison'], () => import('../routes/SiteComparison')),
       },
