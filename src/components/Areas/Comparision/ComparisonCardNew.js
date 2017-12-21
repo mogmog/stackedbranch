@@ -49,17 +49,7 @@ class ComparisonCardNew extends React.Component {
       return g;
     };
 
-    const fakeData = [];
-    fakeData.push({timestamp: new Date('1 December 2017 00:00:45'), network: {network: 'O2' } });
-    fakeData.push({timestamp: new Date('1 December 2017 05:00:45'), network: {network: 'O2' } });
-    fakeData.push({timestamp: new Date('1 December 2017 13:00:45'), network: {network: 'O2' } });
-    fakeData.push({timestamp: new Date('1 December 2017 12:00:45'), network: {network: 'Vodafone' } });
-    fakeData.push({timestamp: new Date('1 December 2017 20:00:45'), network: {network: 'Vodafone' } });
-    fakeData.push({timestamp: new Date('1 December 2017 23:00:45'), network: {network: 'Vodafone' } });
-
-    console.log(fakeData);
-
-    const data = crossfilter(fakeData);
+    const data = crossfilter(this.state.sightings);
 
     const timeOfDayDimension  = data.dimension(d => getGreetingTime(moment(d.timestamp)) );
     const timeOfDayCount      = timeOfDayDimension.group().reduceCount()
@@ -72,13 +62,13 @@ class ComparisonCardNew extends React.Component {
 
         <Row>
           <Col>
-            {(fakeData.length ? <PieChart dimension={timeOfDayDimension} group={timeOfDayCount} /> : <span>loading</span>)}
+            {( data.length ? <PieChart dimension={timeOfDayDimension} group={timeOfDayCount} /> : <span></span>)}
           </Col>
         </Row>
 
         <Row>
           <Col>
-            {(fakeData.length ? <PieChart dimension={networkDimension} group={networkCount} /> : <span>loading</span>)}
+            {(data.length ? <PieChart dimension={networkDimension} group={networkCount} /> : <span></span>)}
           </Col>
         </Row>
 
