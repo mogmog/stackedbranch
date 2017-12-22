@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Table, Card, Select } from 'antd';
+import * as eeGeo from 'wrld.js';
 
 const Option = Select.Option;
 
@@ -13,6 +14,20 @@ class SmallCellList extends PureComponent {
 
   componentDidMount() {
     const { dispatch } = this.props;
+
+    /*const map = eeGeo.map("map", "45c72b83bc93b317be7cb813da7fd4ef", {
+      center: [37.7858, -122.401],
+      zoom: 16,
+    });
+
+    setTimeout(function() {
+      map.setView([37.802, -122.4058], 18, {
+        headingDegrees: 270,
+        animate: true,
+        durationSeconds:5
+      });
+    }, 5000);*/
+
 
     dispatch({
       type: 'site_namespace/fetch',
@@ -67,6 +82,8 @@ class SmallCellList extends PureComponent {
       <span>
 
         <PageHeaderLayout>
+
+
 
           <Card bordered={false}>
             <div>
