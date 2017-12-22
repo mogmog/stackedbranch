@@ -79,7 +79,7 @@ export default class Workplace extends PureComponent {
 
         <Row gutter={24}>
           {cards.map((areaid, i) => (
-            <Col xl={12} lg={12} md={12} sm={24} xs={24} key={i}>
+            <Col xl={8} lg={8} md={24} sm={24} xs={24} key={i}>
               <Card
                 style={{marginBottom: 24}}
                 title={ 'Store index ' + i}

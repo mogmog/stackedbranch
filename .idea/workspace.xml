@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/sql/get_sightings.sql" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/ndx.csv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/dcexample.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/Base.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/BubbleChart.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/ChartContainer.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/DataCount.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/helpers.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/DCReact/components/index.jsx" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/common/nav.js" afterPath="$PROJECT_DIR$/src/common/nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" afterPath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" afterPath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
+      <change beforePath="$PROJECT_DIR$/api/app/__init__.py" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js" afterPath="$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" afterPath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,24 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="158" column="20" lean-forward="true" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <element signature="e#3229#3894#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ComparisonCardNew.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="70" column="99" lean-forward="false" selection-start-line="70" selection-start-column="99" selection-end-line="70" selection-end-column="99" />
+            <state relative-caret-position="-6">
+              <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -44,11 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteCountryBarChart.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js">
+      <file leaf-file-name="AreaSelectMap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+                <marker date="1513010265249" expanded="true" signature="339:595" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AreaComparison.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -56,52 +72,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/nav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="797">
-              <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="site.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/site.js">
+      <file leaf-file-name="storeCompareRowChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareRowChart.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smallcell.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/smallcell.js">
+      <file leaf-file-name="storeCompareDateChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareDateChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="area.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/area.js">
+      <file leaf-file-name="SmallCellIcon.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/SmallCellIcon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="51" column="6" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="51" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/api.js">
+      <file leaf-file-name="realworld.10000.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/realworld.10000.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,11 +123,9 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/SmallCell/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="1250">
               <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,8 +133,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="171" column="34" lean-forward="true" selection-start-line="171" selection-start-column="34" selection-end-line="171" selection-end-column="34" />
+            <state relative-caret-position="706">
+              <caret line="219" column="68" lean-forward="false" selection-start-line="219" selection-start-column="68" selection-end-line="219" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -132,14 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modalVisible</find>
-      <find>modalVis</find>
-      <find>modal</find>
-      <find>handleOk</find>
-      <find>handleCancel</find>
-      <find>`</find>
-      <find>modalV</find>
-      <find>google</find>
       <find>loading</find>
       <find>.query</find>
       <find>onNameChange</find>
@@ -162,6 +166,14 @@
       <find>data</find>
       <find>sightingsnre</find>
       <find>byarea</find>
+      <find>in</find>
+      <find>App</find>
+      <find>prop</find>
+      <find>pro</find>
+      <find>propTypes</find>
+      <find>PropTypes</find>
+      <find>require</find>
+      <find>csv</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -208,21 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/SensorIcon.js" />
-        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
-        <option value="$PROJECT_DIR$/api/data/networks2.csv" />
-        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/SmallCellIcon.js" />
-        <option value="$PROJECT_DIR$/api/data/networks.csv" />
-        <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step2.js" />
-        <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.js" />
-        <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/Step1.js" />
-        <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteTable.js" />
-        <option value="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/SiteList.js" />
-        <option value="$PROJECT_DIR$/src/models/site.js" />
-        <option value="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
-        <option value="$PROJECT_DIR$/src/components/Sites/SiteEventChartsHolder.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json" />
-        <option value="$PROJECT_DIR$/api/dbinit.py" />
         <option value="$PROJECT_DIR$/mock/rule.js" />
         <option value="$PROJECT_DIR$/sql/sightingsPerHourPerCountry.sql" />
         <option value="$PROJECT_DIR$/api/app/schema.py" />
@@ -236,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/components/Sites/SiteDateSelect.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/HourlyCountryThing.js" />
         <option value="$PROJECT_DIR$/src/models/site.comparisonjs" />
-        <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
         <option value="$PROJECT_DIR$/sql/countryHandsetSightings.sql" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/g2.js" />
@@ -249,16 +245,32 @@
         <option value="$PROJECT_DIR$/src/components/Sites/SiteTotalSightings.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.less" />
         <option value="$PROJECT_DIR$/api/app/models.py" />
-        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
         <option value="$PROJECT_DIR$/src/routes/SmallCell/List/index.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
         <option value="$PROJECT_DIR$/src/services/api.js" />
         <option value="$PROJECT_DIR$/src/models/smallcell.js" />
         <option value="$PROJECT_DIR$/src/routes/SmallCell/index.js" />
-        <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/common/nav.js" />
         <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
+        <option value="$PROJECT_DIR$/node_modules/react-dc/dist/module/mixins/color-mixin.js" />
+        <option value="$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/node_modules/dc-react/components/ChartContainer.jsx" />
+        <option value="$PROJECT_DIR$/node_modules/dc-react/lib/ChartContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/BubbleChart.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/Base.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/ChartContainer.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/dcexample.js" />
+        <option value="$PROJECT_DIR$/sql/get_sightings.sql" />
+        <option value="$PROJECT_DIR$/api/app/__init__.py" />
+        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
+        <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
       </list>
     </option>
   </component>
@@ -280,10 +292,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="151" />
-    <option name="y" value="44" />
+    <option name="x" value="372" />
+    <option name="y" value="-1785" />
     <option name="width" value="2416" />
-    <option name="height" value="1685" />
+    <option name="height" value="1757" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -311,7 +323,50 @@
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Areas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Areas" type="462c0819:PsiDirectoryNode" />
+              <item name="Comparision" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -324,7 +379,14 @@
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="SiteComparison" type="462c0819:PsiDirectoryNode" />
+              <item name="AreaComparison" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="SmallCell" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,7 +397,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dc-react-example" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -352,18 +414,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\assets" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\SmallCell" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Sites" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Comparision" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\DCReact" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Comparision" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\SmallCell\List" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Sites" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api\data" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\SiteComparison" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -482,7 +544,7 @@
       <workItem from="1512986243708" duration="70676000" />
       <workItem from="1513244063252" duration="39474000" />
       <workItem from="1513351166071" duration="8849000" />
-      <workItem from="1513677224991" duration="49244000" />
+      <workItem from="1513677224991" duration="69700000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -673,26 +735,40 @@
       <option name="project" value="LOCAL" />
       <updated>1513858508986</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Site titles">
+      <created>1513858518654</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1513858518654</updated>
+    </task>
+    <task id="LOCAL-00029" summary="formatting">
+      <created>1513865922374</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1513865922374</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359658000" />
+    <option name="totallyTimeSpent" value="380114000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="151" y="44" width="2416" height="1685" extended-state="0" />
+    <frame x="372" y="-1785" width="2416" height="1757" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2908745" sideWeight="0.509059" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30657893" sideWeight="0.3508547" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31025642" sideWeight="0.16888046" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46168342" sideWeight="0.3508547" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31025642" sideWeight="0.17036173" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30657893" sideWeight="0.6491453" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46168342" sideWeight="0.6491453" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31025642" sideWeight="0.83111954" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31025642" sideWeight="0.8296383" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -724,7 +800,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added radar graph" />
     <MESSAGE value="tidied up some of the apis" />
     <MESSAGE value="theming" />
     <MESSAGE value="Add D3 map thingy" />
@@ -749,7 +824,8 @@
     <MESSAGE value="wip" />
     <MESSAGE value="adding small cell interface with site select" />
     <MESSAGE value="Site titles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Site titles" />
+    <MESSAGE value="formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -773,274 +849,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/models/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/monitor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1513010265249" expanded="true" signature="339:595" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="60" column="57" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="60" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5733">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/realworld.10000.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/SmallCellIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareRowChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareDateChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Bar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/theme.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Radar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/venv/bin/activate">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-967">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="51" column="140" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/viser-react/src/components/Chart.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/g2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/sitecomparison.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/rule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="75" column="15" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="48" column="3" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="48" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="241" column="141" lean-forward="false" selection-start-line="241" selection-start-column="141" selection-end-line="241" selection-end-column="141" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <element signature="n#!!block;n#getGeoJson#0;n#AreaMapThumbnail#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="63" column="6" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="63" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/uniqueCountryHandsetSightings.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Charts/ChartCard/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1096,7 +904,7 @@
         <state relative-caret-position="315">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
             <marker date="1513703295837" expanded="true" signature="494:798" ph="..." />
           </folding>
         </state>
@@ -1107,7 +915,7 @@
         <state relative-caret-position="252">
           <caret line="87" column="105" lean-forward="false" selection-start-line="87" selection-start-column="105" selection-end-line="87" selection-end-column="105" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1117,16 +925,6 @@
         <state relative-caret-position="839">
           <caret line="51" column="6" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="51" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="70" column="99" lean-forward="false" selection-start-line="70" selection-start-column="99" selection-end-line="70" selection-end-column="99" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,28 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/SmallCell/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="171" column="34" lean-forward="true" selection-start-line="171" selection-start-column="34" selection-end-line="171" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="797">
-          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+          <caret line="49" column="26" lean-forward="false" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1183,9 +963,9 @@
     <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="158" column="20" lean-forward="true" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
+          <caret line="158" column="20" lean-forward="false" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
             <element signature="e#3229#3894#0" expanded="false" />
           </folding>
         </state>
@@ -1193,8 +973,336 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/DataTableChart.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-dc/dist/module/mixins/color-mixin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-dc/dist/react-dc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-dc/dist/module/react-dc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/components/ChartContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/lib/ChartContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/lib/BubbleChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-548">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/components/RowChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/DataCount.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BubbleChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/Base.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/ndx.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/ChartContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1337">
+          <caret line="253" column="68" lean-forward="false" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/dcexample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="80" />
+          <folding>
+            <element signature="n#!!block;n#indexAvgByMonthGroup#0;n#CrossfilterContext#0" expanded="false" />
+            <element signature="n#!!block;n#yearlyPerformanceGroup#0;n#CrossfilterContext#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/get_sightings.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="219" column="68" lean-forward="false" selection-start-line="219" selection-start-column="68" selection-end-line="219" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/SmallCell/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareRowChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareDateChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/SmallCellIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/realworld.10000.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="81" column="16" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1513010265249" expanded="true" signature="339:595" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="65" column="50" lean-forward="true" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>

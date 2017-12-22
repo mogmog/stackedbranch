@@ -3,9 +3,8 @@ import { Router, Route } from 'dva/router';
 import crossfilter from 'crossfilter2';
 import { Spin, Row, Col } from 'antd';
 import moment from 'moment';
-
 import request from '../../../utils/request';
-import PieChart from '../../DCChartWrappers/PieChart';
+import { ChartContainer, PieChart, RowChart, BubbleChart, DataTable, DataCount, BarChart, LineChart } from './../../DCReact/components';
 
 class ComparisonCardNew extends React.Component {
   constructor() {
@@ -29,6 +28,15 @@ class ComparisonCardNew extends React.Component {
 
   render() {
 
+    const records = [{x: 0, y: 1}, {x: 1, y: 3}, {x: 2, y: 5}, {x: 3, y: 1}, {x: 4, y: 2}]
+    const data = crossfilter(records)
+    const dimension = data.dimension(record => record.x)
+    const group = dimension.group().reduceSum(record => record.y)
+
+
+    if (!this.state.sightings.length) return (<span> No Results</span>);
+
+
     const getGreetingTime = (m) => {
       var g = null; //return g
 
@@ -49,26 +57,45 @@ class ComparisonCardNew extends React.Component {
       return g;
     };
 
-    const data = crossfilter(this.state.sightings);
+    const ndx = crossfilter(this.state.sightings);
 
-    const timeOfDayDimension  = data.dimension(d => getGreetingTime(moment(d.timestamp)) );
-    const timeOfDayCount      = timeOfDayDimension.group().reduceCount()
+    const hourDimension  = ndx.dimension(d => getGreetingTime(moment(d.timestamp)));
+    const hourDimensionCount = hourDimension.group();
 
-    const networkDimension    = data.dimension(d => (d.network.network));
-    const networkCount        = networkDimension.group().reduceCount()
+    const countryDimension  = ndx.dimension(d => d.country);
+    const countryDimensionCount = countryDimension.group();
 
     return (
       <Spin spinning={this.state.loading}>
 
         <Row>
           <Col>
-            {( data.length ? <PieChart dimension={timeOfDayDimension} group={timeOfDayCount} /> : <span></span>)}
+            <PieChart
+              dimension={e => { return countryDimension }}
+              group={e => { return countryDimensionCount }}
+              width={300}
+              height={300}
+              radius={120}
+              label={(d) => {
+                return d.key;
+              }}
+            />
           </Col>
         </Row>
 
         <Row>
           <Col>
-            {(data.length ? <PieChart dimension={networkDimension} group={networkCount} /> : <span></span>)}
+            <RowChart
+              dimension={e => { return hourDimension }}
+              group={e => { return hourDimensionCount}}
+              width={280}
+              height={280}
+              elasticX={true}
+              margins={{ top: 20, left: 10, right: 10, bottom: 20 }}
+              label={d => {return d.key }}
+              title={d => d.value}
+              xAxis={axis => axis.ticks(4)}
+            />
           </Col>
         </Row>
 
@@ -79,6 +106,3 @@ class ComparisonCardNew extends React.Component {
 
 export default ComparisonCardNew;
 
-//React.PropTypes
-
-//define prop type3s

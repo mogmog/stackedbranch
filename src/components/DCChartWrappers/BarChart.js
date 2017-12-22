@@ -11,8 +11,11 @@ class BarChart extends React.Component {
     let DOMNode = ReactDOM.findDOMNode(this)
 
     // Create a dc.js barChart
-    const chart = dc.barChart(DOMNode)
+    const chart = dc.rowChart(DOMNode)
     this.chart = this.setChartProperties(chart, width, height, dimension, group, xRange, yRange, rangeFilter, rangeChartID, children, options)
+    //this.chart.x(d3.scale.linear().domain([0, 5]));
+   // this.chart.elasticX(true);
+
     this.chart.render()
 
     if (getChartID) {
@@ -67,16 +70,6 @@ class BarChart extends React.Component {
       },
       dimension: dimension,
       group: group,
-      valueAccessor: valueAccessor || ((d) => {
-        return d.value
-      }),
-      x: x || d3.time.scale().domain(xRange),
-      xUnits: d3.time.days,
-      brushOn: brushOn || true,
-      elasticY: _.isNil(yRange),
-      mouseZoomable: mouseZoomable || false,
-      renderVerticalGridLines: false,
-      transitionDuration: transitionDuration || 500,
     }
 
     chart.options(_.extend({}, defaultOptions, options))
@@ -98,29 +91,15 @@ class BarChart extends React.Component {
 
 
 BarChart.defaultProps = {
-  width: 100,
+  width: 500,
   height: 200,
-  yRange: null,
-  rangeChartID: null,
-  children: null,
-  rangeFilter: null,
   options: {
     margins: {
       top: 10,
       right: 20,
       bottom: 30,
       left: 20,
-    },
-    keyAccessor: (d) => d.key,
-    valueAccessor: (d) => d.value,
-    brushOn: true,
-    centerBar: true,
-    mouseZoomable: false,
-    renderTitle: false,
-    renderHorizontalGridLines: true,
-    renderVerticalGridLines: true,
-    transitionDuration: 500,
-    yAxisTicks: 4,
+    }
   },
 }
 
