@@ -11,7 +11,7 @@ class AreaSelectMap extends PureComponent {
 
     return (
       <Map zoomControl={false} center={[51.522416, -0.185394]} zoom={12}>
-        <TileLayer url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+        <TileLayer opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
         {
           areas.list.map((area, i) =>
