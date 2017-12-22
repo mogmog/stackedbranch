@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route } from 'dva/router';
-import crossfilter from 'crossfilter2';
+import crossfilter from 'crossfilter2/crossfilter';
 import { Spin, Row, Col } from 'antd';
 import moment from 'moment';
 import request from '../../../utils/request';
@@ -28,14 +28,9 @@ class ComparisonCardNew extends React.Component {
 
   render() {
 
-    const records = [{x: 0, y: 1}, {x: 1, y: 3}, {x: 2, y: 5}, {x: 3, y: 1}, {x: 4, y: 2}]
-    const data = crossfilter(records)
-    const dimension = data.dimension(record => record.x)
-    const group = dimension.group().reduceSum(record => record.y)
-
-
+    console.log(this);
+    if (this.state.loading) return (<span> Loading...</span>);
     if (!this.state.sightings.length) return (<span> No Results</span>);
-
 
     const getGreetingTime = (m) => {
       var g = null; //return g
@@ -47,11 +42,11 @@ class ComparisonCardNew extends React.Component {
       var currentHour = parseFloat(m.format("HH"));
 
       if (currentHour >= split_afternoon && currentHour <= split_evening) {
-        g = "afternoon";
+        g = "Afternoon";
       } else if(currentHour >= split_evening) {
-        g = "evening";
+        g = "Evening";
       } else {
-        g = "morning";
+        g = "Morning";
       }
 
       return g;
@@ -66,7 +61,7 @@ class ComparisonCardNew extends React.Component {
     const countryDimensionCount = countryDimension.group();
 
     return (
-      <Spin spinning={this.state.loading}>
+      <div>
 
         <Row>
           <Col>
@@ -87,7 +82,7 @@ class ComparisonCardNew extends React.Component {
           <Col>
             <RowChart
               dimension={e => { return hourDimension }}
-              group={e => { return hourDimensionCount}}
+              group={e => { return hourDimensionCount }}
               width={280}
               height={280}
               elasticX={true}
@@ -99,7 +94,7 @@ class ComparisonCardNew extends React.Component {
           </Col>
         </Row>
 
-      </Spin>
+      </div>
     );
   }
 }

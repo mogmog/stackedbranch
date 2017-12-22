@@ -6,14 +6,17 @@ import { Base } from './Base';
 class RowChart extends Component {
 
   loadChart = (container) => {
-    const chart = dc.rowChart(container);
-    const helper = this.props.chartHelper(this, chart);
-    helper.setProperties('elasticX');
 
-    if (this.props.xAxis) {
-      this.props.xAxis(chart.xAxis());
+    if (container) {
+      const chart = dc.rowChart(container);
+      const helper = this.props.chartHelper(this, chart);
+      helper.setProperties('elasticX');
+
+      if (this.props.xAxis) {
+        this.props.xAxis(chart.xAxis());
+      }
+      chart.render();
     }
-    chart.render();
   };
 
   render() {
