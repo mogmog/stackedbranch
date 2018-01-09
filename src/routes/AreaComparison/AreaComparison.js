@@ -31,7 +31,7 @@ export default class Workplace extends PureComponent {
   }
 
   onClickArea(area) {
-    this.setState({ cards: [...this.state.cards, area.id] });
+    this.setState({ cards: [...this.state.cards, area] });
   }
 
   render() {
@@ -60,7 +60,7 @@ export default class Workplace extends PureComponent {
         <Row gutter={24}>
             <Col xl={24} lg={24} md={24} sm={24} xs={24}>
               <Card
-                title={'Select multiple areas'}
+                title={'Select 2 areas you wish to compare'}
                 bordered={true} >
 
                 <AnimateHeight height={ height } >
@@ -78,17 +78,10 @@ export default class Workplace extends PureComponent {
         </Row>
 
         <Row gutter={24}>
-          {cards.map((areaid, i) => (
+          {cards.map((area, i) => (
             <Col xl={8} lg={8} md={24} sm={24} xs={24} key={i}>
-              <Card
-                style={{marginBottom: 24}}
-                title={ 'Store index ' + i}
-                bordered={true}
-                bodyStyle={{padding: 0}}
-              >
-                <ComparisonCardNew area={areaid} />
-              </Card>
-            </Col>
+                <ComparisonCardNew area={area} />
+              </Col>
           ))}
         </Row>
 
