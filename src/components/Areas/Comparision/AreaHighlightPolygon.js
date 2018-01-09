@@ -18,9 +18,7 @@ class AreaHighlightPolygon extends PureComponent {
 
     const area = this.props.area;
 
-   layer.bindTooltip(area.name,
-       {permanent: true, direction:"center"}
-     );
+    layer.bindTooltip(area.name, { permanent: true, direction: 'auto' } );
 
     layer.on({
       click: (e) => {
