@@ -4,10 +4,10 @@ import {Table, Alert, Badge, Divider, Button, Modal, Card, Form, Input} from 'an
 
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import {Map, TileLayer, Circle, FeatureGroup, Polygon} from 'react-leaflet';
-import {EditControl} from 'react-leaflet-draw';
 
 import D3Map from './../../components/D3Map/D3Map';
 import AreaMapThumbnail from '../../components/Areas/Definition/AreaMapThumbnail';
+import AreaDefinitionMapToolbar from './AreaDefinitionMapToolbar';
 import {connect} from "dva";
 
 const FormItem = Form.Item;
@@ -22,11 +22,15 @@ class AreaDefinitionTable extends PureComponent {
     layers : [1],
     visible: false,
     confirmLoading: false,
-    payload: {id : undefined, name : undefined},
+    payload: {id : undefined, name : undefined, geodata : null},
   }
 
   showModal = () => {
+
+    this.clearLayers();
+
     this.setState({
+      payload: {id : undefined, name : undefined, geojson : undefined},
       visible: true,
     });
   }
@@ -65,6 +69,7 @@ class AreaDefinitionTable extends PureComponent {
   }
 
   onAreaDefine = (layer) => {
+
     this.setState({
       payload: {
         ...this.state.payload,
@@ -77,6 +82,9 @@ class AreaDefinitionTable extends PureComponent {
   }
 
   onNameChange = (event) => {
+
+    console.log(this.state);
+
     this.setState({ payload: { ...this.state.payload, name: event.target.value }});
   }
 
@@ -95,11 +103,15 @@ class AreaDefinitionTable extends PureComponent {
         type: 'area/deleteandfetch',
         payload: this.state.payload,
       });
-    })
-
-
-
+    });
   }
+
+  clearLayers = () => {
+    //TODO this almost certainly is not the best way to do this
+    if (this.map) (this.map.editcontrol.context.layerContainer.clearLayers());
+  }
+
+  layerref = {};
 
   render() {
     const { areas: { list }, loading } = this.props.area;
@@ -155,7 +167,7 @@ class AreaDefinitionTable extends PureComponent {
                  onCancel={this.handleCancel}
                  footer={[
                    <Button key="submit" type="primary" loading={loading} onClick={this.handleOk.bind(this)}
-                           disabled={!this.state.payload.name}>
+                           disabled={!this.state.payload.name || !this.state.payload.geodata}>
                      Submit
                    </Button>,
                  ]}
@@ -169,26 +181,10 @@ class AreaDefinitionTable extends PureComponent {
               <Input placeholder="Area Name" onChange={this.onNameChange.bind(this)} value={this.state.payload.name}/>
             </FormItem>
 
-            {(this.state.layers.map((x) => {
-            <span>dfgfg</span>
-          }) )}
-
-            <D3Map>
-
-              (this.state.layers.map((x) => {
-                <FeatureGroup>
-                  <EditControl
-                    onCreated={this.onAreaDefine.bind(this)}
-                    position='topleft'
-                    draw={{
-                      rectangle: false
-                    }}
-                  />
-
-                </FeatureGroup>
-            }) )
-
-
+            <D3Map >
+              <FeatureGroup>
+                <AreaDefinitionMapToolbar ref={Map => this.map = Map} onAreaDefine={this.onAreaDefine}></AreaDefinitionMapToolbar>
+              </FeatureGroup>
             </D3Map>
           </Modal>
 
