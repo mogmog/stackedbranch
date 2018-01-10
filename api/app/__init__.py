@@ -22,7 +22,7 @@ from flask_bcrypt import Bcrypt
 # initialize db
 db = SQLAlchemy()
 
-from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase
+from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting
 from app.models import Department as DepartmentModel
 
 class Department(SQLAlchemyObjectType):
@@ -110,6 +110,19 @@ def create_app(config_name):
          results.append({'country' : sighting.country, 'site_id' : sighting.site_id, 'count' : sighting[2]})
 
       return make_response(jsonify({ 'list' : results })), 200
+
+
+    @app.route('/api/widesightings', methods=['GET'])
+    def widesightings():
+
+      sightings = WideSighting.get_all()
+
+      results = []
+      for sighting in sightings:
+         results.append(sighting.serialise())
+
+      return make_response(jsonify({ 'list' : results })), 200
+
 
     @app.route('/api/sightingsnewold', methods=['POST'])
     def sightingsnew():

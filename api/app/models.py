@@ -230,6 +230,58 @@ class LTESighting(db.Model):
                     'network': self.network.serialise()
                     }
 
+class WideSighting(db.Model):
+    __tablename__ = 'user_day_sighting_wide'
+
+    user_id           = db.Column(db.Integer, primary_key=True)
+    first_sighting    = db.Column(db.DateTime, primary_key=True)
+    site_id           = db.Column(db.Text, db.ForeignKey('smallcells.id'))
+    gender            = db.Column(db.Text)
+    age_range         = db.Column(db.Text)
+    continent_name    = db.Column(db.Text)
+    handset_make_name = db.Column(db.Text)
+    contract_type     = db.Column(db.Text)
+    home_ps_area_name = db.Column(db.Text)
+
+    def __init__(self, user_id, first_sighting, site_id, gender, age_range):
+        self.user_id = user_id
+        self.first_sighting = first_sighting
+        self.site_id = site_id
+        self.gender = gender
+        self.age_range = age_range
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return WideSighting.query
+
+    @staticmethod
+    def delete_all():
+        db.session.query(WideSighting).delete()
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return "<WideSighting: {}>".format(self.id)
+
+    def serialise(self):
+
+            return  {
+                    'first_sighting'    : self.first_sighting,
+                    'gender'            : self.gender,
+                    'age_range'         : self.age_range,
+                    'continent_name'    : self.continent_name,
+                    'handset_make_name' : self.handset_make_name,
+                    'contract_type'     : self.contract_type,
+                    'home_ps_area_name' : self.home_ps_area_name
+                    }
+
 class Department(db.Model):
     __tablename__ = 'department'
     id = db.Column(db.Integer, primary_key=True)

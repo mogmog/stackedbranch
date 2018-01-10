@@ -19,7 +19,6 @@ const tileOptions = {
 class D3Map extends React.Component {
 
   render() {
-
     return (
       <Map {...mapOptions}>
 
