@@ -45,6 +45,13 @@ export const getNavData = app => [
           },
 
           {
+            name: 'Cell Select',
+            icon: 'api',
+            path: 'cellselect',
+            component: dynamicWrapper(app, [], () => import('../routes/CellSelect')),
+          },
+
+          {
             name: 'Site Dashboard',
             icon: 'shop',
             path: 'sites',
