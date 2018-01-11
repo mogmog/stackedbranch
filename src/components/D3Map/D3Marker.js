@@ -5,260 +5,136 @@ import 'leaflet.markercluster';
 import 'leaflet-d3-svg-overlay';
 import d3 from 'd3';
 
-/*
- * Leaflet.Grid displays a grid of lat/lng lines on the map.
- */
-
-Leaflet.Grid = Leaflet.LayerGroup.extend({
+Leaflet.VirtualGrid = Leaflet.FeatureGroup.extend({
+  include: Leaflet.Mixin.Events,
   options: {
-    xticks: 8,
-    yticks: 5,
-
-    // 'decimal' or one of the templates below
-    coordStyle: 'MinDec',
-    coordTemplates: {
-      'MinDec': '{degAbs}&deg;&nbsp;{minDec}\'{dir}',
-      'DMS': '{degAbs}{dir}{min}\'{sec}"'
-    },
-
-    // Path style for the grid lines
-    lineStyle: {
+    cellSize: 64,
+    delayFactor: 3.5,
+    style: {
       stroke: true,
-      color: '#111',
-      opacity: 0.6,
-      weight: 1
-    },
+      color: '#3ac1f0',
+      dashArray: null,
+      lineCap: null,
+      lineJoin: null,
+      weight: 2,
+      opacity: 1,
 
-    // Redraw on move or moveend
-    redraw: 'move'
+      fill: true,
+      fillColor: null, //same as color by default
+      fillOpacity: 0.5,
+
+      clickable: true
+    }
   },
-
-  initialize: function (options) {
-    Leaflet.LayerGroup.prototype.initialize.call(this);
+  initialize: function(options){
     Leaflet.Util.setOptions(this, options);
-
+    Leaflet.FeatureGroup.prototype.initialize.call(this, [], options);
   },
-
-  onAdd: function (map) {
+  onAdd: function(map){
+    Leaflet.FeatureGroup.prototype.onAdd.call(this, map);
     this._map = map;
+    this._cells = [];
+    this._setupGrid(map.getBounds());
 
-    var grid = this.redraw();
-    this._map.on('viewreset '+ this.options.redraw, function () {
-      grid.redraw();
+    map.on("move", this._moveHandler, this);
+    map.on("zoomend", this._zoomHandler, this);
+    map.on("resize", this._resizeHandler, this);
+  },
+  onRemove: function(map){
+    Leaflet.FeatureGroup.prototype.onRemove.call(this, map);
+    map.off("move", this._moveHandler, this);
+    map.off("zoomend", this._zoomHandler, this);
+    map.off("resize", this._resizeHandler, this);
+  },
+  _clearLayer: function(e) {
+    this._cells = [];
+  },
+  _moveHandler: function(e){
+    this._renderCells(e.target.getBounds());
+  },
+  _zoomHandler: function(e){
+    this.clearLayers();
+    this._renderCells(e.target.getBounds());
+  },
+  _renderCells: function(bounds) {
+    var cells = this._cellsInBounds(bounds);
+    this.fire("newcells", cells);
+    for (var i = cells.length - 1; i >= 0; i--) {
+      var cell = cells[i];
+      if(this._loadedCells.indexOf(cell.id) === -1){
+        (function(cell, i){
+          setTimeout(this.addLayer.bind(this, Leaflet.rectangle(cell.bounds, this.options.style)), this.options.delayFactor*i);
+        }.bind(this))(cell, i);
+        this._loadedCells.push(cell.id);
+      }
+    }
+  },
+  _resizeHandler: function(e) {
+    this._setupSize();
+  },
+  _setupSize: function(){
+    this._rows = Math.ceil(this._map.getSize().x / this._cellSize);
+    this._cols = Math.ceil(this._map.getSize().y / this._cellSize);
+  },
+  _setupGrid: function(bounds){
+    this._origin = this._map.project(bounds.getNorthWest());
+    this._cellSize = this.options.cellSize;
+    this._setupSize();
+    this._loadedCells = [];
+    this.clearLayers();
+    this._renderCells(bounds);
+  },
+  _cellPoint:function(row, col){
+    var x = this._origin.x + (row*this._cellSize);
+    var y = this._origin.y + (col*this._cellSize);
+    return new Leaflet.Point(x, y);
+  },
+  _cellExtent: function(row, col){
+    var swPoint = this._cellPoint(row, col);
+    var nePoint = this._cellPoint(row-1, col-1);
+    var sw = this._map.unproject(swPoint);
+    var ne = this._map.unproject(nePoint);
+    return new Leaflet.LatLngBounds(ne, sw);
+  },
+  _cellsInBounds: function(bounds){
+    var offset = this._map.project(bounds.getNorthWest());
+    var center = bounds.getCenter();
+    var offsetX = this._origin.x - offset.x;
+    var offsetY = this._origin.y - offset.y;
+    var offsetRows = Math.round(offsetX / this._cellSize);
+    var offsetCols = Math.round(offsetY / this._cellSize);
+    var cells = [];
+    for (var i = 0; i <= this._rows; i++) {
+      for (var j = 0; j <= this._cols; j++) {
+        var row = i-offsetRows;
+        var col = j-offsetCols;
+        var cellBounds = this._cellExtent(row, col);
+        var cellId = row+":"+col;
+        cells.push({
+          id: cellId,
+          bounds: cellBounds,
+          distance:cellBounds.getCenter().distanceTo(center)
+        });
+      }
+    }
+    cells.sort(function (a, b) {
+      return a.distance - b.distance;
     });
-
-    this.eachLayer(map.addLayer, map);
-  },
-
-  onRemove: function (map) {
-    // remove layer listeners and elements
-    map.off('viewreset '+ this.options.redraw, this.map);
-    this.eachLayer(this.removeLayer, this);
-  },
-
-  redraw: function () {
-    // pad the bounds to make sure we draw the lines a little longer
-    this._bounds = this._map.getBounds().pad(0.5);
-
-    var grid = [];
-    var i;
-
-    var latLines = this._latLines();
-    for (i in latLines) {
-      if (Math.abs(latLines[i]) > 90) {
-        continue;
-      }
-      grid.push(this._horizontalLine(latLines[i]));
-      grid.push(this._label('lat', latLines[i]));
-    }
-
-    var lngLines = this._lngLines();
-    for (i in lngLines) {
-      grid.push(this._verticalLine(lngLines[i]));
-      grid.push(this._label('lng', lngLines[i]));
-    }
-
-    this.eachLayer(this.removeLayer, this);
-
-    for (i in grid) {
-      this.addLayer(grid[i]);
-    }
-    return this;
-  },
-
-  _latLines: function () {
-    return this._lines(
-      this._bounds.getSouth(),
-      this._bounds.getNorth(),
-      this.options.yticks * 2,
-      this._containsEquator()
-    );
-  },
-  _lngLines: function () {
-    return this._lines(
-      this._bounds.getWest(),
-      this._bounds.getEast(),
-      this.options.xticks * 2,
-      this._containsIRM()
-    );
-  },
-
-  _lines: function (low, high, ticks, containsZero) {
-    var delta = low - high,
-      tick = this._round(delta / ticks, delta);
-
-    if (containsZero) {
-      low = Math.floor(low / tick) * tick;
-    } else {
-      low = this._snap(low, tick);
-    }
-
-    var lines = [];
-    for (var i = -1; i <= ticks; i++) {
-      lines.push(low - (i * tick));
-    }
-    return lines;
-  },
-
-  _containsEquator: function () {
-    var bounds = this._map.getBounds();
-    return bounds.getSouth() < 0 && bounds.getNorth() > 0;
-  },
-
-  _containsIRM: function () {
-    var bounds = this._map.getBounds();
-    return bounds.getWest() < 0 && bounds.getEast() > 0;
-  },
-
-  _verticalLine: function (lng) {
-    return new Leaflet.Polyline([
-      [this._bounds.getNorth(), lng],
-      [this._bounds.getSouth(), lng]
-    ], this.options.lineStyle);
-  },
-  _horizontalLine: function (lat) {
-    return new Leaflet.Polyline([
-      [lat, this._bounds.getWest()],
-      [lat, this._bounds.getEast()]
-    ], this.options.lineStyle);
-  },
-
-  _snap: function (num, gridSize) {
-    return Math.floor(num / gridSize) * gridSize;
-  },
-
-  _round: function (num, delta) {
-    var ret;
-
-    delta = Math.abs(delta);
-    if (delta >= 1) {
-      if (Math.abs(num) > 1) {
-        ret = Math.round(num);
-      } else {
-        ret = (num < 0) ? Math.floor(num) : Math.ceil(num);
-      }
-    } else {
-      var dms = this._dec2dms(delta);
-      if (dms.min >= 1) {
-        ret = Math.ceil(dms.min) * 60;
-      } else {
-        ret = Math.ceil(dms.minDec * 60);
-      }
-    }
-
-    return ret;
-  },
-
-  _label: function (axis, num) {
-    var latlng;
-    var bounds = this._map.getBounds().pad(-0.005);
-
-    if (axis == 'lng') {
-      latlng = Leaflet.latLng(bounds.getNorth(), num);
-    } else {
-      latlng = Leaflet.latLng(num, bounds.getWest());
-    }
-
-    return Leaflet.marker(latlng, {
-      icon: Leaflet.divIcon({
-        iconSize: [0, 0],
-        className: 'leaflet-grid-label',
-        html: '<div class="' + axis + '">' + this.formatCoord(num, axis) + '</div>'
-      })
-    });
-  },
-
-  _dec2dms: function (num) {
-    var deg = Math.floor(num);
-    var min = ((num - deg) * 60);
-    var sec = Math.floor((min - Math.floor(min)) * 60);
-    return {
-      deg: deg,
-      degAbs: Math.abs(deg),
-      min: Math.floor(min),
-      minDec: min,
-      sec: sec
-    };
-  },
-
-  formatCoord: function (num, axis, style) {
-    if (!style) {
-      style = this.options.coordStyle;
-    }
-    if (style == 'decimal') {
-      var digits;
-      if (num >= 10) {
-        digits = 2;
-      } else if (num >= 1) {
-        digits = 3;
-      } else {
-        digits = 4;
-      }
-      return num.toFixed(digits);
-    } else {
-      // Calculate some values to allow flexible templating
-      var dms = this._dec2dms(num);
-
-      var dir;
-      if (dms.deg === 0) {
-        dir = '&nbsp;';
-      } else {
-        if (axis == 'lat') {
-          dir = (dms.deg > 0 ? 'N' : 'S');
-        } else {
-          dir = (dms.deg > 0 ? 'E' : 'W');
-        }
-      }
-
-      return Leaflet.Util.template(
-        this.options.coordTemplates[style],
-        Leaflet.Util.extend(dms, {
-          dir: dir,
-          minDec: Math.round(dms.minDec, 2)
-        })
-      );
-    }
+    return cells;
   }
-
 });
 
-Leaflet.grid = function (options) {
-  return new Leaflet.Grid(options);
-};
+
 
 class D3MarkerCluster extends MapLayer {
   componentWillMount() {
-
-
-    //this.leafletElement.addTo(this.context.map);
-    Leaflet.grid().addTo(this.context.map);
-
-
+    this.leafletElement = new Leaflet.VirtualGrid({});
+    this.leafletElement.addTo(this.context.map);
   }
 
   componentWillUnmount() {
-   // super.componentWillMount();
-   // this.leafletElement.remove();
+    super.componentWillMount();
+    this.leafletElement.remove();
   }
 
   render() {
