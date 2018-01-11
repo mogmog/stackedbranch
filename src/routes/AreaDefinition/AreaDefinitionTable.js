@@ -1,14 +1,15 @@
 import React, {PureComponent} from 'react';
 import moment from 'moment';
+import {connect} from "dva";
+
 import {Table, Alert, Badge, Divider, Button, Modal, Card, Form, Input} from 'antd';
 
+import { Map, FeatureGroup, TileLayer } from 'react-leaflet';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
-import {Map, TileLayer, Circle, FeatureGroup, Polygon} from 'react-leaflet';
 
-import D3Map from './../../components/D3Map/D3Map';
 import AreaMapThumbnail from '../../components/Areas/Definition/AreaMapThumbnail';
 import AreaDefinitionMapToolbar from './AreaDefinitionMapToolbar';
-import {connect} from "dva";
+
 
 const FormItem = Form.Item;
 
@@ -113,6 +114,15 @@ class AreaDefinitionTable extends PureComponent {
 
   layerref = {};
 
+  mapOptions = {
+    center: [51.545, -0.01],
+    zoom: 10,
+    maxZoom: 18,
+    minZoom: 1,
+    zoomControl: true,
+    width: 100
+  };
+
   render() {
     const { areas: { list }, loading } = this.props.area;
     const { visible, confirmLoading } = this.state;
@@ -181,11 +191,13 @@ class AreaDefinitionTable extends PureComponent {
               <Input placeholder="Area Name" onChange={this.onNameChange.bind(this)} value={this.state.payload.name}/>
             </FormItem>
 
-            <D3Map >
+            <Map {...this.mapOptions}>
               <FeatureGroup>
                 <AreaDefinitionMapToolbar ref={Map => this.map = Map} onAreaDefine={this.onAreaDefine}></AreaDefinitionMapToolbar>
               </FeatureGroup>
-            </D3Map>
+
+              <TileLayer url='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'/>
+            </Map>
           </Modal>
 
         </PageHeaderLayout>
