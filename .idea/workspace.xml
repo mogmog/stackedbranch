@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant-design-pro.iml" afterPath="$PROJECT_DIR$/.idea/ant-design-pro.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/api/README.md" afterPath="$PROJECT_DIR$/api/README.md" />
       <change beforePath="$PROJECT_DIR$/api/app/__init__.py" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
       <change beforePath="$PROJECT_DIR$/api/app/models.py" afterPath="$PROJECT_DIR$/api/app/models.py" />
-      <change beforePath="$PROJECT_DIR$/src/common/nav.js" afterPath="$PROJECT_DIR$/src/common/nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" afterPath="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/env.py" afterPath="$PROJECT_DIR$/api/migrations/env.py" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/src/components/D3Map/D3Map.js" afterPath="$PROJECT_DIR$/src/components/D3Map/D3Map.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" afterPath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" afterPath="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" afterPath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
+      <change beforePath="$PROJECT_DIR$/src/index.ejs" afterPath="$PROJECT_DIR$/src/index.ejs" />
+      <change beforePath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" afterPath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/services/api.js" afterPath="$PROJECT_DIR$/src/services/api.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +31,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="243" column="23" lean-forward="false" selection-start-line="243" selection-start-column="23" selection-end-line="243" selection-end-column="23" />
+            <state relative-caret-position="5187">
+              <caret line="247" column="27" lean-forward="false" selection-start-line="247" selection-start-column="13" selection-end-line="247" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -36,18 +41,40 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+            <state relative-caret-position="2499">
+              <caret line="119" column="15" lean-forward="false" selection-start-line="119" selection-start-column="15" selection-end-line="119" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicLayout.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.js">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7182">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2667">
+              <caret line="161" column="20" lean-forward="false" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+              <folding>
+                <element signature="e#3289#3954#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="D3Map.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="141" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -55,79 +82,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/nav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-              <folding>
-                <element signature="e#548#2351#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaDefinitionTable.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1874">
-              <caret line="34" column="7" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaDefinitionMapToolbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaMapThumbnail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="D3Map.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeatureGroup.js.flow" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-leaflet/es/FeatureGroup.js.flow">
+      <file leaf-file-name="D3Marker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="5271">
+              <caret line="256" column="3" lean-forward="true" selection-start-line="249" selection-start-column="2" selection-end-line="256" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeoJSON.js.flow" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-leaflet/es/GeoJSON.js.flow">
+      <file leaf-file-name="sitecomparison.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/sitecomparison.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -137,24 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ranking</find>
-      <find>销售额</find>
-      <find>scale</find>
-      <find>sales</find>
-      <find>first-</find>
-      <find>not sure</find>
-      <find>data</find>
-      <find>sightingsnre</find>
-      <find>byarea</find>
-      <find>in</find>
-      <find>App</find>
-      <find>prop</find>
-      <find>pro</find>
-      <find>propTypes</find>
-      <find>PropTypes</find>
-      <find>require</find>
-      <find>csv</find>
-      <find>`</find>
       <find>componentWill</find>
       <find>map</find>
       <find>crossfilter</find>
@@ -167,6 +150,24 @@
       <find>onAreaDefine</find>
       <find>console</find>
       <find>log</find>
+      <find>sightingsnewold</find>
+      <find>wide</find>
+      <find>create_eng</find>
+      <find>echo</find>
+      <find>database_url</find>
+      <find>SQLALCHEMY_DATABASE_URI</find>
+      <find>debug</find>
+      <find>sightingsnew</find>
+      <find>querySitesComparison</find>
+      <find>SiteCountryBarChart</find>
+      <find>genderTpl</find>
+      <find>d3SvgOverlay</find>
+      <find>d3</find>
+      <find>PAIRS</find>
+      <find>Leaflet.UtiLeaflet</find>
+      <find>debugg</find>
+      <find>L.</find>
+      <find>Leaflet.</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -185,6 +186,10 @@
       <replace>network</replace>
       <replace>'</replace>
       <replace>createTimeBar</replace>
+      <replace>itemTpl</replace>
+      <replace>Leaflet.Util</replace>
+      <replace>Leaflet.</replace>
+      <replace>L.</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Graham\Documents\Dev\ant-design-pro\src\routes\Forms\StepForm</dir>
@@ -196,10 +201,11 @@
       <dir>C:\Users\Graham\Documents\Dev\ant-design-pro</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules\d3-selection</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes</dir>
-      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components</dir>
-      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api\app</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -213,10 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/models.py" />
-        <option value="$PROJECT_DIR$/api/schema.py" />
-        <option value="$PROJECT_DIR$/src/components/Sites/Letter.js" />
-        <option value="$PROJECT_DIR$/src/components/Sites/Alphabet.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/FancyText.js" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteDateSelect.js" />
@@ -233,10 +235,7 @@
         <option value="$PROJECT_DIR$/src/components/Sites/SiteTotalSightings.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.less" />
         <option value="$PROJECT_DIR$/src/routes/SmallCell/List/index.js" />
-        <option value="$PROJECT_DIR$/src/services/api.js" />
         <option value="$PROJECT_DIR$/src/models/smallcell.js" />
-        <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
         <option value="$PROJECT_DIR$/node_modules/react-dc/dist/module/mixins/color-mixin.js" />
         <option value="$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -257,13 +256,20 @@
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
-        <option value="$PROJECT_DIR$/api/app/models.py" />
-        <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/common/nav.js" />
-        <option value="$PROJECT_DIR$/src/components/D3Map/D3Map.js" />
         <option value="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
+        <option value="$PROJECT_DIR$/api/app/models.py" />
+        <option value="$PROJECT_DIR$/api/migrations/env.py" />
+        <option value="$PROJECT_DIR$/src/services/api.js" />
+        <option value="$PROJECT_DIR$/api/app/__init__.py" />
+        <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
+        <option value="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" />
+        <option value="$PROJECT_DIR$/src/index.ejs" />
+        <option value="$PROJECT_DIR$/api/README.md" />
+        <option value="$PROJECT_DIR$/src/components/D3Map/D3Map.js" />
       </list>
     </option>
   </component>
@@ -285,9 +291,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="89" />
-    <option name="width" value="2320" />
+    <option name="x" value="200" />
+    <option name="y" value="71" />
+    <option name="width" value="2156" />
     <option name="height" value="1635" />
   </component>
   <component name="ProjectView">
@@ -305,7 +311,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -355,6 +360,13 @@
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="D3Map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -374,6 +386,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,7 +400,7 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="C:\Users\Graham\Documents\Dev\ant-design-pro\node_modules\stylelint" />
-    <property name="SearchEverywhereHistoryKey" value="sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;basiclayout&#9;null&#9;null&#10;data&#9;null&#9;null&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.ejs&#10;index&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.ejs&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;basiclayout&#9;null&#9;null&#10;data&#9;null&#9;null&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.ejs&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules\eslint" />
@@ -527,7 +540,8 @@
       <workItem from="1513351166071" duration="8849000" />
       <workItem from="1513677224991" duration="76952000" />
       <workItem from="1515077623046" duration="988000" />
-      <workItem from="1515498876248" duration="11617000" />
+      <workItem from="1515498876248" duration="35401000" />
+      <workItem from="1515663067030" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -760,31 +774,36 @@
       <option name="project" value="LOCAL" />
       <updated>1515500469813</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fixed area create bugs">
+      <created>1515575750915</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1515575750916</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="399971000" />
+    <option name="totallyTimeSpent" value="424384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="89" width="2320" height="1635" extended-state="0" />
+    <frame x="200" y="71" width="2156" height="1635" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293023" sideWeight="0.49791232" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2908745" sideWeight="0.509059" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3170068" sideWeight="0.5004456" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23663102" sideWeight="0.18426295" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5387755" sideWeight="0.5048077" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25528845" sideWeight="0.19321534" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3170068" sideWeight="0.49955437" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5387755" sideWeight="0.49519232" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23663102" sideWeight="0.81573707" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25528845" sideWeight="0.8067847" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32299742" sideWeight="0.498565" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -797,7 +816,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293023" sideWeight="0.49791232" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32299742" sideWeight="0.498565" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -837,7 +858,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ignore .idea" />
     <MESSAGE value="removed import" />
     <MESSAGE value="moving path experiments" />
     <MESSAGE value="area list" />
@@ -862,7 +882,8 @@
     <MESSAGE value="fixed null container issue" />
     <MESSAGE value="Add labels to area polygons" />
     <MESSAGE value="Added loading spinners" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added loading spinners" />
+    <MESSAGE value="fixed area create bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed area create bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -886,104 +907,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-dc/dist/module/react-dc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/components/ChartContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/lib/ChartContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/lib/BubbleChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-548">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/dc-react/components/RowChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/DataCount.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BubbleChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/Base.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/ndx.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/ChartContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1337">
-          <caret line="253" column="68" lean-forward="false" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/dcexample.js" />
     <entry file="file://$PROJECT_DIR$/sql/get_sightings.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -1045,9 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,25 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="22" column="74" lean-forward="false" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#52#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/dbinit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1084,20 +985,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-leaflet/es/TileLayer.js.flow">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1115,9 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
           <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1125,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="36" column="72" lean-forward="false" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1133,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="87" column="12" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,9 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1158,23 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,23 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="243" column="23" lean-forward="false" selection-start-line="243" selection-start-column="23" selection-end-line="243" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1214,9 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7182">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,9 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="e#548#2351#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1234,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1242,25 +1083,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1268,18 +1097,186 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1874">
-          <caret line="34" column="7" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
+          <caret line="34" column="7" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/dbinit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/schema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/instance/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/migrations/env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/sitecomparison.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2667">
+          <caret line="161" column="20" lean-forward="false" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+          <folding>
+            <element signature="e#3289#3954#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5187">
+          <caret line="247" column="27" lean-forward="false" selection-start-line="247" selection-start-column="13" selection-end-line="247" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="119" column="15" lean-forward="false" selection-start-line="119" selection-start-column="15" selection-end-line="119" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5271">
+          <caret line="256" column="3" lean-forward="true" selection-start-line="249" selection-start-column="2" selection-end-line="256" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-leaflet/es/TileLayer.js.flow">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -97,7 +97,7 @@ def create_app(config_name):
       return make_response(jsonify({ 'list' : results })), 200
 
     @app.route('/api/sightingsnew', methods=['POST'])
-    def sightingsnewW():
+    def sightingsnew():
 
       sightings = db.session.query(SightingsBase.site_id, SightingsBase.country, func.count(SightingsBase.roundedtoday))\
                         .filter(SightingsBase.site_id.in_(request.data['selectedRow']))\
@@ -112,6 +112,21 @@ def create_app(config_name):
       return make_response(jsonify({ 'list' : results })), 200
 
 
+    @app.route('/api/widesightingsnew', methods=['POST', 'GET'])
+    def widesightingsnew():
+
+      sightings = db.session.query(WideSighting.site_id, WideSighting.gender, func.count(WideSighting.gender))\
+                        .filter(WideSighting.site_id.in_([138, 134]))\
+                        .group_by(WideSighting.site_id, WideSighting.gender)
+
+      results = []
+      for sighting in sightings.all():
+         #gender     = sighting.gender if len(sighting.gender) else 'unknown'
+         results.append({'site_id' : sighting.site_id, 'gender' : sighting.gender, 'count' : sighting[2]})
+
+      return make_response(jsonify({ 'list' : results })), 200
+
+
     @app.route('/api/widesightings', methods=['GET'])
     def widesightings():
 
@@ -122,39 +137,6 @@ def create_app(config_name):
          results.append(sighting.serialise())
 
       return make_response(jsonify({ 'list' : results })), 200
-
-
-    @app.route('/api/sightingsnewold', methods=['POST'])
-    def sightingsnew():
-
-      #remembert to keep the keep the filters in sync
-      #TODO is there a better way to do this
-      sightings = SightingsNew.query\
-                        .filter(SightingsNew.site_id.in_(request.data['selectedRow']))\
-                        .filter(SightingsNew.day.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))
-
-
-      groupedsightings = db.session.query(SightingsNew.country, SightingsNew.site_id, func.count(SightingsNew.country))\
-                        .filter(SightingsNew.site_id.in_(request.data['selectedRow']))\
-                        .filter(SightingsNew.day.between(request.data['selectedDates'][0], request.data['selectedDates'][1]))\
-                        .group_by(SightingsNew.country, SightingsNew.site_id)\
-                        .order_by(func.count(SightingsNew.country).desc())\
-                        .all()
-
-      groupedresults = []
-      for element in groupedsightings:
-        obj = {}
-        obj['label'] = (element)[0]
-        obj[str((element)[1])] = (element)[2]
-        groupedresults.append(obj)
-
-      results = []
-      for sighting in sightings:
-         results.append({'country' : sighting.country, 'network' : sighting.network, 'day' : sighting.day, 'count' : sighting.count, 'site_id' : sighting.site_id})
-
-
-      return make_response(jsonify({ 'list' : results, 'grouped' : groupedresults })), 200
-
 
     @app.route('/api/sites', methods=['GET'])
     def get_sites():

@@ -23,7 +23,7 @@ export async function saveSmallCell(params) {
 }
 
 export async function querySitesComparison(params) {
-  return request('/api/sightingsnew', {
+  return request('/api/widesightingsnew', {
     method: 'POST',
     body: {
       selectedDates: params.selectedDates.map(x => x.toDate()),

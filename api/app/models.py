@@ -250,6 +250,9 @@ class WideSighting(db.Model):
         self.gender = gender
         self.age_range = age_range
 
+    def get_age(self):
+      return self.age_range
+
     def save(self):
         db.session.add(self)
         db.session.commit()
