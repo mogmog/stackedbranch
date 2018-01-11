@@ -5,269 +5,260 @@ import 'leaflet.markercluster';
 import 'leaflet-d3-svg-overlay';
 import d3 from 'd3';
 
-// This is an array of source/target pairs.
-// Each location array is in the order of longitude and then latitude.
-// You often see these as lat/lng but since we need this to be in math format we do them in lng/lat, which is x/y.
-// You could also nest this data and change what object you bind your data to save space. There's no single correct way.
-// Do what is best for your data and for your deadlines.
-var arcdata = [
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-106.503961875, 33.051502817366334]
+/*
+ * Leaflet.Grid displays a grid of lat/lng lines on the map.
+ */
+
+Leaflet.Grid = Leaflet.LayerGroup.extend({
+  options: {
+    xticks: 8,
+    yticks: 5,
+
+    // 'decimal' or one of the templates below
+    coordStyle: 'MinDec',
+    coordTemplates: {
+      'MinDec': '{degAbs}&deg;&nbsp;{minDec}\'{dir}',
+      'DMS': '{degAbs}{dir}{min}\'{sec}"'
+    },
+
+    // Path style for the grid lines
+    lineStyle: {
+      stroke: true,
+      color: '#111',
+      opacity: 0.6,
+      weight: 1
+    },
+
+    // Redraw on move or moveend
+    redraw: 'move'
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-97.27544625, 34.29490081496779]
+
+  initialize: function (options) {
+    Leaflet.LayerGroup.prototype.initialize.call(this);
+    Leaflet.Util.setOptions(this, options);
+
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-92.793024375, 34.837711658059135]
+
+  onAdd: function (map) {
+    this._map = map;
+
+    var grid = this.redraw();
+    this._map.on('viewreset '+ this.options.redraw, function () {
+      grid.redraw();
+    });
+
+    this.eachLayer(map.addLayer, map);
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-100.3076728125, 41.85852354782116]
+
+  onRemove: function (map) {
+    // remove layer listeners and elements
+    map.off('viewreset '+ this.options.redraw, this.map);
+    this.eachLayer(this.removeLayer, this);
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-104.6143134375, 43.18636214435451]
+
+  redraw: function () {
+    // pad the bounds to make sure we draw the lines a little longer
+    this._bounds = this._map.getBounds().pad(0.5);
+
+    var grid = [];
+    var i;
+
+    var latLines = this._latLines();
+    for (i in latLines) {
+      if (Math.abs(latLines[i]) > 90) {
+        continue;
+      }
+      grid.push(this._horizontalLine(latLines[i]));
+      grid.push(this._label('lat', latLines[i]));
+    }
+
+    var lngLines = this._lngLines();
+    for (i in lngLines) {
+      grid.push(this._verticalLine(lngLines[i]));
+      grid.push(this._label('lng', lngLines[i]));
+    }
+
+    this.eachLayer(this.removeLayer, this);
+
+    for (i in grid) {
+      this.addLayer(grid[i]);
+    }
+    return this;
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-106.152399375, 45.57291634897]
+
+  _latLines: function () {
+    return this._lines(
+      this._bounds.getSouth(),
+      this._bounds.getNorth(),
+      this.options.yticks * 2,
+      this._containsEquator()
+    );
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-105.5811103125, 42.3800618087319]
+  _lngLines: function () {
+    return this._lines(
+      this._bounds.getWest(),
+      this._bounds.getEast(),
+      this.options.xticks * 2,
+      this._containsIRM()
+    );
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-74.610651328125, 42.160561343227656]
+
+  _lines: function (low, high, ticks, containsZero) {
+    var delta = low - high,
+      tick = this._round(delta / ticks, delta);
+
+    if (containsZero) {
+      low = Math.floor(low / tick) * tick;
+    } else {
+      low = this._snap(low, tick);
+    }
+
+    var lines = [];
+    for (var i = -1; i <= ticks; i++) {
+      lines.push(low - (i * tick));
+    }
+    return lines;
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-78.148248984375, 40.20112201100485]
+
+  _containsEquator: function () {
+    var bounds = this._map.getBounds();
+    return bounds.getSouth() < 0 && bounds.getNorth() > 0;
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-81.795709921875, 39.89836713516883]
+
+  _containsIRM: function () {
+    var bounds = this._map.getBounds();
+    return bounds.getWest() < 0 && bounds.getEast() > 0;
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-91.738336875, 42.1320516230261]
+
+  _verticalLine: function (lng) {
+    return new Leaflet.Polyline([
+      [this._bounds.getNorth(), lng],
+      [this._bounds.getSouth(), lng]
+    ], this.options.lineStyle);
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-93.902643515625, 39.89836713516886]
+  _horizontalLine: function (lat) {
+    return new Leaflet.Polyline([
+      [lat, this._bounds.getWest()],
+      [lat, this._bounds.getEast()]
+    ], this.options.lineStyle);
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-146.68645699218752, 62.84587613514389]
+
+  _snap: function (num, gridSize) {
+    return Math.floor(num / gridSize) * gridSize;
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-151.03704292968752, 62.3197734579205]
+
+  _round: function (num, delta) {
+    var ret;
+
+    delta = Math.abs(delta);
+    if (delta >= 1) {
+      if (Math.abs(num) > 1) {
+        ret = Math.round(num);
+      } else {
+        ret = (num < 0) ? Math.floor(num) : Math.ceil(num);
+      }
+    } else {
+      var dms = this._dec2dms(delta);
+      if (dms.min >= 1) {
+        ret = Math.ceil(dms.min) * 60;
+      } else {
+        ret = Math.ceil(dms.minDec * 60);
+      }
+    }
+
+    return ret;
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-150.50969917968752, 68.0575087745829]
+
+  _label: function (axis, num) {
+    var latlng;
+    var bounds = this._map.getBounds().pad(-0.005);
+
+    if (axis == 'lng') {
+      latlng = Leaflet.latLng(bounds.getNorth(), num);
+    } else {
+      latlng = Leaflet.latLng(num, bounds.getWest());
+    }
+
+    return Leaflet.marker(latlng, {
+      icon: Leaflet.divIcon({
+        iconSize: [0, 0],
+        className: 'leaflet-grid-label',
+        html: '<div class="' + axis + '">' + this.formatCoord(num, axis) + '</div>'
+      })
+    });
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-155.58278180000002, 19.896766200000002]
+
+  _dec2dms: function (num) {
+    var deg = Math.floor(num);
+    var min = ((num - deg) * 60);
+    var sec = Math.floor((min - Math.floor(min)) * 60);
+    return {
+      deg: deg,
+      degAbs: Math.abs(deg),
+      min: Math.floor(min),
+      minDec: min,
+      sec: sec
+    };
   },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-155.41249371406252, 19.355435189875685]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-156.22204876777346, 20.77817385333129]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-156.08334637519533, 20.781383752662176]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-119.41793240000001, 36.77826099999999]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-111.73848904062501, 34.311442605956636]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-118.62691677500001, 39.80409417718468]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-115.56173122812501, 44.531552843807575]
-  },
-  {
-    sourceLocation: [-99.5606025, 41.068178502813595],
-    targetLocation: [-107.13521755625001, 43.90164233696157]
+
+  formatCoord: function (num, axis, style) {
+    if (!style) {
+      style = this.options.coordStyle;
+    }
+    if (style == 'decimal') {
+      var digits;
+      if (num >= 10) {
+        digits = 2;
+      } else if (num >= 1) {
+        digits = 3;
+      } else {
+        digits = 4;
+      }
+      return num.toFixed(digits);
+    } else {
+      // Calculate some values to allow flexible templating
+      var dms = this._dec2dms(num);
+
+      var dir;
+      if (dms.deg === 0) {
+        dir = '&nbsp;';
+      } else {
+        if (axis == 'lat') {
+          dir = (dms.deg > 0 ? 'N' : 'S');
+        } else {
+          dir = (dms.deg > 0 ? 'E' : 'W');
+        }
+      }
+
+      return Leaflet.Util.template(
+        this.options.coordTemplates[style],
+        Leaflet.Util.extend(dms, {
+          dir: dir,
+          minDec: Math.round(dms.minDec, 2)
+        })
+      );
+    }
   }
-]
+
+});
+
+Leaflet.grid = function (options) {
+  return new Leaflet.Grid(options);
+};
 
 class D3MarkerCluster extends MapLayer {
   componentWillMount() {
 
 
-
-    this.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
-
-      var OD_PAIRS = [
-        ["NRT", "JFK"],
-        ["SFO", "NRT"],
-        ["LAX", "HNL"],
-        ["HNL", "NRT"],
-        ["CDG", "JFK"],
-        ["NRT", "SYD"],
-        ["FCO", "PEK"],
-        ["LHR", "PVG"],
-        ["NRT", "ARN"],
-        ["LAX", "JFK"],
-        ["NRT", "DEL"],
-        ["DFW", "GRU"],
-        ["MAD", "ATL"],
-        ["ORD", "CAI"],
-        ["HKG", "CDG"],
-        ["LAS", "CDG"],
-        ["NRT", "SVO"],
-        ["DEN", "HNL"],
-        ["ORD", "LAX"],
-        ["SIN", "SEA"],
-        ["SYD", "PEK"],
-        ["CAI", "CPT"],
-        ["CUN", "JFK"],
-        ["ORD", "JFK"],
-        ["LHR", "BOM"],
-        ["LAX", "MEX"],
-        ["LHR", "CPT"],
-        ["PVG", "CGK"],
-        ["SYD", "BOM"],
-        ["JFK", "CPT"],
-        ["MAD", "GRU"],
-        ["EZE", "FCO"],
-        ["DEL", "DXB"],
-        ["DXB", "NRT"],
-        ["GRU", "MIA"],
-        ["SVO", "PEK"],
-        ["YYZ", "ARN"],
-        ["LHR", "YYC"],
-        ["HNL", "SEA"],
-        ["JFK", "EZE"],
-        ["EZE", "LAX"],
-        ["CAI", "HKG"],
-        ["SVO", "SIN"],
-        ["IST", "MCO"],
-        ["MCO", "LAX"],
-        ["FRA", "LAS"],
-        ["ORD", "FRA"],
-        ["MAD", "JFK"]
-      ];
-
-      var currentWidth = 500;
-      var width = 938;
-      var height = 620;
+    //this.leafletElement.addTo(this.context.map);
+    Leaflet.grid().addTo(this.context.map);
 
 
-      var airportMap = {};
-
-      function transition(plane, route) {
-        var l = route.node().getTotalLength();
-        plane.transition()
-          .duration(l * 50)
-          .attrTween("transform", delta(plane, route.node()))
-          .each("end", function() { route.remove(); })
-          .remove();
-      }
-
-      function delta(plane, path) {
-        var l = path.getTotalLength();
-        var plane = plane;
-        return function(i) {
-          return function(t) {
-            var p = path.getPointAtLength(t * l);
-
-            var t2 = Math.min(t + 0.05, 1);
-            var p2 = path.getPointAtLength(t2 * l);
-
-            var x = p2.x - p.x;
-            var y = p2.y - p.y;
-            var r = 90 - Math.atan2(-y, x) * 180 / Math.PI;
-
-            var s = Math.min(Math.sin(Math.PI * t) * 0.7, 0.3);
-
-            return "translate(" + p.x + "," + p.y + ") scale(" + s + ") rotate(" + r + ")";
-          }
-        }
-      }
-
-      function fly(origin, destination) {
-        var route = svg.append("path")
-          .datum({type: "LineString", coordinates: [airportMap[origin], airportMap[destination]]})
-          .attr("class", "route")
-          .attr("d", projection.pathFromGeojson);
-
-        var plane = svg.append("path")
-          .attr("class", "plane")
-          .attr("d", "m25.21488,3.93375c-0.44355,0 -0.84275,0.18332 -1.17933,0.51592c-0.33397,0.33267 -0.61055,0.80884 -0.84275,1.40377c-0.45922,1.18911 -0.74362,2.85964 -0.89755,4.86085c-0.15655,1.99729 -0.18263,4.32223 -0.11741,6.81118c-5.51835,2.26427 -16.7116,6.93857 -17.60916,7.98223c-1.19759,1.38937 -0.81143,2.98095 -0.32874,4.03902l18.39971,-3.74549c0.38616,4.88048 0.94192,9.7138 1.42461,13.50099c-1.80032,0.52703 -5.1609,1.56679 -5.85232,2.21255c-0.95496,0.88711 -0.95496,3.75718 -0.95496,3.75718l7.53,-0.61316c0.17743,1.23545 0.28701,1.95767 0.28701,1.95767l0.01304,0.06557l0.06002,0l0.13829,0l0.0574,0l0.01043,-0.06557c0,0 0.11218,-0.72222 0.28961,-1.95767l7.53164,0.61316c0,0 0,-2.87006 -0.95496,-3.75718c-0.69044,-0.64577 -4.05363,-1.68813 -5.85133,-2.21516c0.48009,-3.77545 1.03061,-8.58921 1.42198,-13.45404l18.18207,3.70115c0.48009,-1.05806 0.86881,-2.64965 -0.32617,-4.03902c-0.88969,-1.03062 -11.81147,-5.60054 -17.39409,-7.89352c0.06524,-2.52287 0.04175,-4.88024 -0.1148,-6.89989l0,-0.00476c-0.15655,-1.99844 -0.44094,-3.6683 -0.90277,-4.8561c-0.22699,-0.59493 -0.50356,-1.07111 -0.83754,-1.40377c-0.33658,-0.3326 -0.73578,-0.51592 -1.18194,-0.51592l0,0l-0.00001,0l0,0z");
-
-        //console.log(plane, route);
-
-        transition(plane, route);
-      }
-
-      function loaded(error, countries, airports) {
-
-
-
-        svg.append("g")
-          .attr("class", "airports")
-          .selectAll("path")
-          .data(topojson.feature(airports, airports.objects.airports).features)
-          .enter()
-          .append("path")
-          .attr("id", function(d) {return d.id;})
-          .attr("d", projection.pathFromGeojson)
-
-        var geos = topojson.feature(airports, airports.objects.airports).features;
-
-        for (i in geos) {
-          airportMap[geos[i].id] = [1, 2];//[projection.latLngToLayerPoint(geos[i].geometry.coordinates).x, projection.latLngToLayerPoint(geos[i].geometry.coordinates).y];
-        }
-
-        console.log(airportMap);
-
-        var i = 0;
-        setInterval(function() {
-          if (i > OD_PAIRS.length - 1) {
-            i = 0;
-          }
-          var od = OD_PAIRS[i];
-          fly(od[0], od[1]);
-          i++;
-        }, 150);
-      }
-
-      const countries = require("../../assets/countries2.topo.json");
-      const airports = require("../../assets/airports2.topo.json");
-      loaded(undefined, countries, airports);
-
-
-
-
-
-
-    });
-
-    this.leafletElement.addTo(this.context.map);
   }
 
   componentWillUnmount() {
-    super.componentWillMount();
-    this.leafletElement.remove();
+   // super.componentWillMount();
+   // this.leafletElement.remove();
   }
 
   render() {

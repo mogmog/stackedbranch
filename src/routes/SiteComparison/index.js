@@ -116,7 +116,10 @@ class SiteComparison extends PureComponent {
                                  onClick={this.handleFilterSubmit.bind(this)}> Submit </Button>];
 
 
-    const data = _(sites).groupBy(x => x.country).value();
+    //const data = _(sites).groupBy(x => x.country).value();
+
+    console.log(sites);
+    console.log(sitecomparison);
 
     return (
 
