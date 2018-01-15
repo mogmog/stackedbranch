@@ -12,6 +12,7 @@ import styles from './index.less';
 /* react-intl imports */
 import { addLocaleData, IntlProvider } from 'react-intl';
 import i18nConfig from './il8nConfig_en';
+import {HighchartsProvider} from "react-highcharts-wrapper";
 
 
 
@@ -63,16 +64,18 @@ function RouterConfig({ history, app }) {
   };
 
   return (
-    <IntlProvider locale={i18nConfig.locale} messages={i18nConfig.messages}>
-      <LocaleProvider locale={enGB}>
-        <Router history={history}>
-          <Switch>
-            <Route path="/" render={props => <BasicLayout {...props} {...passProps} />} />
+    <HighchartsProvider>
+      <IntlProvider locale={i18nConfig.locale} messages={i18nConfig.messages}>
+        <LocaleProvider locale={enGB}>
+          <Router history={history}>
+            <Switch>
+              <Route path="/" render={props => <BasicLayout {...props} {...passProps} />} />
 
-          </Switch>
-        </Router>
-      </LocaleProvider>
-    </IntlProvider>
+            </Switch>
+          </Router>
+        </LocaleProvider>
+      </IntlProvider>
+    </HighchartsProvider>
   );
 }
 

@@ -28,3 +28,4 @@ Werkzeug==0.12.1
 shapely==1.6.2
 Flask-GraphQL==1.3.0
 graphene[sqlalchemy]
+simplejson=3.13.2

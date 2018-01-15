@@ -7,7 +7,7 @@ export default {
     sitecomparison: {list : [], grouped : []},
 
     filter : {
-      selectedRow : [],
+      site_ids : [],
       selectedDates : [],
     },
     loading: true,
@@ -51,7 +51,7 @@ export default {
         sitecomparison: {list : [], grouped : []},
 
         filter : {
-          selectedRow : [],
+          site_ids : [],
           selectedDates : [],
         },
         loading: true,

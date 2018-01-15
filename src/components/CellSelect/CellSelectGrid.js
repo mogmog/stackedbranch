@@ -86,16 +86,15 @@ class CellSelectGrid extends MapLayer {
             }, 1, { leading: true }));
         };
 
+        this.leafletElement.addTo(this.context.map);
+
       }
     });
 
-    this.leafletElement.addTo(this.context.map);
+
   }
 
-  componentWillUnmount() {
-    super.componentWillMount();
-    this.leafletElement.remove();
-  }
+
 
   render() {
     return null;

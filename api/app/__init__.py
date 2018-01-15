@@ -216,6 +216,43 @@ def create_app(config_name):
 
         return make_response(jsonify({ 'list' : results })), 200
 
+
+
+    @app.route('/api/sighting/getgender/', methods=['POST'])
+    def get_gender():
+
+        site_ids            = str(request.data.get('site_ids', ''))
+        from_sighting_date  = request.data.get('selectedDates')[0]
+        to_sighting_date    = request.data.get('selectedDates')[1]
+
+        import string
+
+        results = []
+
+        for row in db.session.execute("select * from get_gender(ARRAY[" + site_ids + "]," + "'" + from_sighting_date + "'" + "," + "'" + to_sighting_date + "'" + ")"):
+          results.append(({ 'site_id' : row['__site_id'], 'date_month' : row['__date_month'], 'gender' : row['__gender'], 'age_range' : row['__age_range'], 'perc_visits' : row['__perc_visits'], 'scaled_visits' : row['__scaled_visits'] }))
+
+        return make_response(jsonify({ 'list' : results })), 200
+
+
+    @app.route('/api/sighting/getgendertotals/', methods=['POST'])
+    def get_gender_totals():
+
+        site_ids            = str(request.data.get('site_ids', ''))
+        from_sighting_date  = request.data.get('selectedDates')[0]
+        to_sighting_date    = request.data.get('selectedDates')[1]
+
+        import string
+
+        results = []
+
+        for row in db.session.execute("select * from get_gender_totals(ARRAY[" + site_ids + "]," + "'" + from_sighting_date + "'" + "," + "'" + to_sighting_date + "'" + ")"):
+          results.append(({ 'site_id' : row['__site_id'],  'gender' : row['__gender'], 'age_range' : row['__age_range'], '__visits' : row['__visits'] }))
+
+        return make_response(jsonify({ 'list' : results })), 200
+
+
+
     @app.route('/api/sighting', methods=['GET'])
     def get_sightings():
 

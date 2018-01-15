@@ -23,11 +23,11 @@ export async function saveSmallCell(params) {
 }
 
 export async function querySitesComparison(params) {
-  return request('/api/widesightingsnew', {
+  return request('/api/sighting/getgendertotals/', {
     method: 'POST',
     body: {
       selectedDates: params.selectedDates.map(x => x.toDate()),
-      selectedRow  : params.selectedRow.map(x => x.id),
+      site_ids  : params.site_ids.map(x => x.id),
     },
   });
 }

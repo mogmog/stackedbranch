@@ -11,8 +11,8 @@ import SiteTable from '../../components/Sites/SiteTable';
 import HourlyCountryThing from '../../components/Sites/HourlyCountryThing';
 import SiteEventsChartsHolderIndividual from '../../components/Sites/SiteEventsChartsHolderIndividual';
 import SiteDateSelect from '../../components/Sites/SiteDateSelect';
-import SiteTotalSightings from '../../components/Sites/SiteTotalSightings';
-import SiteCountryBarChart from '../../components/Sites/SiteCountryBarChart';
+import SiteTotalSightings from '../../components/Sites/SiteGenderTotals';
+import SiteGenderTabs from '../../components/Sites/SiteGenderTabs';
 
 import Trend from '../../components/Trend';
 
@@ -28,7 +28,7 @@ class SiteComparison extends PureComponent {
       loading: false,
       visible: true,
       combinedSites: true,
-      filter: {selectedDates: [], selectedRow: []}
+      filter: {selectedDates: [], site_ids: []}
     };
 
   }
@@ -50,8 +50,8 @@ class SiteComparison extends PureComponent {
     });
   }
 
-  onRowSelect(selectedRow) {
-    this.setState({filter: {...this.state.filter, selectedRow: selectedRow}});
+  onRowSelect(site_ids) {
+    this.setState({filter: {...this.state.filter, site_ids: site_ids}});
   }
 
   onDateSelect(selectedDates) {
@@ -76,18 +76,6 @@ class SiteComparison extends PureComponent {
     });
   }
 
-  doSplit() {
-    this.setState({split: true});
-  }
-
-  doUnSplit() {
-    this.setState({split: false});
-  }
-
-  toggleSitesCombined(isCombined) {
-    this.setState({combinedSites: isCombined});
-  }
-
   handleFilterSubmit() {
     const {dispatch, loading} = this.props;
     const {filter} = this.state;
@@ -107,11 +95,10 @@ class SiteComparison extends PureComponent {
   render() {
 
     const {sites, sitecomparison, loading} = this.props;
-    const {combinedSites} = this.state;
-    const {selectedRow, selectedDates} = this.state.filter;
+    const {site_ids, selectedDates} = this.state.filter;
 
     const modalFooter = [<Button key="submit"
-                                 disabled={(selectedRow.length === 0 || selectedDates.length === 0)}
+                                 disabled={(site_ids.length === 0 || selectedDates.length === 0)}
                                  type="primary"
                                  onClick={this.handleFilterSubmit.bind(this)}> Submit </Button>];
 
@@ -159,59 +146,10 @@ class SiteComparison extends PureComponent {
           {
             <Row gutter={24}>
               <Col xl={24} style={{ marginBottom: 24 }}>
-                <SiteCountryBarChart sites={sites} data={sitecomparison} />
+                <SiteGenderTabs sites={sites} data={sitecomparison} />
               </Col>
             </Row>
           }
-
-          {/*{<Row gutter={24}>*/}
-            {/*<Col xl={24} lg={24} md={24} sm={24} xs={24}>*/}
-              {/*<Card bordered loading={this.state.loading}>*/}
-                {/*<div>*/}
-
-                  {/*<Switch*/}
-                    {/*checkedChildren="Separate Sites"*/}
-                    {/*unCheckedChildren="Combine Sites"*/}
-                    {/*defaultChecked={combinedSites}*/}
-                    {/*onChange={this.toggleSitesCombined.bind(this)}*/}
-                  {/*/>*/}
-                  {/*<div>*/}
-                    {/*<SiteEventsChartsHolderIndividual site_ids={selectedRow.map(x => x.id)}/>*/}
-                  {/*</div>*/}
-                {/*</div>*/}
-              {/*</Card>*/}
-            {/*</Col>*/}
-          {/*</Row>}*/}
-
-          {/*<Row>*/}
-            {/*<Col>*/}
-              {/*<Card bordered>*/}
-
-                {/*<Button onClick={this.doSplit.bind(this)}> Down </Button>*/}
-                {/*<Button onClick={this.doUnSplit.bind(this)}> Up</Button>*/}
-
-
-                {/*<svg width={'100%'} height={800}>*/}
-
-                {/*/!*{*!/*/}
-                {/*/!*Object.keys(data).map((e, i) => {*!/*/}
-                {/*/!*if (e !== 'United Kingdom') {*!/*/}
-                {/*/!*return <HourlyCountryThing key={i}  index={i} data={data[e]} />*!/*/}
-                {/*/!*}*!/*/}
-                {/*/!*return <span>UK</span>;*!/*/}
-                {/*/!*}*!/*/}
-                {/*/!*)*!/*/}
-                {/*/!*}*!/*/}
-
-                {/*</svg>)*/}
-
-              {/*</Card>*/}
-            {/*</Col>*/}
-          {/*</Row>*/}
-
-
-
-
 
         </PageHeaderLayout>
       </span>
