@@ -3,14 +3,74 @@
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" afterPath="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" afterPath="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" afterPath="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteTable.js" afterPath="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" afterPath="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapToolbar.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" afterPath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActiveChart/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActiveChart/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/AvatarList/demo/simple.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/AvatarList/index.en-US.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/AvatarList/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/AvatarList/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/AvatarList/index.zh-CN.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountDown/demo/simple.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountDown/index.en-US.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountDown/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountDown/index.zh-CN.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCChartWrappers/DataTableChart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCChartWrappers/PieChart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCChartWrappers/SunburstChart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/Description.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/DescriptionList.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/demo/basic.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/demo/vertical.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/DescriptionList/responsive.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditableItem/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditableItem/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditableLinkGroup/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditableLinkGroup/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ellipsis/demo/line.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ellipsis/demo/number.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ellipsis/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ellipsis/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ellipsis/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/demo/basic.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/demo/popover.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NumberInfo/demo/basic.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NumberInfo/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NumberInfo/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/NumberInfo/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/demo/image.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/demo/simple.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/demo/standard.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/demo/structure.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/demo/classic.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/demo/error.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/demo/structure.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/HourlyCountryThing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/StandardFormRow/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/StandardFormRow/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/StandardTable/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/StandardTable/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/TagSelect/demo/expandable.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/TagSelect/demo/simple.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/TagSelect/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/TagSelect/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/TagSelect/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Trend/demo/basic.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Trend/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Trend/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Trend/index.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" afterPath="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-126">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -36,12 +96,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CellSelectGrid.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CellSelectGrid.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="370">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/nav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="631">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+              <folding>
+                <element signature="e#2796#3461#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicLayout.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="338" column="64" lean-forward="false" selection-start-line="338" selection-start-column="64" selection-end-line="338" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AreaHighlightPolygon.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Analysis.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,7 +166,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteTable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -72,12 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wide</find>
-      <find>create_eng</find>
-      <find>database_url</find>
-      <find>SQLALCHEMY_DATABASE_URI</find>
-      <find>debug</find>
-      <find>sightingsnew</find>
       <find>querySitesComparison</find>
       <find>genderTpl</find>
       <find>d3SvgOverlay</find>
@@ -102,6 +212,12 @@
       <find>D3mAP</find>
       <find>applyCellAttributes</find>
       <find>data</find>
+      <find>Number</find>
+      <find>NumberInfo</find>
+      <find>Trend</find>
+      <find>SiteEventsChartsHolderIndividual</find>
+      <find>HourlyCountryThing</find>
+      <find>NoticeIcon</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -145,6 +261,7 @@
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Dashboard</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -173,7 +290,6 @@
         <option value="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" />
         <option value="$PROJECT_DIR$/src/routes/SmallCell/index.js" />
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js" />
-        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" />
         <option value="$PROJECT_DIR$/api/migrations/env.py" />
@@ -187,7 +303,6 @@
         <option value="$PROJECT_DIR$/api/.env" />
         <option value="$PROJECT_DIR$/api/requirements.txt" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
-        <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
         <option value="$PROJECT_DIR$/src/models/sitecomparison.js" />
         <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/sql/get_gender_totals.sql" />
@@ -199,7 +314,6 @@
         <option value="$PROJECT_DIR$/sql/get_gender_crossfilter.sql" />
         <option value="$PROJECT_DIR$/api/app/models.py" />
         <option value="$PROJECT_DIR$/api/app/__init__.py" />
-        <option value="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
         <option value="$PROJECT_DIR$/src/common/nav.js" />
         <option value="$PROJECT_DIR$/src/layouts/BasicLayout.js" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
@@ -209,6 +323,9 @@
         <option value="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
         <option value="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" />
+        <option value="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
+        <option value="$PROJECT_DIR$/src/routes/SiteComparison/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
       </list>
     </option>
   </component>
@@ -291,20 +408,7 @@
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="CellSelect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Sites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -318,6 +422,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
               <item name="AreaDefinition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="SiteComparison" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -337,7 +448,7 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="C:\Users\Graham\Documents\Dev\ant-design-pro\node_modules\stylelint" />
-    <property name="SearchEverywhereHistoryKey" value="d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;basiclayout&#9;null&#9;null&#10;data&#9;null&#9;null&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.ejs&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
+    <property name="SearchEverywhereHistoryKey" value="areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.ejs&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules\eslint" />
@@ -478,7 +589,7 @@
       <workItem from="1513677224991" duration="76952000" />
       <workItem from="1515077623046" duration="988000" />
       <workItem from="1515498876248" duration="35401000" />
-      <workItem from="1515663067030" duration="59132000" />
+      <workItem from="1515663067030" duration="59852000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -781,11 +892,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516097225837</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="select grid squares by polygon circle">
+      <created>1516115962972</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1516115962972</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482887000" />
+    <option name="totallyTimeSpent" value="483607000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -867,7 +985,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="safety checkin" />
     <MESSAGE value="refactoring apis" />
     <MESSAGE value="Add site comparison page" />
     <MESSAGE value="site breakdown" />
@@ -892,7 +1009,8 @@
     <MESSAGE value="adding gender totals graph" />
     <MESSAGE value="wip" />
     <MESSAGE value="fixed weird componentunmount bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed weird componentunmount bug" />
+    <MESSAGE value="select grid squares by polygon circle" />
+    <option name="LAST_COMMIT_MESSAGE" value="select grid squares by polygon circle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -916,38 +1034,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/instance/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/instance/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/migrations/env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1028,17 +1114,6 @@
           <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="137" column="23" lean-forward="false" selection-start-line="137" selection-start-column="23" selection-end-line="137" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-            <element signature="e#3021#3686#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1139,34 +1214,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="78" column="7" lean-forward="true" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="631">
           <caret line="71" column="47" lean-forward="false" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="361" column="51" lean-forward="false" selection-start-line="361" selection-start-column="51" selection-end-line="361" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1212,7 +1263,7 @@
         <state relative-caret-position="357">
           <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1222,7 +1273,7 @@
         <state relative-caret-position="799">
           <caret line="145" column="48" lean-forward="false" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
             <element signature="e#1154#1723#0" expanded="false" />
           </folding>
         </state>
@@ -1248,9 +1299,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1594">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1258,9 +1307,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-922">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,9 +1315,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1278,9 +1323,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,16 +1332,8 @@
         <state relative-caret-position="399">
           <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,7 +1342,7 @@
         <state relative-caret-position="357">
           <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
             <marker date="1513955291304" expanded="true" signature="339:609" ph="..." />
           </folding>
         </state>
@@ -1318,7 +1353,7 @@
         <state relative-caret-position="231">
           <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="43" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1334,7 +1369,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -1344,7 +1379,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -1355,8 +1390,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1076">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PageHeader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2462">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1364,7 +1415,69 @@
     <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sites/HourlyCountryThing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/SiteComparison/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding>
+            <element signature="e#2796#3461#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="338" column="64" lean-forward="false" selection-start-line="338" selection-start-column="64" selection-end-line="338" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>

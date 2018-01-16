@@ -31,16 +31,7 @@ class AreaHighlightPolygon extends PureComponent {
 
 
     return (
-      <span>
       <GeoJSON data={this.props.area.geodata} onEachFeature={this.onEachFeature.bind(this)}/>
-
-        {
-          this.props.area.smallcells.map((smallcell, i) => <span key={i}>
-             {/*<SmallCellIcon smallcell={smallcell} />*/}
-          </span>)
-        }
-
-      </span>
     );
   }
 }

@@ -5,8 +5,6 @@ import numeral from 'numeral';
 import {
   ChartCard, yuan, MiniArea, MiniBar, MiniProgress, Field, Bar, Pie, TimelineChart, FunnelChart, Radar
 } from '../../components/Charts';
-import Trend from '../../components/Trend';
-import NumberInfo from '../../components/NumberInfo';
 import { getTimeDistance } from '../../utils/utils';
 import { FormattedMessage } from 'react-intl';
 import styles from './Analysis.less';
@@ -151,11 +149,6 @@ export default class Analysis extends Component {
         dataIndex: 'range',
         key: 'range',
         sorter: (a, b) => a.range - b.range,
-        render: (text, record) => (
-          <Trend flag={record.status === 1 ? 'down' : 'up'}>
-            <span style={{ marginRight: 4 }}>{text}%</span>
-          </Trend>
-        ),
         align: 'right',
       },
     ];
@@ -165,13 +158,7 @@ export default class Analysis extends Component {
     const CustomTab = ({ data, currentTabKey: currentKey }) => (
       <Row gutter={8} style={{ width: 138, margin: '8px 0' }}>
         <Col span={12}>
-          <NumberInfo
-            title={data.name}
-            subTitle="Custom"
-            gap={2}
-            total={`${data.cvr * 100}%`}
-            theme={(currentKey !== data.name) && 'light'}
-          />
+
         </Col>
         <Col span={12} style={{ paddingTop: 36 }}>
           <Pie

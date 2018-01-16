@@ -8,13 +8,9 @@ import {ChartCard, Field} from '../../components/Charts';
 
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import SiteTable from '../../components/Sites/SiteTable';
-import HourlyCountryThing from '../../components/Sites/HourlyCountryThing';
-import SiteEventsChartsHolderIndividual from '../../components/Sites/SiteEventsChartsHolderIndividual';
 import SiteDateSelect from '../../components/Sites/SiteDateSelect';
 import SiteTotalSightings from '../../components/Sites/SiteGenderTotals';
 import SiteGenderTabs from '../../components/Sites/SiteGenderTabs';
-
-import Trend from '../../components/Trend';
 
 import styles from './style.less';
 
