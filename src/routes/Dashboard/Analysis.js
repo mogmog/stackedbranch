@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Row, Col, Icon, Card, Tabs, Table, Radio, DatePicker, Tooltip, Menu, Dropdown, Steps } from 'antd';
-import D3Map from '../../components/D3Map/D3Map';
 import numeral from 'numeral';
 import {
   ChartCard, yuan, MiniArea, MiniBar, MiniProgress, Field, Bar, Pie, TimelineChart, FunnelChart, Radar
@@ -310,7 +309,7 @@ export default class Analysis extends Component {
               title="Funnel"
               style={{ marginTop: 14, height: 500 }}
             >
-             <D3Map></D3Map>
+            {/* <D3Map></D3Map>*/}
             </Card>
           </Col>
 

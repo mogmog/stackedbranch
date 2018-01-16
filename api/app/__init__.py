@@ -204,15 +204,15 @@ def create_app(config_name):
         area = Area.query.filter_by(id=areaid).first()
         if area is None : return make_response(jsonify({ 'list' : [] })), 200
 
-        smallcells = []
-        for smallcell in SmallCell.get_all():
-          if area.contains(smallcell):
-            smallcells.append('\'' + smallcell.id + '\'')
+        sites = []
+        for site in Site.get_all():
+            if area.contains(site):
+              sites.append(str(site.id))
 
         results = []
-        if (len(smallcells) > 0):
-          for row in db.session.execute('select * from get_sightings(ARRAY[' + ','.join(smallcells) + '])'):
-            results.append(({ 'country' : row['__country'], 'network' : row['__network'], 'timestamp' : row['__timestamp'], 'count' : row['__count'] }))
+        if (len(sites) > 0):
+          for row in db.session.execute('select * from get_gender_crossfilter(ARRAY[' + ','.join(sites) + '])'):
+            results.append(({ 'gender' : row['__gender'], 'age_range' : row['__age_range'], 'timestamp' : row['__sighting_date'], 'count' : row['__count'] }))
 
         return make_response(jsonify({ 'list' : results })), 200
 

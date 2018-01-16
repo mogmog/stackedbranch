@@ -59,23 +59,6 @@ export const getNavData = app => [
           },
 
           {
-            name: 'Dwell Dashboard',
-            icon: 'dashboard',
-            path: 'dwell',
-            component: dynamicWrapper(app, ['form', 'rule'], () => import('../routes/Dwells/DwellSearchWizard')),
-            children: [
-              {
-                path: 'date',
-                component: dynamicWrapper(app, ['form'], () => import('../routes/Dwells/DwellSearchWizard/Step2')),
-              },
-              {
-                path: 'summary',
-                component: dynamicWrapper(app, ['form'], () => import('../routes/Dwells/DwellSearchWizard/Step3')),
-              },
-            ],
-          },
-
-          {
             name: 'Analysis',
             icon: 'form',
             path: 'analysis',

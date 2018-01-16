@@ -9,7 +9,7 @@ class BarChart extends Component {
     const chart = dc.barChart(container);
     const helper = this.props.chartHelper(this, chart);
     helper.setProperties('elasticY', 'centerBar', 'gap', 'round',
-                         'alwaysUseRounding', 'x', 'renderHorizontalGridLines',
+                         'alwaysUseR ounding', 'x', 'renderHorizontalGridLines',
                          'filterPrinter');
 
     chart.render();

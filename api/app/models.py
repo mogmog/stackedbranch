@@ -30,9 +30,10 @@ class Area(db.Model):
         db.session.add(self)
         db.session.commit()
 
-    def contains(self, smallcell):
+    def contains(self, site):
       area_polygon = shape(self.geodata['geometry'])
-      return area_polygon.contains(Point(smallcell.lat, smallcell.lng))
+      print (site.lng)
+      return area_polygon.contains(Point(site.lng, site.lat))
 
     @staticmethod
     def get_all():
@@ -58,6 +59,8 @@ class Site(db.Model):
     __tablename__ = 'sites'
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
+    lat         = db.Column(db.Float)
+    lng         = db.Column(db.Float)
 
     def __init__(self, name):
        self.name = name

@@ -4,6 +4,8 @@ import crossfilter from 'crossfilter2/crossfilter';
 import {Spin, Row, Col, Card} from 'antd';
 import moment from 'moment';
 import request from '../../../utils/request';
+import d3 from 'd3';
+
 import {
   ChartContainer,
   PieChart,
@@ -64,11 +66,20 @@ class ComparisonCardNew extends React.Component {
 
     const ndx = crossfilter(this.state.sightings);
 
-    const hourDimension = ndx.dimension(d => getGreetingTime(moment(d.timestamp)));
-    const hourDimensionCount = hourDimension.group();
+    const timestampDimension = ndx.dimension(d => new Date(d.timestamp));
+    const timestampDimensionCount = timestampDimension.group().reduceSum(x => x.count);
 
-    const countryDimension = ndx.dimension(d => d.country);
-    const countryDimensionCount = countryDimension.group();
+    const genderDimension = ndx.dimension(d => d.gender);
+    const genderDimensionCount = genderDimension.group().reduceSum(x => x.count);
+
+    const ageRangeDimension = ndx.dimension(d => d.age_range);
+    const ageRangeDimensionCount = ageRangeDimension.group().reduceSum(x => x.count);
+
+
+    //const countryDimension = ndx.dimension(d => d.country);
+    //const countryDimensionCount = countryDimension.group();
+
+    console.log(d3.time.scale().domain(d3.extent(this.state.sightings, function(d) { return d.timestamp; })));
 
     return (
 
@@ -85,12 +96,12 @@ class ComparisonCardNew extends React.Component {
             <Col>
               <PieChart
                 dimension={e => {
-                  return countryDimension
+                  return genderDimension
                 }}
                 group={e => {
-                  return countryDimensionCount
+                  return genderDimensionCount
                 }}
-                width={300}
+                width={350}
                 height={300}
                 radius={120}
                 label={(d) => {
@@ -102,22 +113,41 @@ class ComparisonCardNew extends React.Component {
 
           <Row>
             <Col>
+
+              <BarChart
+                dimension={ e => {return timestampDimension}}
+                group={ e => {return timestampDimensionCount}}
+                renderArea={true}
+                width={350}
+                height={200}
+                transitionDuration={500}
+                margins={{top: 30, right: 50, bottom: 25, left: 40}}
+                mouseZoomable={true}
+                x={d3.time.scale().domain([new Date(2016, 0, 1), new Date(2017, 11, 31)])}
+                round={d3.time.month.round}
+                xUnits={d3.time.years}
+                elasticY={true}
+                renderHorizontalGridLines={true}
+                brushOn={true}
+
+
+
+              />
+
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
               <RowChart
+                width={350}
                 dimension={e => {
-                  return hourDimension
+                  return ageRangeDimension
                 }}
                 group={e => {
-                  return hourDimensionCount
+                  return ageRangeDimensionCount
                 }}
-                width={280}
-                height={280}
-                elasticX={true}
-                margins={{top: 20, left: 10, right: 10, bottom: 20}}
-                label={d => {
-                  return d.key
-                }}
-                title={d => d.value}
-                xAxis={axis => axis.ticks(4)}
+
               />
             </Col>
           </Row>
