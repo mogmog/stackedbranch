@@ -7,8 +7,8 @@ import {Table, Alert, Badge, Divider, Button, Modal, Card, Form, Input} from 'an
 import { Map, FeatureGroup, TileLayer } from 'react-leaflet';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 
-import AreaMapThumbnail from '../../components/Areas/Definition/AreaMapThumbnail';
-import AreaDefinitionMapToolbar from './AreaDefinitionMapToolbar';
+import AreaDefinitionMapThumbnail from '../../components/Areas/Definition/AreaDefinitionMapThumbnail';
+import AreaDefinitionMapToolbar from '../../components/Areas/Definition/AreaDefinitionMapToolbar';
 
 
 const FormItem = Form.Item;
@@ -136,8 +136,11 @@ class AreaDefinitionTable extends PureComponent {
 
       {
         render: (area) => {
-          return <AreaMapThumbnail zoom={area.zoom} geodata={area.geodata} center_lat={area.center_lat}
-                                   center_lng={area.center_lng}/>
+          return <AreaDefinitionMapThumbnail
+                        zoom={area.zoom}
+                        geodata={area.geodata}
+                        center_lat={area.center_lat}
+                        center_lng={area.center_lng}/>
         },
       },
 
@@ -193,7 +196,9 @@ class AreaDefinitionTable extends PureComponent {
 
             <Map {...this.mapOptions}>
               <FeatureGroup>
-                <AreaDefinitionMapToolbar ref={Map => this.map = Map} onAreaDefine={this.onAreaDefine}></AreaDefinitionMapToolbar>
+                <AreaDefinitionMapToolbar
+                  ref={Map => this.map = Map}
+                  onAreaDefine={this.onAreaDefine}></AreaDefinitionMapToolbar>
               </FeatureGroup>
 
               <TileLayer url='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'/>

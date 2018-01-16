@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sql/get_gender_crossfilter.sql" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/app/__init__.py" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/api/app/models.py" afterPath="$PROJECT_DIR$/api/app/models.py" />
-      <change beforePath="$PROJECT_DIR$/src/common/nav.js" afterPath="$PROJECT_DIR$/src/common/nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/D3Map/D3Map.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" afterPath="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.js" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" afterPath="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" afterPath="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" afterPath="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteTable.js" afterPath="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" afterPath="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapToolbar.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" afterPath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Dwells/DwellSearchWizard/index.less" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,109 +24,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <file leaf-file-name="CellSelectMap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="209" column="14" lean-forward="false" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="14" />
+            <state relative-caret-position="-126">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellSelectGrid.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/nav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="78" column="7" lean-forward="true" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="71" column="47" lean-forward="false" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicLayout.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="361" column="51" lean-forward="false" selection-start-line="361" selection-start-column="51" selection-end-line="361" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Analysis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
+      <file leaf-file-name="SiteTable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteTable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
-              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComparisonCardNew.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="134" column="16" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="134" selection-end-column="16" />
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#1134#1703#0" expanded="false" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/index.jsx">
+      <file leaf-file-name="AreaDefinitionTable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="126">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="26" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PieChart.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/helpers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineChart.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -137,8 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>log</find>
-      <find>sightingsnewold</find>
       <find>wide</find>
       <find>create_eng</find>
       <find>database_url</find>
@@ -167,6 +100,8 @@
       <find>basiclayout</find>
       <find>selectedRow</find>
       <find>D3mAP</find>
+      <find>applyCellAttributes</find>
+      <find>data</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -223,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/node_modules/react-dc/dist/module/mixins/color-mixin.js" />
         <option value="$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/node_modules/dc-react/components/ChartContainer.jsx" />
@@ -241,13 +175,11 @@
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js" />
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
-        <option value="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" />
         <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" />
         <option value="$PROJECT_DIR$/api/migrations/env.py" />
         <option value="$PROJECT_DIR$/api/README.md" />
         <option value="$PROJECT_DIR$/src/components/D3Map/D3Map.js" />
         <option value="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" />
-        <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
         <option value="$PROJECT_DIR$/src/components/CellSelect/D3Map.js" />
         <option value="$PROJECT_DIR$/src/routes/CellSelect/index.js" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
@@ -264,16 +196,19 @@
         <option value="$PROJECT_DIR$/src/components/Sites/SiteGenderTabs.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteGenderTotals.js" />
         <option value="$PROJECT_DIR$/src/components/Sites/SiteGenderChart.js" />
-        <option value="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" />
-        <option value="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" />
         <option value="$PROJECT_DIR$/sql/get_gender_crossfilter.sql" />
         <option value="$PROJECT_DIR$/api/app/models.py" />
-        <option value="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
         <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
         <option value="$PROJECT_DIR$/src/common/nav.js" />
         <option value="$PROJECT_DIR$/src/layouts/BasicLayout.js" />
+        <option value="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
+        <option value="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" />
+        <option value="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js" />
+        <option value="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" />
+        <option value="$PROJECT_DIR$/src/components/Sites/SiteTable.js" />
+        <option value="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" />
       </list>
     </option>
   </component>
@@ -295,10 +230,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="38" />
-    <option name="width" value="2391" />
-    <option name="height" value="1723" />
+    <option name="x" value="295" />
+    <option name="y" value="21" />
+    <option name="width" value="2170" />
+    <option name="height" value="1696" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -355,7 +290,34 @@
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="CellSelect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Sites" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="AreaDefinition" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -390,11 +352,11 @@
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Definition" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Sites" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\assets" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\SmallCell" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Comparision" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -516,7 +478,7 @@
       <workItem from="1513677224991" duration="76952000" />
       <workItem from="1515077623046" duration="988000" />
       <workItem from="1515498876248" duration="35401000" />
-      <workItem from="1515663067030" duration="48012000" />
+      <workItem from="1515663067030" duration="59132000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -798,26 +760,56 @@
       <option name="project" value="LOCAL" />
       <updated>1516028386409</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="wip">
+      <created>1516095487735</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1516095487735</updated>
+    </task>
+    <task id="LOCAL-00042" summary="wip">
+      <created>1516095502920</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1516095502920</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed weird componentunmount bug">
+      <created>1516097225837</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1516097225837</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="471767000" />
+    <option name="totallyTimeSpent" value="482887000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="38" width="2391" height="1723" extended-state="0" />
+    <frame x="295" y="21" width="2170" height="1696" extended-state="0" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.49773243" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293023" sideWeight="0.49791232" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848838" sideWeight="0.49637526" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2908745" sideWeight="0.509059" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267009" sideWeight="0.5045356" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2224622" sideWeight="0.18970448" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22077073" sideWeight="0.5625597" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4147616" sideWeight="0.56446993" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24594079" sideWeight="0.19084822" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267009" sideWeight="0.49546435" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4147616" sideWeight="0.4355301" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2224622" sideWeight="0.8102955" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24594079" sideWeight="0.80915177" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -875,7 +867,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding comparison cards and dc" />
     <MESSAGE value="safety checkin" />
     <MESSAGE value="refactoring apis" />
     <MESSAGE value="Add site comparison page" />
@@ -885,7 +876,6 @@
     <MESSAGE value="Add site comparison api call" />
     <MESSAGE value="Adding SightingsNew api" />
     <MESSAGE value="working site comparison page" />
-    <MESSAGE value="wip" />
     <MESSAGE value="adding small cell interface with site select" />
     <MESSAGE value="Site titles" />
     <MESSAGE value="formatting" />
@@ -900,7 +890,9 @@
     <MESSAGE value="added circle highlighting" />
     <MESSAGE value="stuff" />
     <MESSAGE value="adding gender totals graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding gender totals graph" />
+    <MESSAGE value="wip" />
+    <MESSAGE value="fixed weird componentunmount bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed weird componentunmount bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -918,113 +910,12 @@
           <url>file://$PROJECT_DIR$/src/routes/SiteComparison/index.js</url>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js</url>
-          <line>25</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-leaflet/es/TileLayer.js.flow">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="193" column="17" lean-forward="false" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-804">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/get_gender.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1891">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/dbinit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1204,34 +1095,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/get_gender_crossfilter.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1241,26 +1108,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#52#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1287,34 +1134,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="209" column="14" lean-forward="false" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1350,14 +1171,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/Base.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="134" column="16" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="134" selection-end-column="16" />
+        <state relative-caret-position="799">
+          <caret line="145" column="48" lean-forward="false" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#1134#1703#0" expanded="false" />
+            <element signature="e#1154#1723#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="296" column="28" lean-forward="false" selection-start-line="296" selection-start-column="28" selection-end-line="296" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-516">
+          <caret line="231" column="63" lean-forward="false" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1594">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/DataTableChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-922">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/PieChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/SunburstChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1513955291304" expanded="true" signature="339:609" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapToolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sites/SiteTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ActiveChart/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1076">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

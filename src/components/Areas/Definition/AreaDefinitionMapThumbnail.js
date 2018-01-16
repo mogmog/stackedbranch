@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON  } from 'react-leaflet';
 
 
-class AreaMapThumbnail extends PureComponent {
+class AreaDefinitionMapThumbnail extends PureComponent {
 
   render() {
     return (
@@ -17,4 +17,4 @@ class AreaMapThumbnail extends PureComponent {
   }
 }
 
-export default AreaMapThumbnail;
+export default AreaDefinitionMapThumbnail;
