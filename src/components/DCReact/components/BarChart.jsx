@@ -6,13 +6,16 @@ import { Base } from './Base';
 class BarChart extends Component {
 
   loadChart = (container) => {
-    const chart = dc.barChart(container);
-    const helper = this.props.chartHelper(this, chart);
-    helper.setProperties('elasticY', 'centerBar', 'gap', 'round',
-                         'alwaysUseR ounding', 'x', 'renderHorizontalGridLines',
-                         'filterPrinter');
 
-    chart.render();
+    if (container) {
+      const chart = dc.barChart(container);
+      const helper = this.props.chartHelper(this, chart);
+      helper.setProperties('elasticY', 'centerBar', 'gap', 'round',
+        'alwaysUseR ounding', 'x', 'renderHorizontalGridLines',
+        'filterPrinter');
+
+      chart.render();
+    }
   };
 
   render() {

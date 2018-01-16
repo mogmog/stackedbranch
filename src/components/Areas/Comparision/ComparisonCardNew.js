@@ -5,7 +5,7 @@ import {Spin, Row, Col, Card} from 'antd';
 import moment from 'moment';
 import request from '../../../utils/request';
 import d3 from 'd3';
-
+import dc from 'dc';
 import {
   ChartContainer,
   PieChart,
@@ -129,9 +129,6 @@ class ComparisonCardNew extends React.Component {
                 elasticY={true}
                 renderHorizontalGridLines={true}
                 brushOn={true}
-
-
-
               />
 
             </Col>
@@ -139,13 +136,14 @@ class ComparisonCardNew extends React.Component {
 
           <Row>
             <Col>
+
               <RowChart
                 width={350}
                 dimension={e => {
-                  return ageRangeDimension
+                  return ageRangeDimension;
                 }}
                 group={e => {
-                  return ageRangeDimensionCount
+                  return ageRangeDimensionCount;
                 }}
 
               />
