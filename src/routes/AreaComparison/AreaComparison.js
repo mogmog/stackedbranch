@@ -65,7 +65,7 @@ export default class Workplace extends PureComponent {
         <Row gutter={24}>
             <Col xl={24} lg={24} md={24} sm={24} xs={24}>
               <Card
-                title={'Select 2 areas you wish to compare'}
+                title={'Select the areas you wish to compare'}
                 bordered={true} >
 
                 <AnimateHeight height={ height } >
