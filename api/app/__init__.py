@@ -209,10 +209,22 @@ def create_app(config_name):
             if area.contains(site):
               sites.append(str(site.id))
 
+        def generate_random_data(num_rows):
+            import random
+            latitude = 51.51451110408478
+            longitude = -0.12620388576521444
+            result = []
+            for _ in range(num_rows):
+                dec_lat = random.random()/10
+                dec_lon = random.random()/10
+                result.append({'lat' : latitude + dec_lat, 'lng' : longitude + dec_lon})
+            return result
+
         results = []
         if (len(sites) > 0):
           for row in db.session.execute('select * from get_gender_crossfilter(ARRAY[' + ','.join(sites) + '])'):
-            results.append(({ 'gender' : row['__gender'], 'age_range' : row['__age_range'], 'timestamp' : row['__sighting_date'], 'count' : row['__count'] }))
+
+            results.append(({ 'geos': generate_random_data(5), 'gender' : row['__gender'], 'age_range' : row['__age_range'], 'timestamp' : row['__sighting_date'], 'count' : row['__count'] }))
 
         return make_response(jsonify({ 'list' : results })), 200
 

@@ -13,13 +13,11 @@ class PieChart extends Component {
       helper.setProperties('radius', 'innerRadius');
 
       this.chart.render();
-
+      this.chart.on('filtered', this.props.onfilter);
     }
-
   };
 
   componentDidUpdate (prevProps) {
-    console.log(this.chart);
       this.chart.filterAll();
       this.chart.filter(this.props.filter);
       this.chart.redraw();

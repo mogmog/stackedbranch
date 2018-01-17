@@ -7,6 +7,7 @@ import _PieChart from './PieChart';
 import _RowChart from './RowChart';
 import _BarChart from './BarChart';
 import _LineChart from './LineChart';
+import _DetailMap from './DetailMap';
 
 export const ChartContainer = _ChartContainer;
 export const Base = _Base;
@@ -17,3 +18,5 @@ export const PieChart = _PieChart;
 export const RowChart = _RowChart;
 export const BarChart = _BarChart;
 export const LineChart = _LineChart;
+export const DetailMap = _DetailMap;
+

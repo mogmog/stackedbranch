@@ -10,7 +10,7 @@ class RowChart extends Component {
     if (container) {
       this.chart = dc.rowChart(container);
       const helper = this.props.chartHelper(this, this.chart);
-      helper.setProperties('elasticX');
+      helper.setProperties('elasticX', 'ordering');
 
       if (this.props.xAxis) {
         this.props.xAxis(this.chart.xAxis());
