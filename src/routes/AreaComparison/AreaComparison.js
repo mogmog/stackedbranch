@@ -6,7 +6,7 @@ import {Button, Row, Col, Card, List, Avatar, Divider} from 'antd';
 import AnimateHeight from 'react-animate-height';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import AreaSelectMap from '../../components/Areas/Comparision/AreaSelectMap';
-import ComparisonCardNew from '../../components/Areas/Comparision/ComparisonCardNew';
+import ComparisonCardNew from '../../components/Areas/Comparision/ComparisonCard';
 
 @connect(state => ({
   area: state.area,
@@ -18,7 +18,8 @@ export default class Workplace extends PureComponent {
 
     this.state = {
       height: 400,
-      cards : []
+      cards : [],
+      filter : null,
     };
   }
 
@@ -32,6 +33,10 @@ export default class Workplace extends PureComponent {
 
   onClickArea(area) {
     this.setState({ cards: [...this.state.cards, area] });
+  }
+
+  setfilter() {
+    this.setState({ 'filter' : 'Male' });
   }
 
   render() {
@@ -74,13 +79,15 @@ export default class Workplace extends PureComponent {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <Divider/>
+            <button onClick={ x=> {this.setState({filter : 'Male'})}}>set filter to Male</button>
+            <button onClick={ x=> {this.setState({filter : 'Female'})}}>set filter to Female</button>
           </Col>
         </Row>
 
         <Row gutter={24}>
           {cards.map((area, i) => (
             <Col xl={8} lg={8} md={24} sm={24} xs={24} key={i}>
-                <ComparisonCardNew area={area} />
+                <ComparisonCardNew area={area} filter={this.state.filter} clear={x => {this.setState({filter : null})}} />
               </Col>
           ))}
         </Row>

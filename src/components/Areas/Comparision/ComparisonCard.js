@@ -17,18 +17,23 @@ import {
   LineChart
 } from './../../DCReact/components';
 
-class ComparisonCardNew extends React.Component {
+class ComparisonCard extends React.Component {
   constructor() {
     super();
 
     this.state = {
       loading: true,
       sightings: [],
-      records: []
+      records: [],
+      filter : null
     };
+
+    this.genderDimension = undefined;
   }
 
   componentDidMount() {
+
+
 
     return request('/api/sighting/byarea/' + this.props.area.id, {
       method: 'GET',
@@ -42,44 +47,18 @@ class ComparisonCardNew extends React.Component {
     if (this.state.loading) return (<Card style={{marginBottom: 24}} title={<Spin/>} bordered={true} bodyStyle={{padding: 0}}> </Card>);
     if (!this.state.sightings.length) return (<Card style={{marginBottom: 24}} title='No Results' bordered={true} bodyStyle={{padding: 0}}> </Card>);
 
-    const getGreetingTime = (m) => {
-      var g = null; //return g
-
-      if (!m || !m.isValid()) {
-        return;
-      } //if we can't find a valid or filled moment, we return.
-
-      var split_afternoon = 12 //24hr time to split the afternoon
-      var split_evening = 17 //24hr time to split the evening
-      var currentHour = parseFloat(m.format("HH"));
-
-      if (currentHour >= split_afternoon && currentHour <= split_evening) {
-        g = "Afternoon";
-      } else if (currentHour >= split_evening) {
-        g = "Evening";
-      } else {
-        g = "Morning";
-      }
-
-      return g;
-    };
-
     const ndx = crossfilter(this.state.sightings);
 
     const timestampDimension = ndx.dimension(d => new Date(d.timestamp));
     const timestampDimensionCount = timestampDimension.group().reduceSum(x => x.count);
 
-    const genderDimension = ndx.dimension(d => d.gender);
-    const genderDimensionCount = genderDimension.group().reduceSum(x => x.count);
+    this.genderDimension = ndx.dimension(d => d.gender);
+    const genderDimensionCount = this.genderDimension.group().reduceSum(x => x.count);
 
     const ageRangeDimension = ndx.dimension(d => d.age_range);
     const ageRangeDimensionCount = ageRangeDimension.group().reduceSum(x => x.count);
 
-
-    //const countryDimension = ndx.dimension(d => d.country);
-    //const countryDimensionCount = countryDimension.group();
-
-    console.log(d3.time.scale().domain(d3.extent(this.state.sightings, function(d) { return d.timestamp; })));
+    this.state.filter = this.props.filter;
 
     return (
 
@@ -94,12 +73,17 @@ class ComparisonCardNew extends React.Component {
 
           <Row>
             <Col>
+
+              {this.state.filter}
+
               <PieChart
+                filter={this.state.filter}
+                clear={this.props.clear}
                 dimension={e => {
-                  return genderDimension
+                  return this.genderDimension;
                 }}
                 group={e => {
-                  return genderDimensionCount
+                  return genderDimensionCount;
                 }}
                 width={350}
                 height={300}
@@ -156,5 +140,5 @@ class ComparisonCardNew extends React.Component {
   }
 }
 
-export default ComparisonCardNew;
+export default ComparisonCard;
 

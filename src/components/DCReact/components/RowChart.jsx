@@ -8,16 +8,21 @@ class RowChart extends Component {
   loadChart = (container) => {
 
     if (container) {
-      const chart = dc.rowChart(container);
-      const helper = this.props.chartHelper(this, chart);
+      this.chart = dc.rowChart(container);
+      const helper = this.props.chartHelper(this, this.chart);
       helper.setProperties('elasticX');
 
       if (this.props.xAxis) {
-        this.props.xAxis(chart.xAxis());
+        this.props.xAxis(this.chart.xAxis());
       }
-      chart.render();
+      this.chart.render();
     }
   };
+
+
+  componentDidUpdate (prevProps) {
+    this.chart.redraw();
+  }
 
   render() {
     return <div className={this.props.className} ref={ this.loadChart }/>;

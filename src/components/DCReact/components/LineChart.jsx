@@ -6,15 +6,20 @@ import { Base } from './Base';
 class LineChart extends Component {
 
   loadChart = (container) => {
-    const chart = dc.lineChart(container);
-    const helper = this.props.chartHelper(this, chart);
+    this.chart = dc.lineChart(container);
+    const helper = this.props.chartHelper(this, this.chart);
     helper.setProperties('renderArea', 'xAxis', 'x', 'round', 'xUnits',
                          'elasticY', 'renderHorizontalGridLines', 'brushOn',
                          'valueAccessor')
           .setContextProperties('stack');
 
-    chart.render();
+    this.chart.render();
   };
+
+
+  componentDidUpdate (prevProps) {
+    this.chart.redraw();
+  }
 
   render() {
     return <div className={this.props.className} ref={ this.loadChart }/>;

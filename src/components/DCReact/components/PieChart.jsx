@@ -18,6 +18,15 @@ class PieChart extends Component {
 
   };
 
+  componentDidUpdate (prevProps) {
+    console.log(this.chart);
+      this.chart.filterAll();
+      this.chart.filter(this.props.filter);
+      this.chart.redraw();
+  }
+
+
+
   render() {
     return <div className={this.props.className} ref={this.loadChart} />;
   }
