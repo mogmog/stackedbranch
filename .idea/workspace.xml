@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/realworld.10000.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareDateChart.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareRowChart.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/storeCompareWorldMap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/world-countries.topo.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" afterPath="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx" afterPath="$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx" afterPath="$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" afterPath="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" afterPath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RowChart.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RowChart.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+            <state relative-caret-position="399">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,18 +42,28 @@
       <file leaf-file-name="AreaComparison.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+            <state relative-caret-position="475">
+              <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/dc/index.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="378">
+              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,21 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/dc/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d3</find>
       <find>PAIRS</find>
       <find>Leaflet.UtiLeaflet</find>
       <find>debugg</find>
@@ -169,6 +156,7 @@
       <find>dc</find>
       <find>filter</find>
       <find>dc.filter</find>
+      <find>Select 2 areas you wish to compare</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -211,8 +199,8 @@
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api\app</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
-      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Dashboard</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -226,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/node_modules/dc-react/components/ChartContainer.jsx" />
         <option value="$PROJECT_DIR$/node_modules/dc-react/lib/ChartContainer.js" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/BubbleChart.jsx" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx" />
@@ -272,11 +259,12 @@
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js" />
-        <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx" />
         <option value="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" />
+        <option value="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -299,8 +287,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="17" />
-    <option name="width" value="2420" />
+    <option name="y" value="13" />
+    <option name="width" value="2154" />
     <option name="height" value="1713" />
   </component>
   <component name="ProjectView">
@@ -329,80 +317,13 @@
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="dc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Areas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Areas" type="462c0819:PsiDirectoryNode" />
-              <item name="Comparision" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="DCReact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="DCReact" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="AreaComparison" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="SiteComparison" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -563,7 +484,7 @@
       <workItem from="1513677224991" duration="76952000" />
       <workItem from="1515077623046" duration="988000" />
       <workItem from="1515498876248" duration="35401000" />
-      <workItem from="1515663067030" duration="70886000" />
+      <workItem from="1515663067030" duration="72271000" />
     </task>
     <task id="LOCAL-00001" summary="added radar graph">
       <created>1512135833199</created>
@@ -880,11 +801,25 @@
       <option name="project" value="LOCAL" />
       <updated>1516116728141</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="add a global filter to dc geraphs">
+      <created>1516186021999</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1516186021999</updated>
+    </task>
+    <task id="LOCAL-00047" summary="text change">
+      <created>1516190146487</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1516190146487</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="494641000" />
+    <option name="totallyTimeSpent" value="496026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -896,19 +831,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="17" width="2420" height="1713" extended-state="0" />
+    <frame x="-8" y="13" width="2154" height="1713" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.49773243" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848838" sideWeight="0.49637526" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22077073" sideWeight="0.5625597" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4864341" sideWeight="0.56399316" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3041809" sideWeight="0.19119497" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4864341" sideWeight="0.5644851" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34311837" sideWeight="0.19119497" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4864341" sideWeight="0.4360068" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4864341" sideWeight="0.43551493" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3041809" sideWeight="0.80880505" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34311837" sideWeight="0.80880505" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -966,8 +901,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add site comparison page" />
-    <MESSAGE value="site breakdown" />
     <MESSAGE value="randomise site&#10;add new lte file" />
     <MESSAGE value="add sightingsperhour view and api" />
     <MESSAGE value="Add site comparison api call" />
@@ -991,7 +924,9 @@
     <MESSAGE value="fixed weird componentunmount bug" />
     <MESSAGE value="select grid squares by polygon circle" />
     <MESSAGE value="removing unused ant design stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing unused ant design stuff" />
+    <MESSAGE value="add a global filter to dc geraphs" />
+    <MESSAGE value="text change" />
+    <option name="LAST_COMMIT_MESSAGE" value="text change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1015,22 +950,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sql/get_gender_totals.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/sitecomparison.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -1406,14 +1325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1452,8 +1363,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        <state relative-caret-position="399">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>
