@@ -7,6 +7,8 @@ import request from '../../../utils/request';
 
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 
+import Testing from './Testing';
+
 import d3 from 'd3';
 import dc from 'dc';
 import { Map, TileLayer, FeatureGroup, Marker } from 'react-leaflet';
@@ -37,6 +39,7 @@ class ComparisonCard extends React.Component {
     this.geoDimension = undefined;
     this.everything = undefined;
     this.run = false;
+    this.heatmap = [];
   }
 
   componentDidMount() {
@@ -57,7 +60,7 @@ class ComparisonCard extends React.Component {
 
       const everythingDimension = ndx.dimension((d) => { return d});
 
-      this.setState({ heatmap: [], loading: false, genderDimension, genderDimensionCount, everythingDimension, timestampDimension, timestampDimensionCount, ageRangeDimension, ageRangeDimensionCount });
+      this.setState({ loading: false, genderDimension, genderDimensionCount, everythingDimension, timestampDimension, timestampDimensionCount, ageRangeDimension, ageRangeDimensionCount });
     });
   }
 
@@ -73,7 +76,12 @@ class ComparisonCard extends React.Component {
   }
 
   onfilter() {
-    //this.setState({heatmap : this.state.everythingDimension.top(Infinity).map(x=> x.geos)});
+
+    console.log(this.state.everythingDimension.top(Infinity).map(x=> x.geos).length);
+    //this.forceUpdate();
+
+    //alert("on filter");
+   // this.setState({heatmap: this.state.everythingDimension.top(Infinity).map(x=> x.geos)});
   }
 
   applymaphandlers(MAP) {
@@ -81,26 +89,23 @@ class ComparisonCard extends React.Component {
     const that = this;
 
     this.map = MAP;
-console.log(this);
 
-if (this.map) {
-  this.map.leafletElement.on('moveend', function () {
-    that.updateMapFilter();
-  });
+  if (this.map) {
+    this.map.leafletElement.on('moveend', function () {
+      that.updateMapFilter();
+    });
 
-  this.map.leafletElement.on('zoomend', function () {
-    that.updateMapFilter();
-  });
-}
+    this.map.leafletElement.on('zoomend', function () {
+      that.updateMapFilter();
+    });
+  }
 
 
   }
 
   render() {
     if (this.state.loading) return (<Card style={{ marginBottom: 24 }} title={<Spin />} bordered bodyStyle={{ padding: 0 }} />);
-    //if (!this.state.sightings.length) return (<Card style={{ marginBottom: 24 }} title="No Results" bordered bodyStyle={{ padding: 0 }} />);
-
-    //this.state.filter = this.props.filter;
+    if (!this.state.genderDimension.top(Infinity).length) return (<Card style={{ marginBottom: 24 }} title="No Results" bordered bodyStyle={{ padding: 0 }} />);
 
     const mapOptions = {
       center: [51.51451110408478, -0.12620388576521444],
@@ -110,7 +115,6 @@ if (this.map) {
       zoomControl: false,
     }
 
-    console.log(this.state.everythingDimension);
     return (
 
       <Card
@@ -125,10 +129,10 @@ if (this.map) {
           <Row>
             <Col>
 
-              {this.state.filter}
+              {this.props.filter}
 
               <PieChart
-                filter={this.state.filter}
+                filter={this.props.filter}
                 onfilter={this.onfilter.bind(this)}
                 clear={this.props.clear}
                 dimension={(e) => {
@@ -153,6 +157,7 @@ if (this.map) {
               <BarChart
                 dimension={(e) => { return this.state.timestampDimension; }}
                 group={(e) => { return this.state.timestampDimensionCount; }}
+                onfilter={this.onfilter.bind(this)}
                 renderArea
                 width={350}
                 height={200}
@@ -190,11 +195,15 @@ if (this.map) {
           <Row>
             <Col style={{'width':360, 'height':250}}>
 
+              <Testing thing={this.state.everythingDimension}></Testing>
+
+              //{this.state.everythingDimension.top(Infinity).map(x=> x.geos).length}
+
+
               {<Map ref={this.applymaphandlers.bind(this)} {...mapOptions} zoom={18}>
 
                 <HeatmapLayer
                   fitBoundsOnLoad
-                  fitBoundsOnUpdate
                   points={this.state.everythingDimension.top(Infinity).map(x=> x.geos)}
                   longitudeExtractor={m => m[0].lng}
                   latitudeExtractor={m => m[0].lat}

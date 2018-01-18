@@ -15,6 +15,7 @@ class BarChart extends Component {
         'filterPrinter');
 
       this.chart.render();
+      this.chart.on('filtered', this.props.onfilter);
     }
   };
 

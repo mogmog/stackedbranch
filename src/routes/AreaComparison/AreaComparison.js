@@ -87,7 +87,9 @@ export default class Workplace extends PureComponent {
         <Row gutter={24}>
           {cards.map((area, i) => (
             <Col xl={8} lg={8} md={24} sm={24} xs={24} key={i}>
+
                 <ComparisonCardNew area={area} filter={this.state.filter} clear={x => {this.setState({filter : null})}} />
+
               </Col>
           ))}
         </Row>
