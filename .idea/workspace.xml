@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/D3Map/D3Map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/HourlyCountryThing.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Sites/SiteTotalSightings.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionMapToolbar.js" />
-      <change beforePath="$PROJECT_DIR$/api/data/lteSghtlogs_20171124.0000+0000-20171205.0000+0000_vdc21_181775.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonPolygonHighlight.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js" afterPath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/SmallCellIcon.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/index.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/FooterToolbar/demo/basic.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" afterPath="$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js" />
+      <change beforePath="$PROJECT_DIR$/widesightingsnew" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/widesightingsnew.1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/widesightingsnew.2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/widesightingsnew.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/widesightingsnew.4" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,10 +29,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Analysis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/Dashboard/Analysis.js">
+      <file leaf-file-name="D3Marker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-819">
+            <state relative-caret-position="-416">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BarChart.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -37,8 +63,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/index.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -47,14 +73,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="D3Map.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/HeaderSearch/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-1004">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparisonCard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparisonMap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <folding>
+                <marker date="1516275041116" expanded="true" signature="345:615" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparisonPolygonHighlight.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonPolygonHighlight.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AreaComparison.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>set_main_option</find>
       <find>CellSelectGrid</find>
       <find>toggleSitesCombined</find>
       <find>SiteCountryBarChart</find>
@@ -93,6 +162,7 @@
       <find>alert</find>
       <find>&lt;ComparisonCard</find>
       <find>heatmap</find>
+      <find>AreaSElect</find>
     </findStrings>
     <replaceStrings>
       <replace>Cover Card List</replace>
@@ -136,9 +206,9 @@
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api\app</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api</dir>
-      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Dashboard</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -224,10 +294,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
-    <option name="y" value="37" />
+    <option name="x" value="159" />
+    <option name="y" value="53" />
     <option name="width" value="2329" />
-    <option name="height" value="1722" />
+    <option name="height" value="1576" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -263,6 +333,28 @@
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Areas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Areas" type="462c0819:PsiDirectoryNode" />
+              <item name="Comparision" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="DCReact" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -423,13 +515,6 @@
       <workItem from="1515077623046" duration="988000" />
       <workItem from="1515498876248" duration="35401000" />
       <workItem from="1515663067030" duration="94271000" />
-    </task>
-    <task id="LOCAL-00003" summary="theming">
-      <created>1512402501807</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1512402501808</updated>
     </task>
     <task id="LOCAL-00004" summary="updated package.json">
       <created>1512410997745</created>
@@ -767,11 +852,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516211580866</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Merge branch 'master' of https://github.com/mogmog/hurricane&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;api/app/__init__.py&#10;#&#9;api/app/models.py&#10;#&#9;api/data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv&#10;#&#9;api/data/lteSghtlogs_20171124.0000+0000-20171205.0000+0000_vdc21_181775.csv&#10;#&#9;api/requirements.txt&#10;#&#9;package.json&#10;#&#9;src/common/nav.js&#10;#&#9;src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;#&#9;src/components/Areas/Comparision/ComparisonCard2.js&#10;#&#9;src/components/Areas/Comparision/realworld.10000.js&#10;#&#9;src/components/Areas/Comparision/storeCompareDateChart.js&#10;#&#9;src/components/Areas/Comparision/storeCompareRowChart.js&#10;#&#9;src/components/Areas/Comparision/storeCompareWorldMap.js&#10;#&#9;src/components/Areas/Comparision/world-countries.topo.json&#10;#&#9;src/components/CellSelect/CellSelectGrid.js&#10;#&#9;src/components/CellSelect/CellSelectMap.js&#10;#&#9;src/components/DCChartWrappers/BarChart.js&#10;#&#9;src/components/DCChartWrappers/PieChart.js&#10;#&#9;src/components/DCReact/components/BarChart.jsx&#10;#&#9;src/components/DCReact/components/LineChart.jsx&#10;#&#9;src/components/DCReact/components/PieChart.jsx&#10;#&#9;src/components/DCReact/components/RowChart.jsx&#10;#&#9;src/components/DCReact/components/index.jsx&#10;#&#9;src/components/Sites/SiteTable.js&#10;#&#9;src/models/sitecomparison.js&#10;#&#9;src/router.js&#10;#&#9;src/routes/AreaComparison/AreaComparison.js&#10;#&#9;src/routes/AreaDefinition/AreaDefinitionTable.js&#10;#&#9;src/routes/Dashboard/Analysis.js&#10;#&#9;src/routes/Dwells/DwellSearchWizard/index.js&#10;#&#9;src/routes/SiteComparison/index.js&#10;#&#9;src/services/api.js">
+      <created>1516273930923</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1516273930923</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="518061000" />
+    <option name="totallyTimeSpent" value="519247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,22 +875,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="37" width="2329" height="1722" extended-state="0" />
+    <frame x="159" y="53" width="2329" height="1576" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31278098" sideWeight="0.5033289" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4450744" sideWeight="0.5574789" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31278098" sideWeight="0.4966711" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4450744" sideWeight="0.4425211" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.49844652" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288448" sideWeight="0.4966711" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24988903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38304484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32299742" sideWeight="0.498565" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -829,7 +922,6 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7135517" sideWeight="0.4358633" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25832224" sideWeight="0.80269057" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32299742" sideWeight="0.498565" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
@@ -870,7 +962,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding SightingsNew api" />
     <MESSAGE value="working site comparison page" />
     <MESSAGE value="adding small cell interface with site select" />
     <MESSAGE value="Site titles" />
@@ -895,7 +986,8 @@
     <MESSAGE value="ignore file as too big for github" />
     <MESSAGE value="remove big file" />
     <MESSAGE value="introduced heatmap." />
-    <option name="LAST_COMMIT_MESSAGE" value="introduced heatmap." />
+    <MESSAGE value="Merge branch 'master' of https://github.com/mogmog/hurricane&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;api/app/__init__.py&#10;#&#9;api/app/models.py&#10;#&#9;api/data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv&#10;#&#9;api/data/lteSghtlogs_20171124.0000+0000-20171205.0000+0000_vdc21_181775.csv&#10;#&#9;api/requirements.txt&#10;#&#9;package.json&#10;#&#9;src/common/nav.js&#10;#&#9;src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;#&#9;src/components/Areas/Comparision/ComparisonCard2.js&#10;#&#9;src/components/Areas/Comparision/realworld.10000.js&#10;#&#9;src/components/Areas/Comparision/storeCompareDateChart.js&#10;#&#9;src/components/Areas/Comparision/storeCompareRowChart.js&#10;#&#9;src/components/Areas/Comparision/storeCompareWorldMap.js&#10;#&#9;src/components/Areas/Comparision/world-countries.topo.json&#10;#&#9;src/components/CellSelect/CellSelectGrid.js&#10;#&#9;src/components/CellSelect/CellSelectMap.js&#10;#&#9;src/components/DCChartWrappers/BarChart.js&#10;#&#9;src/components/DCChartWrappers/PieChart.js&#10;#&#9;src/components/DCReact/components/BarChart.jsx&#10;#&#9;src/components/DCReact/components/LineChart.jsx&#10;#&#9;src/components/DCReact/components/PieChart.jsx&#10;#&#9;src/components/DCReact/components/RowChart.jsx&#10;#&#9;src/components/DCReact/components/index.jsx&#10;#&#9;src/components/Sites/SiteTable.js&#10;#&#9;src/models/sitecomparison.js&#10;#&#9;src/router.js&#10;#&#9;src/routes/AreaComparison/AreaComparison.js&#10;#&#9;src/routes/AreaDefinition/AreaDefinitionTable.js&#10;#&#9;src/routes/Dashboard/Analysis.js&#10;#&#9;src/routes/Dwells/DwellSearchWizard/index.js&#10;#&#9;src/routes/SiteComparison/index.js&#10;#&#9;src/services/api.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/mogmog/hurricane&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;api/app/__init__.py&#10;#&#9;api/app/models.py&#10;#&#9;api/data/lteSghtlogs_20171118.0000+0000-20171120.0000+0000_vdc21_4108.csv&#10;#&#9;api/data/lteSghtlogs_20171124.0000+0000-20171205.0000+0000_vdc21_181775.csv&#10;#&#9;api/requirements.txt&#10;#&#9;package.json&#10;#&#9;src/common/nav.js&#10;#&#9;src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;#&#9;src/components/Areas/Comparision/ComparisonCard2.js&#10;#&#9;src/components/Areas/Comparision/realworld.10000.js&#10;#&#9;src/components/Areas/Comparision/storeCompareDateChart.js&#10;#&#9;src/components/Areas/Comparision/storeCompareRowChart.js&#10;#&#9;src/components/Areas/Comparision/storeCompareWorldMap.js&#10;#&#9;src/components/Areas/Comparision/world-countries.topo.json&#10;#&#9;src/components/CellSelect/CellSelectGrid.js&#10;#&#9;src/components/CellSelect/CellSelectMap.js&#10;#&#9;src/components/DCChartWrappers/BarChart.js&#10;#&#9;src/components/DCChartWrappers/PieChart.js&#10;#&#9;src/components/DCReact/components/BarChart.jsx&#10;#&#9;src/components/DCReact/components/LineChart.jsx&#10;#&#9;src/components/DCReact/components/PieChart.jsx&#10;#&#9;src/components/DCReact/components/RowChart.jsx&#10;#&#9;src/components/DCReact/components/index.jsx&#10;#&#9;src/components/Sites/SiteTable.js&#10;#&#9;src/models/sitecomparison.js&#10;#&#9;src/router.js&#10;#&#9;src/routes/AreaComparison/AreaComparison.js&#10;#&#9;src/routes/AreaDefinition/AreaDefinitionTable.js&#10;#&#9;src/routes/Dashboard/Analysis.js&#10;#&#9;src/routes/Dwells/DwellSearchWizard/index.js&#10;#&#9;src/routes/SiteComparison/index.js&#10;#&#9;src/services/api.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -905,7 +997,7 @@
           <line>8</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js</url>
+          <url>file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMap.js</url>
           <line>7</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -919,75 +1011,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/ChartContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="71" column="47" lean-forward="false" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/Base.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/BarChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1594">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/DataTableChart.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/PieChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCChartWrappers/SunburstChart.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapToolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AreaDefinition/AreaDefinitionTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1010,13 +1033,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/PageHeader/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2462">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1051,6 +1067,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,6 +1075,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,14 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1267,7 +1277,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaHighlightPolygon.js">
+    <entry file="file://$PROJECT_DIR$/widesightingsnew">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/demo/basic.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FooterToolbar/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Mapping/MarkerCluster.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HeaderSearch/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1004">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ProductList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCardNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2030">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <marker date="1516275041116" expanded="true" signature="345:615" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonPolygonHighlight.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
@@ -1275,19 +1400,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/AreaSelectMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <marker date="1513955291304" expanded="true" signature="339:609" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3276">
+        <state relative-caret-position="567">
           <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -1297,19 +1412,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AreaComparison/AreaComparison.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Areas/Comparision/SmallCellIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

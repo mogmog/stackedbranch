@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Map, TileLayer, GeoJSON} from 'react-leaflet';
 
-import AreaHighlightPolygon from './AreaHighlightPolygon';
+import AreaHighlightPolygon from './ComparisonPolygonHighlight';
 
 class AreaSelectMap extends PureComponent {
 

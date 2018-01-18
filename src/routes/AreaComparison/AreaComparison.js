@@ -5,8 +5,8 @@ import {Link} from 'dva/router';
 import {Button, Row, Col, Card, List, Avatar, Divider} from 'antd';
 import AnimateHeight from 'react-animate-height';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
-import AreaSelectMap from '../../components/Areas/Comparision/AreaSelectMap';
-import ComparisonCardNew from '../../components/Areas/Comparision/ComparisonCard';
+import AreaSelectMap from '../../components/Areas/Comparision/ComparisonMap';
+import ComparisonCard from '../../components/Areas/Comparision/ComparisonCard';
 
 @connect(state => ({
   area: state.area,
@@ -88,7 +88,7 @@ export default class Workplace extends PureComponent {
           {cards.map((area, i) => (
             <Col xl={8} lg={8} md={24} sm={24} xs={24} key={i}>
 
-                <ComparisonCardNew area={area} filter={this.state.filter} clear={x => {this.setState({filter : null})}} />
+                <ComparisonCard area={area} filter={this.state.filter} clear={x => {this.setState({filter : null})}} />
 
               </Col>
           ))}
