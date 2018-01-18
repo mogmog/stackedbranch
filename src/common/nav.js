@@ -27,14 +27,14 @@ export const getNavData = app => [
             name: 'Area Definition',
             icon: 'compass',
             path: 'areas',
-            component: dynamicWrapper(app, ['area'], () => import('../routes/AreaDefinition/AreaDefinitionTable')),
+            component: dynamicWrapper(app, ['area'], () => import('../routes/AreaDefinition/index')),
           },
 
           {
             name: 'Compare my areas',
             icon: 'profile',
             path: 'areacomparison',
-            component: dynamicWrapper(app, ['area', 'comparisoncard'], () => import('../routes/AreaComparison/AreaComparison')),
+            component: dynamicWrapper(app, ['area', 'comparisoncard'], () => import('../routes/AreaComparison/index')),
           },
 
           {

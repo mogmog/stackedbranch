@@ -11,7 +11,7 @@ import Testing from './Testing';
 
 import d3 from 'd3';
 import dc from 'dc';
-import { Map, TileLayer, FeatureGroup, Marker } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
 
 import {
   ChartContainer,
@@ -76,12 +76,6 @@ class ComparisonCard extends React.Component {
   }
 
   onfilter() {
-
-    console.log(this.state.everythingDimension.top(Infinity).map(x=> x.geos).length);
-    //this.forceUpdate();
-
-    //alert("on filter");
-   // this.setState({heatmap: this.state.everythingDimension.top(Infinity).map(x=> x.geos)});
   }
 
   applymaphandlers(MAP) {
@@ -90,17 +84,15 @@ class ComparisonCard extends React.Component {
 
     this.map = MAP;
 
-  if (this.map) {
-    this.map.leafletElement.on('moveend', function () {
-      that.updateMapFilter();
-    });
+    if (this.map) {
+      this.map.leafletElement.on('moveend', function () {
+        that.updateMapFilter();
+      });
 
-    this.map.leafletElement.on('zoomend', function () {
-      that.updateMapFilter();
-    });
-  }
-
-
+      this.map.leafletElement.on('zoomend', function () {
+        that.updateMapFilter();
+      });
+    }
   }
 
   render() {
@@ -197,9 +189,6 @@ class ComparisonCard extends React.Component {
 
               <Testing thing={this.state.everythingDimension}></Testing>
 
-              //{this.state.everythingDimension.top(Infinity).map(x=> x.geos).length}
-
-
               {<Map ref={this.applymaphandlers.bind(this)} {...mapOptions} zoom={18}>
 
                 <HeatmapLayer
@@ -210,7 +199,7 @@ class ComparisonCard extends React.Component {
                   intensityExtractor={m => 50} />
 
                 <TileLayer url='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'/>
-              </Map>}
+               </Map>}
 
             </Col>
           </Row>

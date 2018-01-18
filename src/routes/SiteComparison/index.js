@@ -12,8 +12,6 @@ import SiteDateSelect from '../../components/Sites/SiteDateSelect';
 import SiteTotalSightings from '../../components/Sites/SiteGenderTotals';
 import SiteGenderTabs from '../../components/Sites/SiteGenderTabs';
 
-import styles from './style.less';
-
 const FormItem = Form.Item;
 const TabPane = Tabs.TabPane;
 

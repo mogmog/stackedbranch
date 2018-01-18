@@ -8,7 +8,6 @@ import CellSelectMap from '../../components/CellSelect/CellSelectMap';
 class CellSelect extends PureComponent {
 
   componentDidMount() {
-    const { dispatch } = this.props;
   }
 
   render() {
