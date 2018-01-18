@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Map, TileLayer, GeoJSON} from 'react-leaflet';
 
-import AreaHighlightPolygon from './ComparisonPolygonHighlight';
+import ComparisonMapPolygon from './ComparisonMapPolygon';
 
 class AreaSelectMap extends PureComponent {
 
@@ -15,7 +15,7 @@ class AreaSelectMap extends PureComponent {
 
         {
           areas.list.map((area, i) =>
-            <AreaHighlightPolygon key={i} onClickArea={this.props.onClickArea.bind(this)} area={area}/>
+            <ComparisonMapPolygon key={i} onClickArea={this.props.onClickArea.bind(this)} area={area}/>
           )
         }
 

@@ -1,9 +1,7 @@
 import React, {PureComponent} from 'react';
-import {Map, TileLayer, GeoJSON, Marker, Popup, Circle, CircleMarker, Tooltip} from 'react-leaflet';
+import { GeoJSON } from 'react-leaflet';
 
-import SmallCellIcon from './SmallCellIcon';
-
-class AreaHighlightPolygon extends PureComponent {
+class ComparisonMapPolygon extends PureComponent {
 
   constructor() {
     super();
@@ -29,13 +27,12 @@ class AreaHighlightPolygon extends PureComponent {
 
   render() {
 
-
     return (
       <GeoJSON data={this.props.area.geodata} onEachFeature={this.onEachFeature.bind(this)}/>
     );
   }
 }
 
-export default AreaHighlightPolygon;
+export default ComparisonMapPolygon;
 
 
