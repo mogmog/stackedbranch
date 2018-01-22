@@ -121,8 +121,6 @@ class ComparisonCard extends React.Component {
           <Row>
             <Col>
 
-              {this.props.filter}
-
               <PieChart
                 filter={this.props.filter}
                 onfilter={this.onfilter.bind(this)}
@@ -187,7 +185,7 @@ class ComparisonCard extends React.Component {
           <Row>
             <Col style={{'width':360, 'height':250}}>
 
-              <Testing thing={this.state.everythingDimension}></Testing>
+              {/*<Testing thing={this.state.everythingDimension}></Testing>*/}
 
               {<Map ref={this.applymaphandlers.bind(this)} {...mapOptions} zoom={18}>
 

@@ -5,7 +5,7 @@ import { Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape } 
 
 import _ from 'lodash';
 
-import styles from './SiteCountryBarChart.less';
+//import styles from './SiteCountryBarChart.less';
 
 const TabPane = Tabs.TabPane;
 

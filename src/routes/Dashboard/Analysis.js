@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Row, Col, Icon, Card, Tabs, Table, Radio, DatePicker, Tooltip, Menu, Dropdown, Steps } from 'antd';
 import numeral from 'numeral';
+
+import {Motion, spring} from 'react-motion';
+
 import {
   ChartCard, yuan, MiniArea, MiniBar, MiniProgress, Field, Bar, Pie, TimelineChart, FunnelChart, Radar
 } from '../../components/Charts';
 import { getTimeDistance } from '../../utils/utils';
 import { FormattedMessage } from 'react-intl';
 import styles from './Analysis.less';
+import Stacked from '../../components/Charts/Stacked';
+
+import LineChart from '../../components/Charts/ComparisonStory/LineChart';
 
 const { TabPane } = Tabs;
 const { RangePicker } = DatePicker;
@@ -26,6 +32,7 @@ for (let i = 0; i < 7; i += 1) {
 }))
 export default class Analysis extends Component {
   state = {
+    open : 0,
     loading: true,
     salesType: 'all',
     currentTabKey: '',
@@ -87,6 +94,16 @@ export default class Analysis extends Component {
       return styles.currentDate;
     }
   }
+
+  handleMouseDown = () => {
+    this.setState({open: this.state.open + 60});
+  };
+
+  handleTouchStart = (e) => {
+    e.preventDefault();
+    this.handleMouseDown();
+  };
+
 
   render() {
     const { rangePickerValue, salesType, currentTabKey, loading } = this.state;
@@ -253,9 +270,54 @@ export default class Analysis extends Component {
       });
     });
 
+    var data = [
+      {"name":"Active", "totalHours":180, "leftHours":25},
+      {"name":"Cancel", "totalHours":150, "leftHours":42},
+      {"name":"Arrive", "totalHours":250, "leftHours":10},
+      {"name":"Contract", "totalHours":300, "leftHours":120}
+    ];
+
+    let dataarea = {
+      points: [
+        [ { x: 0, y: 20 }, { x: 1, y: 30 }, { x: 2, y: 10 } ]
+      ],
+      xValues: [0,1,2],
+      yMin: 0,
+      yMax: 30
+    };
 
     return (
       <div>
+
+        <Row gutter={24}>
+          <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+
+            <Card
+              loading={loading}
+              bordered={false}
+              title="Thing"
+              style={{ marginTop: 14, height: 500 }}
+            >
+
+              <button
+                onMouseDown={this.handleMouseDown.bind(this)}
+                onTouchStart={this.handleTouchStart.bind(this)}>
+                Toggle
+              </button>
+              <Motion style={{x: spring(this.state.open, {stiffness: 48, damping: 22})}}>
+                {({x}) =>
+                  <LineChart
+                    data={dataarea}
+                    width={600}
+                    height={300}
+                    x={x}
+                  />
+                }
+              </Motion>
+
+            </Card>
+          </Col>
+        </Row>
 
         <Row gutter={24}>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>

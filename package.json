@@ -36,6 +36,7 @@
     "keymaster": "^1.6.2",
     "leaflet": "^1.2.0",
     "leaflet-d3-svg-overlay": "^2.2.0",
+    "leaflet-draw": "^0.4.13",
     "leaflet.heat": "^0.2.0",
     "leaflet.markercluster": "^1.2.0",
     "lodash": "^4.17.4",
@@ -46,6 +47,7 @@
     "prop-types": "^15.5.10",
     "qs": "^6.5.0",
     "react": "^16.2.0",
+    "react-addons-transition-group": "^15.6.2",
     "react-animate-height": "^0.10.9",
     "react-container-query": "^0.9.1",
     "react-document-title": "^2.0.3",
@@ -56,11 +58,12 @@
     "react-leaflet": "^1.7.7",
     "react-leaflet-draw": "^0.18.0",
     "react-leaflet-heatmap-layer": "^1.0.3",
+    "react-motion": "^0.5.2",
     "simpleheat": "^0.4.0",
-    "topojson": "^3.0.2",
-    "wrld.js": "^0.1.1453"
+    "topojson": "^3.0.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-jest": "^21.0.0",
     "babel-plugin-dva-hmr": "^0.3.2",
@@ -85,6 +88,7 @@
     "gh-pages": "^1.0.0",
     "http-proxy-middleware": "^0.17.4",
     "jest": "^21.0.1",
+    "less": "^2.7.3",
     "lint-staged": "^4.3.0",
     "mockjs": "^1.0.1-beta3",
     "pro-download": "^1.0.0",
