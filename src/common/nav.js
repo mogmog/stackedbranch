@@ -45,6 +45,13 @@ export const getNavData = app => [
           },
 
           {
+            name: 'Key dates',
+            icon: 'calendar',
+            path: 'dates',
+            component: dynamicWrapper(app, ['date'], () => import('../routes/Dates/Define')),
+          },
+
+          {
             name: 'Cell Select',
             icon: 'api',
             path: 'cellselect',

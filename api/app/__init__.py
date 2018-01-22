@@ -148,6 +148,16 @@ def create_app(config_name):
 
       return make_response(jsonify({ 'list' : results })), 200
 
+    @app.route('/api/dates', methods=['GET'])
+    def get_dates():
+      # get all the areas
+      sites   = Date.get_all()
+      results = []
+      for date in dates:
+         results.append(date.serialise())
+
+      return make_response(jsonify({ 'list' : results })), 200
+
     @app.route('/api/areas', methods=['GET'])
     def get_areas():
         # get all the areas

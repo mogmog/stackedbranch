@@ -296,7 +296,7 @@ export default class Analysis extends Component {
               loading={loading}
               bordered={false}
               title="Thing"
-              style={{ marginTop: 14, height: 500 }}
+              style={{ marginTop: 14, height: 900 }}
             >
 
               <button
@@ -308,8 +308,8 @@ export default class Analysis extends Component {
                 {({x}) =>
                   <LineChart
                     data={dataarea}
-                    width={600}
-                    height={300}
+                    width={1200}
+                    height={500}
                     x={x}
                   />
                 }
@@ -319,7 +319,7 @@ export default class Analysis extends Component {
           </Col>
         </Row>
 
-        <Row gutter={24}>
+        {/*<Row gutter={24}>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>
 
             <Card
@@ -347,9 +347,9 @@ export default class Analysis extends Component {
             </Card>
           </Col>
 
-        </Row>
+        </Row>*/}
 
-        <Row gutter={24}>
+       {/* <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
 
             <Card
@@ -358,11 +358,11 @@ export default class Analysis extends Component {
               title="Funnel"
               style={{ marginTop: 14, height: 500 }}
             >
-            {/* <D3Map></D3Map>*/}
+             <D3Map></D3Map>
             </Card>
           </Col>
 
-        </Row>
+        </Row>*/}
 
       </div>
     );

@@ -12,8 +12,8 @@ class DateBars extends Component {
         {dates.map((date, i) =>
           (
             <g className={styles.datebars} key={i}>
-              <rect x={xScale(date.from)} y={0} width={30} height={290} />
-              <text x={xScale(date.from)} y="300">
+              <rect x={xScale(date.from)} y={0} width={70} height={480} />
+              <text x={xScale(date.from)} y="500">
                 {date.text}
               </text>
             </g>

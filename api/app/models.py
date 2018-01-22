@@ -51,9 +51,38 @@ class Area(db.Model):
     def __repr__(self):
         return "<Area: {}>".format(self.name)
 
+class Date(db.Model):
+    __tablename__ = 'dates'
 
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255))
+    _from = db.Column(db.Date)
+    _to   = db.Column(db.Date)
 
+    def __init__(self, _name, _from, _to):
+        self._name = _name
+        self._from = _from
+        self._to = _to
 
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return Date.query
+
+    @staticmethod
+    def delete_all():
+        db.session.query(Date).delete()
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return "<Date: {}>".format(self.name)
 
 class Site(db.Model):
     __tablename__ = 'sites'

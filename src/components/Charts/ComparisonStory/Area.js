@@ -20,7 +20,7 @@ class DataSeries extends Component {
 
         {this.props.children}
 
-        <path fill={fill} className="area" d={area(data)} mask={clipurl} />
+        <path opacity="0.3" clipPath="url(#hexagonal-mask)" fill={fill} className="area" d={area(data)} mask={clipurl} />
       </g>
     );
   }

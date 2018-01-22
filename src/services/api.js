@@ -5,6 +5,19 @@ export async function queryAreas() {
   return request('/api/areas');
 }
 
+export async function queryDates() {
+  return request('/api/dates');
+}
+
+export async function saveDate(params) {
+  return request('/api/dates/create', {
+    method: 'POST',
+    body: {
+      ...params,
+    },
+  });
+}
+
 export async function querySites() {
   return request('/api/sites');
 }

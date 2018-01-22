@@ -6,7 +6,7 @@ import Line from './Line';
 class DataSeries extends Component {
 
   render() {
-    let { dataset, colors, xScale, yScale, interpolationType, x } = this.props;
+    let { dataset, colors, xScale, yScale, interpolationType, x, width, height } = this.props;
 
     let _line = d3.svg.line()
       .x((d, i) => { return xScale(i); })
@@ -15,7 +15,7 @@ class DataSeries extends Component {
 
     return (
       <g >
-        <Line  line={_line(dataset)} x={x}/>
+        <Line  line={_line(dataset)} x={x} dataset={dataset} xScale={xScale} yScale={yScale} width={width} height={height} />
       </g>
     );
   }

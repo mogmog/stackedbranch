@@ -44,11 +44,7 @@ class LineChart extends Component {
 
         <DateBars xScale={xScale} dates={dates}/>
 
-        {/*<Area fill="blue" clipid="ellipse-clip1" data={dataset} width={width} height={height} xScale={xScale} yScale={yScale}>
-          <mask id="ellipse-clip1" >
-            <rect fill="white" x={0} y={0} width={width} height={height/2}/>
-          </mask>
-        </Area>*/}
+
 
        {/* <Area fill="white" clipid="ellipse-clip1" data={dataset} width={width} height={height} xScale={xScale} yScale={yScale}>
         </Area>*/}
