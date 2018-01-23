@@ -11,7 +11,7 @@ class AreaDefinitionMapThumbnail extends PureComponent {
            zoom={this.props.zoom}
            style={{width : 340, height: 80}}>
         <TileLayer url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' />
-        (this.props.geodata  ? <GeoJSON data={this.props.geodata} /> : '<span/>')
+        {(this.props.geodata  ? <GeoJSON data={this.props.geodata} /> : '<span/>')}
       </Map>
     );
   }
