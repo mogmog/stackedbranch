@@ -1,9 +1,8 @@
 // https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 module.exports = {
 
-  // Layout
-  //'layout-body-background' : '#292929',
   'layout-header-background' : '#000000',
-  //'layout-footer-background' : '#292929',
+  'font-family'            : 'telefonica_text',
+  'font-size-base'              : '16px',
 
 };
