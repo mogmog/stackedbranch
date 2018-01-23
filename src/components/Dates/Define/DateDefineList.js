@@ -7,15 +7,6 @@ const {RangePicker} = DatePicker;
 
 class DateDefineList extends PureComponent {
 
-  columns = [
-
-    {
-      title: 'Name',
-      defaultSortOrder: 'ascend',
-      dataIndex: 'name',
-    },
-  ];
-
   render() {
 
     const dates = this.props;
@@ -27,7 +18,20 @@ class DateDefineList extends PureComponent {
     }
 
     function dateCellRender(value) {
-      if (getListData(value).length) return <span>Booked</span>;
+      if (getListData(value).length) {
+        console.log(getListData(value));
+        return (
+          <ul className="events ant-fullcalendar-month-panel-selected-cell">
+            {
+              getListData(value).map((item, i) => (
+                <li key={i}>
+                  <Badge status='success'> {item.name}</Badge>
+                </li>
+              ))
+            }
+          </ul>
+        );
+      }
       return null;
     }
 

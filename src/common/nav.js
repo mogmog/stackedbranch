@@ -69,7 +69,7 @@ export const getNavData = app => [
             name: 'Analysis',
             icon: 'form',
             path: 'analysis',
-            component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
+            component: dynamicWrapper(app, ['chart', 'date'], () => import('../routes/Dashboard/Analysis')),
           },
 
 

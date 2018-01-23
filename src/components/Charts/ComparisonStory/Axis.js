@@ -9,8 +9,7 @@ class Axis extends Component {
 
   renderAxis () {
     var node = ReactDOM.findDOMNode(this);
-    d3.select(node).call(this.props.axis);
-
+    d3.select(node).call(d3.svg.axis().scale(this.props.xScale));
   }
 
   render () {
