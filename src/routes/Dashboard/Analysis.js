@@ -308,7 +308,7 @@ export default class Analysis extends Component {
                 {({x}) =>
                   <LineChart
                     data={dataarea}
-                    width={1200}
+                    width={1000}
                     height={500}
                     x={x}
                   />

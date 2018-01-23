@@ -8,12 +8,14 @@ class Line extends Component {
     let { line, stroke, fill, strokeWidth, x, dataset, width, height, xScale, yScale } = this.props;
     return (
       <g>
-        <clipPath id="hexagonal-mask">
+        <clipPath id="reveal">
           <rect x={0} y={0} width={x} height={height - 40}/>
         </clipPath>
 
+
+
         <path
-          clipPath="url(#hexagonal-mask)"
+          clipPath="url(#reveal)"
           fill={'none'}
           stroke={'blue'}
           strokeWidth={'2'}
