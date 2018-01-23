@@ -85,7 +85,7 @@ export default class Login extends Component {
               <FormItem>
                 {getFieldDecorator('userName', {
                   rules: [{
-                    required: type === 'account', message: 'You must！',
+                    required: type === 'account', message: 'You must enter a user name',
                   }],
                 })(
                   <Input
@@ -98,7 +98,7 @@ export default class Login extends Component {
               <FormItem>
                 {getFieldDecorator('password', {
                   rules: [{
-                    required: type === 'account', message: 'Password！',
+                    required: type === 'account', message: 'Enter a password',
                   }],
                 })(
                   <Input
