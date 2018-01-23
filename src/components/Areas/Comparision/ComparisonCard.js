@@ -96,8 +96,8 @@ class ComparisonCard extends React.Component {
   }
 
   render() {
-    if (this.state.loading) return (<Card style={{ marginBottom: 24 }} title={<Spin />} bordered bodyStyle={{ padding: 0 }} />);
-    if (!this.state.genderDimension.top(Infinity).length) return (<Card style={{ marginBottom: 24 }} title="No Results" bordered bodyStyle={{ padding: 0 }} />);
+    if (this.state.loading) return (<Card style={{ marginBottom: 24, width: '370px' }} title={<Spin />} bordered bodyStyle={{ padding: 0 }} />);
+    if (!this.state.genderDimension.top(Infinity).length) return (<Card style={{ marginBottom: 24, width: '370px' }} title="No Results" bordered bodyStyle={{ padding: 0 }} />);
 
     const mapOptions = {
       center: [51.51451110408478, -0.12620388576521444],
@@ -110,7 +110,7 @@ class ComparisonCard extends React.Component {
     return (
 
       <Card
-        style={{ marginBottom: 24 }}
+        style={{ marginBottom: 24, width: '370px' }}
         title={this.props.area.name}
         bordered
         bodyStyle={{ padding: 0 }}
@@ -131,8 +131,8 @@ class ComparisonCard extends React.Component {
                 group={(e) => {
                   return this.state.genderDimensionCount;
                 }}
-                width={350}
-                height={300}
+                width={380}
+                height={250}
                 radius={120}
                 label={(d) => {
                   return d.key;
@@ -149,7 +149,7 @@ class ComparisonCard extends React.Component {
                 group={(e) => { return this.state.timestampDimensionCount; }}
                 onfilter={this.onfilter.bind(this)}
                 renderArea
-                width={350}
+                width={370}
                 height={200}
                 transitionDuration={500}
                 margins={{ top: 30, right: 50, bottom: 25, left: 40 }}
@@ -169,7 +169,7 @@ class ComparisonCard extends React.Component {
             <Col>
 
               <RowChart
-                width={350}
+                width={370}
                 dimension={(e) => {
                   return this.state.ageRangeDimension;
                 }}
@@ -183,7 +183,7 @@ class ComparisonCard extends React.Component {
           </Row>
 
           <Row>
-            <Col style={{'width':360, 'height':250}}>
+            <Col style={{'width':370, 'height':280}}>
 
               {/*<Testing thing={this.state.everythingDimension}></Testing>*/}
 

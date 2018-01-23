@@ -35,7 +35,7 @@ export default {
     save(state, action) {
       return {
         ...state,
-        areas: action.payload,
+        dates: action.payload,
       };
     },
     changeLoading(state, action) {

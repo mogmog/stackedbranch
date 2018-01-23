@@ -22,7 +22,7 @@ from flask_bcrypt import Bcrypt
 # initialize db
 db = SQLAlchemy()
 
-from app.models import Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting
+from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting
 from app.models import Department as DepartmentModel
 
 class Department(SQLAlchemyObjectType):
@@ -151,7 +151,7 @@ def create_app(config_name):
     @app.route('/api/dates', methods=['GET'])
     def get_dates():
       # get all the areas
-      sites   = Date.get_all()
+      dates   = Date.get_all()
       results = []
       for date in dates:
          results.append(date.serialise())

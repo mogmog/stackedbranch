@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
-import {Row, Col, Card, Divider} from 'antd';
+import {Row, Col, Card, Divider, Button} from 'antd';
 import AnimateHeight from 'react-animate-height';
 import PageHeaderLayout from '../../layouts/PageHeaderLayout';
 import AreaSelectMap from '../../components/Areas/Comparision/ComparisonMap';
@@ -46,12 +46,12 @@ export default class Workplace extends PureComponent {
     const pageHeaderContent = (
       <div>
         <div>
-          <button className='btn btn-sm' onClick={() => this.setState({height: 100})}>
+          <Button onClick={() => this.setState({height: 100})}>
             Hide
-          </button>
-          <button className='btn btn-sm' onClick={() => this.setState({height: 500})}>
+          </Button>
+          <Button onClick={() => this.setState({height: 500})}>
             Increase
-          </button>
+          </Button>
         </div>
       </div>
     );
@@ -77,14 +77,14 @@ export default class Workplace extends PureComponent {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <Divider/>
-            <button onClick={x => {
+            <Button onClick={x => {
               this.setState({filter: 'Male'})
             }}>set filter to Male
-            </button>
-            <button onClick={x => {
+            </Button>
+            <Button onClick={x => {
               this.setState({filter: 'Female'})
             }}>set filter to Female
-            </button>
+            </Button>
           </Col>
         </Row>
 

@@ -6,6 +6,7 @@ import DateDefineRange from './../../../components/Dates/Define/DateDefineRange'
 import DateDefineList from '../../../components/Dates/Define/DateDefineList';
 
 @connect(state => ({
+  date: state.date
 }))
 export default class DateDefine extends PureComponent {
 
@@ -20,12 +21,14 @@ export default class DateDefine extends PureComponent {
     const {dispatch} = this.props;
 
     dispatch({
-      type: 'dates/fetch',
+      type: 'date/fetch',
     });
   }
 
   render() {
 
+    const {date} = this.props;
+    console.log(this.props.date);
     const pageHeaderContent = (
       <div>
       </div>
@@ -64,7 +67,7 @@ export default class DateDefine extends PureComponent {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <Card title={'Defined dates'} bordered>
-              <DateDefineList />
+              <DateDefineList dates={date}/>
             </Card>
           </Col>
         </Row>

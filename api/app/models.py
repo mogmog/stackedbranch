@@ -54,8 +54,7 @@ class Area(db.Model):
 class Date(db.Model):
     __tablename__ = 'dates'
 
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255))
+    name = db.Column(db.String(255), primary_key=True)
     _from = db.Column(db.Date)
     _to   = db.Column(db.Date)
 
@@ -83,6 +82,14 @@ class Date(db.Model):
 
     def __repr__(self):
         return "<Date: {}>".format(self.name)
+
+    def serialise(self):
+
+        return  {
+                   'name':  self.name,
+                   'from':  self._from,
+                   'to':    self._to
+                }
 
 class Site(db.Model):
     __tablename__ = 'sites'
