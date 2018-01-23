@@ -13,14 +13,8 @@ class DataSeries extends Component {
       .y1((d) => yScale(d.y))
       .interpolate("basis");
 
-
-
-
-
-
-    let clipurl = 'url(#' + clipid + ')'
     return (
-      <g clipPath="url(#reveal)">
+      <g>
 
         <clipPath id="cut-off-bottom">
           <rect x="0" y="0" width={width} height={height/2} />

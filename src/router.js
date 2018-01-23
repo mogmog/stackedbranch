@@ -14,6 +14,7 @@ import { addLocaleData, IntlProvider } from 'react-intl';
 import i18nConfig from './il8nConfig_en';
 import {HighchartsProvider} from "react-highcharts-wrapper";
 
+import Login from './routes/User/Login';
 
 
 /* Import basic support for another locale if needed
@@ -69,6 +70,7 @@ function RouterConfig({ history, app }) {
         <LocaleProvider locale={enGB}>
           <Router history={history}>
             <Switch>
+              <Route path="/login" render={props => <Login submitting={false} />} />
               <Route path="/" render={props => <BasicLayout {...props} {...passProps} />} />
 
             </Switch>

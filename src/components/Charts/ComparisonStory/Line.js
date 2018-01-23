@@ -5,25 +5,22 @@ import Area from './Area';
 class Line extends Component {
 
   render() {
-    let { line, stroke, fill, strokeWidth, x, dataset, width, height, xScale, yScale } = this.props;
+    const { line, x, dataset, width, height, xScale, yScale } = this.props;
     return (
-      <g>
+      <g clipPath="url(#reveal)">
+
         <clipPath id="reveal">
           <rect x={0} y={0} width={x} height={height - 40}/>
         </clipPath>
 
-
-
         <path
-          clipPath="url(#reveal)"
           fill={'none'}
           stroke={'blue'}
           strokeWidth={'2'}
           d={line}
         />
 
-        <Area fill="blue"   data={dataset} width={width} height={height} xScale={xScale} yScale={yScale}>
-        </Area>
+        <Area fill="blue" data={dataset} width={width} height={height} xScale={xScale} yScale={yScale}/>
 
       </g>
     );
