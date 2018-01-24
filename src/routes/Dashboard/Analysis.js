@@ -79,6 +79,13 @@ export default class Analysis extends Component {
 
   render() {
 
+    var data = [
+      {"name":"Active", "totalHours":180, "leftHours":25},
+      {"name":"Cancel", "totalHours":150, "leftHours":42},
+      {"name":"Arrive", "totalHours":250, "leftHours":10},
+      {"name":"Contract", "totalHours":300, "leftHours":120}
+    ];
+
     const { rangePickerValue, salesType, currentTabKey, loading } = this.state;
     const { chart, date } = this.props;
 
@@ -134,9 +141,27 @@ export default class Analysis extends Component {
         }
       });
     });
-console.log(date);
     return (
       <div>
+
+        <Row gutter={24}>
+          <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+
+            <Card
+              loading={loading}
+              bordered={false}
+              title="Time stack thing"
+              style={{ marginTop: 14, height: 800 }}
+            >
+              <Stacked
+                data={data}
+                width={1200}
+                height={500}
+              />
+
+            </Card>
+          </Col>
+        </Row>
 
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>

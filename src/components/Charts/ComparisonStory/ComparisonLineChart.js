@@ -41,11 +41,16 @@ class ComparisonLineChart extends Component {
     return (
 
       <div>
+
         <Button
           onMouseDown={this.handleMouseDown.bind(this)}
           onTouchStart={this.handleTouchStart.bind(this)}>
           Toggle
         </Button>
+
+
+
+
 
         <svg width={width} height={height}>
 

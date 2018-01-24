@@ -1,0 +1,132 @@
+import React, {Component} from 'react';
+import * as d3 from 'd3';
+import {Button} from 'antd';
+import {Motion, spring} from 'react-motion';
+
+class Stacked extends Component {
+
+  state = {
+    highlight: false,
+    yOffset: 0,
+    open: {1 : false}
+  }
+
+  margin = {top: 20, right: 160, bottom: 35, left: 30};
+  width = 960 - this.margin.left - this.margin.right;
+  height = 500;
+
+  target = undefined;
+
+
+  dataset = d3.layout.stack()(["redDelicious", "mcintosh", "oranges", "pears"].map(function (fruit) {
+
+    let data = [
+      {year: "2006", redDelicious: "10", mcintosh: "15", oranges: "9", pears: "6"},
+      {year: "2007", redDelicious: "12", mcintosh: "18", oranges: "9", pears: "4"},
+      {year: "2008", redDelicious: "05", mcintosh: "20", oranges: "8", pears: "2"},
+      {year: "2009", redDelicious: "01", mcintosh: "15", oranges: "5", pears: "4"},
+      {year: "2010", redDelicious: "02", mcintosh: "10", oranges: "4", pears: "2"},
+      {year: "2011", redDelicious: "03", mcintosh: "12", oranges: "6", pears: "3"},
+      {year: "2012", redDelicious: "04", mcintosh: "15", oranges: "8", pears: "1"},
+      {year: "2013", redDelicious: "06", mcintosh: "11", oranges: "9", pears: "4"},
+      {year: "2014", redDelicious: "10", mcintosh: "13", oranges: "9", pears: "5"},
+      {year: "2015", redDelicious: "16", mcintosh: "19", oranges: "6", pears: "9"},
+      {year: "2016", redDelicious: "19", mcintosh: "17", oranges: "5", pears: "7"},
+    ];
+
+    return data.map(function (d) {
+      return {x: (d.year), y: +d[fruit]};
+    });
+  }));
+
+  // Set x, y and colors
+  xScale = d3.scale.ordinal().domain(this.dataset[0].map((d) => {return d.x; })).rangeRoundBands([10, this.width - 10], 0.02);
+  yScale = d3.scale.linear().domain([0, d3.max(this.dataset, (d) => d3.max(d, (d) => { return d.y0 + d.y; } ))]).range([this.height, 0]);;
+
+  constructor(props) {
+    super();
+  }
+
+  componentWillReceiveProps(newProps) {
+  }
+
+  handleMouseDown = (d, ii) => {
+    console.log(ii, d.y0, this.yScale(d.y0 + d.y));
+
+    this.target = d;
+    //y0 is wher ethe bar starts. set this as the "target" to move all others to the same height
+
+    //we now need to work out theh differecne between the bar of the current block which matches the color of the bar we clicked on, and the bar in memory as the target
+    if (this.state.open[1]) {
+      this.setState({open: {1 : false}});
+    } else {
+      this.setState({open: {1 : true}});
+    }
+
+
+  };
+
+  handleTouchStart = (e) => {
+    e.preventDefault();
+    this.handleMouseDown();
+  };
+
+
+
+  render() {
+
+
+
+
+    var colors = ["b33040", "#d25c4d", "#f2b447", "#d9d574"];
+
+    let that = this;
+
+    let getY = function (d, reveal) {
+      console.log(reveal);
+      //return 'translate(0, 0)';
+      return 'translate(0,' + ((reveal)) + ')';
+      //let ret = that.state.yOffset  === 0 ? 'translate(0,0)' : 'translate(0,' + (d.y0 + reveal) +')';
+      // return ret;
+    }
+
+    return (
+
+      <div>
+
+        <svg width={600} height={600}>
+          {this.dataset.map((x, i) => (
+            <Motion key={i} style={{reveal: spring(this.state.open[i] ? 100 : 0) }}>
+              {
+                ({reveal}) => (<g key={i} fill={colors[i]} >
+
+                  {
+                    x.map((d, ii) => (<rect key={ii} transform={getY(x, reveal)} onClick={(() => { this.handleMouseDown(d, i)}).bind(this)} width={this.xScale.rangeBand()} height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)} x={this.xScale(d.x)} y={this.yScale(d.y0 + d.y)}/>))
+                  }
+
+                </g>)
+              }
+            </Motion>
+          ) )}
+        </svg>
+      </div>
+    );
+  }
+
+}
+
+export default Stacked;
+
+{/*<Motion key={ii} style={{reveal: spring(this.state.open[ii] ? 100 : 0) }}>*/}
+  {/*{*/}
+    {/*({reveal}) => {*/}
+      {/*return (<g key={i} fill={colors[i]}>*/}
+        {/*{x.map((d, ii) =>*/}
+          {/*(<rect transform={getY(d, reveal)} key={ii} onClick={(() => { this.handleMouseDown(d)}).bind(this)} width={this.xScale.rangeBand()} height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)} x={this.xScale(d.x)} y={this.yScale(d.y0 + d.y)}/>)*/}
+        {/*}*/}
+
+        {/*)}*/}
+      {/*</g>)*/}
+    {/*}*/}
+  {/*}*/}
+  {/*}*/}

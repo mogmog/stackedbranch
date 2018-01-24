@@ -1,115 +1,128 @@
 import React, {Component} from 'react';
 import * as d3 from 'd3';
-import ReactTransitionGroup from "react-addons-transition-group";
-
-const HistogramBar = ({percent, x, y, width, height}) => {
-
-  console.log(width);
-
-  let translate = `translate(${x}, ${y})`,
-    label = percent.toFixed(0) + '%';
-
-  if (percent < 1) {
-    label = percent.toFixed(2) + "%";
-  }
-
-  if (width < 20) {
-    label = label.replace("%", "");
-  }
-
-  if (width < 10) {
-    label = "";
-  }
-
-  return (
-    <g  className="bar">
-      <rect width={width}
-            height={height }
-            fill={'#000'}
-            transform="translate(0, 1)">
-      </rect>
-      <text textAnchor="end"
-            x={width - 5}
-            y={height / 2 + 3}>
-        {label}
-      </text>
-    </g>
-  );
-}
+import {Button} from 'antd';
+import {Motion, spring} from 'react-motion';
+import XAxis from './XAxis';
+import Key from './Key';
 
 class Stacked extends Component {
 
   state = {
-   highlight : false
+    highlight: false,
+    yOffset: 0,
+    clickedon : false,
   }
+
+  margin = {top: 20, right: 30, bottom: 35, left: 30};
+  width = 1200 - this.margin.left - this.margin.right;
+  height = 600;
+
+  target = undefined;
+  band = undefined;
+
+
+  dataset = d3.layout.stack()(["redDelicious", "mcintosh", "oranges", "pears"].map(function (fruit) {
+
+    let data = [
+      {year: "2006", redDelicious: "10", mcintosh: "15", oranges: "9", pears: "6"},
+      {year: "2007", redDelicious: "12", mcintosh: "18", oranges: "9", pears: "4"},
+      {year: "2008", redDelicious: "05", mcintosh: "20", oranges: "8", pears: "2"},
+      {year: "2009", redDelicious: "01", mcintosh: "15", oranges: "5", pears: "4"},
+      {year: "2010", redDelicious: "02", mcintosh: "10", oranges: "4", pears: "2"},
+      {year: "2011", redDelicious: "03", mcintosh: "12", oranges: "6", pears: "3"},
+      {year: "2012", redDelicious: "04", mcintosh: "15", oranges: "8", pears: "1"},
+      {year: "2013", redDelicious: "06", mcintosh: "11", oranges: "9", pears: "4"},
+      {year: "2014", redDelicious: "10", mcintosh: "13", oranges: "9", pears: "5"},
+      {year: "2015", redDelicious: "16", mcintosh: "19", oranges: "6", pears: "9"},
+      {year: "2016", redDelicious: "19", mcintosh: "17", oranges: "5", pears: "7"},
+    ];
+
+    return data.map(function (d) {
+      return {x: (d.year), y: +d[fruit]};
+    });
+  }));
+
+  // Set x, y and colors
+  xScale = d3.scale.ordinal().domain(this.dataset[0].map((d) => {return d.x; })).rangeRoundBands([10, this.width - 300], 0.02);
+  yScale = d3.scale.linear().domain([0, d3.max(this.dataset, (d) => d3.max(d, (d) => { return d.y0 + d.y; } ))]).range([this.height, 0]);;
 
   constructor(props) {
     super();
-
-    this.stack = d3.stack()
-      .order(d3.stackOrderNone)
-      .offset(d3.stackOffsetExpand);
-
-    this.data = props.data;
-
-    this.data.forEach(function(d){d.satisfied=d.totalHours-d.leftHours});
-    this.data.sort(function(a, b) { return b.totalHours-a.totalHours; });
-
-    this.updateD3(props);
   }
 
   componentWillReceiveProps(newProps) {
-    this.updateD3(newProps);
   }
 
-  updateD3(props) {
+  handleMouseDown = (d, ii) => {
+    this.target = d;
+    this.band = ii;
+    this.setState({'clickedon': !this.state.clickedon});
+  };
 
-  }
-
-  makeBar(d, i) {
-
-    const transition = d3
-      .transition()
-      .duration(750)
-      .ease(d3.easeCubicInOut);
-
-    const highlight = this.state.highlight;
-
-    var x = d3.scaleBand().rangeRound([0, 500]).paddingInner(0.1).align(0.2);
-
-    var y = d3.scaleLinear().range([300, 0]);
-
-    var z = d3.scaleOrdinal().range(["#81F781", "#F78181"]);
-
-    x.domain(this.props.data.map(function(d) { return d.name; }));
-    z.domain(["leftHours", "satisfied"]);
-
-    function makeY() {
-      this.setState({"highlight" : !this.state.highlight});
-    }
-
-    function getY(_x, highlighted) {
-      return highlighted ? y(_x[1]) : 0;
-    }
-
-    return (<g key={i}>
-      {d.map((_x, ii) => {
-        return <rect transition={transition} onClick={makeY.bind(this)} fill={z(d.key)} x={x(_x.data.name)} y={getY(_x, this.state.highlight)} height={y(_x[0]) - y(_x[1])} width={40} key={ii}>thing</rect>;
-      })}
-    </g>);
-  }
 
   render() {
 
+    var colors = ["b33040", "#d25c4d", "#f2b447", "#d9d574"];
+
+    let that = this;
+
+    let getY = function (d, i,ii,  tween) {
+       if (typeof that.target !== 'undefined' && i === that.band) {
+         return 'translate(0,' + (((((d.y0 - that.target.y0) * 12)) * (tween))) + ')';
+       }
+
+       return 'translate(0, 0)';
+
+    }
+
+    let getOpacity = function (row, clickedon) {
+      /*if graph unclicked, no clickedon*/
+      if (typeof that.target === 'undefined') return 1;
+
+      /*if clicked, do not apply clickedon to anything in same row*/
+      if (typeof that.target !== 'undefined' && row === that.band) return 1;
+
+      //everything else, fade out
+      return clickedon;
+    }
+
     return (
 
-      <g>
-        {this.stack.keys(["leftHours","satisfied"])(this.data).map(this.makeBar.bind(this))}
-      </g>
+      <div>
 
+        <svg width={that.width} height={that.height + 200}>
+
+          <XAxis height={that.height} xScale={this.xScale}></XAxis>
+          <Key height={that.height} colors={colors} dataset={this.dataset} yScale={this.yScale}></Key>
+
+          {this.dataset.map((x, row) => (
+
+            <Motion key={row} style={{tween: spring(this.state.clickedon ? 1 : 0), opacity: spring(this.state.clickedon ? 0.1 : 1) }}>
+              {
+                ({tween, opacity}) => (
+                  <g>
+                    <g key={row} fill={colors[row]} >
+
+                      {
+                        x.map((d, ii) => (<rect key={ii} opacity={getOpacity(row, opacity)} transform={getY(d, row, ii, tween)} onClick={(() => { this.handleMouseDown(d, row)}).bind(this)} width={this.xScale.rangeBand()} height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)} x={this.xScale(d.x)} y={this.yScale(d.y0 + d.y)}/>))
+                      }
+
+                    </g>
+
+                  </g>
+
+                  )
+              }
+
+            </Motion>
+
+          ) )}
+        </svg>
+      </div>
     );
   }
 
 }
 
 export default Stacked;
+
