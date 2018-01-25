@@ -18,9 +18,7 @@ const app = dva({
 // app.useindex.ht({});
 
 // 3. Register global model
-app.model(require('./models/global'));
-
-app.model(require('./models/products'));
+app.model(require('./models/Store/global'));
 
 // 4. Router
 app.router(router);

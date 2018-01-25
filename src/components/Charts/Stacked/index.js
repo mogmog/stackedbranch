@@ -26,7 +26,7 @@ class Stacked extends Component {
   dataset = d3.layout.stack()(this.keys.map(function (fruit) {
 
     let data = [
-      {year: "2006", redDelicious: "12", mcintosh: "15", oranges: "9", pears: "6"},
+      {year: "2006", redDelicious: "112", mcintosh: "15", oranges: "9", pears: "6"},
       {year: "2007", redDelicious: "12", mcintosh: "18", oranges: "9", pears: "4"},
       {year: "2008", redDelicious: "05", mcintosh: "20", oranges: "8", pears: "2"},
       {year: "2009", redDelicious: "01", mcintosh: "15", oranges: "5", pears: "4"},
@@ -91,6 +91,11 @@ class Stacked extends Component {
         return 'translate(0,' + (offset * tween) + ')';
       }
 
+      if (typeof that.target !== 'undefined' && i !== that.band) {
+        let offset = that.height - that.yScale(d.y0 - that.target.y0);
+        return 'translate(0,' + (offset * tween) + ')';
+      }
+
       return 'translate(0, 0)';
 
     }
@@ -145,6 +150,7 @@ class Stacked extends Component {
                         x.map((d, ii) => (
                           <rect
                             key={ii}
+                            style={{'zIndex': '-1'}}
                             opacity={getRectOpacity(row, opacity)}
                             transform={getRectTransform(d, row, ii, tween)}
                             onClick={(() => { this.handleMouseDown(d, row)}).bind(this)}

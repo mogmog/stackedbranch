@@ -4,7 +4,8 @@ import { LocaleProvider, Spin } from 'antd';
 import enGB from 'antd/lib/locale-provider/en_GB';
 import dynamic from 'dva/dynamic';
 import cloneDeep from 'lodash/cloneDeep';
-import { getNavData } from './common/nav';
+import { getStoreNavData } from './common/store_nav';
+import { getTravelNavData } from './common/travel_nav';
 import { getPlainNode } from './utils/utils';
 
 import styles from './index.less';
@@ -53,14 +54,24 @@ function getLayout(navData, path) {
 }
 
 function RouterConfig({ history, app }) {
-  const navData = getNavData(app);
-  const BasicLayout = getLayout(navData, 'BasicLayout').component;
+  const storenavData = getStoreNavData(app);
+  const travelnavData = getTravelNavData(app);
+  const StoreLayout = getLayout(storenavData, 'StoreLayout').component;
+  const TravelLayout = getLayout(travelnavData, 'TravelLayout').component;
 
-  const passProps = {
+  const storepassProps = {
     app,
-    navData,
+    storenavData,
     getRouteData: (path) => {
-      return getRouteData(navData, path);
+      return getRouteData(storenavData, path);
+    },
+  };
+
+  const travelpassProps = {
+    app,
+    travelnavData,
+    getRouteData: (path) => {
+      return getRouteData(travelnavData, path);
     },
   };
 
@@ -70,8 +81,10 @@ function RouterConfig({ history, app }) {
         <LocaleProvider locale={enGB}>
           <Router history={history}>
             <Switch>
+
               <Route path="/login" render={props => <Login submitting={false} />} />
-              <Route path="/" render={props => <BasicLayout {...props} {...passProps} />} />
+              <Route path="/store/" render={props => <StoreLayout {...props} {...storepassProps} />} />
+              <Route path="/travel/" render={props => <TravelLayout {...props} {...travelpassProps} />} />
 
             </Switch>
           </Router>
