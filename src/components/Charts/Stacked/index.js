@@ -3,6 +3,9 @@ import * as d3 from 'd3';
 import {Button} from 'antd';
 import {Motion, spring} from 'react-motion';
 import XAxis from './XAxis';
+import YAxis from './YAxis';
+import YMiniAxis from './YMiniAxis';
+
 import Key from './Key';
 
 class Stacked extends Component {
@@ -23,7 +26,7 @@ class Stacked extends Component {
   dataset = d3.layout.stack()(this.keys.map(function (fruit) {
 
     let data = [
-      {year: "2006", redDelicious: "10", mcintosh: "15", oranges: "9", pears: "6"},
+      {year: "2006", redDelicious: "12", mcintosh: "15", oranges: "9", pears: "6"},
       {year: "2007", redDelicious: "12", mcintosh: "18", oranges: "9", pears: "4"},
       {year: "2008", redDelicious: "05", mcintosh: "20", oranges: "8", pears: "2"},
       {year: "2009", redDelicious: "01", mcintosh: "15", oranges: "5", pears: "4"},
@@ -42,8 +45,10 @@ class Stacked extends Component {
   }));
 
   // Set x, y and colors
-  xScale = d3.scale.ordinal().domain(this.dataset[0].map((d) => {return d.x; })).rangeRoundBands([10, this.width - 300], 0.02);
+  xScale = d3.scale.ordinal().domain(this.dataset[0].map((d) => {return d.x; })).rangeRoundBands([40, this.width - 330], 0.02);
   yScale = d3.scale.linear().domain([0, d3.max(this.dataset, (d) => d3.max(d, (d) => { return d.y0 + d.y; } ))]).range([this.height, 0]);;
+
+  //yOffsetScale = d3.scale.linear().domain([0, d3.max(this.dataset, (d) => d3.max(d, (d) => { return d.y0 } ))]).range([this.height, 0]);;
 
   constructor(props) {
     super();
@@ -54,6 +59,10 @@ class Stacked extends Component {
   handleMouseDown = (d, ii) => {
     this.target = d;
     this.band = ii;
+    //alert(this.target.y0);
+
+    //if (this.target) this.target = undefined;
+
     this.setState({'clickedon': !this.state.clickedon});
   };
 
@@ -64,17 +73,26 @@ class Stacked extends Component {
 
     const that = this;
 
-    const getAxisY = function (tween) {
-        if (typeof that.target === 'undefined') return 'translate(0, 0)';
-        return 'translate(0,' + (((((that.target.y0 * -12))) * (tween))) + ')';
-      ;
+    const getAxisX = function (big, tween) {
+          if (typeof that.target === 'undefined') return 'translate(0, 0)';
+          let offset = -1 * (that.height - that.yScale(that.target.y0));
+          return 'translate(0,' + (offset * tween) + ')';
     }
 
-    const getRectY = function (d, i, ii,  tween) {
-       if (typeof that.target !== 'undefined' && i === that.band) {
-         return 'translate(0,' + (((((d.y0 - that.target.y0) * 12)) * (tween))) + ')';
-       }
-       return 'translate(0, 0)';
+    const getMiniAxisY = function (tween) {
+        if (typeof that.target === 'undefined') return 'translate(820, 0)';
+        let offset = -1 * (that.height - that.yScale(that.target.y0));
+        return 'translate(820,' + (offset * tween) + ')';
+    }
+
+    const getRectTransform = function (d, i, ii, tween) {
+      if (typeof that.target !== 'undefined' && i === that.band) {
+        let offset = that.height - that.yScale(d.y0 - that.target.y0);
+        return 'translate(0,' + (offset * tween) + ')';
+      }
+
+      return 'translate(0, 0)';
+
     }
 
     const getRectOpacity = function (row, opacity) {
@@ -97,11 +115,20 @@ class Stacked extends Component {
           <Motion style={{tween: spring(this.state.clickedon ? 1 : 0)}}>
             {
               ({tween}) => (
-                <g transform={getAxisY(tween)}>
-                  <XAxis height={that.height} xScale={this.xScale}/>
+                <g>
+                  <g transform={getAxisX(true, tween)}>
+                    <XAxis height={that.height} xScale={this.xScale}/>
+                  </g>
+                  <g opacity={1-tween}>
+                    <YAxis height={that.height} yScale={this.yScale}/>
+                  </g>
+
+                  <g opacity={tween} transform={getMiniAxisY(tween)}>
+                    <YMiniAxis height={that.height} yScale={this.yScale} />
+                  </g>
+
                 </g>
             )}
-
           </Motion>
 
           <Key keys={that.keys} height={that.height} colors={colors} dataset={this.dataset} yScale={this.yScale}></Key>
@@ -119,7 +146,7 @@ class Stacked extends Component {
                           <rect
                             key={ii}
                             opacity={getRectOpacity(row, opacity)}
-                            transform={getRectY(d, row, ii, tween)}
+                            transform={getRectTransform(d, row, ii, tween)}
                             onClick={(() => { this.handleMouseDown(d, row)}).bind(this)}
                             width={this.xScale.rangeBand()}
                             height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)}
