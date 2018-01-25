@@ -6,12 +6,14 @@ class Key extends Component {
 
   render () {
 
-    const {yScale, dataset, colors, height} = this.props;
-
+    const {yScale, dataset, keys, colors, height} = this.props;
     return (
-      <g>
+      <g transform="translate(0, -45)" className="key">
         {dataset.map((x, row) => (
-          <rect fill={colors[row]} key={row} x={850} y={( height - 75 * row )} height={50} width={50} ></rect>
+          <g key={`g_${row}`}>
+            <rect fill={colors[row]} key={`rect_${row}`} x={850} y={( height - 75 * row )} height={50} width={50} ></rect>
+            <text transform="translate(55, 27.5)" fill={'black'} key={`text_${row}`} x={850} y={( height - 75 * row )} height={50} width={50} >{keys[row]}</text>
+          </g>
         ))}
 
       </g>

@@ -8,8 +8,6 @@ import Key from './Key';
 class Stacked extends Component {
 
   state = {
-    highlight: false,
-    yOffset: 0,
     clickedon : false,
   }
 
@@ -20,8 +18,9 @@ class Stacked extends Component {
   target = undefined;
   band = undefined;
 
+  keys = ["redDelicious", "mcintosh", "oranges", "pears"];
 
-  dataset = d3.layout.stack()(["redDelicious", "mcintosh", "oranges", "pears"].map(function (fruit) {
+  dataset = d3.layout.stack()(this.keys.map(function (fruit) {
 
     let data = [
       {year: "2006", redDelicious: "10", mcintosh: "15", oranges: "9", pears: "6"},
@@ -50,8 +49,7 @@ class Stacked extends Component {
     super();
   }
 
-  componentWillReceiveProps(newProps) {
-  }
+
 
   handleMouseDown = (d, ii) => {
     this.target = d;
@@ -62,28 +60,32 @@ class Stacked extends Component {
 
   render() {
 
-    var colors = ["b33040", "#d25c4d", "#f2b447", "#d9d574"];
+    const colors = ["b33040", "#d25c4d", "#f2b447", "#d9d574"];
 
-    let that = this;
+    const that = this;
 
-    let getY = function (d, i,ii,  tween) {
+    const getAxisY = function (tween) {
+        if (typeof that.target === 'undefined') return 'translate(0, 0)';
+        return 'translate(0,' + (((((that.target.y0 * -12))) * (tween))) + ')';
+      ;
+    }
+
+    const getRectY = function (d, i, ii,  tween) {
        if (typeof that.target !== 'undefined' && i === that.band) {
          return 'translate(0,' + (((((d.y0 - that.target.y0) * 12)) * (tween))) + ')';
        }
-
        return 'translate(0, 0)';
-
     }
 
-    let getOpacity = function (row, clickedon) {
-      /*if graph unclicked, no clickedon*/
+    const getRectOpacity = function (row, opacity) {
+      /*if graph unclicked, no opacity*/
       if (typeof that.target === 'undefined') return 1;
 
-      /*if clicked, do not apply clickedon to anything in same row*/
+      /*if clicked, set opacity to 1 to anything in same row*/
       if (typeof that.target !== 'undefined' && row === that.band) return 1;
 
       //everything else, fade out
-      return clickedon;
+      return opacity;
     }
 
     return (
@@ -92,8 +94,17 @@ class Stacked extends Component {
 
         <svg width={that.width} height={that.height + 200}>
 
-          <XAxis height={that.height} xScale={this.xScale}></XAxis>
-          <Key height={that.height} colors={colors} dataset={this.dataset} yScale={this.yScale}></Key>
+          <Motion style={{tween: spring(this.state.clickedon ? 1 : 0)}}>
+            {
+              ({tween}) => (
+                <g transform={getAxisY(tween)}>
+                  <XAxis height={that.height} xScale={this.xScale}/>
+                </g>
+            )}
+
+          </Motion>
+
+          <Key keys={that.keys} height={that.height} colors={colors} dataset={this.dataset} yScale={this.yScale}></Key>
 
           {this.dataset.map((x, row) => (
 
@@ -104,7 +115,17 @@ class Stacked extends Component {
                     <g key={row} fill={colors[row]} >
 
                       {
-                        x.map((d, ii) => (<rect key={ii} opacity={getOpacity(row, opacity)} transform={getY(d, row, ii, tween)} onClick={(() => { this.handleMouseDown(d, row)}).bind(this)} width={this.xScale.rangeBand()} height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)} x={this.xScale(d.x)} y={this.yScale(d.y0 + d.y)}/>))
+                        x.map((d, ii) => (
+                          <rect
+                            key={ii}
+                            opacity={getRectOpacity(row, opacity)}
+                            transform={getRectY(d, row, ii, tween)}
+                            onClick={(() => { this.handleMouseDown(d, row)}).bind(this)}
+                            width={this.xScale.rangeBand()}
+                            height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)}
+                            x={this.xScale(d.x)}
+                            y={this.yScale(d.y0 + d.y)}/>
+                        ))
                       }
 
                     </g>
