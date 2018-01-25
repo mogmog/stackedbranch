@@ -56,10 +56,22 @@ class Stacked extends Component {
 
 
 
-  handleMouseDown = (d, ii) => {
+  handleMouseDown = (d, ii, column) => {
     this.target = d;
     this.band = ii;
-    //alert(this.target.y0);
+    this.column = column;
+
+    //algorithm to looip through
+    // for each bar in dataset[column]
+    // console.log(bar)
+    this.howMuchToMove = {};
+    //console.log(column, ii, this.dataset[ii][column]);
+    for (let i = 0; i < this.dataset[ii].length; i++){
+      this.howMuchToMove[i] = this.height - this.yScale(d.y0)
+    }
+
+    console.log(this.column);
+    //alert(column);
 
     //if (this.target) this.target = undefined;
 
@@ -69,7 +81,7 @@ class Stacked extends Component {
 
   render() {
 
-    const colors = ["b33040", "#d25c4d", "#f2b447", "#d9d574"];
+    const colors = ["#b33040", "#f2b447", "#d25c4d", "#d9d574"];
 
     const that = this;
 
@@ -85,18 +97,20 @@ class Stacked extends Component {
         return 'translate(820,' + (offset * tween) + ')';
     }
 
-    const getRectTransform = function (d, i, ii, tween) {
-      if (typeof that.target !== 'undefined' && i === that.band) {
+    const getRectTransform = function (d, row, ii, tween) {
+
+
+      if (typeof that.target !== 'undefined' && ii !== that.column) {
+       // let offset = that.howMuchToMove[ii];// + that.yScale(d.y0);
         let offset = that.height - that.yScale(d.y0 - that.target.y0);
         return 'translate(0,' + (offset * tween) + ')';
       }
 
-      if (typeof that.target !== 'undefined' && i !== that.band) {
-        let offset = that.height - that.yScale(d.y0 - that.target.y0);
-        return 'translate(0,' + (offset * tween) + ')';
-      }
 
-      return 'translate(0, 0)';
+
+
+
+
 
     }
 
@@ -140,7 +154,7 @@ class Stacked extends Component {
 
           {this.dataset.map((x, row) => (
 
-            <Motion key={row} style={{tween: spring(this.state.clickedon ? 1 : 0), opacity: spring(this.state.clickedon ? 0.1 : 1) }}>
+            <Motion key={row} style={{tween: spring(this.state.clickedon ? 1 : 0), opacity: spring(this.state.clickedon ? 0.0 : 1) }}>
               {
                 ({tween, opacity}) => (
                   <g>
@@ -153,7 +167,7 @@ class Stacked extends Component {
                             style={{'zIndex': '-1'}}
                             opacity={getRectOpacity(row, opacity)}
                             transform={getRectTransform(d, row, ii, tween)}
-                            onClick={(() => { this.handleMouseDown(d, row)}).bind(this)}
+                            onClick={(() => { this.handleMouseDown(d, row, ii)}).bind(this)}
                             width={this.xScale.rangeBand()}
                             height={this.yScale(d.y0) - this.yScale(d.y0 + d.y)}
                             x={this.xScale(d.x)}
