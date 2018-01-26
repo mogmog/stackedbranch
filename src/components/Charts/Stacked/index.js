@@ -19,7 +19,7 @@ class Stacked extends Component {
   height = 600;
 
   target = undefined;
-  band = undefined;
+  rowSelected = undefined;
 
   keys = ["redDelicious", "mcintosh", "oranges", "pears"];
 
@@ -56,24 +56,15 @@ class Stacked extends Component {
 
 
 
-  handleMouseDown = (d, ii, column) => {
+  handleMouseDown = (d, row, column) => {
     this.target = d;
-    this.band = ii;
-    this.column = column;
+    this.rowSelected = row;
 
-    //algorithm to looip through
-    // for each bar in dataset[column]
-    // console.log(bar)
     this.howMuchToMove = {};
-    //console.log(column, ii, this.dataset[ii][column]);
-    for (let i = 0; i < this.dataset[ii].length; i++){
-      this.howMuchToMove[i] = this.height - this.yScale(d.y0)
+
+    for (let i = 0; i < this.dataset[0].length; i++){
+      this.howMuchToMove[i] = this.height - this.yScale(this.dataset[row][i].y0 - this.target.y0);
     }
-
-    console.log(this.column);
-    //alert(column);
-
-    //if (this.target) this.target = undefined;
 
     this.setState({'clickedon': !this.state.clickedon});
   };
@@ -97,29 +88,19 @@ class Stacked extends Component {
         return 'translate(820,' + (offset * tween) + ')';
     }
 
-    const getRectTransform = function (d, row, ii, tween) {
-
-
-      if (typeof that.target !== 'undefined' && ii !== that.column) {
-       // let offset = that.howMuchToMove[ii];// + that.yScale(d.y0);
-        let offset = that.height - that.yScale(d.y0 - that.target.y0);
+    const getRectTransform = function (d, row, column, tween) {
+      if (typeof that.target === 'object' ) {
+        let offset = that.howMuchToMove[column];
         return 'translate(0,' + (offset * tween) + ')';
       }
-
-
-
-
-
-
-
     }
 
-    const getRectOpacity = function (row, opacity) {
+    const getRectOpacity = function (d, row, column, opacity) {
       /*if graph unclicked, no opacity*/
       if (typeof that.target === 'undefined') return 1;
 
       /*if clicked, set opacity to 1 to anything in same row*/
-      if (typeof that.target !== 'undefined' && row === that.band) return 1;
+      if (that.target !== 'undefined' && row === that.rowSelected) return 1;
 
       //everything else, fade out
       return opacity;
@@ -154,7 +135,7 @@ class Stacked extends Component {
 
           {this.dataset.map((x, row) => (
 
-            <Motion key={row} style={{tween: spring(this.state.clickedon ? 1 : 0), opacity: spring(this.state.clickedon ? 0.0 : 1) }}>
+            <Motion key={row} style={{tween: spring(this.state.clickedon ? 1 : 0), opacity: spring(this.state.clickedon ? 0.1 : 1) }}>
               {
                 ({tween, opacity}) => (
                   <g>
@@ -164,8 +145,9 @@ class Stacked extends Component {
                         x.map((d, ii) => (
                           <rect
                             key={ii}
+                            id={ii}
                             style={{'zIndex': '-1'}}
-                            opacity={getRectOpacity(row, opacity)}
+                            opacity={getRectOpacity(d, row, ii, opacity)}
                             transform={getRectTransform(d, row, ii, tween)}
                             onClick={(() => { this.handleMouseDown(d, row, ii)}).bind(this)}
                             width={this.xScale.rangeBand()}
