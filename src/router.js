@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch } from 'dva/router';
+import { Router, Route, Switch, Redirect } from 'dva/router';
 import { LocaleProvider, Spin } from 'antd';
 import enGB from 'antd/lib/locale-provider/en_GB';
 import dynamic from 'dva/dynamic';
@@ -82,6 +82,7 @@ function RouterConfig({ history, app }) {
           <Router history={history}>
             <Switch>
 
+              <Redirect exact from="/" to="/store/areas" />
               <Route path="/login" render={props => <Login submitting={false} />} />
               <Route path="/store/" render={props => <StoreLayout {...props} {...storepassProps} />} />
               <Route path="/travel/" render={props => <TravelLayout {...props} {...travelpassProps} />} />

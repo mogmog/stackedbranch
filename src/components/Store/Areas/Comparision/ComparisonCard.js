@@ -7,8 +7,6 @@ import request from '../../../../utils/request';
 
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 
-import Testing from './Testing';
-
 import d3 from 'd3';
 import dc from 'dc';
 import { Map, TileLayer } from 'react-leaflet';

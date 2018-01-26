@@ -18,10 +18,10 @@ export const getTravelNavData = app => [
     children: [
 
       {
-        name: 'TRAVELY THING',
+        name: 'Origin Destination',
         icon: 'compass',
-        path: 'travel/areas',
-        component: (x) => <span>blah</span>,
+        path: 'travel/origindestination',
+        component: dynamicWrapper(app, [], () => import('../routes/Travel/OriginDestination')),
       },
 
 

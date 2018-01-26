@@ -287,7 +287,7 @@ class TravelLayout extends React.PureComponent {
           </Menu>
         </Sider>
         <Layout>
-          <Header className={styles.header}>
+          {/*<Header className={styles.header}>
             <Icon
               className={styles.trigger}
               type={collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -344,8 +344,8 @@ class TravelLayout extends React.PureComponent {
                 </Dropdown>
               ) : <Spin size="small" style={{ marginLeft: 8 }} />}
             </div>
-          </Header>
-          <Content style={{ margin: '24px 24px 0', height: '100%' }}>
+          </Header>*/}
+          <Content style={{ margin: '0px 0px 0', height: '100%' }}>
             <div style={{ minHeight: 'calc(100vh - 260px)' }}>
               <Switch>
                 {
