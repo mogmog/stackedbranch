@@ -3,8 +3,8 @@ import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button} from 'antd';
 import AnimateHeight from 'react-animate-height';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-import AreaSelectMap from '../../../components/Areas/Comparision/ComparisonMap';
-import ComparisonCard from '../../../components/Areas/Comparision/ComparisonCard';
+import AreaSelectMap from '../../../components/Store/Areas/Comparision/ComparisonMap';
+import ComparisonCard from '../../../components/Store/Areas/Comparision/ComparisonCard';
 
 @connect(state => ({
   area: state.area,

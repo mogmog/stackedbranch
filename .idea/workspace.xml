@@ -3,9 +3,138 @@
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.roadhogrc.mock.js" afterPath="$PROJECT_DIR$/.roadhogrc.mock.js" />
-      <change beforePath="$PROJECT_DIR$/api/requirements.txt" afterPath="$PROJECT_DIR$/api/requirements.txt" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonCard.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonCard.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMap.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMapPolygon.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonMapPolygon.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Comparision/Testing.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Comparision/Testing.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Definition/AreaDefinitionMapThumbnail.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapToolbar.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Definition/AreaDefinitionMapToolbar.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Areas/Definition/AreaMapThumbnail.js" afterPath="$PROJECT_DIR$/src/components/Store/Areas/Definition/AreaMapThumbnail.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/CellSelect/CellSelectGrid.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Bar/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Bar/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ChartCard/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ChartCard/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Area.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Area.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Axis.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Axis.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/ComparisonLineChart.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/DataSeries.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/DataSeries.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/DateBars.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/DateBars.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/DateBars.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/DateBars.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Line.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Line.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Line.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Line.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/ComparisonStory/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Field/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Field/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Field/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Field/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/FunnelChart/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/FunnelChart/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Gauge/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Gauge/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/MiniArea/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/MiniArea/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/MiniBar/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/MiniBar/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/MiniProgress/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/MiniProgress/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/MiniProgress/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/MiniProgress/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Pie/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Pie/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Pie/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Pie/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Radar/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Radar/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Radar/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Radar/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/Key.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/Key.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/XAxis.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/XAxis.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/YAxis.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/YAxis.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/YMiniAxis.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/YMiniAxis.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/data.csv" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/data.csv" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/index.backupjs" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.backupjs" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/Stacked/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/TagCloud/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/TagCloud/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/TagCloud/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/TagCloud/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/TimelineChart/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/TimelineChart/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/TimelineChart/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/TimelineChart/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/WaterWave/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/WaterWave/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/WaterWave/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/WaterWave/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/bar.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/bar.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/chart-card.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/chart-card.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/gauge.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/gauge.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/mini-area.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/mini-area.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/mini-bar.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/mini-bar.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/mini-pie.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/mini-pie.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/mini-progress.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/mini-progress.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/mix.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/mix.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/pie.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/pie.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/radar.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/radar.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/tag-cloud.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/tag-cloud.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/timeline-chart.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/timeline-chart.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/demo/waterwave.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/demo/waterwave.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/equal.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/equal.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Charts/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Charts/index.md" afterPath="$PROJECT_DIR$/src/components/Common/Charts/index.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/D3Map/D3Map.js" afterPath="$PROJECT_DIR$/src/components/Old/D3Map/D3Map.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/D3Map/D3Marker.js" afterPath="$PROJECT_DIR$/src/components/Old/D3Map/D3Marker.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/BarChart.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/BarChart.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/Base.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/Base.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/BubbleChart.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/BubbleChart.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/ChartContainer.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/ChartContainer.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/DataCount.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/DataCount.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/DataTable.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/DataTable.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/DetailMap.js" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/DetailMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/LineChart.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/LineChart.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/PieChart.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/PieChart.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/RowChart.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/RowChart.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/WorldMap.js" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/WorldMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/helpers.js" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/helpers.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/DCReact/components/index.jsx" afterPath="$PROJECT_DIR$/src/components/Common/DCReact/components/index.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dates/Define/DateDefineList.js" afterPath="$PROJECT_DIR$/src/components/Store/Dates/Define/DateDefineList.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dates/Define/DateDefineList3.js" afterPath="$PROJECT_DIR$/src/components/Store/Dates/Define/DateDefineList3.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dates/Define/DateDefineRange.js" afterPath="$PROJECT_DIR$/src/components/Store/Dates/Define/DateDefineRange.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/demo/403.md" afterPath="$PROJECT_DIR$/src/components/Common/Exception/demo/403.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/demo/404.md" afterPath="$PROJECT_DIR$/src/components/Common/Exception/demo/404.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/demo/500.md" afterPath="$PROJECT_DIR$/src/components/Common/Exception/demo/500.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/index.js" afterPath="$PROJECT_DIR$/src/components/Common/Exception/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Exception/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/index.md" afterPath="$PROJECT_DIR$/src/components/Common/Exception/index.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Exception/typeConfig.js" afterPath="$PROJECT_DIR$/src/components/Common/Exception/typeConfig.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/FooterToolbar/index.js" afterPath="$PROJECT_DIR$/src/components/Common/FooterToolbar/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/FooterToolbar/index.less" afterPath="$PROJECT_DIR$/src/components/Common/FooterToolbar/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/FooterToolbar/index.md" afterPath="$PROJECT_DIR$/src/components/Common/FooterToolbar/index.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalFooter/demo/basic.md" afterPath="$PROJECT_DIR$/src/components/Common/GlobalFooter/demo/basic.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalFooter/index.js" afterPath="$PROJECT_DIR$/src/components/Common/GlobalFooter/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalFooter/index.less" afterPath="$PROJECT_DIR$/src/components/Common/GlobalFooter/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalFooter/index.md" afterPath="$PROJECT_DIR$/src/components/Common/GlobalFooter/index.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderSearch/demo/basic.md" afterPath="$PROJECT_DIR$/src/components/Common/HeaderSearch/demo/basic.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderSearch/index.js" afterPath="$PROJECT_DIR$/src/components/Common/HeaderSearch/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderSearch/index.less" afterPath="$PROJECT_DIR$/src/components/Common/HeaderSearch/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderSearch/index.md" afterPath="$PROJECT_DIR$/src/components/Common/HeaderSearch/index.md" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mapping/MarkerCluster.js" afterPath="$PROJECT_DIR$/src/components/Old/Mapping/MarkerCluster.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mapping/TopoJSON.js" afterPath="$PROJECT_DIR$/src/components/Old/Mapping/TopoJSON.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Mapping/style.css" afterPath="$PROJECT_DIR$/src/components/Old/Mapping/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/NoticeList.js" afterPath="$PROJECT_DIR$/src/components/Common/NoticeIcon/NoticeList.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/NoticeList.less" afterPath="$PROJECT_DIR$/src/components/Common/NoticeIcon/NoticeList.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/index.js" afterPath="$PROJECT_DIR$/src/components/Common/NoticeIcon/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoticeIcon/index.less" afterPath="$PROJECT_DIR$/src/components/Common/NoticeIcon/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/index.js" afterPath="$PROJECT_DIR$/src/components/Common/PageHeader/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageHeader/index.less" afterPath="$PROJECT_DIR$/src/components/Common/PageHeader/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/HourlyCountryThing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteCountryBarChart.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteDateSelect.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteEventsChartsHolderIndividual.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteGenderChart.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteGenderTabs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteGenderTotals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteTable.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sites/SiteTotalSightings.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/PageHeaderLayout.js" afterPath="$PROJECT_DIR$/src/layouts/PageHeaderLayout.js" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/StoreLayout.js" afterPath="$PROJECT_DIR$/src/layouts/StoreLayout.js" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/TravelLayout.js" afterPath="$PROJECT_DIR$/src/layouts/TravelLayout.js" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/UserLayout.js" afterPath="$PROJECT_DIR$/src/layouts/UserLayout.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/AreaComparison/index.js" afterPath="$PROJECT_DIR$/src/routes/Store/AreaComparison/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/AreaDefinition/index.js" afterPath="$PROJECT_DIR$/src/routes/Store/AreaDefinition/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/CellSelect/index.js" afterPath="$PROJECT_DIR$/src/routes/Store/CellSelect/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js" afterPath="$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Dates/Define/index.js" afterPath="$PROJECT_DIR$/src/routes/Store/Dates/Define/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Dwells/DwellSearchWizard/SiteList.js" afterPath="$PROJECT_DIR$/src/routes/Store/Dwells/DwellSearchWizard/SiteList.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Exception/403.js" afterPath="$PROJECT_DIR$/src/routes/Common/Exception/403.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Exception/404.js" afterPath="$PROJECT_DIR$/src/routes/Common/Exception/404.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Exception/500.js" afterPath="$PROJECT_DIR$/src/routes/Common/Exception/500.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js" afterPath="$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,90 +168,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Travel/user.js">
+      <file leaf-file-name="Analysis.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="209">
+              <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <folding>
+                <element signature="e#2546#2825#0" expanded="false" />
+                <element signature="e#2882#3011#0" expanded="false" />
+                <element signature="e#3051#3290#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/index.js">
+        <entry file="file://$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="94" column="51" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
+            <state relative-caret-position="294">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding>
-                <marker date="1516897897104" expanded="true" signature="3869:5885" ph="..." />
-                <marker date="1516897897104" expanded="true" signature="3930:5872" ph="..." />
-                <marker date="1516897897104" expanded="true" signature="3957:3965" ph="..." />
-                <marker date="1516897897104" expanded="true" signature="4004:4578" ph="..." />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store_nav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
+      <file leaf-file-name="SiteGenderTotals.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Store/Sites/SiteGenderTotals.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TravelLayout.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/TravelLayout.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="272" column="23" lean-forward="false" selection-start-line="272" selection-start-column="23" selection-end-line="272" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".roadhogrc.mock.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.roadhogrc.mock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+            <state relative-caret-position="336">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StoreLayout.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/StoreLayout.js">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="273" column="35" lean-forward="false" selection-start-line="273" selection-start-column="35" selection-end-line="273" selection-end-column="35" />
+            <state relative-caret-position="385">
+              <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComparisonLineChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarkerCluster.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Old/Mapping/MarkerCluster.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopoJSON.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Old/Mapping/TopoJSON.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+              <folding>
+                <marker date="1516965365962" expanded="true" signature="2778:4788" ph="..." />
+                <marker date="1516965365962" expanded="true" signature="2839:4775" ph="..." />
+                <marker date="1516965365962" expanded="true" signature="2866:2874" ph="..." />
+                <marker date="1516965365962" expanded="true" signature="2913:3487" ph="..." />
               </folding>
             </state>
           </provider>
@@ -132,20 +269,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>state.op</find>
-      <find>band</find>
-      <find>range</find>
-      <find>rangerow</find>
-      <find>height</find>
-      <find>colors</find>
-      <find>width</find>
       <find>highlight</find>
       <find>clickedon</find>
       <find>console</find>
       <find>getRectY</find>
       <find>yOffsetScale</find>
       <find>getAxisY</find>
-      <find>getRectOpacity</find>
       <find>BasicLa</find>
       <find>'BasicLayout'</find>
       <find>products</find>
@@ -158,10 +287,18 @@
       <find>target</find>
       <find>props.na</find>
       <find>navData</find>
-      <find>svg</find>
       <find>format</find>
       <find>delay</find>
       <find>roadhog-api-doc</find>
+      <find>svg</find>
+      <find>handleMouseDown</find>
+      <find>howMuchToMove</find>
+      <find>ii</find>
+      <find>this.band</find>
+      <find>this.column</find>
+      <find>.column</find>
+      <find>`</find>
+      <find>getRectOpacity</find>
     </findStrings>
     <replaceStrings>
       <replace>D3Marker</replace>
@@ -225,10 +362,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/services/api.js" />
-        <option value="$PROJECT_DIR$/src/components/Dates/Define/DateDefineRange.js" />
-        <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/DataSeries.js" />
-        <option value="$PROJECT_DIR$/src/components/Dates/Define/DateDefineList2.js" />
         <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/api/app/models.py" />
         <option value="$PROJECT_DIR$/src/models/date.js" />
@@ -268,7 +401,6 @@
         <option value="$PROJECT_DIR$/src/layouts/StoreLayout.less" />
         <option value="$PROJECT_DIR$/src/common/store_nav.js" />
         <option value="$PROJECT_DIR$/src/router.js" />
-        <option value="$PROJECT_DIR$/src/components/Charts/Stacked/index.js" />
         <option value="$PROJECT_DIR$/src/common/travel_nav.js" />
         <option value="$PROJECT_DIR$/src/layouts/TravelLayout.less" />
         <option value="$PROJECT_DIR$/src/layouts/TravelLayout.js" />
@@ -276,6 +408,11 @@
         <option value="$PROJECT_DIR$/api/requirements.txt" />
         <option value="$PROJECT_DIR$/.roadhogrc.mock.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/Charts/Stacked/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Old/Mapping/TopoJSON.js" />
+        <option value="$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js" />
+        <option value="$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Store/Sites/SiteGenderTotals.js" />
       </list>
     </option>
   </component>
@@ -297,10 +434,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="311" />
-    <option name="y" value="-1340" />
-    <option name="width" value="1779" />
-    <option name="height" value="1263" />
+    <option name="x" value="134" />
+    <option name="y" value="131" />
+    <option name="width" value="1829" />
+    <option name="height" value="1463" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -344,26 +481,27 @@
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="Travel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -384,7 +522,7 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="C:\Users\Graham\Documents\Dev\ant-design-pro\node_modules\stylelint" />
-    <property name="SearchEverywhereHistoryKey" value="stacked&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/theme.js&#10;index.ej&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;router&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;colors&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/less/lib/less/data/colors.js&#10;ana&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;index.e&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;date.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/date.js&#10;webpack&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/roadhog/lib/config/webpack.config.dev.js&#10;SiteCountry&#9;null&#9;null&#10;heatmap&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/leaflet-d3-svg-overlay/examples/heatmap.html&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
+    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;sitegender&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Sites/SiteGenderTotals.js&#10;Dashboard&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard&#10;ComparisonLineChart&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js&#10;analys&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard/Analysis.js&#10;stacked&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/theme.js&#10;index.ej&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;router&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;colors&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/less/lib/less/data/colors.js&#10;ana&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;index.e&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;date.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/date.js&#10;webpack&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/roadhog/lib/config/webpack.config.dev.js&#10;SiteCountry&#9;null&#9;null&#10;heatmap&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/leaflet-d3-svg-overlay/examples/heatmap.html&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules\eslint" />
@@ -399,11 +537,11 @@
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Common" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Common" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Store" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Old" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models\Store" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Store" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\assets\font" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Dates\Define" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Areas\Definition" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -526,28 +664,7 @@
       <workItem from="1515077623046" duration="988000" />
       <workItem from="1515498876248" duration="35401000" />
       <workItem from="1515663067030" duration="94271000" />
-      <workItem from="1516700103578" duration="73053000" />
-    </task>
-    <task id="LOCAL-00022" summary="Adding SightingsNew api">
-      <created>1513345985113</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1513345985113</updated>
-    </task>
-    <task id="LOCAL-00023" summary="working site comparison page">
-      <created>1513683977246</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1513683977246</updated>
-    </task>
-    <task id="LOCAL-00024" summary="wip">
-      <created>1513697077896</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1513697077896</updated>
+      <workItem from="1516700103578" duration="83783000" />
     </task>
     <task id="LOCAL-00025" summary="wip">
       <created>1513778841561</created>
@@ -871,11 +988,32 @@
       <option name="project" value="LOCAL" />
       <updated>1516898837706</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="fixing package issues">
+      <created>1516898984114</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1516898984114</updated>
+    </task>
+    <task id="LOCAL-00072" summary="wip">
+      <created>1516903483743</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1516903483743</updated>
+    </task>
+    <task id="LOCAL-00073" summary="finally fixed graph to behave as tom wants">
+      <created>1516964286118</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1516964286118</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="647666000" />
+    <option name="totallyTimeSpent" value="658396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -887,20 +1025,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="311" y="-1340" width="1779" height="1263" extended-state="0" />
+    <frame x="134" y="131" width="1829" height="1463" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.49773243" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833022" sideWeight="0.4920635" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22077073" sideWeight="0.5625597" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.420765" sideWeight="0.5137992" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3763946" sideWeight="0.22327045" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35362095" sideWeight="0.3884769" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2937821" sideWeight="0.16328964" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.420765" sideWeight="0.4862008" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35362095" sideWeight="0.6115231" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3763946" sideWeight="0.7767296" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2937821" sideWeight="0.8367104" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -957,9 +1095,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="select grid squares by polygon circle" />
-    <MESSAGE value="removing unused ant design stuff" />
-    <MESSAGE value="add a global filter to dc geraphs" />
     <MESSAGE value="text change" />
     <MESSAGE value="ignore file as too big for github" />
     <MESSAGE value="remove big file" />
@@ -982,7 +1117,10 @@
     <MESSAGE value="working axis animation" />
     <MESSAGE value="Adding Mini axis" />
     <MESSAGE value="refactorings" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactorings" />
+    <MESSAGE value="fixing package issues" />
+    <MESSAGE value="wip" />
+    <MESSAGE value="finally fixed graph to behave as tom wants" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally fixed graph to behave as tom wants" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -992,7 +1130,7 @@
           <line>8</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Areas/Comparision/ComparisonMap.js</url>
+          <url>file://$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonMap.js</url>
           <line>7</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1006,38 +1144,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/style/color/colorPalette.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/less/lib/less/data/colors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/style/themes/default.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="203" column="1" lean-forward="false" selection-start-line="203" selection-start-column="1" selection-end-line="203" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/BlankLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/layouts/UserLayout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-945">
@@ -1066,7 +1172,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Areas/Definition/AreaDefinitionMapThumbnail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
@@ -1082,7 +1188,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Dates/Define/DateDefineList.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Dates/Define/DateDefineList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
@@ -1098,7 +1204,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/ComparisonStory/DateBars.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/DateBars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
@@ -1106,7 +1212,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/ComparisonStory/Axis.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Axis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
@@ -1116,7 +1222,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/ComparisonStory/Area.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Area.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
@@ -1124,7 +1230,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/index.backupjs">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.backupjs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
@@ -1140,7 +1246,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/ComparisonStory/DataSeries.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/DataSeries.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
@@ -1148,7 +1254,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/ComparisonStory/Line.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Line.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="17" column="25" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="17" selection-end-column="25" />
@@ -1156,17 +1262,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/ComparisonStory/ComparisonLineChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/XAxis.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/XAxis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
@@ -1174,20 +1270,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="153" column="47" lean-forward="false" selection-start-line="153" selection-start-column="47" selection-end-line="153" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-            <element signature="e#2788#3067#0" expanded="false" />
-            <element signature="e#3124#3253#0" expanded="false" />
-            <element signature="e#3293#3532#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/Key.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/Key.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
@@ -1195,7 +1278,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/YAxis.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/YAxis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
@@ -1203,7 +1286,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/YMiniAxis.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/YMiniAxis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
@@ -1227,7 +1310,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Marker.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Old/D3Map/D3Marker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1237,7 +1320,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/D3Map/D3Map.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Old/D3Map/D3Map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-269">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1247,7 +1330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CellSelect/CellSelectMap.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Store/CellSelect/CellSelectMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="10" />
@@ -1349,37 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="80" column="27" lean-forward="false" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Charts/Stacked/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="94" column="51" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
-          <folding>
-            <marker date="1516897897104" expanded="true" signature="3869:5885" ph="..." />
-            <marker date="1516897897104" expanded="true" signature="3930:5872" ph="..." />
-            <marker date="1516897897104" expanded="true" signature="3957:3965" ph="..." />
-            <marker date="1516897897104" expanded="true" signature="4004:4578" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Travel/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1409,15 +1461,25 @@
         <state relative-caret-position="237">
           <caret line="273" column="35" lean-forward="false" selection-start-line="273" selection-start-column="35" selection-end-line="273" selection-end-column="35" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/TravelLayout.js">
+    <entry file="file://$PROJECT_DIR$/.roadhogrc.mock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="272" column="23" lean-forward="false" selection-start-line="272" selection-start-column="23" selection-end-line="272" selection-end-column="23" />
+        <state relative-caret-position="354">
+          <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1430,20 +1492,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.roadhogrc.mock.js">
+    <entry file="file://$PROJECT_DIR$/src/layouts/TravelLayout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        <state relative-caret-position="237">
+          <caret line="272" column="23" lean-forward="false" selection-start-line="272" selection-start-column="23" selection-end-line="272" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1516965365962" expanded="true" signature="2778:4788" ph="..." />
+            <marker date="1516965365962" expanded="true" signature="2839:4775" ph="..." />
+            <marker date="1516965365962" expanded="true" signature="2866:2874" ph="..." />
+            <marker date="1516965365962" expanded="true" signature="2913:3487" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/components/Old/Mapping/MarkerCluster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Old/Mapping/TopoJSON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <element signature="e#2546#2825#0" expanded="false" />
+            <element signature="e#2882#3011#0" expanded="false" />
+            <element signature="e#3051#3290#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Sites/SiteGenderTotals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
           <folding />
         </state>
       </provider>

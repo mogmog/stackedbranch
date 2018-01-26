@@ -7,8 +7,8 @@ import {Table, Alert, Badge, Divider, Button, Modal, Card, Form, Input} from 'an
 import { Map, FeatureGroup, TileLayer } from 'react-leaflet';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 
-import AreaDefinitionMapThumbnail from '../../../components/Areas/Definition/AreaDefinitionMapThumbnail';
-import AreaDefinitionMapToolbar from '../../../components/Areas/Definition/AreaDefinitionMapToolbar';
+import AreaDefinitionMapThumbnail from '../../../components/Store/Areas/Definition/AreaDefinitionMapThumbnail';
+import AreaDefinitionMapToolbar from '../../../components/Store/Areas/Definition/AreaDefinitionMapToolbar';
 
 
 const FormItem = Form.Item;

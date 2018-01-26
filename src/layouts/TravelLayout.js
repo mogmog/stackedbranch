@@ -9,10 +9,10 @@ import groupBy from 'lodash/groupBy';
 import { ContainerQuery } from 'react-container-query';
 import classNames from 'classnames';
 import Debounce from 'lodash-decorators/debounce';
-import HeaderSearch from '../components/HeaderSearch';
-import NoticeIcon from '../components/NoticeIcon';
-import GlobalFooter from '../components/GlobalFooter';
-import NotFound from '../routes/Store/Exception/404';
+import HeaderSearch from '../components/Common/HeaderSearch';
+import NoticeIcon from '../components/Common/NoticeIcon';
+import GlobalFooter from '../components/Common/GlobalFooter';
+import NotFound from '../routes/Common/Exception/404';
 import styles from './TravelLayout.less';
 import SVGInline from "react-svg-inline"
 

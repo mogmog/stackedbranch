@@ -4,13 +4,13 @@ import {Row, Col, Card, Modal, Form, Tabs, Button, Switch, Alert, Tooltip, Icon}
 
 import _ from 'lodash';
 
-import {ChartCard, Field} from '../../../components/Charts/index';
+import {ChartCard, Field} from '../../../components/Common/Charts/index';
 
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-import SiteTable from '../../../components/Sites/SiteTable';
-import SiteDateSelect from '../../../components/Sites/SiteDateSelect';
-import SiteTotalSightings from '../../../components/Sites/SiteGenderTotals';
-import SiteGenderTabs from '../../../components/Sites/SiteGenderTabs';
+import SiteTable from '../../../components/Store/Sites/SiteTable';
+import SiteDateSelect from '../../../components/Store/Sites/SiteDateSelect';
+import SiteTotalSightings from '../../../components/Store/Sites/SiteGenderTotals';
+import SiteGenderTabs from '../../../components/Store/Sites/SiteGenderTabs';
 
 const FormItem = Form.Item;
 const TabPane = Tabs.TabPane;

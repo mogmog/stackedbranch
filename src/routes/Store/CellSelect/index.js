@@ -3,7 +3,7 @@ import { Table, Card, Select } from 'antd';
 
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 
-import CellSelectMap from '../../../components/CellSelect/CellSelectMap';
+import CellSelectMap from '../../../components/Store/CellSelect/CellSelectMap';
 
 class CellSelect extends PureComponent {
 

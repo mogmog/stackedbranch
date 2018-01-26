@@ -2,8 +2,8 @@ import React, {PureComponent} from 'react';
 import {connect} from 'dva';
 import {Row, Col, Card, Divider, Input, Button} from 'antd';
 import PageHeaderLayout from '../../../../layouts/PageHeaderLayout';
-import DateDefineRange from '../../../../components/Dates/Define/DateDefineRange';
-import DateDefineList from '../../../../components/Dates/Define/DateDefineList';
+import DateDefineRange from '../../../../components/Store/Dates/Define/DateDefineRange';
+import DateDefineList from '../../../../components/Store/Dates/Define/DateDefineList';
 
 @connect(state => ({
   date: state.date

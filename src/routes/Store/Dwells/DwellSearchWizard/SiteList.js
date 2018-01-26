@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Row, Col, Tabs, Form, Input, Select, Icon, Button, InputNumber, DatePicker, Modal, message } from 'antd';
-import SiteTable from '../../../../components/Sites/SiteTable';
+import SiteTable from '../../../../components/Store/Sites/SiteTable';
 import SiteSelectMap from "./Map/SiteSelectMap";
 
 import styles from './SiteList.less';
