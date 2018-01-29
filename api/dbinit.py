@@ -15,7 +15,6 @@ Site.delete_all()
 Area.delete_all()
 Network.delete_all()
 
-
 site1 = Site('Tesco Oxford Street')
 site1.save()
 site2 = Site('Tesco Regent Street')

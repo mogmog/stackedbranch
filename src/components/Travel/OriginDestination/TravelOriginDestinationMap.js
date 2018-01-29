@@ -1,68 +1,93 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
-import Choropleth from 'react-leaflet-choropleth';
+import Choropleth from './Choropleth';
 import Leaflet from 'leaflet';
+import * as topojson from 'topojson';
 
 import styles from './styles.less';
+import { Slider, Switch } from 'antd';
 
-var data = require('json!./lad.json');
+var data = require('json!./topo.json');
+
+//console.log(data);
+
+
+var topology = topojson.feature(data, data.objects.areas).features;
+//debugger;
+
+console.log(topology);
 
 class TravelOriginDestinationMap extends PureComponent {
 
-  state = {countiesToShow: [], distance : 1 };
+  state = {features : [], countiesToShow: [], distance : 1 };
 
-  changeCounty(item) {
-    this.setState({distance : this.state.distance + 1 })
-      this.setState({ countiesToShow: [...this.state.countiesToShow, item] });
-      //this.setState({county : 'South Cambridgeshire'});
+  onChange(value) {
+    this.setState({distance : value });
+   // this.forceUpdate();
   }
+  changeCounty(item) {
 
-  //Islington, Hackney, Westminster, Tower Hamlets, Lambeth, Greenwich
+    this.setState({ features: {type : 'FeatureCollection', features : topology } });
+  }//.slice(0, this.state.distance)
 
   render() {
 
     const style = {
-      fillColor: '#F28F3B',
+      fillColor: '#ffffff',
       weight: 2,
       opacity: 1,
       color: 'white',
-      dashArray: '3',
-      fillOpacity: 0.5
+      fillOpacity: 1
     }
+
+    let test = 0;
 
     return (
       <div>
+
+        <Slider min={0} max={400} defaultValue={0} onChange={this.onChange.bind(this)}  />
+
 
         <button onClick={(x => {this.changeCounty('Islington')}).bind(this) }> Islington </button>
         <button onClick={(x => {this.changeCounty('Hackney')}).bind(this) }> Hackney </button>
         <button onClick={(x => {this.changeCounty('Westminster')}).bind(this) }> Westminster </button>
         {this.state.distance}
-        <Map zoomControl={false} center={[51.522416, -0.185394]} zoom={6} style={{'height': '750px'}}>
+        <Map zoomControl={false} center={[54.82416, -1.185394]} zoom={6} style={{'height': '750px'}}>
+
+          <TileLayer opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
           <Choropleth
-            data={{type: 'FeatureCollection', features: data.features}}
-            valueProperty={(feature, i) => {
-              try {
-                //console.log((new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getNorthEast().distanceTo([0, 51.8]) ));
-                //console.log((new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getNorthEast().distanceTo([0, 51.8]) * this.state.distance));
-                return this.state.distance * Math.random();
-                //return (new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getNorthEast().distanceTo([0, 0]) * this.state.distance);
-              } catch(e) {
+                      data={this.state.features}
+                      valueProperty={(feature, idx) => {return new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getCenter().distanceTo(new Leaflet.latLng([0, 54]))}}
+                      visible={(feature, idx) => {return (this.state.distance ) > idx  }}
 
-              }
-              //return Leaflet.Polygon(feature.geometry)
-              //return this.state.countiesToShow.indexOf(feature.properties.LAD13NM) > -1;
-               }}
-            scale={['#b3cde0', '#ff1f4b']}
-            steps={10}
-            mode='e'
-            style={style}
-            onEachFeature={(feature, layer) => layer.bindPopup(feature.properties.LAD13NM)}
-          />
+            scale={['#ffffff', '#000000']}
+           steps={100}
+           style={style}
+            mode='q'
+             onEachFeature={(feature, layer) => layer.bindPopup(feature.properties.NAME)}
+           />
+
+
         </Map>
       </div>
     );
   }
 }
 
+//valueProperty={(feature, idx) => {return new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getCenter().distanceTo(new Leaflet.latLng([0, 54]))}}
+//((feature, x) => {return x * new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getCenter().distanceTo(new Leaflet.latLng([0, 54]))})(feature, this.state.distance)
 export default TravelOriginDestinationMap;
+
+// {/*<Choropleth
+//             data={{type: 'FeatureCollection', features: data.features}}
+//             valueProperty={(feature) => {test = test + 0.5; return test}}
+//             /*visible={(feature) => feature.id !== 123}*/
+// //return Leaflet.Polygon(feature.geometry)
+// //return this.state.countiesToShow.indexOf(feature.properties.LAD13NM) > -1;
+// /*  scale={['#000000', '#ffffff']}
+//   steps={100}
+//   mode='q'
+//   style={style}
+//   onEachFeature={(feature, layer) => layer.bindPopup(feature.properties.LAD13NM)}
+// />*!/}*/
