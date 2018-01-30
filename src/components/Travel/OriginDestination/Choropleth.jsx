@@ -9,6 +9,14 @@ export default class Choropleth extends Component {
     return typeof prop === 'function'
   }
 
+  onMouseOut = (e) => {
+    console.log('onMouseOut', e)
+  }
+
+  onMouseOver = (e) => {
+    console.log('onMouseOver', e)
+  }
+
   getColors() {
     const { data, valueProperty, mode, steps, scale, colors: cl } = this.props
     const colors = {}
@@ -74,7 +82,7 @@ export default class Choropleth extends Component {
   render(){
     const features = Array.isArray(this.props.data) ? this.props.data : this.props.data.features
     const chroms = this.getColors()
-    const { layerContainer, identity, ...options } = this.props //remove
+    const { layerContainer, identity, onClick, onMouseOver, ...options } = this.props //remove
     return (
       <FeatureGroup map={this.props.map} layerContainer={layerContainer} ref={ (layer) => layer ? this.leafletElement = layer.leafletElement : null } >
         {features.map( (feature, idx) =>
@@ -84,6 +92,9 @@ export default class Choropleth extends Component {
             style={this.getStyle(chroms, feature)}
             {...this.getStyle(chroms, feature, idx)}
             data={feature}
+
+            onClick={() => {onClick(feature)}}
+            onMouseOver={() =>{onMouseOver(feature)}}
             children={this.props.children ? this.cloneChildrenWithFeature(this.props, feature) : this.props.children}
           />)
         ) }
@@ -91,3 +102,4 @@ export default class Choropleth extends Component {
     )
   }
 }
+

@@ -21,7 +21,7 @@ export const getTravelNavData = app => [
         name: 'Origin Destination',
         icon: 'compass',
         path: 'travel/origindestination',
-        component: dynamicWrapper(app, [], () => import('../routes/Travel/OriginDestination')),
+        component: dynamicWrapper(app, ['origindestination'], () => import('../routes/Travel/OriginDestination')),
       },
 
 

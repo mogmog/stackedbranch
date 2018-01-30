@@ -6,6 +6,34 @@ from datetime import datetime, timedelta
 from sqlalchemy.dialects.postgresql import JSON
 from shapely.geometry import shape, Point
 
+class Journey(db.Model):
+    __tablename__ = 'journeys'
+
+    origin_id       = db.Column(db.String(255), primary_key=True)
+    destination_id  = db.Column(db.String(255), primary_key=True)
+    data            = db.Column(db.JSON)
+
+    def __init__(self, origin_id, destination_id, data):
+        self.origin_id = origin_id
+        self.destination_id = destination_id
+        self.data = data
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return Journey.query
+
+    def delete_all():
+          db.session.query(Journey).delete()
+          db.session.commit()
+
+
+    def __repr__(self):
+        return "<Journey: {}>".format(self.origin_id)
+
 class Area(db.Model):
     __tablename__ = 'areas'
 

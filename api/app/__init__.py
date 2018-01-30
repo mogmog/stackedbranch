@@ -22,7 +22,7 @@ from flask_bcrypt import Bcrypt
 # initialize db
 db = SQLAlchemy()
 
-from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting
+from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting, Journey
 from app.models import Department as DepartmentModel
 
 class Department(SQLAlchemyObjectType):
@@ -304,5 +304,27 @@ def create_app(config_name):
             if (str(sighting.smallcell.site_id)) in site_ids : results.append(sighting.serialise())
 
         return make_response(jsonify({ 'list' : results })), 200
+
+    @app.route('/api/origindestination/all', methods=['GET'])
+    def get_all():
+       journeys = Journey.query.all()
+       thing = {}
+       for journey in journeys:
+        if (journey.origin_id not in thing) :
+          thing[journey.origin_id] = {}
+        if (journey.destination_id not in thing[journey.origin_id] and journey.destination_id != journey.origin_id) :
+          thing[journey.origin_id][journey.destination_id] = journey.data['total']
+
+       return make_response(jsonify(thing)), 200
+
+    @app.route('/api/origindestination/<origin_id>', methods=['GET'])
+    def get_od(origin_id):
+       journeys = Journey.query.all()#.filter_by(origin_id=origin_id).all()
+       _j = []
+       for journey in journeys:
+        _j.append({'origin_id' : journey.origin_id, 'destination_id' : journey.destination_id, 'total' : journey.data['total']})
+        #_j.append({'origin_id' : journey.origin_id, 'data' : (journey.data)})
+
+       return make_response(jsonify({ 'list' : _j })), 200
 
     return app

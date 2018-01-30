@@ -51,15 +51,15 @@ class TravelOriginDestinationMap extends PureComponent {
         <button onClick={(x => {this.changeCounty('Islington')}).bind(this) }> Islington </button>
         <button onClick={(x => {this.changeCounty('Hackney')}).bind(this) }> Hackney </button>
         <button onClick={(x => {this.changeCounty('Westminster')}).bind(this) }> Westminster </button>
-        {this.state.distance}
-        <Map zoomControl={false} center={[54.82416, -1.185394]} zoom={6} style={{'height': '750px'}}>
+        {this.props.mapSetup.zoom}
+        <Map zoomControl={false} center={this.props.mapSetup.center} zoom={this.props.mapSetup.zoom} style={{'height': '750px'}}>
 
           <TileLayer opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
           <Choropleth
                       data={this.state.features}
                       valueProperty={(feature, idx) => {return new Leaflet.Polygon(feature.geometry.coordinates).getBounds().getCenter().distanceTo(new Leaflet.latLng([0, 54]))}}
-                      visible={(feature, idx) => {return (this.state.distance ) > idx  }}
+                      visible={(feature, idx) => {return true  }}
 
             scale={['#ffffff', '#000000']}
            steps={100}

@@ -18,6 +18,11 @@ export async function saveDate(params) {
   });
 }
 
+export async function queryOriginDestination() {
+  return request('/api/origindestination/all');
+}
+
+
 export async function querySites() {
   return request('/api/sites');
 }
