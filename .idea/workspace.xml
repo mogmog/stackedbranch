@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Travel/OriginDestination/more.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/models/Travel/origindestination.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Store/Thing.jsx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/routes/Store/Attraction/index.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/app/__init__.py" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/api/app/models.py" afterPath="$PROJECT_DIR$/api/app/models.py" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/alembic.ini" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/env.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/script.py.mako" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/versions/f2abb6d88304_.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/od.py" afterPath="$PROJECT_DIR$/api/od.py" />
-      <change beforePath="$PROJECT_DIR$/src/common/travel_nav.js" afterPath="$PROJECT_DIR$/src/common/travel_nav.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx" afterPath="$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx" />
-      <change beforePath="$PROJECT_DIR$/src/components/Travel/OriginDestination/TravelOriginDestinationMap.js" afterPath="$PROJECT_DIR$/src/components/Travel/OriginDestination/TravelOriginDestinationMap.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Travel/OriginDestination/index.js" afterPath="$PROJECT_DIR$/src/routes/Travel/OriginDestination/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.js" afterPath="$PROJECT_DIR$/src/services/api.js" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/src/common/store_nav.js" afterPath="$PROJECT_DIR$/src/common/store_nav.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,70 +21,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/Travel/OriginDestination/index.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/Store/Attraction/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="44" column="102" lean-forward="false" selection-start-line="44" selection-start-column="102" selection-end-line="44" selection-end-column="102" />
+            <state relative-caret-position="295">
+              <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-                <element signature="e#188#301#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegionChooserMap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js">
+      <file leaf-file-name="Thing.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Store/Thing.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="651">
+              <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#256#295#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="more.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/more.json">
+      <file leaf-file-name="funnel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/funnel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="143533" column="1" lean-forward="false" selection-start-line="143533" selection-start-column="1" selection-end-line="143533" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="314" column="114" lean-forward="false" selection-start-line="314" selection-start-column="114" selection-end-line="314" selection-end-column="114" />
+            <state relative-caret-position="294">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Choropleth.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx">
+      <file leaf-file-name="FunnelSeries.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/src/components/FunnelSeries/FunnelSeries.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-609">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1517308043365" expanded="true" signature="2384:2986" ph="..." />
-                <marker date="1517308043365" expanded="true" signature="2508:2951" ph="..." />
-                <marker date="1517308043365" expanded="false" signature="2607:2629" ph="..." />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="origindestination.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Travel/origindestination.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/src/components/FunnelSeries/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Area.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Area.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -105,10 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>storeNavData</find>
-      <find>store</find>
-      <find>target</find>
-      <find>props.na</find>
       <find>navData</find>
       <find>format</find>
       <find>delay</find>
@@ -135,6 +152,10 @@
       <find>areas</find>
       <find>&quot;E06000047&quot;:</find>
       <find>&quot;E06000047&quot;: {</find>
+      <find>highcharts</find>
+      <find>title</find>
+      <find>d3</find>
+      <find>400</find>
     </findStrings>
     <replaceStrings>
       <replace>D3Marker</replace>
@@ -182,8 +203,8 @@
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\api</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Dashboard</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules</dir>
-      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components</dir>
+      <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane</dir>
       <dir>C:\Users\graha\OneDrive\Documents\Dev\hurricane\src</dir>
     </dirStrings>
   </component>
@@ -198,9 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/assets/font/readme.md" />
-        <option value="$PROJECT_DIR$/src/theme.js" />
-        <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Area.js" />
         <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Line.js" />
         <option value="$PROJECT_DIR$/src/routes/User/Login.js" />
         <option value="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js" />
@@ -218,10 +236,8 @@
         <option value="$PROJECT_DIR$/src/components/Charts/Stacked/YMiniAxis.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/layouts/StoreLayout.less" />
-        <option value="$PROJECT_DIR$/src/common/store_nav.js" />
         <option value="$PROJECT_DIR$/src/layouts/TravelLayout.less" />
         <option value="$PROJECT_DIR$/api/requirements.txt" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Charts/Stacked/index.js" />
         <option value="$PROJECT_DIR$/src/components/Old/Mapping/TopoJSON.js" />
         <option value="$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js" />
@@ -239,7 +255,6 @@
         <option value="$PROJECT_DIR$/api/dbinit.py" />
         <option value="$PROJECT_DIR$/api/app/models.py" />
         <option value="$PROJECT_DIR$/api/od.py" />
-        <option value="$PROJECT_DIR$/src/index.ejs" />
         <option value="$PROJECT_DIR$/src/components/Travel/OriginDestination/TravelOriginDestinationMap.js" />
         <option value="$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx" />
         <option value="$PROJECT_DIR$/src/services/api.js" />
@@ -249,6 +264,12 @@
         <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/components/Travel/OriginDestination/more.json" />
         <option value="$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js" />
+        <option value="$PROJECT_DIR$/src/common/store_nav.js" />
+        <option value="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" />
+        <option value="$PROJECT_DIR$/src/index.ejs" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/Store/Thing.jsx" />
+        <option value="$PROJECT_DIR$/src/routes/Store/Attraction/index.js" />
       </list>
     </option>
   </component>
@@ -270,9 +291,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="281" />
-    <option name="y" value="56" />
-    <option name="width" value="1840" />
+    <option name="x" value="435" />
+    <option name="y" value="78" />
+    <option name="width" value="2147" />
     <option name="height" value="1667" />
   </component>
   <component name="ProjectView">
@@ -300,6 +321,17 @@
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="highcharts-funnel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,7 +351,7 @@
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Travel" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -327,7 +359,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Travel" type="462c0819:PsiDirectoryNode" />
-              <item name="OriginDestination" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -350,21 +381,6 @@
               <item name="Store" type="462c0819:PsiDirectoryNode" />
               <item name="AreaComparison" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Travel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Travel" type="462c0819:PsiDirectoryNode" />
-              <item name="OriginDestination" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -384,7 +400,7 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="C:\Users\Graham\Documents\Dev\ant-design-pro\node_modules\stylelint" />
-    <property name="SearchEverywhereHistoryKey" value="map&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Areas/Comparision/ComparisonMap.js&#10;STACKED&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;rout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;sitegender&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Sites/SiteGenderTotals.js&#10;Dashboard&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard&#10;ComparisonLineChart&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js&#10;analys&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard/Analysis.js&#10;stacked&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/theme.js&#10;index.ej&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;router&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;colors&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/less/lib/less/data/colors.js&#10;ana&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;date.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/date.js&#10;webpack&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/roadhog/lib/config/webpack.config.dev.js&#10;SiteCountry&#9;null&#9;null&#10;heatmap&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/leaflet-d3-svg-overlay/examples/heatmap.html&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
+    <property name="SearchEverywhereHistoryKey" value="index.ejs&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;icon&#9;null&#9;null&#10;map&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Areas/Comparision/ComparisonMap.js&#10;STACKED&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;rout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;sitegender&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Sites/SiteGenderTotals.js&#10;Dashboard&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard&#10;ComparisonLineChart&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js&#10;analys&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard/Analysis.js&#10;stacked&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/theme.js&#10;index.ej&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;router&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;colors&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/less/lib/less/data/colors.js&#10;ana&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;date.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/date.js&#10;webpack&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/roadhog/lib/config/webpack.config.dev.js&#10;SiteCountry&#9;null&#9;null&#10;heatmap&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/leaflet-d3-svg-overlay/examples/heatmap.html&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules\eslint" />
@@ -392,11 +408,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Store\Attraction" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models\Travel" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Travel\OriginDestination" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api\data" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Travel\OriginDestination" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Travel\OriginDestination" />
@@ -528,14 +544,7 @@
       <workItem from="1515663067030" duration="94271000" />
       <workItem from="1516700103578" duration="91621000" />
       <workItem from="1516979000895" duration="9028000" />
-      <workItem from="1517217682893" duration="39226000" />
-    </task>
-    <task id="LOCAL-00031" summary="fixed null container issue">
-      <created>1513946768179</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1513946768179</updated>
+      <workItem from="1517217682893" duration="47810000" />
     </task>
     <task id="LOCAL-00032" summary="Add labels to area polygons">
       <created>1513956396142</created>
@@ -873,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517238759203</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="wip cloropleth">
+      <created>1517324364099</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1517324364099</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="714488000" />
+    <option name="totallyTimeSpent" value="723072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -889,18 +905,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="281" y="56" width="1840" height="1667" extended-state="0" />
+    <frame x="435" y="78" width="2147" height="1667" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.49773243" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22077073" sideWeight="0.5625597" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4620506" sideWeight="0.39795917" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3100907" sideWeight="0.17945544" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4620506" sideWeight="0.39787543" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26412362" sideWeight="0.17945544" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4620506" sideWeight="0.6020408" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4620506" sideWeight="0.6021246" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3100907" sideWeight="0.82054454" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925683" sideWeight="0.4982097" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26412362" sideWeight="0.82054454" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -914,7 +931,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925683" sideWeight="0.4982097" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -959,7 +975,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tidy ups" />
     <MESSAGE value="refactors" />
     <MESSAGE value="more refactors" />
     <MESSAGE value="animated line component" />
@@ -984,7 +999,8 @@
     <MESSAGE value="adding test geojson layer for travel" />
     <MESSAGE value="some mock fixes&#10;choropleth wip" />
     <MESSAGE value="working cloropleth" />
-    <option name="LAST_COMMIT_MESSAGE" value="working cloropleth" />
+    <MESSAGE value="wip cloropleth" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip cloropleth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1002,122 +1018,17 @@
           <url>file://$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js</url>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/routes/Store/Attraction/index.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Store/SiteComparison/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Store/Sites/SiteGenderTotals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Store/Sites/SiteCountryBarChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Store/Sites/DemoStackedThing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-            <element signature="e#480#537#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Store/Areas/Comparision/Testing.js" />
-    <entry file="file://$PROJECT_DIR$/src/layouts/StoreLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="273" column="47" lean-forward="false" selection-start-line="273" selection-start-column="47" selection-end-line="273" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="44" column="95" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Store/Dashboard/Analysis.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Store/Dashboard/Monitor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Travel/OriginDestination/styles.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/antd/es/layout/layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="139" column="16" lean-forward="false" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/TravelLayout.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/styles.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1276,20 +1187,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonMap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="80" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="80" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1331,7 +1234,7 @@
         <state relative-caret-position="590">
           <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1349,7 +1252,7 @@
         <state relative-caret-position="441">
           <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1385,8 +1288,8 @@
         <state relative-caret-position="432">
           <caret line="44" column="102" lean-forward="false" selection-start-line="44" selection-start-column="102" selection-end-line="44" selection-end-column="102" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <element signature="e#188#301#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
+            <element signature="e#188#301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1403,7 +1306,389 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="631">
           <caret line="143533" column="1" lean-forward="false" selection-start-line="143533" selection-start-column="1" selection-end-line="143533" selection-end-column="1" />
-          <folding />
+          <folding>
+            <marker date="1517320382713" expanded="true" signature="0:4692178" ph="{...}" />
+            <marker date="1517320382713" expanded="true" signature="17:12499" ph="{&quot;E06000002&quot;: &quot;1647.32142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="12516:25078" ph="{&quot;E06000001&quot;: &quot;1641.21428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="25095:37639" ph="{&quot;E06000001&quot;: &quot;1517.39285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="37656:50045" ph="{&quot;E06000001&quot;: &quot;3855.32142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="50062:62527" ph="{&quot;E06000001&quot;: &quot;328.107142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="62544:75044" ph="{&quot;E06000001&quot;: &quot;3.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="75061:87449" ph="{&quot;E06000001&quot;: &quot;4.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="87466:99783" ph="{&quot;E06000001&quot;: &quot;2.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="99800:112066" ph="{&quot;E06000001&quot;: &quot;4.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="112083:124641" ph="{&quot;E06000001&quot;: &quot;6.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="124658:137152" ph="{&quot;E06000001&quot;: &quot;18.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="137169:149512" ph="{&quot;E06000001&quot;: &quot;5.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="149529:161943" ph="{&quot;E06000001&quot;: &quot;8.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="161960:174391" ph="{&quot;E06000001&quot;: &quot;71.4285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="174408:186811" ph="{&quot;E06000001&quot;: &quot;2.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="186828:199264" ph="{&quot;E06000001&quot;: &quot;5.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="199281:211557" ph="{&quot;E06000001&quot;: &quot;1.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="211574:223910" ph="{&quot;E06000001&quot;: &quot;6.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="223927:236298" ph="{&quot;E06000001&quot;: &quot;0.607142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="236315:248693" ph="{&quot;E06000001&quot;: &quot;0.892857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="248710:260979" ph="{&quot;E06000001&quot;: &quot;1.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="260996:273433" ph="{&quot;E06000001&quot;: &quot;0.785714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="273450:285890" ph="{&quot;E06000001&quot;: &quot;1.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="285907:298423" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="298440:310767" ph="{&quot;E06000001&quot;: &quot;1.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="310784:323179" ph="{&quot;E06000001&quot;: &quot;0.892857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="323196:335484" ph="{&quot;E06000001&quot;: &quot;0.928571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="335501:347759" ph="{&quot;E06000001&quot;: &quot;2.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="347776:360175" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="360192:372623" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="372640:384990" ph="{&quot;E06000001&quot;: &quot;5.71428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="385007:397282" ph="{&quot;E06000001&quot;: &quot;2.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="397299:409625" ph="{&quot;E06000001&quot;: &quot;1.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="409642:421956" ph="{&quot;E06000001&quot;: &quot;1.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="421973:434320" ph="{&quot;E06000001&quot;: &quot;2.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="434337:446773" ph="{&quot;E06000001&quot;: &quot;1.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="446790:459104" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="459121:471548" ph="{&quot;E06000001&quot;: &quot;1.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="471565:483852" ph="{&quot;E06000001&quot;: &quot;1.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="483869:496169" ph="{&quot;E06000001&quot;: &quot;1.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="496186:508497" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="508514:520882" ph="{&quot;E06000001&quot;: &quot;3.89285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="520899:533213" ph="{&quot;E06000001&quot;: &quot;2.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="533230:545502" ph="{&quot;E06000001&quot;: &quot;1.85714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="545519:557960" ph="{&quot;E06000001&quot;: &quot;3.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="557977:570364" ph="{&quot;E06000001&quot;: &quot;1.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="570381:582869" ph="{&quot;E06000001&quot;: &quot;3735.39285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="582886:595374" ph="{&quot;E06000001&quot;: &quot;5.96428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="595391:607850" ph="{&quot;E06000001&quot;: &quot;6.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="607867:620318" ph="{&quot;E06000001&quot;: &quot;1.60714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="620335:632830" ph="{&quot;E06000001&quot;: &quot;2.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="632847:640522" ph="{&quot;E06000002&quot;: &quot;0.0357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="640539:652907" ph="{&quot;E06000001&quot;: &quot;3.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="652924:665101" ph="{&quot;E06000001&quot;: &quot;2.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="665118:677523" ph="{&quot;E06000001&quot;: &quot;2.92857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="677540:689924" ph="{&quot;E06000001&quot;: &quot;148.642857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="689941:702246" ph="{&quot;E06000001&quot;: &quot;2.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="702263:714550" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="714567:726964" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="726981:739232" ph="{&quot;E06000001&quot;: &quot;1.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="739249:751633" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="751650:763996" ph="{&quot;E06000001&quot;: &quot;1.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="764013:776211" ph="{&quot;E06000001&quot;: &quot;1.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="776228:788673" ph="{&quot;E06000001&quot;: &quot;4.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="788690:801117" ph="{&quot;E06000001&quot;: &quot;2.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="801134:813524" ph="{&quot;E06000001&quot;: &quot;5.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="813541:825953" ph="{&quot;E06000001&quot;: &quot;1.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="825970:838473" ph="{&quot;E06000001&quot;: &quot;12.5714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="838490:851010" ph="{&quot;E06000001&quot;: &quot;2.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="851027:863417" ph="{&quot;E06000001&quot;: &quot;20.5357142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="863434:875835" ph="{&quot;E06000001&quot;: &quot;9.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="875852:888194" ph="{&quot;E06000001&quot;: &quot;2.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="888211:900544" ph="{&quot;E06000001&quot;: &quot;5.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="900561:912797" ph="{&quot;E06000001&quot;: &quot;2.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="912814:925257" ph="{&quot;E06000001&quot;: &quot;1.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="925274:937675" ph="{&quot;E06000001&quot;: &quot;2.46428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="937692:950043" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="950060:962483" ph="{&quot;E06000001&quot;: &quot;2.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="962500:974857" ph="{&quot;E06000001&quot;: &quot;1.60714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="974874:987362" ph="{&quot;E06000001&quot;: &quot;0.285714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="987379:999888" ph="{&quot;E06000001&quot;: &quot;0.357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="999905:1012331" ph="{&quot;E06000001&quot;: &quot;0.142857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1012348:1024720" ph="{&quot;E06000001&quot;: &quot;0.285714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1024737:1037315" ph="{&quot;E06000001&quot;: &quot;0.285714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1037332:1049727" ph="{&quot;E06000001&quot;: &quot;0.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1049744:1062067" ph="{&quot;E06000001&quot;: &quot;0.321428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1062084:1074490" ph="{&quot;E06000001&quot;: &quot;0.107142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1074507:1086953" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1086970:1099366" ph="{&quot;E06000001&quot;: &quot;0.571428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1099383:1111777" ph="{&quot;E06000001&quot;: &quot;0.607142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1111794:1124135" ph="{&quot;E06000001&quot;: &quot;0.285714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1124152:1136619" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1136636:1149085" ph="{&quot;E06000001&quot;: &quot;0.321428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1149102:1161513" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1161530:1173971" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1173988:1186292" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1186309:1198677" ph="{&quot;E06000001&quot;: &quot;0.785714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1198694:1210969" ph="{&quot;E06000001&quot;: &quot;1.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1210986:1223451" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1223468:1235783" ph="{&quot;E06000001&quot;: &quot;1.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1235800:1248119" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1248136:1260453" ph="{&quot;E06000001&quot;: &quot;0.571428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1260470:1272787" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1272804:1285161" ph="{&quot;E06000001&quot;: &quot;1.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1285178:1297490" ph="{&quot;E06000001&quot;: &quot;1.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1297507:1309913" ph="{&quot;E06000001&quot;: &quot;0.964285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1309930:1322391" ph="{&quot;E06000001&quot;: &quot;0.964285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1322408:1334882" ph="{&quot;E06000001&quot;: &quot;0.392857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1334899:1347222" ph="{&quot;E06000001&quot;: &quot;1.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1347239:1359727" ph="{&quot;E06000001&quot;: &quot;1.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1359744:1372102" ph="{&quot;E06000001&quot;: &quot;0.571428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1372119:1384461" ph="{&quot;E06000001&quot;: &quot;0.428571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1384478:1396789" ph="{&quot;E06000001&quot;: &quot;0.178571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1396806:1409132" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1409149:1421530" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1421547:1433895" ph="{&quot;E06000001&quot;: &quot;0.571428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1433912:1446216" ph="{&quot;E06000001&quot;: &quot;1.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1446233:1458643" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1458660:1471161" ph="{&quot;E06000001&quot;: &quot;2.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1471178:1483437" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1483454:1495912" ph="{&quot;E06000001&quot;: &quot;0.535714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1495929:1508399" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1508416:1520907" ph="{&quot;E06000001&quot;: &quot;1.46428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1520924:1533344" ph="{&quot;E06000001&quot;: &quot;1.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1533361:1545773" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1545790:1558008" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1558025:1570430" ph="{&quot;E06000001&quot;: &quot;1.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1570447:1582744" ph="{&quot;E06000001&quot;: &quot;0.392857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1582761:1595103" ph="{&quot;E06000001&quot;: &quot;1.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1595120:1607507" ph="{&quot;E06000001&quot;: &quot;0.928571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1607524:1619977" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1619994:1632330" ph="{&quot;E06000001&quot;: &quot;0.928571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1632347:1644681" ph="{&quot;E06000001&quot;: &quot;1.60714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1644698:1657014" ph="{&quot;E06000001&quot;: &quot;1.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1657031:1669399" ph="{&quot;E06000001&quot;: &quot;1.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1669416:1681811" ph="{&quot;E06000001&quot;: &quot;0.357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1681828:1694146" ph="{&quot;E06000001&quot;: &quot;1.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1694163:1706640" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1706657:1719004" ph="{&quot;E06000001&quot;: &quot;2.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1719021:1731326" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1731343:1743699" ph="{&quot;E06000001&quot;: &quot;1.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1743716:1755976" ph="{&quot;E06000001&quot;: &quot;2.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1755993:1768371" ph="{&quot;E06000001&quot;: &quot;1.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1768388:1780766" ph="{&quot;E06000001&quot;: &quot;1.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1780783:1793223" ph="{&quot;E06000001&quot;: &quot;0.892857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1793240:1805684" ph="{&quot;E06000001&quot;: &quot;1.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1805701:1818110" ph="{&quot;E06000001&quot;: &quot;1.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1818127:1830360" ph="{&quot;E06000001&quot;: &quot;1.85714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1830377:1842793" ph="{&quot;E06000001&quot;: &quot;1.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1842810:1855265" ph="{&quot;E06000001&quot;: &quot;3.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1855282:1867714" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1867731:1880238" ph="{&quot;E06000001&quot;: &quot;2.71428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1880255:1892753" ph="{&quot;E06000001&quot;: &quot;0.607142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1892770:1905072" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1905089:1917445" ph="{&quot;E06000001&quot;: &quot;1.60714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1917462:1929882" ph="{&quot;E06000001&quot;: &quot;1.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1929899:1942370" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1942387:1954721" ph="{&quot;E06000001&quot;: &quot;3.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1954738:1967152" ph="{&quot;E06000001&quot;: &quot;3.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1967169:1979566" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1979583:1991934" ph="{&quot;E06000001&quot;: &quot;1.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="1991951:2004264" ph="{&quot;E06000001&quot;: &quot;0.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2004281:2016732" ph="{&quot;E06000001&quot;: &quot;4.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2016749:2029030" ph="{&quot;E06000001&quot;: &quot;0.785714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2029047:2041426" ph="{&quot;E06000001&quot;: &quot;0.928571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2041443:2053777" ph="{&quot;E06000001&quot;: &quot;5.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2053794:2066187" ph="{&quot;E06000001&quot;: &quot;1.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2066204:2078579" ph="{&quot;E06000001&quot;: &quot;2.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2078596:2090960" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2090977:2103329" ph="{&quot;E06000001&quot;: &quot;5.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2103346:2115760" ph="{&quot;E06000001&quot;: &quot;1.71428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2115777:2128156" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2128173:2140609" ph="{&quot;E06000001&quot;: &quot;1.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2140626:2152968" ph="{&quot;E06000001&quot;: &quot;1.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2152985:2165396" ph="{&quot;E06000001&quot;: &quot;1.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2165413:2177696" ph="{&quot;E06000001&quot;: &quot;0.821428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2177713:2190105" ph="{&quot;E06000001&quot;: &quot;1.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2190122:2202413" ph="{&quot;E06000001&quot;: &quot;0.892857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2202430:2214788" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2214805:2227167" ph="{&quot;E06000001&quot;: &quot;2.89285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2227184:2239480" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2239497:2251812" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2251829:2264234" ph="{&quot;E06000001&quot;: &quot;3.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2264251:2276627" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2276644:2288969" ph="{&quot;E06000001&quot;: &quot;0.928571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2288986:2301340" ph="{&quot;E06000001&quot;: &quot;3.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2301357:2313707" ph="{&quot;E06000001&quot;: &quot;260.714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2313724:2326070" ph="{&quot;E06000001&quot;: &quot;74.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2326087:2338465" ph="{&quot;E06000001&quot;: &quot;68.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2338482:2350949" ph="{&quot;E06000001&quot;: &quot;47.4285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2350966:2363391" ph="{&quot;E06000001&quot;: &quot;142.785714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2363408:2375821" ph="{&quot;E06000001&quot;: &quot;14.8214285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2375838:2388145" ph="{&quot;E06000001&quot;: &quot;5.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2388162:2400436" ph="{&quot;E06000001&quot;: &quot;6.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2400453:2412839" ph="{&quot;E06000001&quot;: &quot;3.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2412856:2425210" ph="{&quot;E06000001&quot;: &quot;1.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2425227:2437589" ph="{&quot;E06000001&quot;: &quot;2.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2437606:2450044" ph="{&quot;E06000001&quot;: &quot;4.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2450061:2462470" ph="{&quot;E06000001&quot;: &quot;1.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2462487:2474874" ph="{&quot;E06000001&quot;: &quot;2.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2474891:2487234" ph="{&quot;E06000001&quot;: &quot;1.71428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2487251:2499607" ph="{&quot;E06000001&quot;: &quot;1.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2499624:2512047" ph="{&quot;E06000001&quot;: &quot;1.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2512064:2524507" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2524524:2536965" ph="{&quot;E06000001&quot;: &quot;0.178571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2536982:2549304" ph="{&quot;E06000001&quot;: &quot;0.785714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2549321:2561715" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2561732:2574069" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2574086:2586527" ph="{&quot;E06000001&quot;: &quot;0.214285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2586544:2598915" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2598932:2611293" ph="{&quot;E06000001&quot;: &quot;3.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2611310:2623641" ph="{&quot;E06000001&quot;: &quot;1.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2623658:2635966" ph="{&quot;E06000001&quot;: &quot;1.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2635983:2648320" ph="{&quot;E06000001&quot;: &quot;0.964285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2648337:2660748" ph="{&quot;E06000001&quot;: &quot;1.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2660765:2673089" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2673106:2685414" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2685431:2697730" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2697747:2710152" ph="{&quot;E06000001&quot;: &quot;0.607142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2710169:2722358" ph="{&quot;E06000001&quot;: &quot;1.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2722375:2734688" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2734705:2747003" ph="{&quot;E06000001&quot;: &quot;1.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2747020:2759343" ph="{&quot;E06000001&quot;: &quot;1.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2759360:2771629" ph="{&quot;E06000001&quot;: &quot;0.892857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2771646:2784046" ph="{&quot;E06000001&quot;: &quot;1.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2784063:2796554" ph="{&quot;E06000001&quot;: &quot;0.428571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2796571:2808938" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2808955:2821298" ph="{&quot;E06000001&quot;: &quot;0.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2821315:2833768" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2833785:2846192" ph="{&quot;E06000001&quot;: &quot;0.785714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2846209:2858504" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2858521:2870907" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2870924:2883316" ph="{&quot;E06000001&quot;: &quot;0.321428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2883333:2895648" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2895665:2908055" ph="{&quot;E06000001&quot;: &quot;0.785714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2908072:2920450" ph="{&quot;E06000001&quot;: &quot;1.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2920467:2932881" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2932898:2945191" ph="{&quot;E06000001&quot;: &quot;2.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2945208:2957721" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2957738:2970058" ph="{&quot;E06000001&quot;: &quot;1.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2970075:2982492" ph="{&quot;E06000001&quot;: &quot;0.571428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2982509:2994845" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="2994862:3007197" ph="{&quot;E06000001&quot;: &quot;1.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3007214:3019561" ph="{&quot;E06000001&quot;: &quot;1.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3019578:3031994" ph="{&quot;E06000001&quot;: &quot;1.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3032011:3044412" ph="{&quot;E06000001&quot;: &quot;1.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3044429:3056729" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3056746:3069004" ph="{&quot;E06000001&quot;: &quot;1.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3069021:3081324" ph="{&quot;E06000001&quot;: &quot;0.392857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3081341:3093539" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3093556:3105804" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3105821:3118297" ph="{&quot;E06000001&quot;: &quot;1.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3118314:3130732" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3130749:3143058" ph="{&quot;E06000001&quot;: &quot;1.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3143075:3155446" ph="{&quot;E06000001&quot;: &quot;1.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3155463:3167827" ph="{&quot;E06000001&quot;: &quot;1.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3167844:3180269" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3180286:3192697" ph="{&quot;E06000001&quot;: &quot;3.46428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3192714:3204968" ph="{&quot;E06000001&quot;: &quot;2.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3204985:3217299" ph="{&quot;E06000001&quot;: &quot;13.7142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3217316:3229650" ph="{&quot;E06000001&quot;: &quot;4.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3229667:3242019" ph="{&quot;E06000001&quot;: &quot;5.89285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3242036:3254378" ph="{&quot;E06000001&quot;: &quot;4.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3254395:3266822" ph="{&quot;E06000001&quot;: &quot;3.67857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3266839:3279199" ph="{&quot;E06000001&quot;: &quot;3.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3279216:3291636" ph="{&quot;E06000001&quot;: &quot;4.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3291653:3304114" ph="{&quot;E06000001&quot;: &quot;3.60714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3304131:3316514" ph="{&quot;E06000001&quot;: &quot;1.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3316531:3328892" ph="{&quot;E06000001&quot;: &quot;6.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3328909:3341188" ph="{&quot;E06000001&quot;: &quot;2.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3341205:3353633" ph="{&quot;E06000001&quot;: &quot;3.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3353650:3365997" ph="{&quot;E06000001&quot;: &quot;1.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3366014:3378290" ph="{&quot;E06000001&quot;: &quot;6.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3378307:3390790" ph="{&quot;E06000001&quot;: &quot;16.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3390807:3403204" ph="{&quot;E06000001&quot;: &quot;10.4285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3403221:3415565" ph="{&quot;E06000001&quot;: &quot;12.2142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3415582:3427969" ph="{&quot;E06000001&quot;: &quot;294.785714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3427986:3440359" ph="{&quot;E06000001&quot;: &quot;133.714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3440376:3452825" ph="{&quot;E06000001&quot;: &quot;153.821428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3452842:3465202" ph="{&quot;E06000001&quot;: &quot;731.964285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3465219:3477671" ph="{&quot;E06000001&quot;: &quot;6.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3477688:3490115" ph="{&quot;E06000001&quot;: &quot;3.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3490132:3502611" ph="{&quot;E06000001&quot;: &quot;1.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3502628:3514990" ph="{&quot;E06000001&quot;: &quot;2.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3515007:3527399" ph="{&quot;E06000001&quot;: &quot;1.96428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3527416:3539661" ph="{&quot;E06000001&quot;: &quot;1.71428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3539678:3552120" ph="{&quot;E06000001&quot;: &quot;1.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3552137:3564496" ph="{&quot;E06000001&quot;: &quot;14.5714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3564513:3576826" ph="{&quot;E06000001&quot;: &quot;7.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3576843:3589318" ph="{&quot;E06000001&quot;: &quot;13.3214285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3589335:3601708" ph="{&quot;E06000001&quot;: &quot;76.3928571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3601725:3614043" ph="{&quot;E06000001&quot;: &quot;25.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3614060:3626549" ph="{&quot;E06000001&quot;: &quot;202.964285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3626566:3638911" ph="{&quot;E06000001&quot;: &quot;4.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3638928:3651271" ph="{&quot;E06000001&quot;: &quot;1.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3651288:3663650" ph="{&quot;E06000001&quot;: &quot;2.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3663667:3676081" ph="{&quot;E06000001&quot;: &quot;0.892857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3676098:3688497" ph="{&quot;E06000001&quot;: &quot;2.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3688514:3700869" ph="{&quot;E06000001&quot;: &quot;1.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3700886:3713295" ph="{&quot;E06000001&quot;: &quot;6.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3713312:3725893" ph="{&quot;E06000001&quot;: &quot;1.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3725910:3738342" ph="{&quot;E06000001&quot;: &quot;1.78571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3738359:3750817" ph="{&quot;E06000001&quot;: &quot;1.89285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3750834:3763225" ph="{&quot;E06000001&quot;: &quot;1.46428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3763242:3775623" ph="{&quot;E06000001&quot;: &quot;1.92857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3775640:3788016" ph="{&quot;E06000001&quot;: &quot;1.57142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3788033:3800410" ph="{&quot;E06000001&quot;: &quot;1.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3800427:3812752" ph="{&quot;E06000001&quot;: &quot;1.82142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3812769:3825205" ph="{&quot;E06000001&quot;: &quot;2.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3825222:3837719" ph="{&quot;E06000001&quot;: &quot;2.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3837736:3850217" ph="{&quot;E06000001&quot;: &quot;1.96428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3850234:3862683" ph="{&quot;E06000001&quot;: &quot;4.0&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3862700:3875032" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3875049:3887386" ph="{&quot;E06000001&quot;: &quot;0.928571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3887403:3899776" ph="{&quot;E06000001&quot;: &quot;2.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3899793:3912184" ph="{&quot;E06000001&quot;: &quot;1.07142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3912201:3924564" ph="{&quot;E06000001&quot;: &quot;0.821428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3924581:3936916" ph="{&quot;E06000001&quot;: &quot;2.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3936933:3949256" ph="{&quot;E06000001&quot;: &quot;2.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3949273:3961738" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3961755:3974210" ph="{&quot;E06000001&quot;: &quot;2.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3974227:3986539" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3986556:3998969" ph="{&quot;E06000001&quot;: &quot;2.28571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="3998986:4011324" ph="{&quot;E06000001&quot;: &quot;2.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4011341:4023747" ph="{&quot;E06000001&quot;: &quot;1.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4023764:4036202" ph="{&quot;E06000001&quot;: &quot;6.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4036219:4048806" ph="{&quot;E06000001&quot;: &quot;0.142857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4048823:4061142" ph="{&quot;E06000001&quot;: &quot;7.60714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4061159:4073621" ph="{&quot;E06000001&quot;: &quot;0.857142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4073638:4086133" ph="{&quot;E06000001&quot;: &quot;2.53571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4086150:4098591" ph="{&quot;E06000001&quot;: &quot;0.392857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4098608:4104576" ph="{&quot;E06000001&quot;: &quot;0.0357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4104593:4116868" ph="{&quot;E06000001&quot;: &quot;2.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4116885:4129264" ph="{&quot;E06000001&quot;: &quot;5.17857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4129281:4141854" ph="{&quot;E06000001&quot;: &quot;1.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4141871:4154352" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4154369:4166948" ph="{&quot;E06000001&quot;: &quot;1.10714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4166965:4179443" ph="{&quot;E06000001&quot;: &quot;0.535714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4179460:4191927" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4191944:4203668" ph="{&quot;E06000002&quot;: &quot;0.0357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4203685:4216047" ph="{&quot;E06000001&quot;: &quot;2.32142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4216064:4228366" ph="{&quot;E06000001&quot;: &quot;5.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4228383:4232218" ph="{&quot;E06000003&quot;: &quot;0.0357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4232235:4244722" ph="{&quot;E06000001&quot;: &quot;1.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4244739:4257149" ph="{&quot;E06000001&quot;: &quot;4.14285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4257166:4269651" ph="{&quot;E06000001&quot;: &quot;0.821428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4269668:4282031" ph="{&quot;E06000001&quot;: &quot;2.35714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4282048:4294654" ph="{&quot;E06000001&quot;: &quot;0.75&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4294671:4306987" ph="{&quot;E06000001&quot;: &quot;0.535714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4307004:4319457" ph="{&quot;E06000001&quot;: &quot;11.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4319474:4331897" ph="{&quot;E06000001&quot;: &quot;2.21428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4331914:4344389" ph="{&quot;E06000001&quot;: &quot;0.535714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4344406:4356825" ph="{&quot;E06000001&quot;: &quot;2.39285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4356842:4369196" ph="{&quot;E06000001&quot;: &quot;0.607142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4369213:4381688" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4381705:4394085" ph="{&quot;E06000001&quot;: &quot;2.89285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4394102:4406608" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4406625:4419104" ph="{&quot;E06000001&quot;: &quot;4.96428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4419121:4431563" ph="{&quot;E06000001&quot;: &quot;0.535714285714&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4431580:4443979" ph="{&quot;E06000001&quot;: &quot;0.714285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4443996:4456369" ph="{&quot;E06000001&quot;: &quot;0.678571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4456386:4468599" ph="{&quot;E06000001&quot;: &quot;0.607142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4468616:4480995" ph="{&quot;E06000001&quot;: &quot;1.64285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4481012:4493375" ph="{&quot;E06000001&quot;: &quot;1.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4493392:4505838" ph="{&quot;E06000001&quot;: &quot;0.178571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4505855:4518233" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4518250:4530687" ph="{&quot;E06000001&quot;: &quot;0.178571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4530704:4543041" ph="{&quot;E06000001&quot;: &quot;0.642857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4543058:4555482" ph="{&quot;E06000001&quot;: &quot;0.464285714286&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4555499:4567909" ph="{&quot;E06000001&quot;: &quot;0.142857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4567926:4580339" ph="{&quot;E06000001&quot;: &quot;0.25&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4580356:4592755" ph="{&quot;E06000001&quot;: &quot;1.42857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4592772:4605249" ph="{&quot;E06000001&quot;: &quot;0.571428571429&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4605266:4617688" ph="{&quot;E06000001&quot;: &quot;0.357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4617705:4630238" ph="{&quot;E06000001&quot;: &quot;0.107142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4630255:4642580" ph="{&quot;E06000001&quot;: &quot;0.5&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4642597:4654818" ph="{&quot;E06000001&quot;: &quot;0.392857142857&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4654835:4667232" ph="{&quot;E06000001&quot;: &quot;1.03571428571&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4667249:4679648" ph="{&quot;E06000001&quot;: &quot;0.357142857143&quot;...}" />
+            <marker date="1517320382713" expanded="true" signature="4679665:4692176" ph="{&quot;E06000001&quot;: &quot;0.0714285714286&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1412,7 +1697,7 @@
         <state relative-caret-position="306">
           <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1420,11 +1705,152 @@
     <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-609">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <marker date="1517308043365" expanded="true" signature="2384:2986" ph="..." />
             <marker date="1517308043365" expanded="true" signature="2508:2951" ph="..." />
             <marker date="1517308043365" expanded="false" signature="2607:2629" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513">
+          <caret line="23" column="89" lean-forward="false" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/NoticeIcon/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="73" column="10" lean-forward="false" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/antd/lib/icon/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/src/components/FunnelSeries/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/src/components/FunnelSeries/FunnelSeries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/funnel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/dist/react-jsx-highcharts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Thing.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#256#295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Store/Attraction/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
