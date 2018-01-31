@@ -1,7 +1,7 @@
 import { GeoJSON, FeatureGroup } from 'react-leaflet'
 import chroma from 'chroma-js'
 import React, { Component, cloneElement, Children } from 'react'
-import assign from './assign'
+import assign from '../../Travel/OriginDestination/assign'
 
 export default class Choropleth extends Component {
 

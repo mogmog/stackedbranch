@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2c4b5f6-b2f1-4c4c-b7b9-2264002e10be" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Store/Thing.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/routes/Store/Attraction/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/app/ng_event_models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/madrid_districts.geo.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Store/Attraction/SummaryCard/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Store/Attraction/SummaryCard/index.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/models/Store/districtvisitors.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/services/ng_event_api.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/api/app/__init__.py" afterPath="$PROJECT_DIR$/api/app/__init__.py" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/src/common/store_nav.js" afterPath="$PROJECT_DIR$/src/common/store_nav.js" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" afterPath="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" />
+      <change beforePath="$PROJECT_DIR$/src/components/Store/Thing.jsx" afterPath="$PROJECT_DIR$/src/components/Store/Thing.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx" afterPath="$PROJECT_DIR$/src/components/Common/Mapping/Choropleth.jsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js" afterPath="$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Travel/OriginDestination/TravelOriginDestinationMap.js" afterPath="$PROJECT_DIR$/src/components/Travel/OriginDestination/TravelOriginDestinationMap.js" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Store/Attraction/index.js" afterPath="$PROJECT_DIR$/src/routes/Store/Attraction/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/Store/Attraction/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+            <state relative-caret-position="414">
+              <caret line="140" column="114" lean-forward="true" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="114" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -36,87 +47,95 @@
       <file leaf-file-name="Thing.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Store/Thing.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#256#295#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="funnel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/funnel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/highcharts-funnel/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FunnelSeries.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/src/components/FunnelSeries/FunnelSeries.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-jsx-highcharts/src/components/FunnelSeries/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Area.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ComparisonStory/Area.js">
+      <file leaf-file-name="ng_event_models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/app/ng_event_models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+            <state relative-caret-position="168">
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="530">
+              <caret line="336" column="75" lean-forward="false" selection-start-line="336" selection-start-column="75" selection-end-line="336" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DistrictVisitorMap.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="madrid_districts.geo.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/madrid_districts.geo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+            <state relative-caret-position="84">
+              <caret line="0" column="526" lean-forward="false" selection-start-line="0" selection-start-column="526" selection-end-line="0" selection-end-column="526" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Choropleth.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Mapping/Choropleth.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+                <marker date="1517397142405" expanded="true" signature="2413:3015" ph="..." />
+                <marker date="1517397142405" expanded="true" signature="2537:2980" ph="..." />
+                <marker date="1517397142405" expanded="false" signature="2636:2658" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="districtvisitors.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/Store/districtvisitors.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ng_event_api.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/ng_event_api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -126,12 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navData</find>
-      <find>format</find>
-      <find>delay</find>
-      <find>roadhog-api-doc</find>
-      <find>svg</find>
-      <find>handleMouseDown</find>
       <find>howMuchToMove</find>
       <find>ii</find>
       <find>this.band</find>
@@ -156,9 +169,14 @@
       <find>title</find>
       <find>d3</find>
       <find>400</find>
+      <find>ChartCard</find>
+      <find>SightingsBase</find>
+      <find>group</find>
+      <find>contentHeight</find>
+      <find>selectRegion</find>
+      <find>styles</find>
     </findStrings>
     <replaceStrings>
-      <replace>D3Marker</replace>
       <replace>{ 24 }</replace>
       <replace>{</replace>
       <replace>areas</replace>
@@ -188,6 +206,7 @@
       <replace>TravelLayout</replace>
       <replace>travelnavData</replace>
       <replace>storenavData</replace>
+      <replace>SummaryCard</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Graham\Documents\Dev\ant-design-pro\src\routes\Forms\StepForm</dir>
@@ -219,14 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Line.js" />
-        <option value="$PROJECT_DIR$/src/routes/User/Login.js" />
-        <option value="$PROJECT_DIR$/src/components/Areas/Definition/AreaDefinitionMapThumbnail.js" />
-        <option value="$PROJECT_DIR$/src/components/Dates/Define/DateDefineList.js" />
-        <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/Axis.js" />
-        <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/LineChart.js" />
-        <option value="$PROJECT_DIR$/src/common/nav.js" />
-        <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/DateBars.js" />
         <option value="$PROJECT_DIR$/src/components/Charts/ComparisonStory/ComparisonLineChart.js" />
         <option value="$PROJECT_DIR$/src/components/Charts/Stacked/Axis.js" />
         <option value="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
@@ -261,15 +272,23 @@
         <option value="$PROJECT_DIR$/src/common/travel_nav.js" />
         <option value="$PROJECT_DIR$/src/models/Travel/origindestination.js" />
         <option value="$PROJECT_DIR$/src/routes/Travel/OriginDestination/index.js" />
-        <option value="$PROJECT_DIR$/api/app/__init__.py" />
         <option value="$PROJECT_DIR$/src/components/Travel/OriginDestination/more.json" />
         <option value="$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js" />
-        <option value="$PROJECT_DIR$/src/common/store_nav.js" />
-        <option value="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/Store/Attraction/SummaryCard/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less" />
+        <option value="$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/madris_districts.geojson" />
+        <option value="$PROJECT_DIR$/src/common/store_nav.js" />
+        <option value="$PROJECT_DIR$/src/components/Common/Choropleth.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Common/Mapping/Choropleth.jsx" />
         <option value="$PROJECT_DIR$/src/components/Store/Thing.jsx" />
+        <option value="$PROJECT_DIR$/api/app/ng_event_models.py" />
+        <option value="$PROJECT_DIR$/api/app/__init__.py" />
+        <option value="$PROJECT_DIR$/src/models/Store/districtvisitors.js" />
+        <option value="$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap.js" />
         <option value="$PROJECT_DIR$/src/routes/Store/Attraction/index.js" />
+        <option value="$PROJECT_DIR$/src/services/ng_event_api.js" />
       </list>
     </option>
   </component>
@@ -291,10 +310,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="435" />
-    <option name="y" value="78" />
-    <option name="width" value="2147" />
-    <option name="height" value="1667" />
+    <option name="x" value="283" />
+    <option name="y" value="81" />
+    <option name="width" value="2163" />
+    <option name="height" value="1632" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -321,13 +340,13 @@
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="highcharts-funnel" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -351,7 +370,39 @@
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="Mapping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="Attraction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hurricane" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="Attraction" type="462c0819:PsiDirectoryNode" />
+              <item name="DistrictVisitorMap" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
@@ -364,22 +415,21 @@
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Travel" type="462c0819:PsiDirectoryNode" />
+              <item name="OriginDestination" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Store" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hurricane" type="b2602c69:ProjectViewProjectNode" />
               <item name="hurricane" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Store" type="462c0819:PsiDirectoryNode" />
-              <item name="AreaComparison" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -400,7 +450,7 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="C:\Users\Graham\Documents\Dev\ant-design-pro\node_modules\stylelint" />
-    <property name="SearchEverywhereHistoryKey" value="index.ejs&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;icon&#9;null&#9;null&#10;map&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Areas/Comparision/ComparisonMap.js&#10;STACKED&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;rout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;sitegender&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Sites/SiteGenderTotals.js&#10;Dashboard&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard&#10;ComparisonLineChart&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js&#10;analys&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard/Analysis.js&#10;stacked&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/theme.js&#10;index.ej&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;router&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;colors&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/less/lib/less/data/colors.js&#10;ana&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;date.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/date.js&#10;webpack&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/roadhog/lib/config/webpack.config.dev.js&#10;SiteCountry&#9;null&#9;null&#10;heatmap&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/leaflet-d3-svg-overlay/examples/heatmap.html&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
+    <property name="SearchEverywhereHistoryKey" value="stacked&#9;null&#9;null&#10;index.ejs&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;icon&#9;null&#9;null&#10;map&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Areas/Comparision/ComparisonMap.js&#10;STACKED&#9;null&#9;null&#10;index.e&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;rout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;sitegender&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Store/Sites/SiteGenderTotals.js&#10;Dashboard&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard&#10;ComparisonLineChart&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Common/Charts/ComparisonStory/ComparisonLineChart.js&#10;analys&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Store/Dashboard/Analysis.js&#10;theme&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/theme.js&#10;index.ej&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;router&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/router.js&#10;nav&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/common/nav.js&#10;colors&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/less/lib/less/data/colors.js&#10;ana&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;date.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/date.js&#10;webpack&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/roadhog/lib/config/webpack.config.dev.js&#10;SiteCountry&#9;null&#9;null&#10;heatmap&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/node_modules/leaflet-d3-svg-overlay/examples/heatmap.html&#10;index&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/index.ejs&#10;areah&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaHighlightPolygon.js&#10;basiclayout&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/layouts/BasicLayout.js&#10;siteeventschartds&#9;null&#9;null&#10;d3&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/D3Map/D3Map.js&#10;sitecom&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/sitecomparison.js&#10;services/api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;site.js&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/site.js&#10;comparis&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/ComparisonCardNew.js&#10;factory&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/stores/CardStoreFactory.js&#10;api&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/services/api.js&#10;arease&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Areas/Comparision/AreaSelectMap.js&#10;areadef&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/AreaDefinition/AreaDefinitionTable.js&#10;user&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/models/user.js&#10;data&#9;null&#9;null&#10;Pie/i&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/components/Charts/Pie/index.js&#10;monitor&#9;null&#9;null&#10;analy&#9;FILE&#9;file://C:/Users/graha/OneDrive/Documents/Dev/hurricane/src/routes/Dashboard/Analysis.js&#10;index.js&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/index.js&#10;funnelchart&#9;null&#9;null&#10;header&#9;FILE&#9;file://C:/Users/Graham/Documents/Dev/ant-design-pro/src/layouts/PageHeaderLayout.js" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\Users\graha\OneDrive\Documents\Dev\hurricane\node_modules\eslint" />
@@ -408,18 +458,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Store\Attraction\DistrictVisitorMap" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models\Store" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\services" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Store\Attraction" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Store\Attraction" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\models\Travel" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Travel\OriginDestination" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\api\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Common\Mapping" />
+      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Common" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Travel\OriginDestination" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\routes\Common" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Common" />
       <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Store" />
-      <recent name="C:\Users\graha\OneDrive\Documents\Dev\hurricane\src\components\Old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -544,14 +594,7 @@
       <workItem from="1515663067030" duration="94271000" />
       <workItem from="1516700103578" duration="91621000" />
       <workItem from="1516979000895" duration="9028000" />
-      <workItem from="1517217682893" duration="47810000" />
-    </task>
-    <task id="LOCAL-00032" summary="Add labels to area polygons">
-      <created>1513956396142</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1513956396142</updated>
+      <workItem from="1517217682893" duration="62825000" />
     </task>
     <task id="LOCAL-00033" summary="Added loading spinners">
       <created>1515500469813</created>
@@ -889,11 +932,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517324364099</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="aded funnel">
+      <created>1517333942552</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1517333942552</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="723072000" />
+    <option name="totallyTimeSpent" value="738087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -905,19 +955,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="435" y="78" width="2147" height="1667" extended-state="0" />
+    <frame x="283" y="81" width="2163" height="1632" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.49773243" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22077073" sideWeight="0.5625597" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4620506" sideWeight="0.39787543" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26412362" sideWeight="0.17945544" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6912065" sideWeight="0.39770004" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296598" sideWeight="0.19205298" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4620506" sideWeight="0.6021246" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6912065" sideWeight="0.6022999" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925683" sideWeight="0.4982097" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26412362" sideWeight="0.82054454" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296598" sideWeight="0.80794704" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -975,8 +1025,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactors" />
-    <MESSAGE value="more refactors" />
     <MESSAGE value="animated line component" />
     <MESSAGE value="adding data bars" />
     <MESSAGE value="adding Date calendar screens&#10;adding logo" />
@@ -1000,7 +1048,9 @@
     <MESSAGE value="some mock fixes&#10;choropleth wip" />
     <MESSAGE value="working cloropleth" />
     <MESSAGE value="wip cloropleth" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip cloropleth" />
+    <MESSAGE value="aded funnel" />
+    <MESSAGE value="initial version of attraction page" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial version of attraction page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1029,68 +1079,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/styles.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Old/D3Map/D3Map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Old/D3Map/D3Marker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonMapPolygon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="30" column="93" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Store/Areas/Comparision/ComparisonCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/TravelLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="346" column="22" lean-forward="false" selection-start-line="289" selection-start-column="10" selection-end-line="346" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/lad.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.roadhogrc.mock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -1119,14 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1175,14 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="27" column="30" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="27" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1247,16 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/travel_nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -1291,14 +1253,6 @@
             <element signature="e#0#43#0" expanded="false" />
             <element signature="e#188#301#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="314" column="114" lean-forward="false" selection-start-line="314" selection-start-column="114" selection-end-line="314" selection-end-column="114" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1692,36 +1646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/Choropleth.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <marker date="1517308043365" expanded="true" signature="2384:2986" ph="..." />
-            <marker date="1517308043365" expanded="true" signature="2508:2951" ph="..." />
-            <marker date="1517308043365" expanded="false" signature="2607:2629" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="23" column="89" lean-forward="false" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Common/NoticeIcon/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1746,28 +1670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1777,7 +1683,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1795,7 +1701,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1821,7 +1727,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1834,23 +1740,155 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Attraction/SummaryCard/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/store_nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="104" lean-forward="true" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/ChartCard/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="32" column="72" lean-forward="false" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Travel/OriginDestination/RegionChooserMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Mapping/Choropleth.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1517397142405" expanded="true" signature="2413:3015" ph="..." />
+            <marker date="1517397142405" expanded="true" signature="2537:2980" ph="..." />
+            <marker date="1517397142405" expanded="false" signature="2636:2658" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/madrid_districts.geo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="0" column="526" lean-forward="false" selection-start-line="0" selection-start-column="526" selection-end-line="0" selection-end-column="526" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/ng_event_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Charts/Stacked/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="105" column="10" lean-forward="true" selection-start-line="105" selection-start-column="10" selection-end-line="105" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Store/Thing.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#256#295#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="336" column="75" lean-forward="false" selection-start-line="336" selection-start-column="75" selection-end-line="336" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Store/districtvisitors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/ng_event_api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/Store/Attraction/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+        <state relative-caret-position="414">
+          <caret line="140" column="114" lean-forward="true" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="114" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>

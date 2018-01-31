@@ -21,7 +21,7 @@ export const getStoreNavData = app => [
         name: 'Attraction',
         icon: 'compass',
         path: 'store/attraction',
-        component: dynamicWrapper(app, ['area'], () => import('../routes/Store/Attraction/index')),
+        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
       },
 
       {

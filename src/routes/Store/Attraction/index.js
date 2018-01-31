@@ -3,10 +3,12 @@ import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button, Icon} from 'antd';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import Thing from '../../../components/Store/Thing';
-import ChartCard from '../../../components/Common/Charts/ChartCard';
+import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
+
+import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
 
 @connect(state => ({
-  area: state.area,
+  districtvisitors: state.districtvisitors.visitors,
 }))
 export default class Attraction extends PureComponent {
 
@@ -21,11 +23,10 @@ export default class Attraction extends PureComponent {
     const {dispatch} = this.props;
 
     dispatch({
-      type: 'area/fetch',
+      type: 'districtvisitors/fetch',
+      payload: {'type': 'work'}
     });
   }
-
-
 
   render() {
 
@@ -61,6 +62,8 @@ export default class Attraction extends PureComponent {
       </div>
     );
 
+    console.log(this.props.districtvisitors);
+
     return (
       <PageHeaderLayout
         content={pageHeaderContent}
@@ -68,59 +71,49 @@ export default class Attraction extends PureComponent {
         <Row gutter={24}>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-            <ChartCard
-              bordered={false}
+            <SummaryCard
+              bordered={true}
               title="Catchment Area"
               total={(126560)}
               contentHeight={46}
             >
               <Icon type="global" style={{color : 'rgb(5, 220, 172)', 'zoom' :'640%', float : 'left'}} />
-            </ChartCard>
+            </SummaryCard>
           </Col>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-            <ChartCard
-              bordered={false}
+            <SummaryCard
+              bordered={true}
               title="Nearby"
               total={(101608)}
               contentHeight={46}
             >
               <Icon type="bank" style={{color : '#1981c2', 'zoom' :'640%', float : 'left'}} />
-            </ChartCard>
+            </SummaryCard>
           </Col>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-            <ChartCard
-              bordered={false}
+            <SummaryCard
+              bordered={true}
               title="In store"
               total={(68067)}
               contentHeight={46}
             >
               <Icon type="shop" style={{color : 'rgb(159, 5, 220)', 'zoom' :'640%', float : 'left'}} />
-            </ChartCard>
+            </SummaryCard>
           </Col>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-            <ChartCard
-              bordered={false}
+            <SummaryCard
+              bordered={true}
               title="Sales"
               total={(11537)}
               contentHeight={46}
             >
               <Icon type="shopping-cart" style={{color : 'rgb(221, 117, 169)', 'zoom' :'640%', float : 'left'}} />
-            </ChartCard>
+            </SummaryCard>
           </Col>
 
-        </Row>
-
-        <Divider/>
-
-        <Row gutter={24} style={{'height' : '800px'}}>
-          <Col xl={6} lg={6} md={6} sm={6} xs={6}></Col>
-          <Col xl={10} lg={24} md={24} sm={24} xs={24} >
-            <Thing></Thing>
-          </Col>
-          <Col xl={6} lg={6} md={6} sm={6} xs={6}></Col>
         </Row>
 
         <Divider/>
@@ -128,14 +121,37 @@ export default class Attraction extends PureComponent {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <Card
-              title={'Attractio thing'}
-              bordered>
-
+              title={'Attraction funnel'}
+              bordered={true}>
+              <Thing></Thing>
             </Card>
           </Col>
         </Row>
 
+        <Divider/>
 
+        <Row gutter={24}>
+
+          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+            <Card
+              bordered={true}
+              title="Home District"
+              contentHeight={46}>
+
+              <DistrictVisitorMap type={'home'} data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
+            </Card>
+          </Col>
+
+          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+            <Card
+              bordered={true}
+              title="Work District"
+              contentHeight={46}>
+              <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>
+            </Card>
+          </Col>
+
+        </Row>
 
       </PageHeaderLayout>
     );

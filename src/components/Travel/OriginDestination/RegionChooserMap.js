@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
-import Choropleth from './Choropleth';
+import Choropleth from '../../Common/Mapping/Choropleth';
 import Leaflet from 'leaflet';
 import * as topojson from 'topojson';
 

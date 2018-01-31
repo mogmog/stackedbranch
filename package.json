@@ -34,6 +34,7 @@
     "freezer-js": "^0.11.2",
     "highcharts": "^6.0.4",
     "highcharts-funnel": "^0.1.7",
+    "highcharts-more": "^0.1.7",
     "keymaster": "^1.6.2",
     "leaflet": "^1.2.0",
     "leaflet-d3-svg-overlay": "^2.2.0",

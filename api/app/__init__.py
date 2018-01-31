@@ -24,6 +24,7 @@ db = SQLAlchemy()
 
 from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting, Journey
 from app.models import Department as DepartmentModel
+from app.ng_event_models import ZoneDistrict
 
 class Department(SQLAlchemyObjectType):
 
@@ -326,5 +327,26 @@ def create_app(config_name):
         #_j.append({'origin_id' : journey.origin_id, 'data' : (journey.data)})
 
        return make_response(jsonify({ 'list' : _j })), 200
+
+
+    @app.route('/api/ng_event/districts', methods=['GET'])
+    def districts():
+
+      home_results = []
+      for result in db.session.query(ZoneDistrict.home_district_code, ZoneDistrict.home_district_name, func.sum(ZoneDistrict.visitors)).group_by(ZoneDistrict.home_district_code, ZoneDistrict.home_district_name).all():
+        home_results.append({'district_code' : result.home_district_code, 'district_name' : result.home_district_name, 'visitors' : result[2]})
+
+      work_results = []
+      for result in db.session.query(ZoneDistrict.work_district_code, ZoneDistrict.work_district_name, func.sum(ZoneDistrict.visitors)).group_by(ZoneDistrict.work_district_code, ZoneDistrict.work_district_name).all():
+        work_results.append({'district_code' : result.work_district_code, 'district_name' : result.work_district_name, 'visitors' : result[2]})
+
+      return make_response(jsonify({'work' : { 'list' : work_results }, 'home' : { 'list' : home_results }})), 200
+
+
+
+
+
+
+
 
     return app

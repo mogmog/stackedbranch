@@ -25,26 +25,26 @@ const plotOptions = {
     dataLabels: {
       enabled: true,
       format: '<b>{point.name}</b> ({point.y:,.0f})',
-      softConnector: true
+      softConnector: false
     },
     center: ['40%', '50%'],
     neckWidth: '30%',
     neckHeight: '25%',
-    width: '70%',
+    width: '100%',
   }
 };
 
 const funnelData = [
-  ['Catchment Area', 126560],
-  ['Nearby', 101608],
-  ['IN Store', 68607],
-  ['Sales', 11537]
+  ['Catchment Area', 100],
+  ['Nearby', 100],
+  ['In Store', 100],
+  ['Sales', 100]
 ];
 
 
 const MyChart = () => (
   <HighchartsChart  >
-    <FunnelSeries  data={funnelData} />
+    <FunnelSeries width={800}   data={funnelData} />
   </HighchartsChart>
 );
 
