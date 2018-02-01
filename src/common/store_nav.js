@@ -1,4 +1,5 @@
 import dynamic from 'dva/dynamic';
+import {routerRedux} from "dva/router";
 
 // wrapper of dynamic
 const dynamicWrapper = (app, models, component) => dynamic({
@@ -72,6 +73,14 @@ export const getStoreNavData = app => [
         path: 'store/analysis',
         component: dynamicWrapper(app, ['chart', 'date'], () => import('../routes/Store/Dashboard/Analysis')),
       },
+
+      {
+        name: 'Logout',
+        icon: 'user',
+        path: 'store/logout',
+        component: (app) => { (app.history.push('/login')); return <span></span>},
+      },
+
     ],
   },
 ];

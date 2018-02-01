@@ -47,7 +47,6 @@ class StoreLayout extends React.PureComponent {
   }
   constructor(props) {
     super(props);
-    console.log(props);
     // 把一级 Layout 的 children 作为菜单项
     this.menus = props.storenavData.reduce((arr, current) => arr.concat(current.children), []);
     this.state = {
