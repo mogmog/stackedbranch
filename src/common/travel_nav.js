@@ -24,6 +24,13 @@ export const getTravelNavData = app => [
         component: dynamicWrapper(app, ['origindestination'], () => import('../routes/Travel/OriginDestination')),
       },
 
+      {
+        name: 'Logout',
+        icon: 'user',
+        path: 'store/logout',
+        component: (app) => { (app.history.push('/login')); return <span></span>},
+      },
+
 
     ],
   },
