@@ -4,6 +4,7 @@ import {routerRedux, Link} from 'dva/router';
 import {Form, Input, Tabs, Button, Icon, Checkbox, Row, Col, Alert} from 'antd';
 import styles from './Login.less';
 import {Layout} from "antd/lib/index";
+import LucaButton from './../../components/LucaUI/Button/LucaButton';
 
 const FormItem = Form.Item;
 const {TabPane} = Tabs;
@@ -85,12 +86,16 @@ export default class Login extends Component {
     const {count, type} = this.state;
     return (
 
-      <Content style={{padding: '324px 24px 0', height: '100%',  background: 'url(https://preview.ibb.co/jvDYim/trapecios_color_trans.png) #3b3b3b', backgroundRepeat: 'no-repeat', backgroundPosition: 'center',  backgroundSize: '900px' }}>
+      <Content style={{padding: '10% 24px 0', height: '100%', background: 'url(' + require('../../assets/img/image-bg.png') + ')', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize : 'cover'  }}>
         <div className="login" >
-          <div className={styles.main}>
+          <div className={styles.main}  >
 
-            <div style={{'textAlign' : 'center'}}>
-            <h1>Welcome</h1>
+            <div className={styles.borderthing}>
+            <img style={{'width': '100px'}} src={require('../../assets/img/luca.png')}/>
+            </div>
+            <div style={{'textAlign' : 'center', paddingTop : '34px'}}>
+            <h3>Welcome to</h3>
+            <h1 style={{marginTop: '-24px'}}>Smartsteps</h1>
             </div>
             <Form onSubmit={this.handleSubmit}>
 
@@ -121,19 +126,13 @@ export default class Login extends Component {
                   />
                 )}
               </FormItem>
-              <FormItem className={styles.additional}>
-                {getFieldDecorator('remember', {
-                  valuePropName: 'checked',
-                  initialValue: true,
-                })(
-                  <Checkbox className={styles.autoLogin}>Remember me</Checkbox>
-                )}
-                <a className={styles.forgot} href="">Forgot password</a>
 
-                  <Button size="large" className={styles.submit} type="primary" htmlType="submit">
-                    Login
-                  </Button>
+              <FormItem style={{'textAlign' : 'center'}} className={styles.additional}>
+                <LucaButton size="large" className={styles.submit} type="primary" htmlType="submit">Sign in</LucaButton>
+              </FormItem>
 
+              <FormItem style={{'textAlign' : 'center'}}>
+                <a className={styles.forgot} href="">Forgot your password</a>
               </FormItem>
             </Form>
 

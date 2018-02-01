@@ -1,23 +1,31 @@
 @import "~antd/lib/style/themes/default.less";
 
-.loginHolder {
-  background: url(https://preview.ibb.co/jvDYim/trapecios_color_trans.png) #3B3B3A;
-  -webkit-background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  min-height: 100%;
-  background-size: 100%;
-  padding: 110px 0 144px 0;
-  position: relative;
-}
-
 .main {
-  width: 450px;
+
+  width: 45%;
   margin: 0 auto;
+  border-top: 10px solid black;
+  /*border-top: solid 50px black;*/
   background : white;
-  padding: 2%;
+  padding-left : 10%;
+  padding-right : 10%;
+  padding-top : 10%;
   border-radius: 5px;
+
+  .borderthing {
+    box-sizing: border-box;
+    width: 180%;
+    color: white;
+    background-color: black;
+    margin-top: -40%;
+    margin-left: -40%;
+    padding-left: 12px;
+  }
+
+
+  h1 {
+      color: @primary-color;
+  }
 
   .tabs {
     padding: 0 2px;
@@ -55,58 +63,14 @@
     width: 100%;
   }
 
-  .additional {
-    text-align: left;
-
-    .forgot {
-      float: right;
-    }
-
-    .submit {
-      width: 100%;
-      margin-top: 24px;
-    }
-
-    :global {
-      .ant-form-item-control {
-        line-height: 22px;
-      }
-    }
+  .forgot {
+    color: #0000FF;
+    text-decoration: underline;
   }
 
-  .iconAlipay, .iconTaobao, .iconWeibo {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: url('https://gw.alipayobjects.com/zos/rmsportal/itDzjUnkelhQNsycranf.svg');
-    margin-left: 16px;
-    vertical-align: middle;
-    cursor: pointer;
-  }
 
-  .iconAlipay {
-    background-position: -24px 0;
 
-    &:hover {
-      background-position: 0 0;
-    }
-  }
 
-  .iconTaobao {
-    background-position: -24px -24px;
-
-    &:hover {
-      background-position: 0 -24px;
-    }
-  }
-
-  .iconWeibo {
-    background-position: -24px -48px;
-
-    &:hover {
-      background-position: 0 -48px;
-    }
-  }
 
   .other {
     text-align: left;
