@@ -49,11 +49,20 @@ export default class Login extends Component {
     const {type} = this.state;
     this.props.form.validateFields({force: true},
       (err, values) => {
+
+        if (this.props.form.getFieldValue('userName') === 'graham.bates@biggroup.co.uk') {
+          this.props.dispatch(routerRedux.push('/store/attraction'));
+        } else {
+          this.props.dispatch(routerRedux.push('/travel/origindestination'));
+        }
+
+
         if (!err) {
-          this.props.dispatch({
-            type: `login/${type}Submit`,
-            payload: values,
-          });
+
+          // this.props.dispatch({
+          //   type: `login/${type}Submit`,
+          //   payload: values,
+          // });
         }
       }
     );
@@ -76,22 +85,25 @@ export default class Login extends Component {
     const {count, type} = this.state;
     return (
 
-      <Content style={{padding: '324px 24px 0', height: '100%'}}>
-        <div style={{}}>
+      <Content style={{padding: '324px 24px 0', height: '100%',  background: 'url(https://preview.ibb.co/jvDYim/trapecios_color_trans.png) #3b3b3b', backgroundRepeat: 'no-repeat', backgroundPosition: 'center',  backgroundSize: '900px' }}>
+        <div className="login" >
           <div className={styles.main}>
 
+            <div style={{'textAlign' : 'center'}}>
+            <h1>Welcome</h1>
+            </div>
             <Form onSubmit={this.handleSubmit}>
 
               <FormItem>
                 {getFieldDecorator('userName', {
                   rules: [{
-                    required: type === 'account', message: 'You must enter a user name',
+                    required: type === 'account', message: 'You must enter a user name'
                   }],
                 })(
                   <Input
                     size="large"
                     prefix={<Icon type="user" className={styles.prefixIcon}/>}
-                    placeholder="admin"
+                    placeholder="user name is an email"
                   />
                 )}
               </FormItem>
@@ -105,7 +117,7 @@ export default class Login extends Component {
                     size="large"
                     prefix={<Icon type="lock" className={styles.prefixIcon}/>}
                     type="password"
-                    placeholder="888888"
+                    placeholder="password here"
                   />
                 )}
               </FormItem>
@@ -117,11 +129,11 @@ export default class Login extends Component {
                   <Checkbox className={styles.autoLogin}>Remember me</Checkbox>
                 )}
                 <a className={styles.forgot} href="">Forgot password</a>
-                <Link to="/store/areas">
+
                   <Button size="large" className={styles.submit} type="primary" htmlType="submit">
                     Login
                   </Button>
-                </Link>
+
               </FormItem>
             </Form>
 
