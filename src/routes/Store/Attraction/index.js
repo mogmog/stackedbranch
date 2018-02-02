@@ -2,8 +2,8 @@ import React, {PureComponent} from 'react';
 import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button, Icon} from 'antd';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-import Thing from '../../../components/Store/Thing';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
+import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
 
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
 import DistrictVisitorMapLayers from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMapLayers';
@@ -32,102 +32,76 @@ export default class Attraction extends PureComponent {
 
   render() {
 
-    const plotOptions = {
-      series: {
-        dataLabels: {
-          enabled: true,
-          format: '<b>{point.name}</b> ({point.y:,.0f})',
-          softConnector: true
-        },
-        center: ['40%', '50%'],
-        neckWidth: '30%',
-        neckHeight: '25%',
-        width: '80%'
-      }
-    };
-
-    const funnelData = [
-      ['Website visits', 15654],
-      ['Downloads', 4064],
-      ['Requested price list', 1987],
-      ['Invoice sent', 976],
-      ['Finalized', 846]
-    ];
-
-
-
     const pageHeaderContent = (
       <div>
-        <div>
 
+        <div style={{'float' : 'right'}}>
+        <Icon type={'calendar'}/>
+          May 13, 2016 - Jul 12, 2017 &nbsp;
+          <Icon type={'down'}/>
         </div>
+
+        <div>
+          <h1>Overview: Attraction power</h1>
+          <small>Know your attraction power from total pedestrians to sales and take a general perspective of target</small>
+        </div>
+
+
       </div>
     );
 
-    console.log(this.props.districtvisitors);
-
     return (
       <PageHeaderLayout
+        top={null}
         content={pageHeaderContent}
       >
         <Row gutter={24}>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              bordered={true}
-              title="Catchment Area"
-              total={(126560)}
-              contentHeight={46}
+              avatar={<Icon type="global" />}
+              bordered={false}
+              title="Catchment Area (100%)"
+              total={126560 + '*'}
+              footer={<ColorThing color='pink'>Catchment area (ca)</ColorThing>}
             >
-              <Icon type="global" style={{color : 'rgb(5, 220, 172)', 'zoom' :'640%', float : 'left'}} />
+
             </SummaryCard>
           </Col>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              bordered={true}
+              avatar={<Icon type="global" />}
+              bordered={false}
               title="Nearby"
               total={(101608)}
-              contentHeight={46}
+              footer={<ColorThing color='orange'>Concern CA = 29K less</ColorThing>}
             >
-              <Icon type="bank" style={{color : '#1981c2', 'zoom' :'640%', float : 'left'}} />
             </SummaryCard>
           </Col>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              bordered={true}
+              avatar={<Icon type="global" />}
+              bordered={false}
               title="In store"
               total={(68067)}
-              contentHeight={46}
+              footer={<ColorThing color='beige'>Concern CA = 62K less</ColorThing>}
             >
-              <Icon type="shop" style={{color : 'rgb(159, 5, 220)', 'zoom' :'640%', float : 'left'}} />
             </SummaryCard>
           </Col>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              bordered={true}
+              avatar={<Icon type="global" />}
+              bordered={false}
               title="Sales"
               total={(11537)}
-              contentHeight={46}
+              footer={<ColorThing>Concern CA = 122K Less</ColorThing>}
             >
-              <Icon type="shopping-cart" style={{color : 'rgb(221, 117, 169)', 'zoom' :'640%', float : 'left'}} />
             </SummaryCard>
           </Col>
 
-        </Row>
-
-        <Divider />
-
-        <Row gutter={24}>
-          <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-            <Card
-              title={'Attraction funnel'}
-              bordered={true}>
-              <Thing></Thing>
-            </Card>
-          </Col>
         </Row>
 
         <Divider />

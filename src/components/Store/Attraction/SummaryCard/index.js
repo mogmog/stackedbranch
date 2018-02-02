@@ -8,7 +8,7 @@ const SummaryCard = ({
   loading = false, contentHeight, title, avatar, action, total, footer, children, ...rest
 }) => {
   const content = (
-    <div className={styles.chartCard}>
+    <div className={classNames(styles.summaryCard)}>
       <div
         className={classNames(styles.chartTop, { [styles.chartTopMargin]: (!children && !footer) })}
       >
@@ -16,27 +16,19 @@ const SummaryCard = ({
           {
             avatar
           }
+
         </div>
-        <div className={styles.metaWrap}>
+        <div style={{'clear' : 'both'}}>
+
+          <div className={styles.total} dangerouslySetInnerHTML={{ __html: total }} />
+
           <div className={styles.meta}>
             <span className={styles.title}>{title}</span>
-            <span className={styles.action}>{action}</span>
           </div>
-          {
-            // eslint-disable-next-line
-            total && (<div className={styles.total} dangerouslySetInnerHTML={{ __html: total }} />)
-          }
+
         </div>
       </div>
-      {
-        children && (
-          <div className={styles.content} style={{ height: contentHeight || 'auto' }}>
-            <div className={contentHeight && styles.contentFixed}>
-              {children}
-            </div>
-          </div>
-        )
-      }
+
       {
         footer && (
           <div className={classNames(styles.footer, { [styles.footerMargin]: !children })}>
@@ -49,10 +41,11 @@ const SummaryCard = ({
 
   return (
     <Card
-      bodyStyle={{ padding: '20px 24px 8px 24px' }}
+      bodyStyle={{ padding: '0px 0px 0px 0px', backgroundColor : 'transparent'}}
       {...rest}
     >
-      {<Spin spinning={loading}>{content}</Spin>}
+      {content}
+
     </Card>
   );
 };
