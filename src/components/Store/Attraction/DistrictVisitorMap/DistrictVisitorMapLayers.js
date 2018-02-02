@@ -63,12 +63,10 @@ class DistrictVisitorMapLayers extends PureComponent {
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
-          <Motion style={{tween: spring(this.state.showWork ? 800 : 1200)}}>
+          <Motion style={{tween: spring(this.state.showWork ? 0 : 700)}}>
             {
               ({tween}) => (
-                <div style={{ 'position' : 'absolute' }} transform={'translate3d(' + tween + 'px, 0px, 0px);'}>
-                    <DistrictVisitorSlider x={tween}/>
-                </div>
+                  <DistrictVisitorSlider x={tween}/>
               )}
           </Motion>
         </Map>

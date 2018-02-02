@@ -8,8 +8,7 @@ class DistrictVisitorSlider extends MapLayer {
   }
 
   applyAttributes(selection) {
-    const that = this;
-    selection.attr("x", () => that.props.x);
+    this.svg.attr('transform', `translate(${this.props.x}, 0)`);
   }
 
   componentWillMount() {
@@ -19,10 +18,7 @@ class DistrictVisitorSlider extends MapLayer {
     that.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
 
         that.svg = svg;
-        console.log(that.svg.select('rect'));
-        if (!that.svg.select('rect')[0][0]) {
-          that.svg.append('rect').attr({x: 0, y: 10, width: 100, height: 800, fill: 'red'});
-        }
+        svg.append('rect').attr({x: 0, y: 10, width: 100, height: 800, fill: 'red'});
 
         this.leafletElement.addTo(this.context.map);
     });
@@ -33,7 +29,7 @@ class DistrictVisitorSlider extends MapLayer {
 
   render() {
     const that = this;
-    if (that.svg) that.svg.select('rect').call((selection) => { that.applyAttributes(selection)});
+    if (that.svg) that.svg.select('rect').call(() => { that.applyAttributes()});
     return null;
   }
 }
