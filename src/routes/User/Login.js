@@ -91,13 +91,14 @@ export default class Login extends Component {
           <div className={styles.main}  >
 
             <div className={styles.borderthing}>
-            <img style={{'width': '100px'}} src={require('../../assets/img/luca.png')}/>
+              <img style={{'width': '100px'}} src={require('../../assets/img/luca.png')}/>
             </div>
-            <div style={{'textAlign' : 'center', paddingTop : '34px'}}>
+
+            <div style={{'textAlign' : 'center', paddingTop : '34px' }}>
             <h3>Welcome to</h3>
             <h1 style={{marginTop: '-24px'}}>Smartsteps</h1>
             </div>
-            <Form onSubmit={this.handleSubmit}>
+            <Form style={{'padding' : '5%'}} onSubmit={this.handleSubmit}>
 
               <FormItem>
                 {getFieldDecorator('userName', {
