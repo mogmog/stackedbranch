@@ -4,6 +4,9 @@ import Choropleth from '../../../Common/Mapping/Choropleth';
 import Leaflet from 'leaflet';
 import * as topojson from 'topojson';
 import { Slider, Switch, Radio } from 'antd';
+import {Motion, spring} from 'react-motion';
+
+import DistrictVisitorSlider from './DistrictVisitorSlider';
 
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
@@ -12,10 +15,10 @@ var districts = require('json!./madrid_districts.geo.json');
 
 class DistrictVisitorMapLayers extends PureComponent {
 
-  state = {showWork : true};
+  state = {showWork : false};
 
   onChange(e) {
-    this.setState({showWork : !this.state.showWork})
+    this.setState({showWork : !this.state.showWork});
   }
 
   render() {
@@ -55,33 +58,21 @@ class DistrictVisitorMapLayers extends PureComponent {
           <RadioButton value="home">Home</RadioButton>
         </RadioGroup>
 
+
         <Map ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{'height': '300px'}}>
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
-          {(this.state.showWork ? (<Choropleth
-            data={districts}
-            valueProperty={(feature) => { const match =  data.work.list.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
-            visible={(feature) => { const match =  data.work.list.find((x) => x.district_name === feature.properties.name); return match  }}
-            scale={['lightgreen', 'darkgreen']}
-            steps={20}
-            style={style}
-            mode='e'
-          />) : (<Choropleth
-            data={districts}
-            valueProperty={(feature) => { const match =  data.home.list.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
-            visible={(feature) => { const match =  data.home.list.find((x) => x.district_name === feature.properties.name); return match  }}
-            scale={['lightgreen', 'darkgreen']}
-            steps={20}
-            style={style}
-            mode='e'
-          />))}
-
-
-
-
-
+          <Motion style={{tween: spring(this.state.showWork ? 800 : 1200)}}>
+            {
+              ({tween}) => (
+                <div style={{ 'position' : 'absolute' }} transform={'translate3d(' + tween + 'px, 0px, 0px);'}>
+                    <DistrictVisitorSlider x={tween}/>
+                </div>
+              )}
+          </Motion>
         </Map>
+
       </div>
     );
   }

@@ -58,6 +58,8 @@ class CellSelectGrid extends MapLayer {
 
     that.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
 
+      console.log(svg);
+
       if (!this.hasAlreadyRun) {
         that.svg = svg;
         that.projection = projection;
