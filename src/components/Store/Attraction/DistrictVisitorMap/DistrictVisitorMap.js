@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 import Choropleth from '../../../Common/Mapping/Choropleth';
-import Leaflet from 'leaflet';
 import * as topojson from 'topojson';
-import { Slider, Switch } from 'antd';
 
 var districts = require('json!./madrid_districts.geo.json');
 
@@ -16,10 +14,10 @@ class RegionChooserMap extends PureComponent {
     const {data} = this.props
 
     const style = {
-      fillColor: '#000000',
+      fillColor: 'white',
       weight: 2,
       opacity: 0.5,
-      color: 'black',
+      color: 'white',
       fillOpacity: 0.5,
     }
 
@@ -34,6 +32,7 @@ class RegionChooserMap extends PureComponent {
           <Choropleth
                       data={districts}
                       valueProperty={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
+                      visible={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match  }}
 
            scale={['lightgreen', 'darkgreen']}
            steps={20}

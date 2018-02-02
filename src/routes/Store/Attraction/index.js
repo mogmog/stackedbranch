@@ -6,6 +6,8 @@ import Thing from '../../../components/Store/Thing';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
 
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
+import DistrictVisitorMapLayers from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMapLayers';
+
 
 @connect(state => ({
   districtvisitors: state.districtvisitors.visitors,
@@ -116,7 +118,7 @@ export default class Attraction extends PureComponent {
 
         </Row>
 
-        <Divider/>
+        <Divider />
 
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
@@ -128,16 +130,13 @@ export default class Attraction extends PureComponent {
           </Col>
         </Row>
 
-        <Divider/>
-
+        <Divider />
         <Row gutter={24}>
-
           <Col xl={12} lg={12} md={24} sm={24} xs={24}>
             <Card
               bordered={true}
               title="Home District"
               contentHeight={46}>
-
               <DistrictVisitorMap type={'home'} data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
             </Card>
           </Col>
@@ -145,14 +144,24 @@ export default class Attraction extends PureComponent {
           <Col xl={12} lg={12} md={24} sm={24} xs={24}>
             <Card
               bordered={true}
-              title="Work District"
+              title="Work districts"
               contentHeight={46}>
               <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>
             </Card>
           </Col>
 
         </Row>
-
+        <Divider />
+        <Row gutter={24}>
+          <Col xl={12} lg={12} md={24} sm={24} xs={24} >
+            <Card
+              bordered={true}
+              title="Both Districts"
+              contentHeight={46}>
+              <DistrictVisitorMapLayers type={'work'} data={this.props.districtvisitors}></DistrictVisitorMapLayers>
+            </Card>
+          </Col>
+        </Row>
       </PageHeaderLayout>
     );
   }
