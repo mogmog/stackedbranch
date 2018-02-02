@@ -283,6 +283,7 @@ class StoreLayout extends React.PureComponent {
     const layout = (
       <Layout>
         <Sider
+          theme={'light'}
           trigger={null}
           collapsible
           collapsed={collapsed}
@@ -298,7 +299,7 @@ class StoreLayout extends React.PureComponent {
             </Link>
           </div>
           <Menu
-            theme="dark"
+            theme="light"
             mode="inline"
             {...menuProps}
             onOpenChange={this.handleOpenChange}
@@ -319,7 +320,7 @@ class StoreLayout extends React.PureComponent {
 
               <div>
                 <Dropdown.Button onClick={this.handleButtonClick.bind(this)} overlay={menu}>
-                  Dropdown
+                  Luca Store
                 </Dropdown.Button>
               </div>
 
