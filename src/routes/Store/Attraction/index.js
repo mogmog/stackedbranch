@@ -44,7 +44,7 @@ export default class Attraction extends PureComponent {
 
     domtoimage.toBlob(document.getElementById('root'))
       .then(function (blob) {
-        FileSaver.saveAs(blob, 'my-node.png');
+        FileSaver.saveAs(blob, 'attraction_power.png');
       });
   }
 
