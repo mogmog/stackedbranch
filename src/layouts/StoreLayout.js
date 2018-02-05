@@ -288,7 +288,7 @@ class StoreLayout extends React.PureComponent {
           theme={'light'}
           trigger={null}
           collapsible
-          collapsed={collapsed}
+          collapsed={true}
           breakpoint="md"
           onCollapse={this.onCollapse}
           width={256}
@@ -311,13 +311,13 @@ class StoreLayout extends React.PureComponent {
         <Layout>
           <Header className={styles.header}>
 
-            <Icon
+           {/* <Icon
               className={styles.trigger}
               type={collapsed ? 'menu-unfold' : 'menu-fold'}
               onClick={this.toggle}
-            />
+            />*/}
 
-            <span style={{'fontSize' : '24px'}}>Store</span>
+            <span style={{'fontSize' : '24px', 'padding-left' : '3%'}}> Store</span>
 
 
             <div className={styles.right}>

@@ -12,6 +12,7 @@ import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
 import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
 
+import HourBar from '../../../components/Store/Attraction/HourBar';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
 import DistrictVisitorMapLayers from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMapLayers';
 
@@ -50,6 +51,9 @@ export default class Attraction extends PureComponent {
 
   render() {
 
+
+    const work_dow_data = [{value : 32.01, text : 'Friday', hour_from : 20, hour_to : 24}, {value : 31.56, text : 'Saturday', hour_from : 16, hour_to : 24}, {value : 38.43, text : 'Sunday', hour_from : 10, hour_to : 20}];
+
     const pageHeaderContent = (
       <div>
 
@@ -79,13 +83,12 @@ export default class Attraction extends PureComponent {
         content={pageHeaderContent}
       >
 
-
         <Row gutter={24}>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
 
             <SummaryCard
-              avatar={ <ReactSVG path={require('../../../assets/svg/ic-nearby-camera-store.svg')} /> }
+              avatar={ <ReactSVG path={require('../../../assets/svg/ic_city_store.svg')} /> }
               bordered={false}
               title="Catchment Area (100%)"
               total={126560 + '*'}
@@ -137,7 +140,19 @@ export default class Attraction extends PureComponent {
               bordered={true}
               title="Home District"
               contentHeight={46}>
-              <DistrictVisitorMap type={'home'} data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
+
+              <Row gutter={24}>
+                <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                  <DistrictVisitorMap type={'home'} data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
+                </Col>
+              </Row>
+
+              <Row gutter={24}>
+                <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                  <HourBar width={250}/>
+                </Col>
+              </Row>
+
             </Card>
           </Col>
 
@@ -152,12 +167,15 @@ export default class Attraction extends PureComponent {
 
         </Row>
         <Divider />
+        <Divider />
+        <Divider />
+        <Divider />
+        <Divider />
         <Row gutter={24}>
           <Col xl={12} lg={12} md={24} sm={24} xs={24} >
             <Card
               bordered={true}
-              title="Both Districts"
-              contentHeight={46}>
+              title="Both Districts">
               <DistrictVisitorMapLayers type={'work'} data={this.props.districtvisitors}></DistrictVisitorMapLayers>
             </Card>
           </Col>
