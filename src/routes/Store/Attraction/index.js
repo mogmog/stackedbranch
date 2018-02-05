@@ -4,6 +4,9 @@ import {Row, Col, Card, Divider, Button, Icon} from 'antd';
 import SVGInline from "react-svg-inline"
 import ReactSVG from 'react-svg';
 
+import domtoimage from 'dom-to-image';
+import FileSaver from 'file-saver';
+
 
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
@@ -33,17 +36,16 @@ export default class Attraction extends PureComponent {
     });
   }
 
+
+
+
+
   printDocument() {
-    const input = document.getElementById('root');
-    html2canvas(input)
-      .then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF();
-        pdf.addImage(imgData, 'JPEG', 0, 0);
-        pdf.output('dataurlnewwindow');
-        pdf.save("download.pdf");
-      })
-    ;
+
+    domtoimage.toBlob(document.getElementById('root'))
+      .then(function (blob) {
+        FileSaver.saveAs(blob, 'my-node.png');
+      });
   }
 
   render() {
@@ -58,10 +60,15 @@ export default class Attraction extends PureComponent {
         </div>
 
         <div>
+
           <h1>Overview: Attraction power</h1>
           <small>Know your attraction power from total pedestrians to sales and take a general perspective of target</small>
-        </div>
 
+          <div style={{'zoom' : 0.5, 'float' : 'right'}} onClick={this.printDocument.bind(this)}>
+            <ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')} />
+          </div>
+
+        </div>
 
       </div>
     );
@@ -72,11 +79,13 @@ export default class Attraction extends PureComponent {
         content={pageHeaderContent}
       >
 
+
         <Row gutter={24}>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
+
             <SummaryCard
-              avatar={ <ReactSVG path={require('../../../assets/svg/ic_city_store.svg')} /> }
+              avatar={ <ReactSVG path={require('../../../assets/svg/ic-nearby-camera-store.svg')} /> }
               bordered={false}
               title="Catchment Area (100%)"
               total={126560 + '*'}
