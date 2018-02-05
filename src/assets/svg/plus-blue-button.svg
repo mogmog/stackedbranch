@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="64px" viewBox="0 0 74 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>plus-blue-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,26.4 L0,26.4 C1.7855739e-15,40.9803174 11.8196826,52.8 26.4,52.8 L52.8,52.8 L52.8,26.4 C52.8,11.8196826 40.9803174,-2.67836085e-15 26.4,0 L26.4,0 C11.8196826,2.67836085e-15 -1.7855739e-15,11.8196826 0,26.4 Z" id="path-1"></path>
+        <filter x="-16.1%" y="-12.3%" width="132.2%" height="132.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.847   0 0 0 0 0.847   0 0 0 0 0.847  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="PLUS-Options" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-655.000000, -448.000000)">
+        <g id="botonera" transform="translate(394.000000, 325.000000)">
+            <g id="plus-blue-button" transform="translate(267.000000, 119.000000)">
+                <g id="boton-copy" transform="translate(37.476659, 37.476659) rotate(-135.000000) translate(-37.476659, -37.476659) translate(10.976659, 10.976659)">
+                    <g id="bg" transform="translate(26.400000, 26.400000) rotate(-90.000000) translate(-26.400000, -26.400000) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#00AAEE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <polygon id="+" fill="#FFFFFF" transform="translate(26.790000, 26.730000) rotate(-270.000000) translate(-26.790000, -26.730000) " points="25.98 35.46 27.66 35.46 27.66 27.54 35.58 27.54 35.58 25.98 27.66 25.98 27.66 18 25.98 18 25.98 25.98 18 25.98 18 27.54 25.98 27.54"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

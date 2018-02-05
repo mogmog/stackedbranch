@@ -1,13 +1,16 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button, Icon} from 'antd';
+import SVGInline from "react-svg-inline"
+import ReactSVG from 'react-svg';
+
+
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
 import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
 
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
 import DistrictVisitorMapLayers from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMapLayers';
-
 
 @connect(state => ({
   districtvisitors: state.districtvisitors.visitors,
@@ -28,6 +31,19 @@ export default class Attraction extends PureComponent {
       type: 'districtvisitors/fetch',
       payload: {'type': 'work'}
     });
+  }
+
+  printDocument() {
+    const input = document.getElementById('root');
+    html2canvas(input)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'JPEG', 0, 0);
+        pdf.output('dataurlnewwindow');
+        pdf.save("download.pdf");
+      })
+    ;
   }
 
   render() {
@@ -55,11 +71,12 @@ export default class Attraction extends PureComponent {
         top={null}
         content={pageHeaderContent}
       >
+
         <Row gutter={24}>
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              avatar={<Icon type="global" />}
+              avatar={ <ReactSVG path={require('../../../assets/svg/ic_city_store.svg')} /> }
               bordered={false}
               title="Catchment Area (100%)"
               total={126560 + '*'}
@@ -71,7 +88,7 @@ export default class Attraction extends PureComponent {
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              avatar={<Icon type="global" />}
+              avatar={ <ReactSVG path={require('../../../assets/svg/ic-nearby-camera-store.svg')} /> }
               bordered={false}
               title="Nearby"
               total={(101608)}
@@ -82,7 +99,7 @@ export default class Attraction extends PureComponent {
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              avatar={<Icon type="global" />}
+              avatar={ <ReactSVG path={require('../../../assets/svg/ic-shop-store.svg')} /> }
               bordered={false}
               title="In store"
               total={(68067)}
@@ -93,7 +110,7 @@ export default class Attraction extends PureComponent {
 
           <Col xl={6} lg={6} md={8} sm={8} xs={8}>
             <SummaryCard
-              avatar={<Icon type="global" />}
+              avatar={ <ReactSVG path={require('../../../assets/svg/ic-basket-sales-store.svg')} /> }
               bordered={false}
               title="Sales"
               total={(11537)}

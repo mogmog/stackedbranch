@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>screen-shot-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-22.7%" y="-18.2%" width="145.5%" height="145.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.847   0 0 0 0 0.847   0 0 0 0 0.847  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="PLUS-Options" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-92.000000, -487.000000)">
+        <g id="screen-shot-button" transform="translate(89.000000, 482.000000)">
+            <g id="boton-copy-9" filter="url(#filter-1)" transform="translate(31.112698, 31.112698) rotate(-45.000000) translate(-31.112698, -31.112698) translate(9.112698, 9.112698)">
+                <circle id="Oval" fill="#5F639E" cx="22" cy="22" r="22"></circle>
+                <g id="camara-foto" transform="translate(7.707107, 6.292893)">
+                    <path d="M14.9,12.2 C13.1,12.2 11.7,13.6 11.7,15.4 C11.7,17.2 13.1,18.6 14.9,18.6 C16.7,18.6 18.1,17.2 18.1,15.4 C18.1,13.6 16.7,12.2 14.9,12.2" id="Fill-1" stroke="#FFFFFF" stroke-width="2" transform="translate(14.900000, 15.400000) rotate(44.000000) translate(-14.900000, -15.400000) "></path>
+                    <path d="M23.4996,7.9998 L20.8006,7.9998 L19.6006,6.5998 C19.3996,6.2998 19.3006,5.9998 18.6006,5.9998 L11.1996,5.9998 C10.6006,5.9998 10.3996,6.2998 10.1996,6.5998 L9.1006,7.9998 L6.3996,7.9998 C5.1006,7.9998 3.9996,8.5998 3.9996,10.3998 L3.9996,21.7998 C3.9996,23.1008 5.1006,23.9998 6.3996,23.9998 L23.6006,23.9998 C24.8996,23.9998 25.9996,22.9998 25.9996,21.7998 L25.9996,10.3998 C25.8996,8.3998 24.6996,7.9998 23.4996,7.9998" id="Fill-3" stroke="#FFFFFF" stroke-width="2" transform="translate(14.999600, 14.999800) rotate(44.000000) translate(-14.999600, -14.999800) "></path>
+                    <path d="M23.0071068,18.8928932 C22.3081068,18.8928932 21.7071068,18.2928932 21.7071068,17.5928932 C21.7071068,16.8928932 22.3081068,16.2928932 23.0071068,16.2928932 C23.7071068,16.2928932 24.3081068,16.8928932 24.3081068,17.5928932 C24.3081068,18.3928932 23.7071068,18.8928932 23.0071068,18.8928932" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

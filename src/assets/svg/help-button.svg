@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>help-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-22.7%" y="-18.2%" width="145.5%" height="145.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.847   0 0 0 0 0.847   0 0 0 0 0.847  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="PLUS-Options" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-92.000000, -339.000000)">
+        <g id="help-button" transform="translate(89.000000, 334.000000)">
+            <g id="boton-copy-7" filter="url(#filter-1)" transform="translate(31.112698, 31.112698) rotate(-45.000000) translate(-31.112698, -31.112698) translate(9.112698, 9.112698)">
+                <circle id="Oval" fill="#00E6A5" cx="22" cy="22" r="22"></circle>
+                <text id="help?" transform="translate(23.414214, 23.414214) rotate(-315.000000) translate(-23.414214, -23.414214) " font-family="Telefonica-Regular, Telefonica" font-size="14" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="5.52386665" y="28.4142136">help?</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
