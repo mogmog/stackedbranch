@@ -13,8 +13,8 @@ import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index'
 import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
 
 import HourBar from '../../../components/Store/Attraction/HourBar';
+import GenderAge from '../../../components/Store/Attraction/GenderAge';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
-import DistrictVisitorMapLayers from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMapLayers';
 
 @connect(state => ({
   districtvisitors: state.districtvisitors.visitors,
@@ -136,10 +136,10 @@ export default class Attraction extends PureComponent {
         <Divider />
         <Row gutter={24}>
           <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+
             <Card
               bordered={true}
-              title="Home District"
-              contentHeight={46}>
+              title="Home District">
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
@@ -147,39 +147,37 @@ export default class Attraction extends PureComponent {
                 </Col>
               </Row>
 
+              <Divider/>
+
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <HourBar width={250}/>
+                  <HourBar width={290}/>
+                </Col>
+              </Row>
+
+              <Divider/>
+
+              <Row gutter={24}>
+                <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                  <GenderAge/>
                 </Col>
               </Row>
 
             </Card>
+
           </Col>
 
-          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+         {/* <Col xl={12} lg={12} md={24} sm={24} xs={24}>
             <Card
-              bordered={true}
+              bordered={false}
               title="Work districts"
               contentHeight={46}>
               <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>
             </Card>
-          </Col>
+          </Col>*/}
 
         </Row>
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Row gutter={24}>
-          <Col xl={12} lg={12} md={24} sm={24} xs={24} >
-            <Card
-              bordered={true}
-              title="Both Districts">
-              <DistrictVisitorMapLayers type={'work'} data={this.props.districtvisitors}></DistrictVisitorMapLayers>
-            </Card>
-          </Col>
-        </Row>
+
       </PageHeaderLayout>
     );
   }

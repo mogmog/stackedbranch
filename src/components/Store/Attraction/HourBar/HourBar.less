@@ -1,20 +1,40 @@
+@import "../../../../luca.less";
+
 .hourbar {
 
   h4 {
+    margin-top : 0.3em;
     margin-bottom : -0.3em;
   }
 
-    .axis text {
-      font: 10px telefonica_text;
-      fill: gray;
+  svg {
+
+    .background {
+      fill: #F2F2F2;
     }
 
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: gray;
+    .stop-left {
+      stop-color: @bar_gradient_1;
+    }
+
+    .stop-right {
+      stop-color: @bar_gradient_2;
+    }
+
+    .axis text {
+      font: 12px telefonica_text;
+      fill: @axis_text;
+    }
+
+    .axis path, .axis line {
+      fill : none;
+      stroke-width: 1.5px;
+      stroke: @axis_line;
       shape-rendering: crispEdges;
     }
+  }
+
+
 
 }
 

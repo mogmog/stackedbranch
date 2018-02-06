@@ -10,13 +10,17 @@ class Timescale extends Component {
 
   renderAxis () {
     var node = ReactDOM.findDOMNode(this);
-    d3.select(node).call(d3.svg.axis().scale(this.props.scale));
+    d3.select(node).call(d3.svg.axis().scale(this.props.scale).ticks(12).tickFormat((d, i) => (i % 2 === 0 ? `${d}h` : '')));
   }
+
+
+  //axis.tickFormat((d) => {console.log(d);return `${d}h`});
+ // axis.ticks(d => {console.log(d)})
 
   render () {
 
     return (
-          <g transform={'translate(5, 0)'} className={styles.axis} />
+          <g className={styles.axis} />
     );
   }
 

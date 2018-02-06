@@ -19,7 +19,7 @@ class HourBar extends Component {
 
     this.barheight = 20;
     this.margin = {left : 10, right : 10, top : 0, bottom : 0};
-    this.width = 390;
+    this.width = 420;
     this.scale = d3.scale.linear().domain([0, 24]).range([0, this.width]);
   }
 
@@ -40,14 +40,16 @@ class HourBar extends Component {
               <h4>{d.value}%</h4>
               <h6>{d.text}</h6>
               {/*TODO fix these offset hacks*/}
-              <svg height={this.barheight} width={this.scale(24) + 5} transform={'translate(-5, 0)'}  >
+              <svg height={this.barheight} width={this.scale(24) } transform={'translate(-5, 0)'}  >
                 <TimeBar hour_from={d.hour_from} hour_to={d.hour_to} scale={this.scale} width={this.scale(24)} height={this.barheight} label={32.01} text={'Friday'}/>
               </svg>
             </div>
           ))
         }
-        <svg height={this.barheight} width={this.scale(24) + this.margin.right } transform={'translate(-5, 0)'}  >
+        <svg height={this.barheight} width={this.scale(24) + this.margin.left + this.margin.right  } transform={'translate(-5, 0)'}  >
+          <g transform={'translate(10, 0)'}>
           <Timescale scale={this.scale} />
+          </g>
         </svg>
       </div>
     );

@@ -11,12 +11,20 @@ class TimeBar extends Component {
   render() {
     return (
       <g transform={'translate(5,0)'}>
-        <g fill={'grey'}>
-          <rect x={0} y={0} width={this.props.scale(24) + 50} height={(this.props.height - 5)}/>
+
+        <defs>
+          <linearGradient id="mainGradient">
+            <stop offset="0" className={styles["stop-left"]}></stop>
+            <stop offset="1" className={styles["stop-right"]}></stop>
+          </linearGradient>
+        </defs>
+
+        <g>
+          <rect className={styles.background} x={0} y={0} width={this.props.scale(24) + 50} height={(this.props.height - 5)}/>
         </g>
 
-        <g fill={'pink'}>
-          <rect x={0} y={0} transform={`translate(${this.props.scale(this.props.hour_from)},0)`} width={(this.props.scale(this.props.hour_to) - this.props.scale(this.props.hour_from))} height={(this.props.height - 5)}/>
+        <g >
+          <rect style={{'fill': 'url(#mainGradient)'}} x={0} y={0} transform={`translate(${this.props.scale(this.props.hour_from)},0)`} width={(this.props.scale(this.props.hour_to) - this.props.scale(this.props.hour_from))} height={(this.props.height - 5)}/>
         </g>
       </g>
     );

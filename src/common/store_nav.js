@@ -67,12 +67,12 @@ export const getStoreNavData = app => [
         component: dynamicWrapper(app, ['site', 'sitecomparison'], () => import('../routes/Store/SiteComparison')),
       },
 
-      {
+/*      {
         name: 'Analysis',
         icon: 'form',
         path: 'store/analysis',
         component: dynamicWrapper(app, ['chart', 'date'], () => import('../routes/Store/Dashboard/Analysis')),
-      },
+      },*/
 
       {
         name: 'Logout',

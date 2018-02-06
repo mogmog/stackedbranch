@@ -21,12 +21,10 @@ class RegionChooserMap extends PureComponent {
       fillOpacity: 0.5,
     }
 
-    console.log(data);
-
     return (
       <div>
 
-        <Map ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{'height': '300px'}}>
+        <Map ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{'width': '100%', 'height': '280px'}}>
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
           <Choropleth
