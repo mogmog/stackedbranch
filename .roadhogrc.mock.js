@@ -2,6 +2,7 @@ import mockjs from 'mockjs';
 import { getRule, postRule } from './mock/rule';
 import { getArea} from './mock/area';
 import { getActivities, getNotice, getFakeList } from './mock/api';
+import {getDistricts} from './mock/ng_event';
 import { getFakeChartData } from './mock/chart';
 import { imgMap } from './mock/utils';
 import { getProfileBasicData } from './mock/profile';
@@ -31,6 +32,7 @@ const proxy = {
   },
   // GET POST 可省略
   'GET /api/dates': {list : []},
+  'GET /api/ng_event/districts' : getDistricts,
   'GET /api/project/notice': getNotice,
   'GET /api/activities': getActivities,
   'GET /api/areas': getArea,
