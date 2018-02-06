@@ -16,7 +16,7 @@ class Timescale extends Component {
   render () {
 
     return (
-          <g className={styles.axis} />
+          <g transform={'translate(5, 0)'} className={styles.axis} />
     );
   }
 
