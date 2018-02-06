@@ -1,4 +1,4 @@
-import Bar from './Bar';
+import TimeBar from './TimeBar';
 import Timescale from './Timescale';
 
 import React, {Component} from 'react';
@@ -20,12 +20,12 @@ class HourBar extends Component {
     this.barheight = 20;
     this.margin = {left : 10, right : 10, top : 0, bottom : 0};
     this.width = 390;
-    this.scale = d3.scale.linear().domain([0, 24]).range([0 + this.margin.left, this.width - this.margin.right]);
+    this.scale = d3.scale.linear().domain([0, 24]).range([0, this.width]);
   }
 
   render() {
 
-    const items= [{text : 'Friday'}, {text : 'Saturday'}, {text : 'Sunday'}];
+    const items= [{text : 'Friday', value : 31.89, hour_from : 0, hour_to : 22}, {text : 'Saturday', value : 21.89, hour_from : 16, hour_to : 20}, {text : 'Sunday', value : 11.89, hour_from : 21, hour_to : 23}];
 
     return (
 
@@ -37,15 +37,16 @@ class HourBar extends Component {
         {
           items.map((d, i) => (
             <div>
-              <h4>31.89%</h4>
+              <h4>{d.value}%</h4>
               <h6>{d.text}</h6>
-              <svg height={this.barheight} width={this.scale(24)} transform={`translate(${-1 * this.margin.left}, 0)`} >
-                <Bar value={20} scale={this.scale} width={this.scale(24)} height={this.barheight} label={32.01} text={'Friday'}></Bar>
+              {/*TODO fix these offset hacks*/}
+              <svg height={this.barheight} width={this.scale(24) + 5} transform={'translate(-5, 0)'}  >
+                <TimeBar hour_from={d.hour_from} hour_to={d.hour_to} scale={this.scale} width={this.scale(24)} height={this.barheight} label={32.01} text={'Friday'}/>
               </svg>
             </div>
           ))
         }
-        <svg height={this.barheight} width={this.scale(24) + this.margin.right }  transform={`translate(${-1 * this.margin.left}, 0)`} >
+        <svg height={this.barheight} width={this.scale(24) + this.margin.right } transform={'translate(-5, 0)'}  >
           <Timescale scale={this.scale} />
         </svg>
       </div>
@@ -55,6 +56,3 @@ class HourBar extends Component {
 }
 
 export default HourBar;
-
-
-
