@@ -345,7 +345,7 @@ class StoreLayout extends React.PureComponent {
                     )
                   )
                 }
-                <Redirect exact from="/" to="/store/areas" />
+                <Redirect exact from="/" to="/store/attraction" />
                 <Route component={NotFound} />
               </Switch>
             </div>

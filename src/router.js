@@ -82,7 +82,7 @@ function RouterConfig({ history, app }) {
           <Router history={history}>
             <Switch>
 
-              <Redirect exact from="/" to="/store/areas" />
+              <Redirect exact from="/" to="/store/attraction" />
               <Route path="/login" render={props => <Login submitting={false} />} />
               <Route path="/store/" render={props => <StoreLayout {...props} {...storepassProps} />} />
               <Route path="/travel/" render={props => <TravelLayout {...props} {...travelpassProps} />} />
