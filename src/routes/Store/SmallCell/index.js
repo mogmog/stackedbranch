@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Table, Card, Select } from 'antd';
-import * as eeGeo from 'wrld.js';
 
 const Option = Select.Option;
 
