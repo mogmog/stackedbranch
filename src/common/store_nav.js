@@ -19,13 +19,34 @@ export const getStoreNavData = app => [
     children: [
 
       {
-        name: 'Attraction',
-        icon: 'compass',
+        name: 'Attraction Power',
+        icon: 'IC-LUCA-STORE.svg',
         path: 'store/attraction',
         component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
       },
 
       {
+        name: 'Attraction Power',
+        icon: 'IC-LUCA-STORE.svg',
+        path: 'store/attraction',
+        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
+      },
+
+      {
+        name: 'Attraction Power',
+        icon: 'IC-LUCA-STORE.svg',
+        path: 'store/attraction',
+        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
+      },
+
+      {
+        name: 'Attraction Power',
+        icon: 'IC-LUCA-STORE.svg',
+        path: 'store/attraction',
+        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
+      },
+
+    /*  {
         name: 'Area Definition',
         icon: 'compass',
         path: 'store/areas',
@@ -65,7 +86,7 @@ export const getStoreNavData = app => [
         icon: 'shop',
         path: 'store/sites',
         component: dynamicWrapper(app, ['site', 'sitecomparison'], () => import('../routes/Store/SiteComparison')),
-      },
+      },*/
 
 /*      {
         name: 'Analysis',
@@ -74,12 +95,12 @@ export const getStoreNavData = app => [
         component: dynamicWrapper(app, ['chart', 'date'], () => import('../routes/Store/Dashboard/Analysis')),
       },*/
 
-      {
+      /*{
         name: 'Logout',
         icon: 'user',
         path: 'store/logout',
         component: (app) => { (app.history.push('/login')); return <span></span>},
-      },
+      },*/
 
     ],
   },

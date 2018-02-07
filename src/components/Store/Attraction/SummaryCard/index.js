@@ -12,7 +12,7 @@ const SummaryCard = ({
       <div
         className={classNames(styles.chartTop, { [styles.chartTopMargin]: (!children && !footer) })}
       >
-        <div className={styles.avatar}>
+        <div className={styles.avatar} style={{'height':'27px'}}>
           {
             avatar
           }

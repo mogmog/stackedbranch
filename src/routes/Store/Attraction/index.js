@@ -92,7 +92,7 @@ export default class Attraction extends PureComponent {
               bordered={false}
               title="Catchment Area (100%)"
               total={126560 + '*'}
-              footer={<ColorThing color='pink'>Catchment area (ca)</ColorThing>}
+              footer={<ColorThing color='#E90C8B' text={'#ffffff'}>Catchment area (ca)</ColorThing>}
             >
 
             </SummaryCard>
@@ -104,7 +104,7 @@ export default class Attraction extends PureComponent {
               bordered={false}
               title="Nearby"
               total={(101608)}
-              footer={<ColorThing color='orange'>Concern CA = 29K less</ColorThing>}
+              footer={<ColorThing color='#477784' text={'#ffffff'}>Concern CA = 29K less</ColorThing>}
             >
             </SummaryCard>
           </Col>
@@ -115,7 +115,7 @@ export default class Attraction extends PureComponent {
               bordered={false}
               title="In store"
               total={(68067)}
-              footer={<ColorThing color='beige'>Concern CA = 62K less</ColorThing>}
+              footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>Concern CA = 62K less</ColorThing>}
             >
             </SummaryCard>
           </Col>
@@ -126,7 +126,7 @@ export default class Attraction extends PureComponent {
               bordered={false}
               title="Sales"
               total={(11537)}
-              footer={<ColorThing>Concern CA = 122K Less</ColorThing>}
+              footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >Concern CA = 122K Less</ColorThing>}
             >
             </SummaryCard>
           </Col>

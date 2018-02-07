@@ -14,7 +14,7 @@ import NoticeIcon from '../components/Common/NoticeIcon';
 import GlobalFooter from '../components/Common/GlobalFooter';
 import NotFound from '../routes/Common/Exception/404';
 import styles from './StoreLayout.less';
-import SVGInline from "react-svg-inline"
+import ReactSVG from 'react-svg';
 
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
@@ -134,7 +134,9 @@ class StoreLayout extends React.PureComponent {
             title={
               item.icon ? (
                 <span>
-                  <Icon type={item.icon} />
+
+                  {/*<Icon type={item.icon} />*/}
+
                   <span>{item.name}</span>
                 </span>
               ) : item.name
@@ -145,7 +147,10 @@ class StoreLayout extends React.PureComponent {
           </SubMenu>
         );
       }
-      const icon = item.icon && <Icon type={item.icon} />;
+      //const icon = item.icon && <Icon type={item.icon} />;
+      console.log(item.icon);
+      const icon = item.icon && <ReactSVG path={require(`../assets/svg/${item.icon}`)} />;
+
       return (
         <Menu.Item key={item.key || item.path}>
           {
