@@ -19,7 +19,7 @@ class HourBar extends Component {
 
     this.barheight = 20;
     this.margin = {left : 10, right : 10, top : 0, bottom : 0};
-    this.width = 420;
+    this.width = 350;
     this.scale = d3.scale.linear().domain([0, 24]).range([0, this.width]);
   }
 
@@ -36,7 +36,7 @@ class HourBar extends Component {
         <h6>and hour of most frequency</h6>
         {
           items.map((d, i) => (
-            <div>
+            <div key={i}>
               <h4>{d.value}%</h4>
               <h6>{d.text}</h6>
               {/*TODO fix these offset hacks*/}

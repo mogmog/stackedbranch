@@ -32,11 +32,8 @@ class GenderAgeGraphic extends Component {
       .outerRadius(radius - 10)
       .innerRadius(radius - 30);
 
-    console.log(arc);
-
     var pie = d3.layout.pie().sort(null).value(function(d) { return d.population; });
 
-    console.log(pie(data));
     return (
       <div>
         <Row gutter={24}>
@@ -44,7 +41,7 @@ class GenderAgeGraphic extends Component {
             <div>
               <h2 style={{'float' : 'left', 'marginBottom' : '-1.32em'}}>51,43%</h2>
 
-              <ReactSVG path={require('../../../../assets/svg/ic-man.svg')} />
+              <ReactSVG path={require(`../../../../assets/svg/${this.props.icon}`)} />
             </div>
 
           </Col>
@@ -71,5 +68,7 @@ class GenderAgeGraphic extends Component {
   }
 
 }
+
+GenderAgeGraphic.defaultProps = {icon : 'ic-man.svg'};
 
 export default GenderAgeGraphic;

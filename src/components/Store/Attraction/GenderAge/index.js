@@ -32,11 +32,11 @@ class GenderAge extends Component {
 
         <Row gutter={24}>
           <Col xl={12} lg={12} md={12} sm={12} xs={24}>
-              <GenderAgeGraphic />
+              <GenderAgeGraphic icon={'ic-man.svg'}/>
             </Col>
 
           <Col xl={12} lg={12} md={12} sm={12} xs={24}>
-              <GenderAgeGraphic />
+              <GenderAgeGraphic icon={'ic-woman.svg'}/>
             </Col>
         </Row>
 
