@@ -12,6 +12,7 @@ import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
 import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
 
+import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
 import HourBar from '../../../components/Store/Attraction/HourBar';
 import GenderAge from '../../../components/Store/Attraction/GenderAge';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
@@ -53,18 +54,13 @@ export default class Attraction extends PureComponent {
 
   render() {
 
-    console.log(this.props);
-
-
     const work_dow_data = [{value : 32.01, text : 'Friday', hour_from : 20, hour_to : 24}, {value : 31.56, text : 'Saturday', hour_from : 16, hour_to : 24}, {value : 38.43, text : 'Sunday', hour_from : 10, hour_to : 20}];
 
     const pageHeaderContent = (
       <div>
 
         <div style={{'float' : 'right'}}>
-        <Icon type={'calendar'}/>
-          May 13, 2016 - Jul 12, 2017 &nbsp;
-          <Icon type={'down'}/>
+          <CalendarSideBar/>
         </div>
 
         <div>
@@ -72,9 +68,9 @@ export default class Attraction extends PureComponent {
           <h1>Overview: Attraction power</h1>
           <small>Know your attraction power from total pedestrians to sales and take a general perspective of target</small>
 
-          {/**/}
+          {/*TODO put this in a component*/}
 
-          <div style={{'height' : '60px', 'float' : 'right', 'paddingRight' : '4em'}} >
+          <div style={{'height' : '60px', 'right' : '83px', top : '151px', 'zIndex' : 999, position: 'absolute'}} >
 
           <MotionMenu
             type="horizontal"
@@ -102,7 +98,6 @@ export default class Attraction extends PureComponent {
       </div>
     );
 
-    console.log(this.props.attraction_totals.keys);
     return (
       <PageHeaderLayout
         top={null}
@@ -129,6 +124,7 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic-nearby-camera-store.svg')} /> }
               bordered={false}
               title="Nearby"
+              subtitle={this.props.attraction_totals.getValue('Walk bys')}
               total={this.props.attraction_totals.getPercent('Walk bys')}
               footer={<ColorThing color='#477784' text={'#ffffff'}>Concern CA = {this.props.attraction_totals.getDifference('Walk bys')} less</ColorThing>}
             >
@@ -140,6 +136,7 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic-shop-store.svg')} /> }
               bordered={false}
               title="In store"
+              subtitle={this.props.attraction_totals.getValue('In Store')}
               total={this.props.attraction_totals.getPercent('In Store')}
               footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>Concern CA = {this.props.attraction_totals.getDifference('In Store')} less</ColorThing>}
             >
@@ -151,6 +148,7 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic-basket-sales-store.svg')} /> }
               bordered={false}
               title="Sales"
+              subtitle={this.props.attraction_totals.getValue('Buy')}
               total={this.props.attraction_totals.getPercent('Buy')}
               footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >Concern CA = {this.props.attraction_totals.getDifference('Buy')} Less</ColorThing>}
             >

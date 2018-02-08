@@ -26,23 +26,30 @@ export const getStoreNavData = app => [
       },
 
       {
-        name: 'Attraction Power',
+        name: 'Full perspective',
         icon: 'IC-LUCA-STORE.svg',
-        path: 'store/attraction',
+        path: 'store/fullperspective',
         component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
       },
 
       {
-        name: 'Attraction Power',
+        name: 'Buyer profile',
         icon: 'IC-LUCA-STORE.svg',
-        path: 'store/attraction',
+        path: 'store/buyerprofile',
         component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
       },
 
       {
-        name: 'Attraction Power',
+        name: 'Comparative Zones',
         icon: 'IC-LUCA-STORE.svg',
-        path: 'store/attraction',
+        path: 'store/comparativezones',
+        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
+      },
+
+      {
+        name: 'Comparative Profiles',
+        icon: 'IC-LUCA-STORE.svg',
+        path: 'store/comparativeprofiles',
         component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
       },
 

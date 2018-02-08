@@ -271,14 +271,6 @@ class StoreLayout extends React.PureComponent {
 
     const { currentUser, collapsed, fetchingNotices, getRouteData } = this.props;
 
-    /* const menu = (
-       <Menu className={styles.menu} selectedKeys={[]} onClick={this.onMenuClick}>
-         <Menu.Item disabled><Icon type="user" />个人中心</Menu.Item>
-         <Menu.Item disabled><Icon type="setting" />设置</Menu.Item>
-         <Menu.Divider />
-         <Menu.Item key="logout"><Icon type="logout" />退出登录</Menu.Item>
-       </Menu>
-     );*/
     const noticeData = this.getNoticeData();
 
     // Don't show popup menu when it is been collapsed

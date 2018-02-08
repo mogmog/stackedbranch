@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styles from './index.less';
 
 const SummaryCard = ({
-  loading = false, contentHeight, title, avatar, action, total, footer, children, ...rest
+  loading = false, contentHeight, title, subtitle, avatar, action, total, footer, children, ...rest
 }) => {
   const content = (
     <div className={classNames(styles.summaryCard)}>
@@ -24,6 +24,10 @@ const SummaryCard = ({
 
           <div className={styles.meta}>
             <span className={styles.title}>{title}</span>
+          </div>
+
+          <div className={styles.subtitle}>
+            {subtitle}
           </div>
 
         </div>
