@@ -266,7 +266,6 @@ class StoreLayout extends React.PureComponent {
       <Menu onClick={this.handleMenuClick.bind(this)}>
         <Menu.Item key="1">Luca Store</Menu.Item>
         <Menu.Item key="2">Luca Travel</Menu.Item>
-        <Menu.Item key="3">Luca Blah</Menu.Item>
       </Menu>
     );
 

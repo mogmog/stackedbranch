@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button, Icon} from 'antd';
-import SVGInline from "react-svg-inline"
 import ReactSVG from 'react-svg';
+import MotionMenu from '../../../ext/react-motion-menu/src';
 
 import domtoimage from 'dom-to-image';
 import FileSaver from 'file-saver';
@@ -72,9 +72,30 @@ export default class Attraction extends PureComponent {
           <h1>Overview: Attraction power</h1>
           <small>Know your attraction power from total pedestrians to sales and take a general perspective of target</small>
 
-          <div style={{'zoom' : 0.5, 'float' : 'right'}} onClick={this.printDocument.bind(this)}>
-            <ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')} />
+          {/**/}
+
+          <div style={{'height' : '60px', 'float' : 'right', 'paddingRight' : '4em'}} >
+
+          <MotionMenu
+            type="horizontal"
+            reverse={true}
+            margin={60}
+          >
+            <div>
+              <ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')} />
+            </div>
+
+            <div onClick={this.printDocument.bind(this)} style={{'marginTop' : '5px'}}>
+              <ReactSVG path={require('../../../assets/svg/share-button.svg')} />
+            </div>
+
+            <div onClick={this.printDocument.bind(this)} style={{'marginTop' : '5px'}}>
+              <ReactSVG path={require('../../../assets/svg/screen-shot-button.svg')}  />
+            </div>
+
+          </MotionMenu>
           </div>
+
 
         </div>
 

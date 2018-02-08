@@ -69,6 +69,7 @@
     "react-leaflet-draw": "^0.18.0",
     "react-leaflet-heatmap-layer": "^1.0.3",
     "react-motion": "^0.5.2",
+    "react-motion-menu": "^0.4.4",
     "react-svg": "^2.2.11",
     "react-svg-inline": "^2.1.0",
     "simpleheat": "^0.4.0",
