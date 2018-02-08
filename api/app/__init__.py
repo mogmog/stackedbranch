@@ -24,7 +24,7 @@ db = SQLAlchemy()
 
 from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting, Journey
 from app.models import Department as DepartmentModel
-from app.ng_event_models import ZoneDistrict
+from app.ng_event_models import ZoneDistrict, AttractionTotal
 
 class Department(SQLAlchemyObjectType):
 
@@ -341,6 +341,17 @@ def create_app(config_name):
         work_results.append({'district_code' : result.work_district_code, 'district_name' : result.work_district_name, 'visitors' : result[2]})
 
       return make_response(jsonify({'work' : { 'list' : work_results }, 'home' : { 'list' : home_results }})), 200
+
+
+    @app.route('/api/ng_event/attractiontotals', methods=['GET'])
+    def attractiontotals():
+
+      results = []
+      for result in db.session.query(AttractionTotal.zone_visitors, AttractionTotal.num_visitors).all():
+        results.append({'zone_visitors' : result.zone_visitors, 'num_visitors' : result.num_visitors})
+
+      return make_response(jsonify({'totals' : { 'list' : results }})), 200
+
 
 
 

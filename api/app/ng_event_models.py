@@ -12,5 +12,12 @@ class ZoneDistrict(db.Model):
         )
 
 
+class AttractionTotal(db.Model):
+    __table__ = db.Table('ng_event_tableau_tot', db.Model.metadata,
+        db.Column('zone_visitors', db.String, primary_key=True),
+        db.Column('num_visitors', db.Numeric, primary_key=False),
+        )
+
+
 
 

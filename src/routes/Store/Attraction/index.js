@@ -18,6 +18,7 @@ import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVis
 
 @connect(state => ({
   districtvisitors: state.districtvisitors.visitors,
+  attraction_totals: state.districtvisitors.attraction_totals,
 }))
 export default class Attraction extends PureComponent {
 
@@ -32,14 +33,15 @@ export default class Attraction extends PureComponent {
     const {dispatch} = this.props;
 
     dispatch({
-      type: 'districtvisitors/fetch',
-      payload: {'type': 'work'}
+      type: 'districtvisitors/fetch_visitors',
+      payload: {}
+    });
+
+    dispatch({
+      type: 'districtvisitors/fetch_attraction_totals',
+      payload: {}
     });
   }
-
-
-
-
 
   printDocument() {
 
@@ -50,6 +52,8 @@ export default class Attraction extends PureComponent {
   }
 
   render() {
+
+    console.log(this.props);
 
 
     const work_dow_data = [{value : 32.01, text : 'Friday', hour_from : 20, hour_to : 24}, {value : 31.56, text : 'Saturday', hour_from : 16, hour_to : 24}, {value : 38.43, text : 'Sunday', hour_from : 10, hour_to : 20}];
@@ -77,6 +81,7 @@ export default class Attraction extends PureComponent {
       </div>
     );
 
+    console.log(this.props.attraction_totals.keys);
     return (
       <PageHeaderLayout
         top={null}
@@ -91,7 +96,7 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic_city_store.svg')} /> }
               bordered={false}
               title="Catchment Area (100%)"
-              total={126560 + '*'}
+              total={this.props.attraction_totals.getValue('Influence area')}
               footer={<ColorThing color='#E90C8B' text={'#ffffff'}>Catchment area (ca)</ColorThing>}
             >
 
@@ -103,8 +108,8 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic-nearby-camera-store.svg')} /> }
               bordered={false}
               title="Nearby"
-              total={(101608)}
-              footer={<ColorThing color='#477784' text={'#ffffff'}>Concern CA = 29K less</ColorThing>}
+              total={this.props.attraction_totals.getPercent('Walk bys')}
+              footer={<ColorThing color='#477784' text={'#ffffff'}>Concern CA = {this.props.attraction_totals.getDifference('Walk bys')} less</ColorThing>}
             >
             </SummaryCard>
           </Col>
@@ -114,8 +119,8 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic-shop-store.svg')} /> }
               bordered={false}
               title="In store"
-              total={(68067)}
-              footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>Concern CA = 62K less</ColorThing>}
+              total={this.props.attraction_totals.getPercent('In Store')}
+              footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>Concern CA = {this.props.attraction_totals.getDifference('In Store')} less</ColorThing>}
             >
             </SummaryCard>
           </Col>
@@ -125,8 +130,8 @@ export default class Attraction extends PureComponent {
               avatar={ <ReactSVG path={require('../../../assets/svg/ic-basket-sales-store.svg')} /> }
               bordered={false}
               title="Sales"
-              total={(11537)}
-              footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >Concern CA = 122K Less</ColorThing>}
+              total={this.props.attraction_totals.getPercent('Buy')}
+              footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >Concern CA = {this.props.attraction_totals.getDifference('Buy')} Less</ColorThing>}
             >
             </SummaryCard>
           </Col>
