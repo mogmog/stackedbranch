@@ -19,5 +19,21 @@ class AttractionTotal(db.Model):
         )
 
 
+class Profile(db.Model):
+    __table__ = db.Table('datos_madriddestino_profile', db.Model.metadata,
+        db.Column('country', db.String, primary_key=True),
+        db.Column('nationality', db.String, primary_key=True),
+        db.Column('name_province', db.String, primary_key=True),
+        db.Column('gender', db.String, primary_key=True),
+        db.Column('age', db.String, primary_key=True),
+        db.Column('rent', db.String, primary_key=True),
+        db.Column('type_visitor', db.String, primary_key=True),
+        db.Column('date', db.Date, primary_key=True),
+        db.Column('period', db.String, primary_key=True),
+        db.Column('name_tur_zone', db.String, primary_key=True))
+
+
+
+
 
 

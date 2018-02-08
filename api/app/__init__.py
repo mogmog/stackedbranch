@@ -24,7 +24,7 @@ db = SQLAlchemy()
 
 from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting, Journey
 from app.models import Department as DepartmentModel
-from app.ng_event_models import ZoneDistrict, AttractionTotal
+from app.ng_event_models import ZoneDistrict, AttractionTotal, Profile
 
 class Department(SQLAlchemyObjectType):
 
@@ -351,6 +351,16 @@ def create_app(config_name):
         results.append({'zone_visitors' : result.zone_visitors, 'num_visitors' : result.num_visitors})
 
       return make_response(jsonify({'totals' : { 'list' : results }})), 200
+
+
+    @app.route('/api/ng_event/profiles', methods=['GET'])
+    def profiles():
+
+      results = []
+      for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.period, Profile.name_tur_zone).limit(1000):
+        results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : result.name_province, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'period' : result.period, 'zone' : result.name_tur_zone })
+
+      return make_response(jsonify(result)), 200
 
 
 

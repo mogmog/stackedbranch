@@ -19,7 +19,7 @@ class PieChart extends Component {
 
   componentDidUpdate (prevProps) {
       this.chart.filterAll();
-      this.chart.filter(this.props.filter);
+      if (this.props.filter && this.props.filter.length) this.chart.filter(this.props.filter);
       this.chart.redraw();
   }
 

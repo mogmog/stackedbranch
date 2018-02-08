@@ -50,7 +50,7 @@ export const getStoreNavData = app => [
         name: 'Comparative Profiles',
         icon: 'IC-LUCA-STORE.svg',
         path: 'store/comparativeprofiles',
-        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
+        component: dynamicWrapper(app, ['profile'], () => import('../routes/Store/Profile/index')),
       },
 
     /*  {

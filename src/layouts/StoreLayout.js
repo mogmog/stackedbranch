@@ -313,7 +313,7 @@ class StoreLayout extends React.PureComponent {
               onClick={this.toggle}
             />*/}
 
-            <span style={{'fontSize' : '24px', 'padding-left' : '3%'}}> Store</span>
+            <span style={{'fontSize' : '24px', 'paddingLeft' : '3%'}}> Store</span>
 
 
             <div className={styles.right}>
