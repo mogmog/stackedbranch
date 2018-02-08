@@ -39,7 +39,7 @@ class GenderAgeGraphic extends Component {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <div>
-              <h2 style={{'float' : 'left', 'marginBottom' : '-1.32em'}}>51,43%</h2>
+              <h2 style={{'float' : 'left', 'marginBottom' : '-1.32em'}}>{this.props.value}%</h2>
 
               <ReactSVG path={require(`../../../../assets/svg/${this.props.icon}`)} />
             </div>

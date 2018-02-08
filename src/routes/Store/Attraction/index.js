@@ -191,14 +191,41 @@ export default class Attraction extends PureComponent {
 
           </Col>
 
-         {/* <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+
+
+          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+
             <Card
-              bordered={false}
-              title="Work districts"
-              contentHeight={46}>
-              <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>
+              bordered={true}
+              title="Work District">
+
+              <Row gutter={24}>
+                <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                  <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>
+                </Col>
+              </Row>
+
+              <Divider/>
+
+              <Row gutter={24}>
+                <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                  <HourBar width={290}/>
+                </Col>
+              </Row>
+
+              <Divider/>
+
+              <Row gutter={24}>
+                <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                  <GenderAge/>
+                </Col>
+              </Row>
+
             </Card>
-          </Col>*/}
+
+          </Col>
+
+
 
         </Row>
 

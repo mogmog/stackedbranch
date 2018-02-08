@@ -32,7 +32,7 @@ class RegionChooserMap extends PureComponent {
                       valueProperty={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
                       visible={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match  }}
 
-           scale={['lightgreen', 'darkgreen']}
+           scale={['#7F387F', '#FF77FF']}
            steps={20}
            style={style}
            mode='e'
