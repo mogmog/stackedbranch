@@ -24,7 +24,7 @@ db = SQLAlchemy()
 
 from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting, Journey
 from app.models import Department as DepartmentModel
-from app.ng_event_models import ZoneDistrict, AttractionTotal, Profile
+from app.ng_event_models import ZoneDistrict, AttractionTotal, Profile, PurchDistrict
 
 class Department(SQLAlchemyObjectType):
 
@@ -329,6 +329,21 @@ def create_app(config_name):
        return make_response(jsonify({ 'list' : _j })), 200
 
 
+
+    @app.route('/api/ng_event/purchase/<home_district_name>/<type_visitor>', methods=['GET'])
+    def purchase(home_district_name, type_visitor):
+
+      results = []
+      for result in db.session.query(PurchDistrict.gender, PurchDistrict.age, func.count(PurchDistrict.gender))\
+                    .group_by(PurchDistrict.gender, PurchDistrict.age)\
+                    .filter(PurchDistrict.home_district_name.in_([home_district_name]))\
+                    .filter(PurchDistrict.type_visitor.in_([type_visitor])).all():
+
+        results.append({'gender' : result.gender, 'age' : result.age, 'count' : result[2]})
+
+      return make_response(jsonify(results)), 200
+
+
     @app.route('/api/ng_event/districts', methods=['GET'])
     def districts():
 
@@ -360,7 +375,7 @@ def create_app(config_name):
       for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.period, Profile.name_tur_zone).limit(1000):
         results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : result.name_province, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'period' : result.period, 'zone' : result.name_tur_zone })
 
-      return make_response(jsonify(result)), 200
+      return make_response(jsonify(results)), 200
 
 
 

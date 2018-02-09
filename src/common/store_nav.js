@@ -22,7 +22,7 @@ export const getStoreNavData = app => [
         name: 'Attraction Power',
         icon: 'IC-LUCA-STORE.svg',
         path: 'store/attraction',
-        component: dynamicWrapper(app, ['districtvisitors'], () => import('../routes/Store/Attraction/index')),
+        component: dynamicWrapper(app, ['districtvisitors', 'purchase'], () => import('../routes/Store/Attraction/index')),
       },
 
       {

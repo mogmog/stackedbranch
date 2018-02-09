@@ -11,3 +11,10 @@ export async function queryDistrictAttractionTotals(payload) {
 export async function queryProfile(payload) {
   return request('/api/ng_event/profiles');
 }
+
+
+export async function queryPurchase(payload) {
+  return request(`/api/ng_event/purchase/${payload.home_district_name}/${payload.type_visitor}`);
+}
+
+

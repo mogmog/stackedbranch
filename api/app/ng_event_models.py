@@ -11,6 +11,13 @@ class ZoneDistrict(db.Model):
         db.Column('visitors', db.Integer, primary_key=True),
         )
 
+class PurchDistrict(db.Model):
+    __table__ = db.Table('ng_event_tableau_purch_district', db.Model.metadata,
+        db.Column('gender', db.String, primary_key=True),
+        db.Column('age', db.String, primary_key=True),
+        db.Column('type_visitor', db.String, primary_key=True),
+        db.Column('home_district_name', db.String, primary_key=True)
+        )
 
 class AttractionTotal(db.Model):
     __table__ = db.Table('ng_event_tableau_tot', db.Model.metadata,

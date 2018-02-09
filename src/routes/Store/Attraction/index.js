@@ -39,6 +39,11 @@ export default class Attraction extends PureComponent {
     });
 
     dispatch({
+      type: 'purchase/fetch',
+      payload: {'home_district_name' : 'Barajas', 'type_visitor' : 'Visitor'}
+    });
+
+    dispatch({
       type: 'districtvisitors/fetch_attraction_totals',
       payload: {}
     });

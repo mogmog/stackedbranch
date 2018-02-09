@@ -56,6 +56,7 @@ class ProfileHolder extends React.Component {
                     height={180}
                     radius={100}
                     label={(d) => d.key }
+
                   />
                 </Card>
 

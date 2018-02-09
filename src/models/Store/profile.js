@@ -15,6 +15,26 @@ class Profile {
     this.ageDimensionCount = this.ageDimension.group();
 
 
+    this.ageDimensionCountPercent = this.ageDimensionCount.reduce(
+      function(p, v) {
+        console.log(p);
+        ++p.count;
+        return p;
+      },
+      function(p, v) {
+        --p.count;
+        return p;
+      },
+      function() {
+        return {
+          count: 0,
+        };
+      }
+    );
+
+
+
+
   }
 }
 
