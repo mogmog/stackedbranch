@@ -1,9 +1,13 @@
 import { queryPurchase } from '../../services/ng_event_api';
+import _ from 'lodash';
 
 class Purchases {
 
   constructor(data) {
-    this.data = data;
+    this.days             = data.days;
+    this.gender_totals    = _(data.gender).groupBy('gender').value();
+    this.groupedByGender  = _(data.gender_age).groupBy('gender').value();
+
   }
 
 }
@@ -12,7 +16,7 @@ export default {
   namespace: 'purchase',
 
   state: {
-    purchase : new Purchases([]),
+    purchase : new Purchases({days : [], gender : [], gender_age : []}),
     loading: true,
   },
 

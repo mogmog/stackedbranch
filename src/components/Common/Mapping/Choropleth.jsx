@@ -94,7 +94,7 @@ export default class Choropleth extends Component {
             data={feature}
 
             onClick={() => {onClick(feature)}}
-            onMouseOver={() =>{onMouseOver(feature)}}
+           /* onMouseOver={() =>{onMouseOver(feature)}}*/
             children={this.props.children ? this.cloneChildrenWithFeature(this.props, feature) : this.props.children}
           />)
         ) }

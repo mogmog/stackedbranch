@@ -15,6 +15,7 @@ class PurchDistrict(db.Model):
     __table__ = db.Table('ng_event_tableau_purch_district', db.Model.metadata,
         db.Column('gender', db.String, primary_key=True),
         db.Column('age', db.String, primary_key=True),
+        db.Column('start_dow', db.String, primary_key=True),
         db.Column('type_visitor', db.String, primary_key=True),
         db.Column('home_district_name', db.String, primary_key=True)
         )

@@ -21,6 +21,11 @@ class GenderAge extends Component {
 
   render() {
 
+    if (!this.props.data || !this.props.data.days.length) {
+      return (<span>no data</span>);
+    }
+
+    //console.log(this.props.data);
     return (
 
       <div>
@@ -32,11 +37,11 @@ class GenderAge extends Component {
 
         <Row gutter={24}>
           <Col xl={12} lg={12} md={12} sm={12} xs={24}>
-              <GenderAgeGraphic value={45} icon={'ic-man.svg'}/>
+              <GenderAgeGraphic gender="m" data={this.props.data} icon={'ic-man.svg'}/>
             </Col>
 
           <Col xl={12} lg={12} md={12} sm={12} xs={24}>
-              <GenderAgeGraphic value={55} icon={'ic-woman.svg'}/>
+              <GenderAgeGraphic gender="f" data={this.props.data} icon={'ic-woman.svg'}/>
             </Col>
         </Row>
 

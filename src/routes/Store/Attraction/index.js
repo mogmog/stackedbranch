@@ -17,10 +17,15 @@ import HourBar from '../../../components/Store/Attraction/HourBar';
 import GenderAge from '../../../components/Store/Attraction/GenderAge';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
 
-@connect(state => ({
-  districtvisitors: state.districtvisitors.visitors,
-  attraction_totals: state.districtvisitors.attraction_totals,
-}))
+@connect(state => {
+
+  return {
+    purchase: state.purchase.purchase,
+    districtvisitors: state.districtvisitors.visitors,
+    attraction_totals: state.districtvisitors.attraction_totals,
+  }
+})
+
 export default class Attraction extends PureComponent {
 
   constructor(props) {
@@ -39,13 +44,18 @@ export default class Attraction extends PureComponent {
     });
 
     dispatch({
-      type: 'purchase/fetch',
-      payload: {'home_district_name' : 'Barajas', 'type_visitor' : 'Visitor'}
-    });
-
-    dispatch({
       type: 'districtvisitors/fetch_attraction_totals',
       payload: {}
+    });
+  }
+
+  getGender(feature) {
+
+    const {dispatch} = this.props;
+
+    dispatch({
+      type: 'purchase/fetch',
+      payload: {'home_district_name' : feature.properties.name, 'type_visitor' : 'Visitor'}
     });
   }
 
@@ -58,6 +68,8 @@ export default class Attraction extends PureComponent {
   }
 
   render() {
+
+    const {purchase} = this.props;
 
     const work_dow_data = [{value : 32.01, text : 'Friday', hour_from : 20, hour_to : 24}, {value : 31.56, text : 'Saturday', hour_from : 16, hour_to : 24}, {value : 38.43, text : 'Sunday', hour_from : 10, hour_to : 20}];
 
@@ -172,7 +184,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <DistrictVisitorMap type={'home'} data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
+                  <DistrictVisitorMap type={'home'} districtClick={ this.getGender.bind(this) } data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
                 </Col>
               </Row>
 
@@ -180,7 +192,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <HourBar width={290}/>
+                  <HourBar data={purchase} width={290}/>
                 </Col>
               </Row>
 
@@ -188,7 +200,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <GenderAge/>
+                  {(purchase ? <GenderAge data={purchase}/> : <span></span>)}
                 </Col>
               </Row>
 
@@ -214,7 +226,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <HourBar width={290}/>
+                  <HourBar data={purchase} width={290}/>
                 </Col>
               </Row>
 
@@ -222,7 +234,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <GenderAge/>
+                  {(purchase ? <GenderAge data={purchase}/> : <span></span>)}
                 </Col>
               </Row>
 

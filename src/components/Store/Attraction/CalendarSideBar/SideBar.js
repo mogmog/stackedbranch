@@ -21,8 +21,6 @@ class SideBar extends Component {
 
   render() {
 
-
-    console.log(this.node);
     const {onDateSelect} = this.props;
 
     return (

@@ -11,7 +11,7 @@ class RegionChooserMap extends PureComponent {
 
   render() {
 
-    const {data} = this.props
+    const {data, districtClick} = this.props
 
     const style = {
       fillColor: 'white',
@@ -28,6 +28,7 @@ class RegionChooserMap extends PureComponent {
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
           <Choropleth
+                      onClick={(feature) => {districtClick(feature)}}
                       data={districts}
                       valueProperty={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
                       visible={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match  }}

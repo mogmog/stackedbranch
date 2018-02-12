@@ -20,7 +20,7 @@ class TimeBar extends Component {
         </defs>
 
         <g>
-          <rect className={styles.background} x={0} y={0} width={this.props.scale(24) + 50} height={(this.props.height - 5)}/>
+          <rect className={styles.background} x={0} y={0} width={this.props.scale(100) + 50} height={(this.props.height - 5)}/>
         </g>
 
         <g >
