@@ -20,8 +20,8 @@ class GenderAgeGraphic extends Component {
 
   render() {
 
-    const width = 125,
-      height = 125,
+    const width = 170,
+      height = 170,
       radius = Math.min(width, height) / 2;
 
     const {data, gender} = this.props;
@@ -33,16 +33,23 @@ class GenderAgeGraphic extends Component {
     var color = d3.scale.ordinal().range(["#FF77FF", "#BC0FE0", "#662188", "yellow", "blue"]);
 
     var arc = d3.svg.arc()
-      .outerRadius(radius - 10)
-      .innerRadius(radius - 30);
+      .outerRadius(radius - 30)
+      .innerRadius(radius - 10);
+
+    var textarc = d3.svg.arc()
+      .outerRadius(radius + 30)
+      .innerRadius(radius - 10);
 
     var pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
+
+    //console.log(pie(data.groupedByGender[gender]));
+
     return (
       <div>
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <div>
-              <h2 style={{'float' : 'left', 'paddingLeft' : '1em', 'marginBottom' : '-1.32em'}}>{d3.format(".000%")(data.gender_totals[gender][0].percent)}</h2>
+              <h2 style={{'float' : 'left', 'paddingLeft' : '3.5em', 'marginBottom' : '-1.32em'}}>{d3.format(".01%")(data.gender_totals[gender][0].percent)}</h2>
               <ReactSVG path={require(`../../../../assets/svg/${this.props.icon}`)} />
             </div>
 
@@ -51,13 +58,17 @@ class GenderAgeGraphic extends Component {
 
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-              <svg width={width} height={height} transform="translate(-8, 0)">
-              <g transform={"translate(" + width / 2 + "," + height / 2 + ")"}>
+              <svg width={width * 1.5} height={height* 1.5} transform="translate(0, 15)">
+              <g transform={"translate(" + width / 1.5 + "," + height / 2 + ")"}>
                 {
                   pie(data.groupedByGender[gender]).map((d, i) => (
 
                     <g className="arc" key={i}>
                         <path d={arc(d)} style={{'fill' : color(d.data.count)}}></path>
+
+                        <g transform="translate(0, 13)">
+                          <text fill='gray' text-anchor='middle' transform={`translate(${textarc.centroid(d)})`}>{d.data.age}</text>
+                        </g>
                     </g>
                   ))
                 }
