@@ -26,7 +26,7 @@ class GenderAgeGraphic extends Component {
 
     const {data, gender} = this.props;
 
-    console.log(data);
+   // console.log(data);
 
 
 
@@ -37,7 +37,6 @@ class GenderAgeGraphic extends Component {
       .innerRadius(radius - 30);
 
     var pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
-
     return (
       <div>
         <Row gutter={24}>
@@ -53,15 +52,16 @@ class GenderAgeGraphic extends Component {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
               <svg width={width} height={height} transform="translate(-8, 0)">
-              {/*<g transform={"translate(" + width / 2 + "," + height / 2 + ")"}>
+              <g transform={"translate(" + width / 2 + "," + height / 2 + ")"}>
                 {
-                  pie(data).map((d, i) => (
+                  pie(data.groupedByGender[gender]).map((d, i) => (
+
                     <g className="arc" key={i}>
                         <path d={arc(d)} style={{'fill' : color(d.data.count)}}></path>
                     </g>
                   ))
                 }
-              </g>*/}
+              </g>
               </svg>
           </Col>
         </Row>
