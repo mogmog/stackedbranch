@@ -1,24 +1,53 @@
 import Leaflet from 'leaflet';
-import { MapLayer } from 'react-leaflet';
+import {MapLayer} from 'react-leaflet';
 import 'leaflet-d3-svg-overlay';
+import _ from 'lodash';
+import polylabel from '@mapbox/polylabel';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import DistrictLabel from './DistrictLabel';
 
-class DistrictVisitorSlider extends MapLayer {
+class DistrictLabels extends MapLayer {
+
+  hasRun = false;
 
   componentWillReceiveProps() {
   }
 
-  applyAttributes(selection) {
-    this.svg.attr('transform', `translate(${this.props.x}, 0)`);
-  }
 
   componentWillMount() {
 
     let that = this;
 
+    const {data, districts} = this.props;
+
+    const findDistrict = (name) => {
+      return _(districts.features).find(district => district.properties.name === name);
+    }
+
+
     that.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
 
         that.svg = svg;
-        svg.append('rect').attr({x: 0, y: 10, width: 100, height: 800, fill: 'red'});
+        that.projection = projection;
+
+        const elements = [];
+        const sum = _(data).sumBy(x => x.visitors);
+        data.forEach((thing) => {
+
+          const district = findDistrict(thing.district_name, districts);
+
+          if (district) {
+           const center = (polylabel(district.geometry.coordinates[0]));
+           elements.push(<DistrictLabel text={d3.format(".01%")(thing.visitors/sum)} latlng={[center[0], center[1]]} projection={projection}/>);
+          }
+        });
+
+
+
+
+          ReactDOM.render(elements, svg[0][0]);
+
 
         this.leafletElement.addTo(this.context.map);
     });
@@ -28,10 +57,8 @@ class DistrictVisitorSlider extends MapLayer {
 
 
   render() {
-    const that = this;
-    if (that.svg) that.svg.select('rect').call(() => { that.applyAttributes()});
     return null;
   }
 }
 
-export default DistrictVisitorSlider;
+export default DistrictLabels;

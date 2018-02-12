@@ -148,7 +148,6 @@ class StoreLayout extends React.PureComponent {
         );
       }
       //const icon = item.icon && <Icon type={item.icon} />;
-      console.log(item.icon);
       const icon = item.icon && <ReactSVG path={require(`../assets/svg/${item.icon}`)} />;
 
       return (

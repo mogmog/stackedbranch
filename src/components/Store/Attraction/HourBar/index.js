@@ -26,7 +26,6 @@ class HourBar extends Component {
   render() {
 
     //const items= [{text : 'Friday', value : 31.89, hour_from : 0, hour_to : 22}, {text : 'Saturday', value : 21.89, hour_from : 16, hour_to : 20}, {text : 'Sunday', value : 11.89, hour_from : 21, hour_to : 23}];
-    console.log(this.props);
     const {days} = this.props.data;
 
     return (
@@ -38,7 +37,6 @@ class HourBar extends Component {
         <h6>and hour of most frequency</h6>
         {
           days.map((d, i) => {
-              console.log(i);
               if (i <=2) return (<div key={i}>
                   <h4>{d3.format('.1%')(d.percent)}</h4>
                   {<h6>{d.start_dow}</h6>}

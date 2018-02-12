@@ -37,7 +37,7 @@ class GenderAgeGraphic extends Component {
       .innerRadius(radius - 10);
 
     var textarc = d3.svg.arc()
-      .outerRadius(radius + 30)
+      .outerRadius(radius + 40)
       .innerRadius(radius - 10);
 
     var pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
@@ -49,7 +49,7 @@ class GenderAgeGraphic extends Component {
         <Row gutter={24}>
           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
             <div>
-              <h2 style={{'float' : 'left', 'paddingLeft' : '3.5em', 'marginBottom' : '-1.32em'}}>{d3.format(".01%")(data.gender_totals[gender][0].percent)}</h2>
+              <h2 style={{'float' : 'left', 'paddingLeft' : '3.2em', 'paddingRight' : '0.35em', 'marginBottom' : '-1.32em'}}>{d3.format(".01%")(data.gender_totals[gender][0].percent)}</h2>
               <ReactSVG path={require(`../../../../assets/svg/${this.props.icon}`)} />
             </div>
 
@@ -63,10 +63,10 @@ class GenderAgeGraphic extends Component {
                 {
                   pie(data.groupedByGender[gender]).map((d, i) => (
 
-                    <g className="arc" key={i}>
+                    <g className="arc" key={i} transform="translate(0, 15)">
                         <path d={arc(d)} style={{'fill' : color(d.data.count)}}></path>
 
-                        <g transform="translate(0, 13)">
+                        <g transform="translate(5, 10)">
                           <text fill='gray' text-anchor='middle' transform={`translate(${textarc.centroid(d)})`}>{d.data.age}</text>
                         </g>
                     </g>

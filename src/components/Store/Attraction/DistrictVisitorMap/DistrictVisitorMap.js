@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 import Choropleth from '../../../Common/Mapping/Choropleth';
-import * as topojson from 'topojson';
+import DistrictLabels from './DistrictLabels';
 
 var districts = require('json!./madrid_districts.geo.json');
 
@@ -16,17 +16,18 @@ class RegionChooserMap extends PureComponent {
     const style = {
       fillColor: 'white',
       weight: 2,
-      opacity: 0.5,
+      opacity: 0.7,
       color: 'white',
-      fillOpacity: 0.5,
+      fillOpacity: 0.7,
     }
 
     return (
-      <div style={{'width' : '350px'}}>
+      <div style={{'width' : '100%'}}>
 
         <Map ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{ 'height': '280px'}}>
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+
           <Choropleth
                       onClick={(feature) => {districtClick(feature)}}
                       data={districts}
@@ -38,6 +39,8 @@ class RegionChooserMap extends PureComponent {
            style={style}
            mode='e'
            />
+
+          <DistrictLabels districts={districts} data={data}/>
 
 
         </Map>
