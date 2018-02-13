@@ -11,6 +11,12 @@ class DistrictVisitorSlider extends MapLayer {
     this.svg.attr('transform', `translate(${this.props.x}, 0)`);
   }
 
+
+  componentWillUnmount() {
+    super.componentWillMount();
+    this.leafletElement.remove();
+  }
+
   componentWillMount() {
 
     let that = this;

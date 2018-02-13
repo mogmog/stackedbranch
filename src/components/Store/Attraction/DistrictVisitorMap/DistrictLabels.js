@@ -7,9 +7,6 @@ import 'leaflet-d3-svg-overlay';
 import d3 from 'd3';
 import polylabel from '@mapbox/polylabel';
 
-import DistrictLabel from './DistrictLabel';
-
-
 class DistrictLabels extends MapLayer {
 
   elements = [];
@@ -39,23 +36,14 @@ class DistrictLabels extends MapLayer {
     console.log(this.props);
 
     this.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
-
       this.svg = svg;
       this.projection = projection;
-
-      let startingPoint = new Leaflet.LatLng(40.458527, -3.691853);
-      let unit = 0.0001;
-
-      //this.applyAttributes(svg);
-
-
     });
 
     if (this.props.map) this.leafletElement.addTo(this.props.map);
   }
 
   componentWillUnmount() {
-    super.componentWillMount();
     this.leafletElement.remove();
   }
 

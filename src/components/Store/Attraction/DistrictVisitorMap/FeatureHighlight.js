@@ -7,21 +7,13 @@ import polylabel from '@mapbox/polylabel';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import DistrictLabel from './DistrictLabel';
-
 class FeatureHighlight extends MapLayer {
 
   hasRun = false;
 
-  componentWillReceiveProps() {
-  }
-
-
   componentWillMount() {
 
     let that = this;
-
-
 
     that.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
       that.svg = svg;
@@ -29,9 +21,11 @@ class FeatureHighlight extends MapLayer {
     });
 
     if (this.props.map) this.leafletElement.addTo(this.props.map);
-
   }
 
+  componentWillUnmount() {
+    this.leafletElement.remove();
+  }
 
   render() {
     const { highlightedfeature } = this.props;

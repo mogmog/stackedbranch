@@ -3,7 +3,7 @@ import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button, Icon, Spin} from 'antd';
 import dc from 'dc';
 
-import ProfileHolder from '../../../components/Store/Profile/Profile';
+//import BattleGround from '../../../components/Store/Profile/Profile';
 
 @connect(state => {
 
@@ -13,7 +13,7 @@ import ProfileHolder from '../../../components/Store/Profile/Profile';
   }
 })
 
-export default class Profile extends PureComponent {
+export default class BattleGround extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -53,7 +53,7 @@ export default class Profile extends PureComponent {
 
     return (
       <Spin spinning={loading}>
-        <ProfileHolder profile={profile}/>
+        {/*<ProfileHolder profile={profile}/>*/}
         {profile.data.length}
       </Spin>
 
