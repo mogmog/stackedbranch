@@ -1,5 +1,28 @@
 import { getUrlParams } from './utils';
 
+export const getAttractionTotals = {
+  "totals": {
+    "list": [
+      {
+        "num_visitors": 130235,
+        "zone_visitors": "Influence area"
+      },
+      {
+        "num_visitors": 101608,
+        "zone_visitors": "Walk bys"
+      },
+      {
+        "num_visitors": 68067,
+        "zone_visitors": "In Store"
+      },
+      {
+        "num_visitors": 11537,
+        "zone_visitors": "Buy"
+      }
+    ]
+  }
+}
+
 
 export const getDistricts = {
   "home": {
