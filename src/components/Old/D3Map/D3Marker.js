@@ -11,7 +11,7 @@ class D3MarkerCluster extends MapLayer {
 
     this.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
 
-      let startingPoint = new Leaflet.LatLng(51.51451110408478, -0.12620388576521444);
+      let startingPoint = new Leaflet.LatLng(40.458527, -3.691853);
       let unit = 0.0001;
 
       let data = [];

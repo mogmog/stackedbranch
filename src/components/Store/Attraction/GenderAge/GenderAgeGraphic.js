@@ -67,7 +67,7 @@ class GenderAgeGraphic extends Component {
                         <path d={arc(d)} style={{'fill' : color(d.data.count)}}></path>
 
                         <g transform="translate(5, 10)">
-                          <text fill='gray' text-anchor='middle' transform={`translate(${textarc.centroid(d)})`}>{d.data.age}</text>
+                          <text fill='gray' textAnchor='middle' transform={`translate(${textarc.centroid(d)})`}>{d.data.age}</text>
                         </g>
                     </g>
                   ))

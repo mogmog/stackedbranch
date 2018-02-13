@@ -69,7 +69,10 @@ export default class Attraction extends PureComponent {
 
   render() {
 
-    const {purchase} = this.props;
+    const {purchase, districtvisitors } = this.props;
+    console.log("*******");
+    console.log(districtvisitors);
+    console.log("*******");
 
     const work_dow_data = [{value : 32.01, text : 'Friday', hour_from : 20, hour_to : 24}, {value : 31.56, text : 'Saturday', hour_from : 16, hour_to : 24}, {value : 38.43, text : 'Sunday', hour_from : 10, hour_to : 20}];
 
@@ -184,7 +187,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <DistrictVisitorMap type={'home'} districtClick={ this.getGender.bind(this) } data={this.props.districtvisitors.home.list}></DistrictVisitorMap>
+                  <DistrictVisitorMap type={'home'} districtClick={ this.getGender.bind(this) } data={districtvisitors}></DistrictVisitorMap>
                 </Col>
               </Row>
 
@@ -218,7 +221,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>
+                {/*  <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>*/}
                 </Col>
               </Row>
 

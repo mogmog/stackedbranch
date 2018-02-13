@@ -1,17 +1,24 @@
 import React, { PureComponent } from 'react';
-import { Map, TileLayer, GeoJSON } from 'react-leaflet';
+import { Map, TileLayer, GeoJSON, CircleMarker, Marker, Tooltip, Popup} from 'react-leaflet';
 import Choropleth from '../../../Common/Mapping/Choropleth';
 import DistrictLabels from './DistrictLabels';
 
+import FeatureHighlight from './FeatureHighlight';
+
 var districts = require('json!./madrid_districts.geo.json');
+
 
 class RegionChooserMap extends PureComponent {
 
   state = {};
 
+  districtHover(feature) {
+    this.setState({'highlightedfeature' : feature});
+  }
+
   render() {
 
-    const {data, districtClick} = this.props
+    const {data, districtClick, districtHover} = this.props;
 
     const style = {
       fillColor: 'white',
@@ -28,20 +35,28 @@ class RegionChooserMap extends PureComponent {
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
-          <Choropleth
-                      onClick={(feature) => {districtClick(feature)}}
-                      data={districts}
-                      valueProperty={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
-                      visible={(feature) => { const match =  data.find((x) => x.district_name === feature.properties.name); return match  }}
 
-           scale={['#7F387F', '#FF77FF']}
-           steps={20}
-           style={style}
-           mode='e'
-           />
 
-          <DistrictLabels districts={districts} data={data}/>
+            <Choropleth
+                        onClick={(feature) => {districtClick(feature)}}
+                        onMouseOver={(feature) => this.districtHover(feature)}
+                        data={districts}
+                        valueProperty={(feature) => { const match =  data.work.list.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
+                        visible={(feature) => { const match =  data.work.list.find((x) => x.district_name === feature.properties.name); return match  }}
 
+             scale={['#7F387F', '#FF77FF']}
+             steps={20}
+             style={style}
+             mode='e'
+
+             />
+
+          <Marker position={[40.408527, -3.641853]} >
+          </Marker>
+
+          <DistrictLabels  districts={districts}  data={data.work.list} map={this.map}/>
+
+          <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
 
         </Map>
       </div>
