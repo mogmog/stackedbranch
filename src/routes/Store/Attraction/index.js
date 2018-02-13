@@ -20,7 +20,8 @@ import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVis
 @connect(state => {
 
   return {
-    purchase: state.purchase.purchase,
+    visitors: state.purchase.visitors,
+    workers: state.purchase.workers,
     districtvisitors: state.districtvisitors.visitors,
     attraction_totals: state.districtvisitors.attraction_totals,
   }
@@ -49,14 +50,24 @@ export default class Attraction extends PureComponent {
     });
   }
 
-  getGender(feature) {
+  getGender(feature, type) {
 
     const {dispatch} = this.props;
 
-    dispatch({
-      type: 'purchase/fetch',
-      payload: {'home_district_name' : feature.properties.name, 'type_visitor' : 'Visitor'}
-    });
+    if (type === 'Visitor') {
+      dispatch({
+        type: 'purchase/fetch',
+        payload: {'home_district_name' : feature.properties.name, 'type_visitor' : 'Visitor'}
+      });
+    }
+
+    if (type === 'Worker') {
+      dispatch({
+        type: 'purchase/fetch',
+        payload: {'home_district_name' : feature.properties.name, 'type_visitor' : 'Worker'}
+      });
+    }
+
   }
 
   printDocument() {
@@ -69,12 +80,7 @@ export default class Attraction extends PureComponent {
 
   render() {
 
-    const {purchase, districtvisitors } = this.props;
-    console.log("*******");
-    console.log(districtvisitors);
-    console.log("*******");
-
-    const work_dow_data = [{value : 32.01, text : 'Friday', hour_from : 20, hour_to : 24}, {value : 31.56, text : 'Saturday', hour_from : 16, hour_to : 24}, {value : 38.43, text : 'Sunday', hour_from : 10, hour_to : 20}];
+    const {visitors, workers, districtvisitors } = this.props;
 
     const pageHeaderContent = (
       <div>
@@ -187,7 +193,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <DistrictVisitorMap type={'home'} districtClick={ this.getGender.bind(this) } data={districtvisitors}></DistrictVisitorMap>
+                  <DistrictVisitorMap type={'home'} districtClick={ ((feature) => this.getGender(feature, 'Visitor')) } data={districtvisitors}></DistrictVisitorMap>
                 </Col>
               </Row>
 
@@ -195,7 +201,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <HourBar data={purchase} width={290}/>
+                  <HourBar data={visitors} width={290}/>
                 </Col>
               </Row>
 
@@ -203,7 +209,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  {(purchase ? <GenderAge data={purchase}/> : <span></span>)}
+                  {(visitors ? <GenderAge data={visitors}/> : <span></span>)}
                 </Col>
               </Row>
 
@@ -221,7 +227,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                {/*  <DistrictVisitorMap type={'work'} data={this.props.districtvisitors.work.list}></DistrictVisitorMap>*/}
+                  <DistrictVisitorMap type={'work'} districtClick={ ((feature) => this.getGender(feature, 'Worker')) }  data={districtvisitors}></DistrictVisitorMap>
                 </Col>
               </Row>
 
@@ -229,7 +235,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  <HourBar data={purchase} width={290}/>
+                  <HourBar data={workers} width={290}/>
                 </Col>
               </Row>
 
@@ -237,7 +243,7 @@ export default class Attraction extends PureComponent {
 
               <Row gutter={24}>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                  {(purchase ? <GenderAge data={purchase}/> : <span></span>)}
+                  {(workers ? <GenderAge data={workers}/> : <span></span>)}
                 </Col>
               </Row>
 

@@ -18,7 +18,7 @@ class RegionChooserMap extends PureComponent {
 
   render() {
 
-    const {data, districtClick, districtHover} = this.props;
+    const {data, type, districtClick, districtHover} = this.props;
 
     const style = {
       fillColor: 'white',
@@ -41,8 +41,8 @@ class RegionChooserMap extends PureComponent {
                         onClick={(feature) => {districtClick(feature)}}
                         onMouseOver={(feature) => this.districtHover(feature)}
                         data={districts}
-                        valueProperty={(feature) => { const match =  data.work.list.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
-                        visible={(feature) => { const match =  data.work.list.find((x) => x.district_name === feature.properties.name); return match  }}
+                        valueProperty={(feature) => { const match =  data[type].list.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
+                        visible={(feature) => { const match =  data[type].list.find((x) => x.district_name === feature.properties.name); return match  }}
 
              scale={['#7F387F', '#FF77FF']}
              steps={20}
@@ -51,10 +51,9 @@ class RegionChooserMap extends PureComponent {
 
              />
 
-          <Marker position={[40.408527, -3.641853]} >
-          </Marker>
+          <Marker position={[40.408527, -3.641853]} ></Marker>
 
-          <DistrictLabels  districts={districts}  data={data.work.list} map={this.map}/>
+          <DistrictLabels  districts={districts}  data={data[type].list} map={this.map}/>
 
           <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
 
