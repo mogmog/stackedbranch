@@ -22,8 +22,8 @@ export default class Choropleth extends Component {
     const colors = {}
     const features = Array.isArray(data) ? data : data.features
 
-    const values = features.map(item => this.isFunction(valueProperty)
-      ? valueProperty(item)
+    const values = features.map((item, i) => this.isFunction(valueProperty)
+      ? valueProperty(item, i)
       : item.properties[valueProperty])
 
     colors.limits = chroma.limits(values, mode, steps - 1)
@@ -89,12 +89,12 @@ export default class Choropleth extends Component {
           (<GeoJSON
             key={(identity) ? identity(feature) : idx}
             {...options}
-            style={this.getStyle(chroms, feature)}
+            style={this.getStyle(chroms, feature, idx)}
             {...this.getStyle(chroms, feature, idx)}
             data={feature}
 
-            onClick={() => {onClick(feature)}}
-          onMouseOver={() =>{onMouseOver(feature)}}
+            onClick={() => {if (this.isFunction(onClick)) onClick(feature)}}
+          onMouseOver={() =>{if (this.isFunction(onMouseOver)) onMouseOver(feature)}}
           children={this.props.children ? this.cloneChildrenWithFeature(this.props, feature) : this.props.children}
           />)
         ) }

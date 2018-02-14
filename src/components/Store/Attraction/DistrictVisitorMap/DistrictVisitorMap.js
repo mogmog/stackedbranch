@@ -5,7 +5,7 @@ import DistrictLabels from './DistrictLabels';
 
 import FeatureHighlight from './FeatureHighlight';
 
-var districts = require('json!./madrid_districts.geo.json');
+var districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo');
 
 
 class RegionChooserMap extends PureComponent {

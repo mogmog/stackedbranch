@@ -1,7 +1,7 @@
 import mockjs from 'mockjs';
 import { getArea} from './mock/area';
 import { getActivities, getNotice, getFakeList } from './mock/api';
-import {getDistricts, getAttractionTotals} from './mock/ng_event';
+import {getDistricts, getAttractionTotals, getProfiles} from './mock/ng_event';
 import { getNotices } from './mock/notices';
 
 const noProxy = process.env.NO_PROXY === 'true';
@@ -27,6 +27,7 @@ const proxy = {
   'GET /api/sites': {list : []},
   'GET /api/ng_event/districts' : getDistricts,
   'GET /api/ng_event/attractiontotals' : getAttractionTotals,
+  'GET /api/ng_event/profiles' : getProfiles,
   'GET /api/project/notice': getNotice,
   'GET /api/activities': getActivities,
   'GET /api/areas': getArea,

@@ -2,8 +2,12 @@ import React, {PureComponent} from 'react';
 import {connect} from 'dva';
 import {Row, Col, Card, Divider, Button, Icon, Spin} from 'antd';
 import dc from 'dc';
+import Transition from 'react-motion-ui-pack'
 
-//import BattleGround from '../../../components/Store/Profile/Profile';
+import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
+import DistrictCard from './DistrictCard';
+
+import styles from './index.less';
 
 @connect(state => {
 
@@ -19,6 +23,7 @@ export default class BattleGround extends PureComponent {
     super(props);
 
     this.state = {
+      selecteddistricts: []
     };
   }
 
@@ -29,32 +34,47 @@ export default class BattleGround extends PureComponent {
       type: 'profile/fetch',
       payload: {}
     });
+  }
 
-    dc.redrawAll();
-
+  districtClick(district) {
+    this.setState({selecteddistricts: [...this.state.selecteddistricts, district]});
   }
 
   render() {
 
     const {loading, profile} = this.props.profile;
-    console.log(profile);
-
-    const pageHeaderContent = (
-      <div>
-
-        <div>
-
-          <h1>Profile</h1>
-          <small>Something</small>
-        </div>
-
-      </div>
-    );
+    const { selecteddistricts } = this.state;
 
     return (
       <Spin spinning={loading}>
-        {/*<ProfileHolder profile={profile}/>*/}
-        {profile.data.length}
+        <div className={styles.battleground}>
+          <Row gutter={24}>
+
+            <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+                <BattlegroundMap districtClick={this.districtClick.bind(this)}></BattlegroundMap>
+            </Col>
+
+            <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+
+              <Transition
+                component="ul"
+
+                enter={{
+                  opacity: 1,
+                }}
+                leave={{
+                  opacity: 0,
+                }}
+              >
+                { selecteddistricts.map((district, i) =>
+                  <li key={i}><DistrictCard district={district}/></li>
+                )
+                }
+              </Transition>
+
+            </Col>
+          </Row>
+        </div>
       </Spin>
 
     );

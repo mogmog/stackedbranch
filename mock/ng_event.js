@@ -1,5 +1,44 @@
 import { getUrlParams } from './utils';
 
+export const getProfiles = [
+  {
+    "age": "18-29",
+    "country": "Espa\ufffda",
+    "date": "2016-06-02",
+    "gender": "f",
+    "name_province": "Cuenca",
+    "nationality": "National",
+    "period": "Morning",
+    "rent": "Low",
+    "type_visitor": "Turista",
+    "zone": "Zone 1"
+  },
+  {
+    "age": "18-29",
+    "country": "Espa\ufffda",
+    "date": "2016-06-16",
+    "gender": "m",
+    "name_province": "Guadalajara",
+    "nationality": "National",
+    "period": "Evening",
+    "rent": "High",
+    "type_visitor": "Excursionista",
+    "zone": "Zone 1"
+  },
+  {
+    "age": "40-49",
+    "country": "Espa\ufffda",
+    "date": "2016-06-26",
+    "gender": "m",
+    "name_province": "Madrid",
+    "nationality": "National",
+    "period": "Evening",
+    "rent": "High",
+    "type_visitor": "Excursionista",
+    "zone": "Zone 2"
+  }
+]
+
 export const getAttractionTotals = {
   "totals": {
     "list": [

@@ -11,7 +11,7 @@ import DistrictVisitorSlider from './DistrictVisitorSlider';
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 
-var districts = require('json!./madrid_districts.geo.json');
+var districts = require('json!../../../../assets/mapping/geojson/madrid_districts.geo.json');
 
 class DistrictVisitorMapLayers extends PureComponent {
 
