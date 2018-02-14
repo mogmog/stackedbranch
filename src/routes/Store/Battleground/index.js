@@ -5,7 +5,7 @@ import dc from 'dc';
 import Transition from 'react-motion-ui-pack'
 
 import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
-import DistrictCard from './DistrictCard';
+import DistrictCard from '../../../components/Store/Battleground/Cards/DistrictCard';
 
 import styles from './index.less';
 

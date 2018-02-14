@@ -27,7 +27,7 @@ class BattlegroundMap extends PureComponent {
     return (
       <div style={{'width' : '100%'}}>
 
-        <Map ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={14} style={{'height': '100vh'}} >
+        <Map doubleClickZoom={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={14} style={{'height': '100vh'}} >
 
           <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
