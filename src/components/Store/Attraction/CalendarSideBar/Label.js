@@ -16,13 +16,15 @@ class Label extends Component {
 
   render() {
 
-    const {range} =  this.props;
+    const {range, click} =  this.props;
 
     return (
 
-      <div style={{width: '30px'}} onClick={this.props.click}>
-        <Icon type={'calendar'} />
-        {range.length ? (<span>{range[0].format('MM/DD/YYYY')} - {range[1].format('MM/DD/YYYY')}</span>) : <span></span>}
+      <div  >
+        <span onClick={this.props.click} style={{ "width" : "30px", "height" : "20px"}}> <Icon  type={'calendar'} /> </span>
+
+        <span style={{"width" : "230px"}}> {range.length ? (<span>{range[0].format('MM/DD/YYYY')} - {range[1].format('MM/DD/YYYY')}</span>) : <span></span>} </span>
+
       </div>
     );
   }

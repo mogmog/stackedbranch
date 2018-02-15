@@ -18,7 +18,7 @@ export default class DistrictGenderCard extends PureComponent {
     console.log(data);
 
     return (
-      <Card >
+      <Card>
         <h2>{district.properties.name} {d3.format(".1%")(data.getHighest())} </h2>
 
         <h4 style={{'marginTop' : '-1em'}}>{data.total}</h4>
@@ -29,7 +29,7 @@ export default class DistrictGenderCard extends PureComponent {
               <ReactSVG path={require('../../../../assets/svg/ic-man.svg')} />
           </Col>
 
-          <Col xl={18} lg={16} md={24} sm={24} xs={24}>
+          <Col xl={18} lg={18} md={24} sm={24} xs={24}>
             <GenderBar data={data}></GenderBar>
           </Col>
 

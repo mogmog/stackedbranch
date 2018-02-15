@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON, CircleMarker, Marker, Tooltip, Popup} from 'react-leaflet';
 import Choropleth from '../../../Common/Mapping/Choropleth';
-import DistrictLabels from './DistrictLabels';
 
+import StoreIcon from '../../../Common/Mapping/StoreIcon';
+import DistrictLabels from './DistrictLabels';
 import FeatureHighlight from './FeatureHighlight';
 
 var districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo');
@@ -51,9 +52,9 @@ class RegionChooserMap extends PureComponent {
 
              />
 
-          <Marker position={[40.408527, -3.641853]} ></Marker>
+          <Marker position={[40.408527, -3.641853]} icon={StoreIcon}/>
 
-          <DistrictLabels  districts={districts}  data={data[type].list} map={this.map}/>
+          <DistrictLabels districts={districts}  data={data[type].list} map={this.map}/>
 
           <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
 

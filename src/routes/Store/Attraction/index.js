@@ -4,10 +4,7 @@ import {Row, Col, Card, Divider, Button, Icon} from 'antd';
 import ReactSVG from 'react-svg';
 import MotionMenu from '../../../ext/react-motion-menu/src';
 
-import domtoimage from 'dom-to-image';
-import FileSaver from 'file-saver';
-
-
+import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
 import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
@@ -70,14 +67,6 @@ export default class Attraction extends PureComponent {
 
   }
 
-  printDocument() {
-
-    domtoimage.toBlob(document.getElementById('root'))
-      .then(function (blob) {
-        FileSaver.saveAs(blob, 'attraction_power.png');
-      });
-  }
-
   render() {
 
     const {visitors, workers, districtvisitors } = this.props;
@@ -94,30 +83,9 @@ export default class Attraction extends PureComponent {
           <h1>Overview: Attraction power</h1>
           <small>Know your attraction power from total pedestrians to sales and take a general perspective of target</small>
 
-          {/*TODO put this in a component*/}
-
           <div style={{'height' : '60px', 'right' : '83px', top : '151px', 'zIndex' : 999, position: 'absolute'}} >
-
-          <MotionMenu
-            type="horizontal"
-            reverse={true}
-            margin={60}
-          >
-            <div>
-              <ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')} />
-            </div>
-
-            <div onClick={this.printDocument.bind(this)} style={{'marginTop' : '5px'}}>
-              <ReactSVG path={require('../../../assets/svg/share-button.svg')} />
-            </div>
-
-            <div onClick={this.printDocument.bind(this)} style={{'marginTop' : '5px'}}>
-              <ReactSVG path={require('../../../assets/svg/screen-shot-button.svg')}  />
-            </div>
-
-          </MotionMenu>
+            <PrintMenu/>
           </div>
-
 
         </div>
 

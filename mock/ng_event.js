@@ -36,7 +36,38 @@ export const getProfiles = [
     "rent": "High",
     "type_visitor": "Excursionista",
     "zone": "Zone 2"
-  }
+  },
+
+  {
+    "age": "40-49",
+    "country": "Espa\ufffda",
+    "date": "2016-06-26",
+    "gender": "f",
+    "name_province": "Salamanca",
+    "nationality": "National",
+    "period": "Evening",
+    "rent": "High",
+    "type_visitor": "Excursionista",
+    "zone": "Zone 2"
+  },
+
+  {
+    "age": "40-49",
+    "country": "Espa\ufffda",
+    "date": "2016-06-26",
+    "gender": "m",
+    "name_province": "Salamanca",
+    "nationality": "National",
+    "period": "Evening",
+    "rent": "High",
+    "type_visitor": "Excursionista",
+    "zone": "Zone 2"
+  },
+
+
+
+
+
 ]
 
 export const getAttractionTotals = {

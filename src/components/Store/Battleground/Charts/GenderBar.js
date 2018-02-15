@@ -18,7 +18,8 @@ class GenderBar extends Component {
   render() {
 
     const { data } = this.props;
-
+    console.log(data);
+    console.log(data.total ? this.scale(1) - this.scale((data.f/data.total)) : 0);
     return (
         <div className={styles.genderbar}>
 
@@ -36,8 +37,8 @@ class GenderBar extends Component {
 
                 <g transform="translate(0, 20)">
                   <rect  fill="#E6E6E6" x={0} y={0} width={this.scale(1)} height={(20)}/>
-                  <rect  fill="lightblue" x={0} y={0} width={data.m ? this.scale((data.m/data.total)) : 0} height={(20)}/>
-                  <rect  fill="pink" x={data.f ? this.scale(1) - this.scale((data.f/data.total)) : 0} y={0} width={this.scale(1)} height={(20)} />
+                  <rect  fill="lightblue" x={0} y={0} width={data.total ? this.scale((data.m/data.total)) : 0} height={(20)}/>
+                  <rect transform={`translate(${data.total ? this.scale((data.m/data.total)) : 0}, 0)`} fill="pink" x={0} y={0} width={data.total ? this.scale(data.f/data.total) : 0} height={(20)} />
                 </g>
 
               </svg>

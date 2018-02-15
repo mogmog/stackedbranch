@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import _ from 'lodash';
 
+import StoreIcon from '../../../Common/Mapping/StoreIcon';
 import Choropleth from '../../../Common/Mapping/Choropleth';
 
 const districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo.json');
@@ -37,14 +38,14 @@ class BattlegroundMap extends PureComponent {
             valueProperty={(feature, i) =>  {}}
             visible={(feature) => { return true }}
 
-            scale={['#7F387F', '#FF77FF']}
+            scale={['#29A5E9', '#7FD6D6']}
             steps={20}
             style={style}
             mode='e'
 
           />
 
-          <Marker position={[40.432127, -3.671853]} ></Marker>
+          <Marker position={[40.432127, -3.671853]} icon={StoreIcon}></Marker>
 
         </Map>
       </div>
