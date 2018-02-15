@@ -34,7 +34,7 @@ class BattlegroundMap extends PureComponent {
           <Choropleth
             onClick={districtClick}
             data={{'type' : 'featureCollection', 'features' : _(districts.features).filter(x=> _(districtsToShow).includes(x.properties.name)).value()}}
-            valueProperty={(feature, i) =>  {console.log(i)}}
+            valueProperty={(feature, i) =>  {}}
             visible={(feature) => { return true }}
 
             scale={['#7F387F', '#FF77FF']}

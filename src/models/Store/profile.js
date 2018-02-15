@@ -1,5 +1,6 @@
 import { queryProfile} from '../../services/ng_event_api';
 import crossfilter from 'crossfilter2/crossfilter';
+import _ from 'lodash';
 
 class Profile {
 
@@ -31,10 +32,23 @@ class Profile {
         };
       }
     );
+  }
 
+  getGroupedByGender(district) {
+    const buckets = {f : 0, m: 0, total : 0};
+    const grouped= _(this.data).filter(x => x.name_province === district).groupBy(x => x.gender).value();
 
+    _(grouped).forEach((items, key) => {
+      buckets[key] = items.length;
+      buckets.total += items.length;
+    });
 
+    buckets.getHighest = function() {
+      if (this.total === 0) return 0;
+      return (this.f > this.m) ? (this.f/this.total) : (this.m/this.total)
+    };
 
+    return buckets;
   }
 }
 

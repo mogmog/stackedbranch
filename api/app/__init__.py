@@ -397,7 +397,7 @@ def create_app(config_name):
     def profiles():
 
       results = []
-      for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.period, Profile.name_tur_zone).limit(1000):
+      for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.period, Profile.name_tur_zone).all():
         results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : result.name_province, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'period' : result.period, 'zone' : result.name_tur_zone })
 
       return make_response(jsonify(results)), 200

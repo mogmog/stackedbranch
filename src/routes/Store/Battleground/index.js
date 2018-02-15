@@ -5,7 +5,7 @@ import dc from 'dc';
 import Transition from 'react-motion-ui-pack'
 
 import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
-import DistrictCard from '../../../components/Store/Battleground/Cards/DistrictCard';
+import DistrictGenderCard from '../../../components/Store/Battleground/Cards/DistrictGenderCard';
 
 import styles from './index.less';
 
@@ -67,7 +67,7 @@ export default class BattleGround extends PureComponent {
                 }}
               >
                 { selecteddistricts.map((district, i) =>
-                  <li key={i}><DistrictCard district={district}/></li>
+                  <li key={i}><DistrictGenderCard profile={profile} district={district}/></li>
                 )
                 }
               </Transition>
