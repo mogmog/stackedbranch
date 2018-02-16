@@ -20,12 +20,13 @@ class GenderBar extends Component {
 
     const { data, gender, colors, title } = this.props;
     const safePercent = (a, b) => d3.format('.01%')(b ? (a/b) : 0);
-
     return (
         <div className={styles.genderbar}>
 
               <div style={{"float" : "left"}}>
-                <ReactSVG path={require('../../../../assets/svg/ic-man.svg')} />
+                {
+                  (gender === 'm') ? <ReactSVG path={require(`../../../../assets/svg/ic-man.svg`)} /> : <ReactSVG path={require(`../../../../assets/svg/ic-woman.svg`)} />
+                }
               </div>
 
               <svg width={this.width} height={this.height} transform="translate(5, 0)">

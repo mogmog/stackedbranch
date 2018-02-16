@@ -16,7 +16,7 @@ export default class DistrictGenderCard extends PureComponent {
 
     return (
 
-      <DistrictCard title={district.properties.name} total={data.total}>
+      <DistrictCard title={district.properties.name} total={data.total} height={170}>
 
         <Row gutter={24}>
 

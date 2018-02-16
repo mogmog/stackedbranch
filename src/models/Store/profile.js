@@ -1,6 +1,7 @@
 import { queryProfile} from '../../services/ng_event_api';
 import crossfilter from 'crossfilter2/crossfilter';
 import _ from 'lodash';
+import * as d3 from 'd3';
 
 class Profile {
 
@@ -14,24 +15,6 @@ class Profile {
 
     this.ageDimension = ndx.dimension(d => d.age);
     this.ageDimensionCount = this.ageDimension.group();
-
-
-    this.ageDimensionCountPercent = this.ageDimensionCount.reduce(
-      function(p, v) {
-        console.log(p);
-        ++p.count;
-        return p;
-      },
-      function(p, v) {
-        --p.count;
-        return p;
-      },
-      function() {
-        return {
-          count: 0,
-        };
-      }
-    );
   }
 
   getGroupedByGender(district) {
@@ -43,12 +26,17 @@ class Profile {
       buckets.total += items.length;
     });
 
-    buckets.getHighest = function() {
-      if (this.total === 0) return 0;
-      return (this.f > this.m) ? (this.f/this.total) : (this.m/this.total)
-    };
-
     return buckets;
+  }
+
+  getGroupedByGenderAndAge(district) {
+    const entries= _(this.data).filter(x => x.name_province === district).value();
+
+    /*'group by' 2 fields*/
+    return d3.nest()
+      .key((d) => d.gender)
+      .key((d) => d.age)
+      .entries(entries);
   }
 }
 
