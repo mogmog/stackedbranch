@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>ic-zoom-in</title>
+    <title>ic-zoom-out</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic-zoom-in">
-            <g id="zoom-copy" transform="translate(-5.000000, -5.000000)">
+        <g id="ic-zoom-out">
+            <g id="zoom" transform="translate(-5.000000, -5.000000)">
                 <g id="boton-copy-3" transform="translate(20.127603, 20.285714) rotate(-45.000000) translate(-20.127603, -20.285714) translate(6.127603, 6.285714)" fill="#999999" opacity="0.98999995">
                     <circle id="Oval" cx="14" cy="14" r="14"></circle>
                 </g>
-                <polygon id="+" fill="#FFFFFF" transform="translate(20.500000, 20.266149) rotate(-270.000000) translate(-20.500000, -20.266149) " points="19.7695652 27.7661491 21.2304348 27.7661491 21.2304348 12.7661491 19.7695652 12.7661491"></polygon>
+                <polygon id="+" fill="#FFFFFF" transform="translate(20.500000, 20.500000) rotate(-270.000000) translate(-20.500000, -20.500000) " points="19.9010239 27 21.1433447 27 21.1433447 21.1030928 27 21.1030928 27 19.9415808 21.1433447 19.9415808 21.1433447 14 19.9010239 14 19.9010239 19.9415808 14 19.9415808 14 21.1030928 19.9010239 21.1030928"></polygon>
             </g>
         </g>
     </g>
