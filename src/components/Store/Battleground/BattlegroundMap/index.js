@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Map, TileLayer, Marker } from 'react-leaflet';
+import { Map, TileLayer, Marker, GeoJSON, FeatureGroup  } from 'react-leaflet';
 import _ from 'lodash';
 
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
@@ -13,16 +13,18 @@ class BattlegroundMap extends PureComponent {
 
   render() {
 
-    const {data, type, districtClick, districtHover} = this.props;
+    const {data, type, districtClick, colors } = this.props;
 
-    const districtsToShow = ['Chamartin', 'Chamberi', 'Salamanca'];
+    const _districtsToShow = ['Chamartin', 'Chamberi', 'Salamanca'];
+    const districtsToShow = _(districts.features).filter(x=> _(_districtsToShow).includes(x.properties.name)).value();
 
-    const style = {
-      fillColor: 'lightblue',
-      weight: 2,
-      opacity: 0.5,
-      color: 'blue',
-      fillOpacity: 0.5,
+    const getStyle = (feature, layer) => {
+      return {
+        weight: 3,
+        'fillOpacity': 0.75,
+        'opacity': 0.75,
+        'color' : colors(feature.properties.name)
+      }
     }
 
     return (
@@ -30,20 +32,14 @@ class BattlegroundMap extends PureComponent {
 
         <Map doubleClickZoom={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={14} style={{'height': '100vh'}} >
 
-          <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+          <TileLayer opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
-          <Choropleth
-            onClick={districtClick}
-            data={{'type' : 'featureCollection', 'features' : _(districts.features).filter(x=> _(districtsToShow).includes(x.properties.name)).value()}}
-            valueProperty={(feature, i) =>  {}}
-            visible={(feature) => { return true }}
-
-            scale={['#29A5E9', '#7FD6D6']}
-            steps={20}
-            style={style}
-            mode='e'
-
-          />
+          <FeatureGroup map={this.map}  >
+            {
+              (districtsToShow).map((feature, idx) =>
+                <GeoJSON onClick={districtClick} data={feature} style={getStyle} key={idx}/>)
+            }
+          </FeatureGroup>
 
           <Marker position={[40.432127, -3.671853]} icon={StoreIcon}></Marker>
 

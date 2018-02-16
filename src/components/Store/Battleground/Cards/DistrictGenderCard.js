@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react';
 import {Row, Col, Card } from 'antd';
 import _ from 'lodash';
 import * as d3 from 'd3';
-import ReactSVG from 'react-svg';
 import GenderBar from './../Charts/GenderBar';
 
 export default class DistrictGenderCard extends PureComponent {
@@ -13,28 +12,25 @@ export default class DistrictGenderCard extends PureComponent {
 
   render() {
 
-    const {district, profile} = this.props;
+    const {district, profile, colors } = this.props;
     const data = profile.getGroupedByGender(district.properties.name);
-    console.log(data);
 
     return (
-      <Card>
-        <h2>{district.properties.name} {d3.format(".1%")(data.getHighest())} </h2>
+      <Card style={{'height' : '140px'}}>
 
-        <h4 style={{'marginTop' : '-1em'}}>{data.total}</h4>
+        <h2>{district.properties.name}  </h2>
+
+        <h5 style={{'marginTop' : '-1.5em'}}>{data.total}</h5>
 
 
-        <Row gutter={24} style={{'width': '500px'}}>
-          <Col xl={3} lg={3} md={24} sm={24} xs={24}>
-              <ReactSVG path={require('../../../../assets/svg/ic-man.svg')} />
+        <Row gutter={24}>
+
+          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+            <GenderBar title={district.properties.name} colors={colors} gender={'m'} data={data}></GenderBar>
           </Col>
 
-          <Col xl={18} lg={18} md={24} sm={24} xs={24}>
-            <GenderBar data={data}></GenderBar>
-          </Col>
-
-          <Col xl={3} lg={3} md={24} sm={24} xs={24}>
-            <ReactSVG path={require('../../../../assets/svg/ic-woman.svg')} />
+          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+            <GenderBar title={district.properties.name} colors={colors} gender={'f'} data={data}></GenderBar>
           </Col>
 
         </Row>
@@ -44,3 +40,4 @@ export default class DistrictGenderCard extends PureComponent {
     );
   }
 }
+
