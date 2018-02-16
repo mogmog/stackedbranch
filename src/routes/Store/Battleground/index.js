@@ -8,8 +8,10 @@ import Transition from 'react-motion-ui-pack'
 import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
-import DistrictGenderCard from '../../../components/Store/Battleground/Cards/DistrictGenderCard';
+
 import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
+import DistrictGenderCard     from '../../../components/Store/Battleground/Cards/DistrictGenderCard';
+import DistrictAgeGenderCard  from '../../../components/Store/Battleground/Cards/DistrictAgeGenderCard';
 
 import styles from './index.less';
 
@@ -18,7 +20,7 @@ const RadioGroup = Radio.Group;
 
 const whichcards = {
   'gender'  : DistrictGenderCard,
-  'age'     : ()=> (<span>age</span>)
+  'age'  : DistrictAgeGenderCard,
 }
 
 @connect(state => {
@@ -89,7 +91,7 @@ export default class BattleGround extends PureComponent {
       </div>
     );
 
-    const Element = whichcards[type];
+    const WhichCard = whichcards[type];
 
     return (
       <PageHeaderLayout
@@ -131,7 +133,7 @@ export default class BattleGround extends PureComponent {
                   <li key={i}>
                     <Row gutter={24}>
                       <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                         <Element colors={colors} profile={profile} district={district}/>
+                         <WhichCard colors={colors} profile={profile} district={district}/>
                       </Col>
 
                     </Row>
