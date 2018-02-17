@@ -36,11 +36,7 @@ export default class DistrictAgeGenderCard extends PureComponent {
 
                     <Row>
                       <Col span={2}>
-
-                        {
-                          ((d.key === 'm') ? <ReactSVG path={require(`../../../../assets/svg/ic-man.svg`)}/> :
-                            <ReactSVG path={require(`../../../../assets/svg/ic-woman.svg`)}/>)
-                        }
+                         <ReactSVG path={require(`../../../../assets/svg/ic-${d.key === 'm' ? 'man' : 'woman'}.svg`)}/>
                       </Col>
 
                       <Col span={10}>

@@ -20,8 +20,8 @@ class BattlegroundMap extends PureComponent {
     const getStyle = (feature, layer) => {
       return {
         weight: 3,
-        'fillOpacity': 0.75,
-        'opacity': 0.75,
+        'fillOpacity': 0.65,
+        'opacity': 0.65,
         'color' : colors(feature.properties.name)
       }
     }
