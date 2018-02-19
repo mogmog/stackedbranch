@@ -397,12 +397,22 @@ def create_app(config_name):
     def profiles():
 
       results = []
-      for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.period, Profile.name_tur_zone).limit(10000):
+      for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.day, Profile.period, Profile.name_tur_zone).limit(10000):
         district = ''
         if result.name_tur_zone == 'Zone 1' : district = 'Chamartin'
         if result.name_tur_zone == 'Zone 2' : district = 'Chamberi'
         if result.name_tur_zone == 'Zone 3' : district = 'Salamanca'
-        results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : district, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'period' : result.period, 'zone' : result.name_tur_zone })
+
+        day = ''
+        if result.day == 'Monday' : day = 'Mon'
+        if result.day == 'Tuesday' : day = 'Tue'
+        if result.day == 'Wednesday' : day = 'Wed'
+        if result.day == 'Thursday' : day = 'Thu'
+        if result.day == 'Friday' : day = 'Fri'
+        if result.day == 'Saturday' : day = 'Sat'
+        if result.day == 'Sunday' : day = 'Sun'
+
+        results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : district, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'day' : day, 'period' : result.period, 'zone' : result.name_tur_zone })
 
       return make_response(jsonify(results)), 200
 

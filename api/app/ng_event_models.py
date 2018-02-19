@@ -37,6 +37,7 @@ class Profile(db.Model):
         db.Column('rent', db.String, primary_key=True),
         db.Column('type_visitor', db.String, primary_key=True),
         db.Column('date', db.Date, primary_key=True),
+        db.Column('day', db.String, primary_key=True),
         db.Column('period', db.String, primary_key=True),
         db.Column('name_tur_zone', db.String, primary_key=True))
 

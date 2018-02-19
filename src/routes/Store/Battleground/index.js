@@ -13,6 +13,7 @@ import BattlegroundSideBar from '../../../components/Store/Battleground/Battelgr
 import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
 import DistrictGenderCard     from '../../../components/Store/Battleground/Cards/DistrictGenderCard';
 import DistrictAgeGenderCard  from '../../../components/Store/Battleground/Cards/DistrictAgeGenderCard';
+import DistrictDayGenderCard  from '../../../components/Store/Battleground/Cards/DistrictDayGenderCard';
 
 import styles from './index.less';
 
@@ -22,6 +23,7 @@ const RadioGroup = Radio.Group;
 const whichcards = {
   'gender'  : DistrictGenderCard,
   'age'  : DistrictAgeGenderCard,
+  'day'  : DistrictDayGenderCard,
 }
 
 @connect(state => {
@@ -123,6 +125,7 @@ export default class BattleGround extends PureComponent {
                     <RadioGroup defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
                       <RadioButton value="gender">Gender</RadioButton>
                       <RadioButton value="age">Age</RadioButton>
+                      <RadioButton value="day">Day</RadioButton>
                     </RadioGroup>
 
                     <Button onClick={this.closeSidebar.bind(this)}>close</Button>

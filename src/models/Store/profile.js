@@ -37,6 +37,19 @@ class Profile {
       .key((d) => d.age).sortKeys(d3.ascending)
       .entries(entries);
   }
+
+
+  getGroupedByGenderAndDay(district) {
+    const entries= _(this.data).filter(x => x.name_province === district).value();
+
+    /*'group by' 2 fields*/
+    return d3.nest()
+      .key((d) => d.gender).sortKeys(d3.descending)
+      .key((d) => d.day).sortKeys(d3.ascending)
+      .entries(entries);
+  }
+
+
 }
 
 export default {
