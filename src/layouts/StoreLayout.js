@@ -15,10 +15,8 @@ import GlobalFooter from '../components/Common/GlobalFooter';
 import NotFound from '../routes/Common/Exception/404';
 import styles from './StoreLayout.less';
 import ReactSVG from 'react-svg';
-
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
-
 const query = {
   'screen-xs': {
     maxWidth: 575,
@@ -39,7 +37,6 @@ const query = {
     minWidth: 1200,
   },
 };
-
 class StoreLayout extends React.PureComponent {
   static childContextTypes = {
     location: PropTypes.object,
@@ -47,7 +44,6 @@ class StoreLayout extends React.PureComponent {
   }
   constructor(props) {
     super(props);
-    // 把一级 Layout 的 children 作为菜单项
     this.menus = props.storenavData.reduce((arr, current) => arr.concat(current.children), []);
     this.state = {
       openKeys: this.getDefaultCollapsedSubMenus(props),
@@ -59,7 +55,6 @@ class StoreLayout extends React.PureComponent {
     const firstMenuData = storenavData.reduce((arr, current) => arr.concat(current.children), []);
     const menuData = this.getMenuData(firstMenuData, '');
     const breadcrumbNameMap = {};
-
     routeData.concat(menuData).forEach((item) => {
       breadcrumbNameMap[item.path] = item.name;
     });
@@ -69,7 +64,6 @@ class StoreLayout extends React.PureComponent {
     this.props.dispatch({
       type: 'user/fetchCurrent',
     });
-
     this.toggle();
   }
   componentWillUnmount() {
@@ -134,9 +128,7 @@ class StoreLayout extends React.PureComponent {
             title={
               item.icon ? (
                 <span>
-
                   {/*<Icon type={item.icon} />*/}
-
                   <span>{item.name}</span>
                 </span>
               ) : item.name
@@ -149,7 +141,6 @@ class StoreLayout extends React.PureComponent {
       }
       //const icon = item.icon && <Icon type={item.icon} />;
       const icon = item.icon && <ReactSVG path={require(`../assets/svg/${item.icon}`)} />;
-
       return (
         <Menu.Item key={item.key || item.path}>
           {
@@ -188,7 +179,7 @@ class StoreLayout extends React.PureComponent {
       return {};
     }
     const newNotices = notices.map((notice) => {
-      const newNotice = { ...notice };
+      const newNotice = {...notice};
       if (newNotice.datetime) {
         newNotice.datetime = moment(notice.datetime).fromNow();
       }
@@ -246,39 +237,47 @@ class StoreLayout extends React.PureComponent {
       });
     }
   }
-
   handleButtonClick = (e) =>{
     //message.info('Click on left button.');
     console.log('click left button', e);
   }
-
   handleMenuClick = (e) =>{
     // message.info('Click on menu item.');
     console.log('click', e);
   }
-
-
-
   render() {
-
     const menu = (
       <Menu onClick={this.handleMenuClick.bind(this)}>
         <Menu.Item key="1">Luca Store</Menu.Item>
         <Menu.Item key="2">Luca Travel</Menu.Item>
       </Menu>
     );
-
     const { currentUser, collapsed, fetchingNotices, getRouteData } = this.props;
-
     const noticeData = this.getNoticeData();
-
     // Don't show popup menu when it is been collapsed
     const menuProps = collapsed ? {} : {
       openKeys: this.state.openKeys,
     };
-
+    const header = (
+      <Header className={styles.header}>
+            {/* <Icon
+              className={styles.trigger}
+              type={collapsed ? 'menu-unfold' : 'menu-fold'}
+              onClick={this.toggle}
+            />*/}
+            <img width={76} src={require('../assets/img/luca_telefonica_data_unit.svg')}/>
+            <div className={styles.mainTitle}>Store</div>
+            <div className={styles.right}>
+              <div>
+                <Dropdown.Button onClick={this.handleButtonClick.bind(this)} overlay={menu}>
+                  Account services
+                </Dropdown.Button>
+              </div>
+            </div>
+          </Header>);
     const layout = (
       <Layout>
+{header}
         <Sider
           theme={'light'}
           trigger={null}
@@ -286,12 +285,9 @@ class StoreLayout extends React.PureComponent {
           collapsed={true}
           breakpoint="md"
           onCollapse={this.onCollapse}
-          width={256}
+          width={76}
           className={styles.sider}
         >
-          <div>
-            <img width={75} src={require('../assets/img/luca_telefonica.png')}/>
-          </div>
           <Menu
             theme="light"
             mode="inline"
@@ -303,28 +299,6 @@ class StoreLayout extends React.PureComponent {
             {this.getNavMenuItems(this.menus)}
           </Menu>
         </Sider>
-        <Layout>
-          <Header className={styles.header}>
-
-            {/* <Icon
-              className={styles.trigger}
-              type={collapsed ? 'menu-unfold' : 'menu-fold'}
-              onClick={this.toggle}
-            />*/}
-
-            <span style={{'fontSize' : '24px', 'paddingLeft' : '3%'}}> Store</span>
-
-
-            <div className={styles.right}>
-
-              <div>
-                <Dropdown.Button onClick={this.handleButtonClick.bind(this)} overlay={menu}>
-                  Account services
-                </Dropdown.Button>
-              </div>
-
-            </div>
-          </Header>
           <Content style={{ height: '100%' }}>
             <div style={{ minHeight: 'calc(100vh - 260px)' }}>
               <Switch>
@@ -353,9 +327,7 @@ class StoreLayout extends React.PureComponent {
             />
           </Content>
         </Layout>
-      </Layout>
     );
-
     return (
       <DocumentTitle title={this.getPageTitle()}>
         <ContainerQuery query={query}>
@@ -365,7 +337,6 @@ class StoreLayout extends React.PureComponent {
     );
   }
 }
-
 export default connect(state => ({
   currentUser: state.user.currentUser,
   collapsed: state.global.collapsed,
