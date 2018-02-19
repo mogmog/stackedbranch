@@ -40,7 +40,11 @@ class CalendarSideBar extends Component {
   }
 
   drawerChange(open) {
-    if (open) this.setState({show : true});
+    if (open) {
+      let that = this;
+      setTimeout(x => {that.setState({show : true})}, 10);
+    }
+
     this.setState({open : open});
   }
 
