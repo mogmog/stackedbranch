@@ -40,12 +40,23 @@ class Profile {
 
 
   getGroupedByGenderAndDay(district) {
+
+    var priority_order =
+      ["Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+   ]
+
     const entries= _(this.data).filter(x => x.name_province === district).value();
 
     /*'group by' 2 fields*/
     return d3.nest()
       .key((d) => d.gender).sortKeys(d3.descending)
-      .key((d) => d.day).sortKeys(d3.ascending)
+      .key((d) => d.day).sortKeys(function(a,b) { return priority_order.indexOf(a) - priority_order.indexOf(b); })
       .entries(entries);
   }
 
