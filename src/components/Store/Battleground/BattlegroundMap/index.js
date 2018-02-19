@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, Marker, GeoJSON, FeatureGroup  } from 'react-leaflet';
 import _ from 'lodash';
-
+import styles from './BattlegroundMap.less';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
 
 const districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo.json');
@@ -32,7 +32,7 @@ class BattlegroundMap extends PureComponent {
 
         <Map attributionControl={false} doubleClickZoom={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={13} style={{'height': '100vh'}} >
 
-          <TileLayer opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+          <TileLayer className={styles.greyscale} opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
           <FeatureGroup map={this.map}  >
             {

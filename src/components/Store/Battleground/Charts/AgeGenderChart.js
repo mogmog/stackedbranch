@@ -21,7 +21,7 @@ class GenderAgeChart extends Component {
 
     this.data = values;
     this.x = d3.scale.ordinal().domain(this.data.map((d) => { return d.key })).rangeRoundBands([0, this.width], 0.1);
-    this.y = d3.scale.linear().domain([0, d3.max(this.data, (d) => { return d.values.length; })]).range([this.height, 0])
+    this.y = d3.scale.linear().domain([0, d3.max(this.data, (d) => { return 700 })]).range([this.height, 0])
 
   }
 

@@ -19,7 +19,7 @@ export default class DistrictAgeGenderCard extends PureComponent {
     const groupedbygender = profile.getGroupedByGender(district.properties.name);
     const groupedbygenderandage = profile.getGroupedByGenderAndAge(district.properties.name);
 
-    console.log(groupedbygenderandage);
+
 
     return (
 

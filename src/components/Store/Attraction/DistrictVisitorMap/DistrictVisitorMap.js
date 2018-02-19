@@ -5,6 +5,7 @@ import Choropleth from '../../../Common/Mapping/Choropleth';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
 import DistrictLabels from './DistrictLabels';
 import FeatureHighlight from './FeatureHighlight';
+import styles from './DistrictVisitorMap.less';
 
 var districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo');
 
@@ -34,7 +35,7 @@ class RegionChooserMap extends PureComponent {
 
         <Map attributionControl={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{ 'height': '280px'}}>
 
-          <TileLayer opacity={0.8} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+          <TileLayer className={styles.greyscale} opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
 
 
 

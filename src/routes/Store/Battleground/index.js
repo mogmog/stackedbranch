@@ -3,6 +3,7 @@ import {connect} from 'dva';
 import {Row, Col, Radio , Card, Divider, Button, Icon, Spin} from 'antd';
 import _ from 'lodash';
 import * as d3 from 'd3';
+import moment from 'moment';
 import Transition from 'react-motion-ui-pack'
 
 import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
@@ -58,7 +59,7 @@ export default class BattleGround extends PureComponent {
   }
 
   districtClick(e) {
-    console.log(e.target.options.data);
+
     if (!_(this.state.cards).includes(e.target.options.data)) {
       this.setState({sidebaropen : true, cards: [...this.state.cards, e.target.options.data]});
     }
@@ -83,7 +84,7 @@ export default class BattleGround extends PureComponent {
       <div>
 
         <div style={{'float': 'right'}}>
-          <CalendarSideBar />
+          <CalendarSideBar range={[moment('2018/03/01'), moment('2018/03/07')]}/>
         </div>
 
         <div>
@@ -111,8 +112,7 @@ export default class BattleGround extends PureComponent {
         style={{'padding': '0px 0px 0px 0px'}}
       >
 
-        <div className={styles.battleground}>
-          <Row gutter={24}>
+          <Row gutter={24} className={styles.battleground}>
 
             <Col xl={24} lg={24} md={24} sm={24} xs={24}>
 
@@ -120,17 +120,21 @@ export default class BattleGround extends PureComponent {
 
                 <BattlegroundSideBar open={sidebaropen}>
 
-                  <div>
+                  <Row gutter={24}>
+                    <Col>
+                      <a onClick={this.closeSidebar.bind(this)}><Button>x</Button></a>
+                    </Col>
+                  </Row>
 
-                    <RadioGroup defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
-                      <RadioButton value="gender">Gender</RadioButton>
-                      <RadioButton value="age">Age</RadioButton>
-                      <RadioButton value="day">Day</RadioButton>
-                    </RadioGroup>
-
-                    <Button onClick={this.closeSidebar.bind(this)}>close</Button>
-
-                  </div>
+                  <Row type="flex" justify="end">
+                    <Col span={24} >
+                      <RadioGroup style={{'float' : 'right'}} defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
+                        <RadioButton value="gender">Gender</RadioButton>
+                        <RadioButton value="age">Age</RadioButton>
+                        <RadioButton value="day">Day</RadioButton>
+                      </RadioGroup>
+                    </Col>
+                  </Row>
 
                   <Transition
                     component="ul"
@@ -160,7 +164,6 @@ export default class BattleGround extends PureComponent {
             </Col>
 
           </Row>
-        </div>
 
       </PageHeaderLayout>
 

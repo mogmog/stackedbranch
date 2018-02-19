@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import getRouteData from './../../../router';
 import {connect} from 'dva';
+import moment from 'moment';
 import {Menu, Row, Col, Card, Divider, Button, Icon} from 'antd';
 import ReactSVG from 'react-svg';
 import MotionMenu from '../../../ext/react-motion-menu/src';
@@ -79,7 +80,7 @@ export default class Attraction extends PureComponent {
       <div>
 
         <div style={{'float': 'right'}}>
-          <CalendarSideBar/>
+          <CalendarSideBar range={[moment('2018/03/01'), moment('2018/03/07')]}/>
         </div>
 
         <div>
@@ -95,7 +96,7 @@ export default class Attraction extends PureComponent {
 
       </div>
     );
-    console.log(getRouteData);
+
     return (
       <PageHeaderLayout
         top={null}

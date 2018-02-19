@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import moment from 'moment';
 import Drawer from 'react-motion-drawer';
 
 import Label from './Label';
 
 import { DatePicker, Button } from 'antd';
 const {RangePicker} = DatePicker;
+
 import styles from './SideBar.less';
 
 
@@ -19,6 +21,7 @@ class CalendarSideBar extends Component {
 
   constructor(props) {
     super();
+    this.state.range = props.range;
   }
 
   componentWillMount () {
@@ -42,7 +45,7 @@ class CalendarSideBar extends Component {
   drawerChange(open) {
     if (open) {
       let that = this;
-      setTimeout(x => {that.setState({show : true})}, 10);
+      setTimeout(x => {that.setState({show : true})}, 100);
     }
 
     this.setState({open : open});
@@ -51,6 +54,8 @@ class CalendarSideBar extends Component {
   render() {
 
     const { open, range } = this.state;
+
+    console.log(range)
     return (
       <div  >
 
@@ -59,7 +64,7 @@ class CalendarSideBar extends Component {
         <Drawer open={open} width={300} right={true} onChange={this.drawerChange.bind(this)}>
           <div className={styles.sidebar}>
             <span id="test"></span>
-            <RangePicker  onChange={this.onDateSelect.bind(this)} open={this.state.show} getCalendarContainer={() => {return document.getElementById('test')}}/>
+            <RangePicker defaultValue={range} onChange={this.onDateSelect.bind(this)} open={this.state.show} getCalendarContainer={() => {return document.getElementById('test')}}/>
           </div>
         </Drawer>
       </div>

@@ -12,7 +12,7 @@ export default class DistrictCard extends PureComponent {
     const { children, title, total, height = 200, className } = this.props;
 
     return (
-      <Card style={{'background' : 'none', 'height' : `${height}px`}} className={className}>
+      <Card style={{'background' : 'none', 'border': 'none', 'height' : `${height}px`}} className={className}>
 
         <h2>{title}  </h2>
 
