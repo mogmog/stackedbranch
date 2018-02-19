@@ -56,6 +56,7 @@ export default class BattleGround extends PureComponent {
   }
 
   districtClick(e) {
+    console.log(e.target.options.data);
     if (!_(this.state.cards).includes(e.target.options.data)) {
       this.setState({sidebaropen : true, cards: [...this.state.cards, e.target.options.data]});
     }

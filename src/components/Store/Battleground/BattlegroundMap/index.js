@@ -15,6 +15,7 @@ class BattlegroundMap extends PureComponent {
     const {data, type, districtClick, colors } = this.props;
 
     const _districtsToShow = ['Chamartin', 'Chamberi', 'Salamanca'];
+    console.log(districts.features);
     const districtsToShow = _(districts.features).filter(x=> _(_districtsToShow).includes(x.properties.name)).value();
 
     const getStyle = (feature, layer) => {

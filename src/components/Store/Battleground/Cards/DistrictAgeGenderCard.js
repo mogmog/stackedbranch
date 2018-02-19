@@ -4,6 +4,7 @@ import ReactSVG from 'react-svg';
 
 import DistrictCard from './DistrictCard';
 import AgeGenderChart from './../Charts/AgeGenderChart';
+import styles from './DistrictAgeGenderCard.less';
 
 export default class DistrictAgeGenderCard extends PureComponent {
 
@@ -22,14 +23,14 @@ export default class DistrictAgeGenderCard extends PureComponent {
 
     return (
 
-      <DistrictCard title={district.properties.name} total={groupedbygender.total} height={260}>
+      <DistrictCard title={district.properties.name} total={groupedbygender.total} height={260} className={styles.districtagegendercard}>
 
         <Row gutter={24}>
 
           {groupedbygenderandage.map((d, i) =>
 
             (
-              <Col xl={12} lg={12} md={24} sm={24} xs={24}>
+              <Col xl={12} lg={12} md={24} sm={24} xs={24} key={i}>
 
                 <Row>
                   <Col>
@@ -40,7 +41,7 @@ export default class DistrictAgeGenderCard extends PureComponent {
                       </Col>
 
                       <Col span={10}>
-                        {groupedbygender[d.key]}
+                        <span className={styles.gendercount}>{groupedbygender[d.key]}</span>
                       </Col>
 
                       <Col span={2} offset={2}>

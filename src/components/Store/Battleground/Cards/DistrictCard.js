@@ -9,10 +9,10 @@ export default class DistrictCard extends PureComponent {
 
   render() {
 
-    const { children, title, total, height = 200 } = this.props;
+    const { children, title, total, height = 200, className } = this.props;
 
     return (
-      <Card style={{'background' : 'none', 'height' : `${height}px`}}>
+      <Card style={{'background' : 'none', 'height' : `${height}px`}} className={className}>
 
         <h2>{title}  </h2>
 

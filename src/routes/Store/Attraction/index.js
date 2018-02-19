@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
+import getRouteData from './../../../router';
 import {connect} from 'dva';
-import {Row, Col, Card, Divider, Button, Icon} from 'antd';
+import {Menu, Row, Col, Card, Divider, Button, Icon} from 'antd';
 import ReactSVG from 'react-svg';
 import MotionMenu from '../../../ext/react-motion-menu/src';
 
@@ -13,6 +14,9 @@ import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBa
 import HourBar from '../../../components/Store/Attraction/HourBar';
 import GenderAge from '../../../components/Store/Attraction/GenderAge';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
+
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
 
 @connect(state => {
 
@@ -91,7 +95,7 @@ export default class Attraction extends PureComponent {
 
       </div>
     );
-
+    console.log(getRouteData);
     return (
       <PageHeaderLayout
         top={null}
@@ -99,7 +103,7 @@ export default class Attraction extends PureComponent {
         style={{'padding': '10px 10px 10px 10px'}}
       >
 
-        <div style={{'padding' : '20px 20px 20px 20px' }}>
+        <div style={{width : '95%', 'padding' : '20px 20px 20px 20px', 'float' : 'right' }}>
           <Row gutter={24}>
 
             <Col xl={6} lg={6} md={8} sm={8} xs={8}>

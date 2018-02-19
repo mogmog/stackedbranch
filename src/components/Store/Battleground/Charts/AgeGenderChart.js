@@ -14,21 +14,21 @@ class GenderAgeChart extends Component {
 
     const { values } = this.props;
 
-    this.width = 250;
-    this.height = 100;
+    this.width = 200;
+    this.height = 70;
     //this.ages = ["18-29", "40-49"];
     this.scale = d3.scale.linear().domain([0, 1]).range([0, this.width]);
 
     this.data = values;
     this.x = d3.scale.ordinal().domain(this.data.map((d) => { return d.key })).rangeRoundBands([0, this.width], 0.1);
-    this.y = d3.scale.linear().domain([0, d3.max(this.data, (d) => { return d.values.length; })]).range([this.height, 0]);
+    this.y = d3.scale.linear().domain([0, d3.max(this.data, (d) => { return d.values.length; })]).range([this.height, 0])
 
   }
 
   componentDidMount() {
     // Axis
     var xAxis = d3.svg.axis().scale(this.x).orient("bottom");
-    var yAxis = d3.svg.axis().scale(this.y).orient("left");
+    var yAxis = d3.svg.axis().scale(this.y).orient("left").tickFormat(d3.format("d")).ticks(5)
 
     d3.select(this.xaxis).call(xAxis);
     d3.select(this.yaxis).call(yAxis);
@@ -54,8 +54,8 @@ class GenderAgeChart extends Component {
             }
           </g>
 
-          <g className="xaxis" transform={`translate(8, ${this.height + 10} )`}    ref={(axis) => this.xaxis = axis }></g>
-          <g className="yaxis" transform={`translate(20,10)`}    ref={(axis) => this.yaxis = axis }></g>
+          <g className="xaxis" transform={`translate(5, ${this.height + 10} )`}    ref={(axis) => this.xaxis = axis }></g>
+          <g className="yaxis" transform={`translate(25,10)`}    ref={(axis) => this.yaxis = axis }></g>
 
         </svg>
     );

@@ -20,7 +20,6 @@ class Profile {
   getGroupedByGender(district) {
     const buckets = {f : 0, m: 0, total : 0};
     const grouped= _(this.data).filter(x => x.name_province === district).groupBy(x => x.gender).value();
-
     _(grouped).forEach((items, key) => {
       buckets[key] = items.length;
       buckets.total += items.length;
@@ -34,8 +33,8 @@ class Profile {
 
     /*'group by' 2 fields*/
     return d3.nest()
-      .key((d) => d.gender)
-      .key((d) => d.age)
+      .key((d) => d.gender).sortKeys(d3.descending)
+      .key((d) => d.age).sortKeys(d3.ascending)
       .entries(entries);
   }
 }

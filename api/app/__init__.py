@@ -398,7 +398,11 @@ def create_app(config_name):
 
       results = []
       for result in db.session.query(Profile.country, Profile.nationality, Profile.name_province, Profile.gender, Profile.age, Profile.rent, Profile.type_visitor, Profile.date, Profile.period, Profile.name_tur_zone).limit(10000):
-        results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : result.name_province, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'period' : result.period, 'zone' : result.name_tur_zone })
+        district = ''
+        if result.name_tur_zone == 'Zone 1' : district = 'Chamartin'
+        if result.name_tur_zone == 'Zone 2' : district = 'Chamberi'
+        if result.name_tur_zone == 'Zone 3' : district = 'Salamanca'
+        results.append({'country' : result.country, 'nationality' : result.nationality, 'name_province' : district, 'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'type_visitor' : result.type_visitor, 'date' : result.date, 'period' : result.period, 'zone' : result.name_tur_zone })
 
       return make_response(jsonify(results)), 200
 
