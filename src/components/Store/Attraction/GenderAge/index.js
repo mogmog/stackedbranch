@@ -30,7 +30,7 @@ class GenderAge extends Component {
 
       <div>
         <h4>
-         Genre
+         Gender
         </h4>
         <h6>and age group</h6>
 

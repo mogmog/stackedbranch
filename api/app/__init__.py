@@ -347,6 +347,8 @@ def create_app(config_name):
 
       gender_age_sql = db.session.query(PurchDistrict.gender, PurchDistrict.age, func.count(PurchDistrict.gender))\
                                        .group_by(PurchDistrict.gender, PurchDistrict.age)\
+                                       .filter(PurchDistrict.gender.isnot(None))\
+                                        .filter(PurchDistrict.age.isnot(None))\
                                        .filter(PurchDistrict.home_district_name.in_([home_district_name]))\
                                        .filter(PurchDistrict.type_visitor.in_([type_visitor])).all()
 

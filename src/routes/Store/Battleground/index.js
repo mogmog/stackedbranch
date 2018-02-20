@@ -126,9 +126,9 @@ export default class BattleGround extends PureComponent {
                     </Col>
                   </Row>
 
-                  <Row type="flex" justify="end">
+                  <Row>
                     <Col span={24} >
-                      <RadioGroup style={{'float' : 'right'}} defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
+                      <RadioGroup style={{'float' : 'right', 'marginRight' : '0.8em'}} defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
                         <RadioButton value="gender">Gender</RadioButton>
                         <RadioButton value="age">Age</RadioButton>
                         <RadioButton value="day">Day</RadioButton>

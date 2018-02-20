@@ -40,9 +40,9 @@ class GenderAgeChart extends Component {
     const { data, gender, colors, title, district } = this.props;
 
     return (
-        <svg className={styles.genderagechart} width={this.width + 20} height={this.height + 70}>
+        <svg className={styles.genderagechart} width={this.width + 20} height={this.height + 40}>
 
-          <g transform="translate(20, 10)">
+          <g transform="translate(25, 10)">
             {
               this.data.map((d, i) =>
                 (<rect key={i}

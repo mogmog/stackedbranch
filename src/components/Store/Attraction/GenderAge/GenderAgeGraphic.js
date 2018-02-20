@@ -26,23 +26,24 @@ class GenderAgeGraphic extends Component {
 
     const {data, gender} = this.props;
 
-   // console.log(data);
+    console.log(data.groupedByGender["m"]);
 
+    /*hack - assume same number of buckers*/
+    const howManyColours = data.groupedByGender["m"].length;
 
+    /*an aopacity scale */
+    const color = d3.scale.ordinal().range([...Array(howManyColours).keys()].map(i => `rgba(102, 34, 136, ${(i + 1) / howManyColours})`));
 
-    var color = d3.scale.ordinal().range(["#FF77FF", "#BC0FE0", "#662188", "yellow", "blue"]);
-
-    var arc = d3.svg.arc()
+    const arc = d3.svg.arc()
       .outerRadius(radius - 30)
       .innerRadius(radius - 10);
 
-    var textarc = d3.svg.arc()
+    const textarc = d3.svg.arc()
       .outerRadius(radius + 40)
       .innerRadius(radius - 10);
 
-    var pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
+    const pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
 
-    //console.log(pie(data.groupedByGender[gender]));
 
     return (
       <div>

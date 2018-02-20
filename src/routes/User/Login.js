@@ -54,7 +54,7 @@ export default class Login extends Component {
         if (this.props.form.getFieldValue('userName') === 'graham.bates@biggroup.co.uk') {
           this.props.dispatch(routerRedux.push('/store/attraction'));
         } else {
-          this.props.dispatch(routerRedux.push('/travel/origindestination'));
+          this.props.dispatch(routerRedux.push('/store/attraction'));
         }
 
 
@@ -98,9 +98,9 @@ export default class Login extends Component {
             <h3>Welcome to</h3>
             <h1 style={{marginTop: '-24px'}}>Smartsteps</h1>
             </div>
-            <Form style={{'padding' : '5%'}} onSubmit={this.handleSubmit}>
+            <Form style={{'padding' : '5%'}} onSubmit={this.handleSubmit} hideRequiredMark>
 
-              <FormItem>
+              <FormItem label={"Username"}>
                 {getFieldDecorator('userName', {
                   rules: [{
                     required: type === 'account', message: 'You must enter a user name'
@@ -113,7 +113,7 @@ export default class Login extends Component {
                   />
                 )}
               </FormItem>
-              <FormItem>
+              <FormItem label={'Password'} >
                 {getFieldDecorator('password', {
                   rules: [{
                     required: type === 'account', message: 'Enter a password',
@@ -129,11 +129,11 @@ export default class Login extends Component {
               </FormItem>
 
               <FormItem style={{'textAlign' : 'center'}} className={styles.additional}>
-                <LucaButton size="large" className={styles.submit} type="primary" htmlType="submit">Sign in</LucaButton>
+                <LucaButton size="large" type="primary" htmlType="submit">Sign in</LucaButton>
               </FormItem>
 
               <FormItem style={{'textAlign' : 'center'}}>
-                <a className={styles.forgot} href="">Forgot your password</a>
+                <a className="login-form-forgot" href="">Forgot password</a>
               </FormItem>
             </Form>
 
