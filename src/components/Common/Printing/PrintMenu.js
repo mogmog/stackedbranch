@@ -13,6 +13,8 @@ const printDocument = () => {
     });
 }
 
+/*DO NOT COPY THIS APPROACH - ONLY DONE BECAUSE THE ANIMATION WAS GLITCHING*/
+
 export default () => (
   <MotionMenu
     type="horizontal"
@@ -20,7 +22,35 @@ export default () => (
     margin={60}
   >
     <div>
-      <ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')}/>
+
+
+      <svg width="74px" height="63px" viewBox="0 0 74 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <title>boton</title>
+        <desc>Created with Sketch.</desc>
+        <defs>
+          <path d="M0,26.4 L0,26.4 C1.7855739e-15,40.9803174 11.8196826,52.8 26.4,52.8 L52.8,52.8 L52.8,26.4 C52.8,11.8196826 40.9803174,-2.67836085e-15 26.4,0 L26.4,0 C11.8196826,2.67836085e-15 -1.7855739e-15,11.8196826 0,26.4 Z" id="path-1"></path>
+          <filter x="-16.1%" y="-12.3%" width="132.2%" height="132.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.847   0 0 0 0 0.847   0 0 0 0 0.847  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+          </filter>
+        </defs>
+        <g id="OVERVIEW:-attraction-power-Copy" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(-1184.000000, -199.000000)">
+          <g id="botonera" transform="translate(923.000000, 194.000000)">
+            <g id="boton" transform="translate(304.335238, 38.258579) rotate(-135.000000) translate(-304.335238, -38.258579) translate(277.835238, 11.758579)">
+              <g id="bg" transform="translate(26.400000, 26.400000) rotate(-90.000000) translate(-26.400000, -26.400000) ">
+                <use fill="black" fillOpacity="1" filter="url(#filter-2)" xlinkHref="#path-1"></use>
+                <use fill="#FFFFFF" fillRule="evenodd" xlinkHref="#path-1"></use>
+              </g>
+              <polygon id="+" fill="#29A5E9" transform="translate(26.790000, 26.730000) rotate(-225.000000) translate(-26.790000, -26.730000) " points="25.98 35.46 27.66 35.46 27.66 27.54 35.58 27.54 35.58 25.98 27.66 25.98 27.66 18 25.98 18 25.98 25.98 18 25.98 18 27.54 25.98 27.54"></polygon>
+            </g>
+          </g>
+        </g>
+      </svg>
+
+      {/*<ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')}/>*/}
+
+
     </div>
 
     <div onClick={printDocument} style={{'marginTop': '5px'}}>

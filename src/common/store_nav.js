@@ -27,6 +27,14 @@ export const getStoreNavData = app => [
       },
 
       {
+        name: 'Attraction Power Limited',
+        icon: 'IC-LUCA-STORE.svg',
+        path: 'store/attraction2',
+        margin: '24px 24px 0 ',
+        component: dynamicWrapper(app, ['districtvisitors', 'purchase'], () => import('../routes/Store/Attraction/index')),
+      },
+
+      {
         name: 'Full perspective',
         icon: 'IC-LUCA-STORE.svg',
         path: 'store/fullperspective',

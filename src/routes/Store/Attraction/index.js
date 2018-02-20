@@ -8,8 +8,7 @@ import MotionMenu from '../../../ext/react-motion-menu/src';
 
 import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-import SummaryCard from '../../../components/Store/Attraction/SummaryCard/index';
-import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
+import SummaryBar from '../../../components/Store/Attraction/SummaryCard/SummaryBar';
 
 import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
 import HourBar from '../../../components/Store/Attraction/HourBar';
@@ -74,7 +73,9 @@ export default class Attraction extends PureComponent {
 
   render() {
 
-    const {visitors, workers, districtvisitors } = this.props;
+    const {visitors, workers, districtvisitors, attraction_totals, match } = this.props;
+
+    const show4Columns = match.path === '/store/attraction';
 
     const pageHeaderContent = (
       <div>
@@ -105,58 +106,8 @@ export default class Attraction extends PureComponent {
       >
 
         <div style={{width : '95%', 'padding' : '20px 20px 20px 20px', 'float' : 'right' }}>
-          <Row gutter={24}>
 
-            <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-
-              <SummaryCard
-                avatar={ <ReactSVG path={require('../../../assets/svg/ic_city_store.svg')} /> }
-                bordered={false}
-                title="Catchment Area (100%)"
-                total={this.props.attraction_totals.getValue('Influence area')}
-                footer={<ColorThing color='#E90C8B' text={'#ffffff'}>Catchment area (ca)</ColorThing>}
-              >
-
-              </SummaryCard>
-            </Col>
-
-            <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-              <SummaryCard
-                avatar={ <ReactSVG path={require('../../../assets/svg/ic-nearby-camera-store.svg')} /> }
-                bordered={false}
-                title="Nearby"
-                subtitle={this.props.attraction_totals.getValue('Walk bys')}
-                total={this.props.attraction_totals.getPercent('Walk bys')}
-                footer={<ColorThing color='#477784' text={'#ffffff'}>Concern CA = {this.props.attraction_totals.getDifference('Walk bys')} less</ColorThing>}
-              >
-              </SummaryCard>
-            </Col>
-
-            <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-              <SummaryCard
-                avatar={ <ReactSVG path={require('../../../assets/svg/ic-shop-store.svg')} /> }
-                bordered={false}
-                title="In store"
-                subtitle={this.props.attraction_totals.getValue('In Store')}
-                total={this.props.attraction_totals.getPercent('In Store')}
-                footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>Concern CA = {this.props.attraction_totals.getDifference('In Store')} less</ColorThing>}
-              >
-              </SummaryCard>
-            </Col>
-
-            <Col xl={6} lg={6} md={8} sm={8} xs={8}>
-              <SummaryCard
-                avatar={ <ReactSVG path={require('../../../assets/svg/ic-basket-sales-store.svg')} /> }
-                bordered={false}
-                title="Sales"
-                subtitle={this.props.attraction_totals.getValue('Buy')}
-                total={this.props.attraction_totals.getPercent('Buy')}
-                footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >Concern CA = {this.props.attraction_totals.getDifference('Buy')} Less</ColorThing>}
-              >
-              </SummaryCard>
-            </Col>
-
-          </Row>
+          <SummaryBar attraction_totals={attraction_totals} columns={show4Columns ? 4 : 2}/>
 
           <Divider />
           <Row gutter={24}>
