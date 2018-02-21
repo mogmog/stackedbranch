@@ -15,7 +15,6 @@ class BattlegroundMap extends PureComponent {
     const {data, type, districtClick, colors } = this.props;
 
     const _districtsToShow = ['Chamartin', 'Chamberi', 'Salamanca'];
-    console.log(districts.features);
     const districtsToShow = _(districts.features).filter(x=> _(_districtsToShow).includes(x.properties.name)).value();
 
     const getStyle = (feature, layer) => {
@@ -32,7 +31,7 @@ class BattlegroundMap extends PureComponent {
 
         <Map attributionControl={false} doubleClickZoom={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={13} style={{'height': '100vh'}} >
 
-          <TileLayer className={styles.greyscale} opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+          <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
 
           <FeatureGroup map={this.map}  >
             {

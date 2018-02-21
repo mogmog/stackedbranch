@@ -35,9 +35,7 @@ class RegionChooserMap extends PureComponent {
 
         <Map attributionControl={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{ 'height': '280px'}}>
 
-          <TileLayer className={styles.greyscale} opacity={0.3} url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
-
-
+          <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
 
             <Choropleth
                         onClick={(feature) => {districtClick(feature)}}
