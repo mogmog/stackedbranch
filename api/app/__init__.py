@@ -328,8 +328,6 @@ def create_app(config_name):
 
        return make_response(jsonify({ 'list' : _j })), 200
 
-
-
     @app.route('/api/ng_event/purchase/<home_district_name>/<type_visitor>', methods=['GET'])
     def purchase(home_district_name, type_visitor):
 
@@ -352,6 +350,13 @@ def create_app(config_name):
                                        .filter(PurchDistrict.home_district_name.in_([home_district_name]))\
                                        .filter(PurchDistrict.type_visitor.in_([type_visitor])).all()
 
+
+      gender_age_rent_sql = db.session.query(PurchDistrict.gender, PurchDistrict.age, PurchDistrict.rent, func.count(PurchDistrict.gender))\
+                                            .group_by(PurchDistrict.gender, PurchDistrict.age, PurchDistrict.rent)\
+                                            .filter(PurchDistrict.gender.isnot(None))\
+                                            .filter(PurchDistrict.age.isnot(None))\
+                                            .filter(PurchDistrict.type_visitor.in_([type_visitor])).all()
+
       days_total          = sum(i[1] for i in days_sql)
       gender_total        = sum(i[1] for i in gender_sql)
       gender_age_total    = sum(i[2] for i in gender_age_sql)
@@ -369,6 +374,32 @@ def create_app(config_name):
         gender_age_results.append({'gender' : result.gender, 'age' : result.age, 'count' : result[2], 'percent' : result[2]/gender_age_total})
 
       return make_response(jsonify({'days' : days_results, 'gender' : gender_results, 'gender_age' : gender_age_results})), 200
+
+
+    @app.route('/api/ng_event/purchase_affluence/<type_visitor>', methods=['GET'])
+    def purchase_rent(type_visitor):
+
+      gender_sql = db.session.query(PurchDistrict.gender, func.count(PurchDistrict.gender))\
+                                             .group_by(PurchDistrict.gender)\
+                                             .filter(PurchDistrict.type_visitor.in_([type_visitor])).all()
+
+      gender_age_rent_sql = db.session.query(PurchDistrict.gender, PurchDistrict.age, PurchDistrict.rent, func.count(PurchDistrict.gender))\
+                                            .group_by(PurchDistrict.gender, PurchDistrict.age, PurchDistrict.rent)\
+                                            .filter(PurchDistrict.gender.isnot(None))\
+                                            .filter(PurchDistrict.age.isnot(None))\
+                                            .filter(PurchDistrict.type_visitor.in_([type_visitor])).all()
+
+      gender_total = sum(i[1] for i in gender_sql)
+
+      gender_results = []
+      for result in gender_sql:
+        gender_results.append({'gender' : result.gender, 'count' : result[1], 'percent' : result[1]/gender_total})
+
+      gender_age_rent_results = []
+      for result in gender_age_rent_sql:
+       gender_age_rent_results.append({'gender' : result.gender, 'age' : result.age, 'rent' : result.rent, 'count' : result[3]})
+
+      return make_response(jsonify({'gender' : gender_results, 'gender_age_rent' : gender_age_rent_results})), 200
 
 
     @app.route('/api/ng_event/districts', methods=['GET'])

@@ -13,7 +13,9 @@ const printDocument = () => {
     });
 }
 
-/*DO NOT COPY THIS APPROACH - ONLY DONE BECAUSE THE ANIMATION WAS GLITCHING*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*DO NOT COPY THIS APPROACH - ONLY DONE BECAUSE THE ANIMATION WAS GLITCHING AND WE DO NOT HAVE WEBPACK FOR SVG SET UP YET!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 export default () => (
   <MotionMenu

@@ -1,0 +1,85 @@
+@import "../../../../node_modules/antd/lib/style/themes/default.less";
+
+.customTooltip {
+
+  ul {
+    list-style: none;
+  }
+
+  width:210px !important;
+  color: @text-color !important;
+  background-color: white !important;
+  border: 1px @text-color !important;
+  border-style:dotted!important;
+  &.place-top {
+    &:after {
+      border-top-color: orange !important;
+      border-top-style: solid !important;
+      border-top-width: 6px !important;
+    }
+  }
+}
+
+.bubblemock {
+
+  text {
+    font-family: telefonica_text;
+    font-size: 18px;
+  }
+
+  rect {
+    stroke: #ccc;
+    fill: none;
+  }
+
+  line {
+    stroke: #ccc;
+    fill: none;
+  }
+
+  .grid-line {
+    stroke: #ccc;
+    stroke-dasharray: 4;
+  }
+
+  .axis-tick-label {
+    font-size: 1em;
+  }
+
+  .x-axis-tick-label {
+    alignment-baseline: top;
+    text-anchor: middle;
+  }
+
+  .y-axis-tick-label {
+    alignment-baseline: middle;
+    text-anchor: end;
+  }
+
+  .x-axis-label,
+  .y-axis-label {
+    font-size: 1.6em;
+    alignment-baseline: hanging;
+    text-anchor: end;
+  }
+
+  .bubble {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+
+  .bubble:hover {
+    opacity: 0.9;
+  }
+
+  .set-01>.bubble {
+    fill: #e90d8b;
+  }
+
+  g.set-02 .bubble {
+    fill: #f00;
+  }
+
+}
+

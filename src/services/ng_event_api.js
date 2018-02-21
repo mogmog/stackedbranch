@@ -17,4 +17,8 @@ export async function queryPurchase(payload) {
   return request(`/api/ng_event/purchase/${payload.home_district_name}/${payload.type_visitor}`);
 }
 
+export async function queryPurchaseAffluence(payload) {
+  return request(`/api/ng_event/purchase_affluence/${payload.type}`);
+}
+
 

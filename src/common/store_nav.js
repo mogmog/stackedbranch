@@ -62,6 +62,14 @@ export const getStoreNavData = app => [
         component: dynamicWrapper(app, ['profile'], () => import('../routes/Store/Battleground/index')),
       },
 
+      {
+        name: 'Crossfilter',
+        icon: 'IC-LUCA-STORE.svg',
+        path: 'store/crossfilter',
+        component: dynamicWrapper(app, ['purchase_affluence'], () => import('../routes/Store/Crossfilter/index')),
+      }
+
+
     /*  {
         name: 'Area Definition',
         icon: 'compass',

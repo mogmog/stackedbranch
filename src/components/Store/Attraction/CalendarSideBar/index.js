@@ -55,9 +55,8 @@ class CalendarSideBar extends Component {
 
     const { open, range } = this.state;
 
-    console.log(range)
     return (
-      <div  >
+      <div>
 
         <Button onClick={this.click.bind(this)}> <Label range={range}></Label></Button>
 

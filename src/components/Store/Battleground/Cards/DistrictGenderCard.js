@@ -13,7 +13,6 @@ export default class DistrictGenderCard extends PureComponent {
 
     const {district, profile, colors } = this.props;
     const data = profile.getGroupedByGender(district.properties.name);
-    console.log(profile);
 
     return (
 
