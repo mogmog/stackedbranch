@@ -104,10 +104,9 @@ export default class Attraction extends PureComponent {
           <PageHeaderLayout
         top={null}
         content={null}
-        style={{'padding': '10px 10px 10px 10px'}}
+        style={null}
       >
 
-        <div style={{width : '95%', 'padding' : '20px 20px 20px 20px', 'float' : 'right' }}>
 
           <SummaryBar attraction_totals={attraction_totals} columns={show4Columns ? 4 : 2}/>
 
@@ -182,7 +181,6 @@ export default class Attraction extends PureComponent {
 
 
           </Row>
-        </div>
       </PageHeaderLayout>
       </div>
     );
