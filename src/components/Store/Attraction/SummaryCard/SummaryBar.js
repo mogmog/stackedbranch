@@ -10,10 +10,7 @@ const SummaryBar = ({ attraction_totals, columns }) => {
     return (
       <Row gutter={24}>
 
-        <Col xl={4} lg={12} md={12} sm={24} xs={24}>
-        </Col>
-
-        <Col xl={8} lg={12} md={12} sm={24} xs={24}>
+        <Col xl={12} lg={12} md={12} sm={24} xs={24}>
 
           <SummaryCard
             avatar={ <ReactSVG path={require('../../../../assets/svg/ic_city_store.svg')} /> }
@@ -23,7 +20,7 @@ const SummaryBar = ({ attraction_totals, columns }) => {
             footer={<ColorThing color='#E90C8B' text={'#ffffff'}>Catchment area (ca)</ColorThing>}/>
         </Col>
 
-        <Col xl={8} lg={12} md={12} sm={24} xs={24}>
+        <Col xl={12} lg={12} md={12} sm={24} xs={24}>
           <SummaryCard
             avatar={ <ReactSVG path={require('../../../../assets/svg/ic-basket-sales-store.svg')} /> }
             bordered={false}
@@ -31,9 +28,6 @@ const SummaryBar = ({ attraction_totals, columns }) => {
             subtitle={attraction_totals.getValue('Buy')}
             total={attraction_totals.getPercent('Buy')}
             footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >Concern CA = {attraction_totals.getDifference('Buy')} Less</ColorThing>}/>
-        </Col>
-
-        <Col xl={4} lg={12} md={12} sm={24} xs={24}>
         </Col>
 
       </Row>
