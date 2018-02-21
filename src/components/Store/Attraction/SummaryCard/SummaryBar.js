@@ -41,7 +41,7 @@ const SummaryBar = ({ attraction_totals, columns }) => {
     );
   }
 
-  if (columns === 4) {
+else {
     return (
       <Row gutter={24}>
 
