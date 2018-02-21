@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
+import moment from "moment";
 
 import styles from './index.less';
 
@@ -15,8 +16,9 @@ class PageTitle extends PureComponent {
           <span className={styles.category}>{category}:</span> {title}
         </div>
         <div className={styles.pullRight}>
-          <CalendarSideBar />
-        </div>
+          <CalendarSideBar
+            range={[moment("2018/03/01"), moment("2018/03/07")]}
+          />        </div>
         <small className={styles.pageDescription}>
           {description}
         </small>
