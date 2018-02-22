@@ -119,7 +119,7 @@ export default class FullPerspective extends PureComponent {
         <Button onClick={((e) => this.changeType('Visitor')).bind(this)}>Visitor</Button>
         <Button onClick={((e) => this.changeType('Worker')).bind(this)}>Worker</Button>
 
-        <Card>
+        <Card title={"Affluence by gender > type > rent > age"}>
 
           <Row gutter={24}>
 
@@ -145,7 +145,7 @@ export default class FullPerspective extends PureComponent {
 
         </Card>
 
-        <Card>
+        <Card title={"Volume of people"} >
 
           <Row gutter={24}>
             <Col span={24}>

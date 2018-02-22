@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import * as d3 from 'd3';
 import VisitorFrequencyLine from './VisitorFrequencyLine';
-import VisitorFrequencyXScale from './VisitorFrequencyXScale';
+import VisitorFrequencyXScaleHours from './VisitorFrequencyXScaleHours';
+import VisitorFrequencyXScaleDays from './VisitorFrequencyXScaleDays';
 import VisitorFrequencyYScale from './VisitorFrequencyYScale';
 
 import styles from './VisitorFrequency.less';
@@ -46,10 +47,6 @@ class VisitorFrequency extends Component {
   }
 
   componentWillMount() {
-
-
-
-
   }
 
   componentDidMount() {
@@ -60,19 +57,25 @@ class VisitorFrequency extends Component {
     const { } = this.props;
 
     return (
-      <svg height={this.height + this.axisOffset + this.axisOffset + this.axisOffset} width={this.width} viewBox="0 0 1000 400">
+      <svg height={this.height + 150} width={this.width} viewBox="0 0 1000 400">
 
-        <g transform={`translate(0, ${0})`}>
+        <g transform={`translate(50, ${0})`}>
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_influence_area" types={this.types} values={this.data} />
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_door_area"      types={this.types} values={this.data} />
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_in_store"       types={this.types} values={this.data} />
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_purcharsers"    types={this.types} values={this.data} />
         </g>
 
-        {/*<VisitorFrequencyYScale yScale={this.x} values={this.data} />*/}
+        <g transform={`translate(30, 0)`}>
+          <VisitorFrequencyYScale yScale={this.y} values={this.data} />
+        </g>
 
-        <g transform={`translate(0, ${this.height + 20 })`}>
-          <VisitorFrequencyXScale xScale={this.x} values={this.data} />
+        <g transform={`translate(85, ${this.height + 20 })`}>
+          <VisitorFrequencyXScaleDays xScale={this.x} values={this.data} />
+        </g>
+
+        <g transform={`translate(40, ${this.height + 50 })`}>
+          <VisitorFrequencyXScaleHours xScale={this.x} values={this.data} />
         </g>
 
       </svg>

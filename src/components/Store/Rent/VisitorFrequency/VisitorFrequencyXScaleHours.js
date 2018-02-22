@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import styles from './VisitorFrequency.less';
 
-class VisitorFrequencyYScale extends Component {
+class VisitorFrequencyXScaleHours extends Component {
 
   constructor(props) {
     super();
@@ -13,18 +13,20 @@ class VisitorFrequencyYScale extends Component {
 
   renderAxis () {
     var node = this.axis;
-    d3.select(node).call(d3.svg.axis().scale(this.props.yScale).orient("left").ticks(10).outerTickSize(0).tickFormat(d3.format("s")));
+    const parts = {'Morning' : '9am', 'Afternoon' : '12am', 'Evening' : '9pm'}
+    const dayPartToHours = x => parts[x.split("_")[1]];
+    d3.select(node).call(d3.svg.axis().scale(this.props.xScale).ticks(21).tickFormat(dayPartToHours));
   }
 
   render() {
 
     return (
-      <g ref={(axis) => this.axis = axis} className={styles.freqaxis} />
+      <g ref={(axis) => this.axis = axis} className={styles.houraxis} />
     );
   }
 }
 
-export default VisitorFrequencyYScale;
+export default VisitorFrequencyXScaleHours;
 
 //a scale which maps a width to a key of start_dow + start_hour
 //a scale which maps a height to the maximum count of all entries

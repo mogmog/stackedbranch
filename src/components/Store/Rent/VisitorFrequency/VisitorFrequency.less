@@ -1,26 +1,32 @@
 @import "../../../../luca.less";
 
 svg {
-  .green {
-    fill : green
-  }
 
-  .axis {
-    fill: green;
-
-    stroke-width: 1px;
-  }
-
-  .axis text {
+  .houraxis, .daysaxis, .freqaxis text {
     font: 12px telefonica_text;
     fill: @axis_text;
   }
 
-  .axis path, .axis line {
+  .freqaxis path, .freqaxis line {
     fill : none;
     stroke-width: 1.5px;
     stroke: @axis_line;
     shape-rendering: crispEdges;
   }
+
+  .houraxis path, .houraxis line {
+    fill : none;
+    stroke-width: 1.5px;
+    stroke: @axis_line;
+    shape-rendering: crispEdges;
+  }
+
+  .daysaxis path, .daysaxis line {
+    fill : none;
+    stroke-width: 0px;
+    stroke: @axis_line;
+    shape-rendering: crispEdges;
+  }
+
 
 }
