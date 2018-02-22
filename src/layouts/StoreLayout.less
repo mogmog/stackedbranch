@@ -1,54 +1,101 @@
 @import "~antd/lib/style/themes/default.less";
-
-.header {
-  padding: 0 12px 0 0;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
-  position: relative;
+@import "../luca.less";
+body {
+  background-color: @luca-main-bg;
 }
 
-.logo {
-  height: 64px;
+.appBar {
+  display: block;
+  width: 100%;
+  height: 80px;
+  padding: 0 20px 0 0;
+  .appTitle {
+    display: inline-block;
+    font-family: @font-telefonica-extralight;
+    font-size: 36px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: top;
+    padding: 0 15px;
+    color: @luca-title-text;
+  }
+  .appLogo {
+    height: 80px;
+    width: 120px;
+    display: inline-block;
+    background: url(../assets/img/luca_telefonica_data_unit.svg) no-repeat center center;
+    background-size: 100px 100px;
+    vertical-align: top;
+  }
+  .appDropdown {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: top;
+  }
+}
+
+.logoSquare {
+  height: 76px;
   position: relative;
   line-height: 64px;
   padding-left: 24px;
   transition: all .3s;
-  background: #002140;
   overflow: hidden;
-  img {
-    display: inline-block;
-    vertical-align: middle;
-    height: 32px;
-  }
-  h1 {
-    color: #fff;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
-    margin: 0 0 0 12px;
-    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 600;
-  }
+  display: inline-block;
 }
 
-.ant-menu-inline-collapsed > .ant-menu-item .anticon,
-.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .anticon,
-.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon {
+.ant-menu-inline-collapsed>.ant-menu-item .anticon,
+.ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .anticon,
+.ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title .anticon {
   font-size: 36px;
-  line-height: 40px;
+  line-height: 76px;
+  min-height: 76px;
   margin: 0;
 }
 
+:global(.ant-layout-header) {
+  height: 100px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+:global(.ant-layout-content) {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  margin-left: 0;
+  margin-top: 0;
+  width:100%;
+}
+
+:global(.ant-layout-has-sider) {
+  width: 100%;
+  height: 100px;
+}
+
 :global(.ant-layout-sider) {
+  .ant-layout-sider-children {
+    width: 76px;
+  }
+  overflow: hidden;
+  top:0;
+  left:0;
   transition: all .2s;
-  position: relative;
-  background: white;
+  position: absolute;
+  background: @luca-sidebar-bg;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 34px;
 }
 
 :global(.ant-layout-sider-collapsed) .logo {
   padding-left: 24px;
-  > a {
+  >a {
     width: 32px;
   }
 }
@@ -79,7 +126,7 @@
     display: inline-block;
     transition: all .3s;
     height: 100%;
-    > i {
+    >i {
       font-size: 16px;
       vertical-align: middle;
     }
@@ -106,10 +153,10 @@
 }
 
 .menu {
-  :global(.anticon) {
+   :global(.anticon) {
     margin-right: 8px;
   }
-  :global(.ant-dropdown-menu-item) {
+   :global(.ant-dropdown-menu-item) {
     width: 160px;
   }
 }
@@ -117,17 +164,32 @@
 :global {
   .ant-layout {
     overflow-x: hidden;
+    background-color: @luca-main-bg;
   }
 }
 
 .sider {
+  margin-top: 100px;
   min-height: 100vh;
   position: relative;
   z-index: 10;
-
   .anticon {
-    font-size : 34px;
+    font-size: 34px;
   }
 }
 
-.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#fff;}.cls-3{stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;fill:url(#New_Gradient_Swatch);stroke:url(#linear-gradient-2);}
+.cls-1 {
+  fill: url(#linear-gradient);
+}
+
+.cls-2 {
+  fill: #fff;
+}
+
+.cls-3 {
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  fill: url(#New_Gradient_Swatch);
+  stroke: url(#linear-gradient-2);
+}

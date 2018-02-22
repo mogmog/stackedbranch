@@ -1,0 +1,65 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../luca.less";
+
+
+.pageBar {
+  background-color: @luca-light-bg;
+  height: 120px;
+  overflow: hidden;
+  border-top: 1px solid @luca-accent;
+  border-bottom: 1px solid @luca-accent;
+  .pageLogoContainer {
+    height: 120px;
+    width: 120px;
+    float: left;
+    margin-right: 15px;
+    background-color: @luca-sidebar-bg;
+    vertical-align: top;
+    .pageLogo {
+      margin: auto;
+      height: 120px;
+      width: 120px;
+      display: block;
+      background-size: 80px 80px;
+      vertical-align: top;
+      &.icFunnelAttraction {
+        background: url(../../../assets/svg/ic-funnel-attraction.svg) no-repeat center center;
+      }
+      &.icBattleground {
+        background: url(../../../assets/svg/ic-battleground.svg) no-repeat center center;
+      }
+    }
+  }
+  .pageTitle {
+    overflow: hidden;
+    margin: 10px 0 0;
+    height: 64px;
+    line-height: 64px;
+    font-size: 2.5em;
+    font-family: @font-telefonica-extralight;
+    color: @luca-title-text;
+    .category {
+      color: @luca-title-highlight;
+    }
+  }
+  .pullRight {
+    margin: -50px 20px 0;
+    float: right;
+    overflow: hidden;
+  }
+  .pageDescription {
+    overflow: hidden;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.printMenu {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 86px;
+  margin-top: 86px;
+}
