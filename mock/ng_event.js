@@ -130026,6 +130026,778 @@ export const getAttractionTotals = {
   }
 };
 
+export const getPurchaseAffluenceVisitor = {
+  "gender": [
+    {
+      "count": 92148,
+      "gender": "f",
+      "percent": 0.4990684575389948
+    },
+    {
+      "count": 92492,
+      "gender": "m",
+      "percent": 0.5009315424610052
+    }
+  ],
+  "gender_age_rent": [
+    {
+      "age": 1829,
+      "count": 3745,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 1829,
+      "count": 3881,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 1829,
+      "count": 4338,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 1829,
+      "count": 4480,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 3039,
+      "count": 4708,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 3039,
+      "count": 4723,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 3039,
+      "count": 5544,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 3039,
+      "count": 5354,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 4049,
+      "count": 4783,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 4049,
+      "count": 5023,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 4049,
+      "count": 5579,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 4049,
+      "count": 5654,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 5059,
+      "count": 3975,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 5059,
+      "count": 4164,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 5059,
+      "count": 4792,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 5059,
+      "count": 4854,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 6069,
+      "count": 2520,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 6069,
+      "count": 2762,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 6069,
+      "count": 3091,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 6069,
+      "count": 3051,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 1829,
+      "count": 3847,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 1829,
+      "count": 4001,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 1829,
+      "count": 4490,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 1829,
+      "count": 4519,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 3039,
+      "count": 4522,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 3039,
+      "count": 4769,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 3039,
+      "count": 5429,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 3039,
+      "count": 5398,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 4049,
+      "count": 4836,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 4049,
+      "count": 4989,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 4049,
+      "count": 5637,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 4049,
+      "count": 5721,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 5059,
+      "count": 4085,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 5059,
+      "count": 4289,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 5059,
+      "count": 4803,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 5059,
+      "count": 4785,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 6069,
+      "count": 2506,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 6069,
+      "count": 2640,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 6069,
+      "count": 3015,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 6069,
+      "count": 2970,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    }
+  ]
+};
+
+export const getPurchaseAffluenceResident = {
+  "gender": [
+    {
+      "count": 7364,
+      "gender": "f",
+      "percent": 0.5056303213402912
+    },
+    {
+      "count": 7200,
+      "gender": "m",
+      "percent": 0.4943696786597089
+    }
+  ],
+  "gender_age_rent": [
+    {
+      "age": 1829,
+      "count": 397,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 1829,
+      "count": 260,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 1829,
+      "count": 343,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 1829,
+      "count": 379,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 3039,
+      "count": 424,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 3039,
+      "count": 271,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 3039,
+      "count": 387,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 3039,
+      "count": 426,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 4049,
+      "count": 429,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 4049,
+      "count": 303,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 4049,
+      "count": 389,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 4049,
+      "count": 421,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 5059,
+      "count": 411,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 5059,
+      "count": 280,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 5059,
+      "count": 381,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 5059,
+      "count": 387,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 6069,
+      "count": 331,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 6069,
+      "count": 147,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 6069,
+      "count": 236,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 6069,
+      "count": 283,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 1829,
+      "count": 408,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 1829,
+      "count": 177,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 1829,
+      "count": 335,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 1829,
+      "count": 369,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 3039,
+      "count": 423,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 3039,
+      "count": 246,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 3039,
+      "count": 384,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 3039,
+      "count": 411,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 4049,
+      "count": 424,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 4049,
+      "count": 286,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 4049,
+      "count": 395,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 4049,
+      "count": 396,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 5059,
+      "count": 418,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 5059,
+      "count": 256,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 5059,
+      "count": 339,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 5059,
+      "count": 398,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 6069,
+      "count": 336,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 6069,
+      "count": 116,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 6069,
+      "count": 279,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 6069,
+      "count": 312,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    }
+  ]
+}
+
+export const getPurchaseAffluenceWorker = {
+  "gender": [
+    {
+      "count": 7197,
+      "gender": "f",
+      "percent": 0.4975114060555786
+    },
+    {
+      "count": 7269,
+      "gender": "m",
+      "percent": 0.5024885939444214
+    }
+  ],
+  "gender_age_rent": [
+    {
+      "age": 1829,
+      "count": 321,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 1829,
+      "count": 311,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 1829,
+      "count": 345,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 1829,
+      "count": 330,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 3039,
+      "count": 357,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 3039,
+      "count": 373,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 3039,
+      "count": 393,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 3039,
+      "count": 384,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 4049,
+      "count": 363,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 4049,
+      "count": 347,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 4049,
+      "count": 388,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 4049,
+      "count": 342,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 5059,
+      "count": 291,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 5059,
+      "count": 313,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 5059,
+      "count": 386,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 5059,
+      "count": 372,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 6069,
+      "count": 213,
+      "gender": "f",
+      "rent": "Alto"
+    },
+    {
+      "age": 6069,
+      "count": 276,
+      "gender": "f",
+      "rent": "Bajo"
+    },
+    {
+      "age": 6069,
+      "count": 238,
+      "gender": "f",
+      "rent": "Medio"
+    },
+    {
+      "age": 6069,
+      "count": 283,
+      "gender": "f",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 1829,
+      "count": 291,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 1829,
+      "count": 310,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 1829,
+      "count": 366,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 1829,
+      "count": 362,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 3039,
+      "count": 319,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 3039,
+      "count": 376,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 3039,
+      "count": 394,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 3039,
+      "count": 394,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 4049,
+      "count": 327,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 4049,
+      "count": 363,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 4049,
+      "count": 404,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 4049,
+      "count": 385,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 5059,
+      "count": 313,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 5059,
+      "count": 335,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 5059,
+      "count": 377,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 5059,
+      "count": 386,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    },
+    {
+      "age": 6069,
+      "count": 239,
+      "gender": "m",
+      "rent": "Alto"
+    },
+    {
+      "age": 6069,
+      "count": 262,
+      "gender": "m",
+      "rent": "Bajo"
+    },
+    {
+      "age": 6069,
+      "count": 259,
+      "gender": "m",
+      "rent": "Medio"
+    },
+    {
+      "age": 6069,
+      "count": 293,
+      "gender": "m",
+      "rent": "Medio-Alto"
+    }
+  ]
+}
+
+
 export const getDistrictClick = {
   "days": [
     {

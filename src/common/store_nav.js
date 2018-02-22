@@ -35,13 +35,6 @@ export const getStoreNavData = app => [
       },
 
       {
-        name: "Full Perspective",
-        icon: "ic-luca-audience.svg",
-        path: "store/fullperspective",
-        component: dynamicWrapper(app, ["districtvisitors"], () => import("../routes/Store/Attraction/index")),
-      },
-
-      {
         name: "Comparitive Zones",
         icon: "ic-luca-store.svg",
         path: "store/battleground",
@@ -56,10 +49,10 @@ export const getStoreNavData = app => [
       },
 
       {
-        name: 'Crossfilter',
+        name: 'Full Perspective',
         icon: "ic-luca-store.svg",
-        path: 'store/crossfilter',
-        component: dynamicWrapper(app, ['purchase_affluence'], () => import('../routes/Store/Crossfilter/index')),
+        path: 'store/fullperspective',
+        component: dynamicWrapper(app, ['purchase_affluence'], () => import('../routes/Store/FullPerspective/index')),
       },
     ],
   },

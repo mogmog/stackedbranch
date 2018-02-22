@@ -1,7 +1,7 @@
 import mockjs from 'mockjs';
 import { getArea} from './mock/area';
 import { getActivities, getNotice, getFakeList } from './mock/api';
-import {getDistricts, getDistrictClick, getAttractionTotals, getProfiles} from './mock/ng_event';
+import {getDistricts, getDistrictClick, getAttractionTotals, getProfiles, getPurchaseAffluenceVisitor, getPurchaseAffluenceResident, getPurchaseAffluenceWorker} from './mock/ng_event';
 import { getNotices } from './mock/notices';
 
 const noProxy = process.env.NO_PROXY === 'true';
@@ -30,6 +30,12 @@ const proxy = {
   'GET /api/ng_event/profiles' : getProfiles,
   'GET /api/ng_event/purchase/Moratalaz/Visitor' : getDistrictClick,
   'GET /api/ng_event/purchase/Moratalaz/Worker' : getDistrictClick,
+
+  'GET /api/ng_event/purchase_affluence/Visitor' : getPurchaseAffluenceVisitor,
+  'GET /api/ng_event/purchase_affluence/Resident' : getPurchaseAffluenceResident,
+  'GET /api/ng_event/purchase_affluence/Worker' : getPurchaseAffluenceWorker,
+
+
   'GET /api/project/notice': getNotice,
   'GET /api/activities': getActivities,
   'GET /api/areas': getArea,

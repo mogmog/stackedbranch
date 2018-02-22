@@ -15,7 +15,7 @@ import VisitorFrequency from '../../../components/Store/Rent/VisitorFrequency/Vi
   }
 })
 
-export default class CrossFilter extends PureComponent {
+export default class FullPerspective extends PureComponent {
 
   constructor(props) {
     super(props);

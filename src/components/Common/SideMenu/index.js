@@ -33,7 +33,7 @@ class SideMenu extends PureComponent {
         </Menu.Item>
 
         <Menu.Item key="4">
-          <Link to="/store/crossfilter">
+          <Link to="/store/fullperspective">
             <ReactSVG path={require(`../../../assets/svg/ic-luca-store.svg`)}/>
           </Link>
         </Menu.Item>
