@@ -12,14 +12,16 @@ class Purchases {
 
 }
 
+const initialState = {
+  visitors : new Purchases({days : [], gender : [], gender_age : []}),
+  workers  : new Purchases({days : [], gender : [], gender_age : []}),
+  loading: true,
+}
+
 export default {
   namespace: 'purchase',
 
-  state: {
-    visitors : new Purchases({days : [], gender : [], gender_age : []}),
-    workers  : new Purchases({days : [], gender : [], gender_age : []}),
-    loading: true,
-  },
+  state: initialState,
 
   effects: {
     *fetch({ payload }, { call, put }) {
@@ -48,11 +50,7 @@ export default {
   reducers: {
 
     clear() {
-      return {
-        visitors : new Purchases({days : [], gender : [], gender_age : []}),
-        workers  : new Purchases({days : [], gender : [], gender_age : []}),
-        loading: true,
-      }
+      return initialState;
     },
 
     save_visitors(state, action) {
