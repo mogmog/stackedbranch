@@ -130879,12 +130879,7 @@ export const getDistrictClick = {
       "gender": "f",
       "percent": 0.05783658436775337
     },
-    {
-      "age": null,
-      "count": 171,
-      "gender": "f",
-      "percent": 0.023325603601145817
-    },
+
     {
       "age": 1829,
       "count": 709,
@@ -130914,13 +130909,8 @@ export const getDistrictClick = {
       "count": 414,
       "gender": "m",
       "percent": 0.056472513981721456
-    },
-    {
-      "age": null,
-      "count": 187,
-      "gender": "m",
-      "percent": 0.02550811621879689
     }
+
   ]
 };
 
