@@ -130914,6 +130914,120 @@ export const getDistrictClick = {
   ]
 };
 
+export const getDistrictClickWorker = {
+  "days": [
+    {
+      "count": 101,
+      "percent": 0.16211878009630817,
+      "start_dow": "Monday"
+    },
+    {
+      "count": 100,
+      "percent": 0.16051364365971107,
+      "start_dow": "Tuesday"
+    },
+    {
+      "count": 90,
+      "percent": 0.14446227929373998,
+      "start_dow": "Sunday"
+    },
+    {
+      "count": 88,
+      "percent": 0.14125200642054575,
+      "start_dow": "Thursday"
+    },
+    {
+      "count": 88,
+      "percent": 0.14125200642054575,
+      "start_dow": "Wednesday"
+    },
+    {
+      "count": 83,
+      "percent": 0.1332263242375602,
+      "start_dow": "Saturday"
+    },
+    {
+      "count": 73,
+      "percent": 0.11717495987158909,
+      "start_dow": "Friday"
+    }
+  ],
+  "gender": [
+    {
+      "count": 290,
+      "gender": "f",
+      "percent": 0.4654895666131621
+    },
+    {
+      "count": 333,
+      "gender": "m",
+      "percent": 0.5345104333868379
+    }
+  ],
+  "gender_age": [
+    {
+      "age": 1829,
+      "count": 57,
+      "gender": "f",
+      "percent": 0.09359605911330049
+    },
+    {
+      "age": 3039,
+      "count": 70,
+      "gender": "f",
+      "percent": 0.11494252873563218
+    },
+    {
+      "age": 4049,
+      "count": 71,
+      "gender": "f",
+      "percent": 0.11658456486042693
+    },
+    {
+      "age": 5059,
+      "count": 55,
+      "gender": "f",
+      "percent": 0.090311986863711
+    },
+    {
+      "age": 6069,
+      "count": 28,
+      "gender": "f",
+      "percent": 0.04597701149425287
+    },
+    {
+      "age": 1829,
+      "count": 70,
+      "gender": "m",
+      "percent": 0.11494252873563218
+    },
+    {
+      "age": 3039,
+      "count": 70,
+      "gender": "m",
+      "percent": 0.11494252873563218
+    },
+    {
+      "age": 4049,
+      "count": 74,
+      "gender": "m",
+      "percent": 0.12151067323481117
+    },
+    {
+      "age": 5059,
+      "count": 64,
+      "gender": "m",
+      "percent": 0.10509031198686371
+    },
+    {
+      "age": 6069,
+      "count": 50,
+      "gender": "m",
+      "percent": 0.08210180623973727
+    }
+  ]
+};
+
 
 export const getDistricts = {
   "home": {
