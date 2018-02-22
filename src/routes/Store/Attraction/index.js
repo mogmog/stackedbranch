@@ -64,7 +64,7 @@ export default class Attraction extends PureComponent {
       });
     }
 
-    if (type === 'Worker') {
+    if (type === "Worker") {
       dispatch({
         type: 'purchase/fetch',
         payload: {
