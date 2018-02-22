@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Ic-Full perspective Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ic-Full-perspective-Copy">
+            <circle id="Oval-8" fill="#CCCCCC" cx="40" cy="40" r="40"></circle>
+            <g id="Group-2" transform="translate(19.000000, 16.000000)" stroke="#FFFFFF" stroke-width="3">
+                <g id="Group">
+                    <path d="M3.41594428,11.4078018 L0.202258928,46.1156036 C0.100419597,47.2154684 0.909479077,48.189642 2.00934385,48.2914813 C2.07064546,48.2971574 2.13217645,48.3 2.19374028,48.3 L39.8062597,48.3 C40.9108292,48.3 41.8062597,47.4045695 41.8062597,46.3 C41.8062597,46.2384362 41.8034171,46.1769052 41.7977411,46.1156036 L38.5840557,11.4078018 C38.5364295,10.8934389 38.1048781,10.5 37.588315,10.5 L4.41168495,10.5 C3.89512186,10.5 3.46357047,10.8934389 3.41594428,11.4078018 Z" id="Path-3-Copy"></path>
+                    <path d="M12.6,17.454243 L12.6,8.72712152 L12.6,8.4 C12.6,3.7608081 16.3608081,2.03222426e-12 21,0 L21,0 C25.6391919,-8.52205726e-16 29.4,3.7608081 29.4,8.4 L29.4,8.72712152 L29.4,17.454243" id="Path-4-Copy" stroke-linecap="round"></path>
+                </g>
+                <polyline id="Path-3" stroke-linecap="round" stroke-linejoin="round" points="14.7 33.6 18.9 37.8 27.3 25.2"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
