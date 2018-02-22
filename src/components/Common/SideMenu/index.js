@@ -4,6 +4,8 @@ import {Link} from "dva/router";
 
 import ReactSVG from "react-svg";
 
+import styles from './index.less';
+
 const {SubMenu} = Menu;
 
 class SideMenu extends PureComponent {
@@ -16,7 +18,7 @@ class SideMenu extends PureComponent {
       >
         <Menu.Item key="1">
           <Link to="/store/attraction">
-            <ReactSVG path={require(`../../../assets/svg/ic-luca-store.svg`)}/>
+            <ReactSVG path={require(`../../../assets/svg/ic-funnel-attraction.svg`)}/>
           </Link>
         </Menu.Item>
 
@@ -28,7 +30,7 @@ class SideMenu extends PureComponent {
 
         <Menu.Item key="3">
           <Link to="/store/battleground">
-            <ReactSVG path={require(`../../../assets/svg/ic-luca-store.svg`)}/>
+            <ReactSVG path={require(`../../../assets/svg/ic-battleground.svg`)}/>
           </Link>
         </Menu.Item>
 
@@ -37,10 +39,6 @@ class SideMenu extends PureComponent {
             <ReactSVG path={require(`../../../assets/svg/ic-luca-store.svg`)}/>
           </Link>
         </Menu.Item>
-
-
-
-
       </Menu>
     );
   }
