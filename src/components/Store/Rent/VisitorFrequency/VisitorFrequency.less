@@ -1,0 +1,26 @@
+@import "../../../../luca.less";
+
+svg {
+  .green {
+    fill : green
+  }
+
+  .axis {
+    fill: green;
+
+    stroke-width: 1px;
+  }
+
+  .axis text {
+    font: 12px telefonica_text;
+    fill: @axis_text;
+  }
+
+  .axis path, .axis line {
+    fill : none;
+    stroke-width: 1.5px;
+    stroke: @axis_line;
+    shape-rendering: crispEdges;
+  }
+
+}

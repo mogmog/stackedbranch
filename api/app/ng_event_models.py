@@ -45,5 +45,11 @@ class Profile(db.Model):
 
 
 
+class DOWFrequency(db.Model):
+ __table__ = db.Table('district_dow_freq', db.Model.metadata,
+        db.Column('start_dow', db.String, primary_key=True),
+        db.Column('start_hour', db.String, primary_key=True),
+        db.Column('type_visitor', db.String, primary_key=True),
+        db.Column('count', db.Numeric, primary_key=True))
 
 

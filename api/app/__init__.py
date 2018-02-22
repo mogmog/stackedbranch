@@ -24,7 +24,7 @@ db = SQLAlchemy()
 
 from app.models import Date, Area, LTESighting, SmallCell, Site, SightingsPerHourPerCountry, SightingsNew, SightingsBase, WideSighting, Journey
 from app.models import Department as DepartmentModel
-from app.ng_event_models import ZoneDistrict, AttractionTotal, Profile, PurchDistrict
+from app.ng_event_models import ZoneDistrict, AttractionTotal, Profile, PurchDistrict, DOWFrequency
 
 class Department(SQLAlchemyObjectType):
 
@@ -449,12 +449,13 @@ def create_app(config_name):
 
       return make_response(jsonify(results)), 200
 
+    @app.route('/api/ng_event/dowfreq', methods=['GET'])
+    def dowfreq():
 
+      results = []
+      for result in db.session.query(DOWFrequency.type_visitor, DOWFrequency.start_dow, DOWFrequency.start_hour, DOWFrequency.count).all():
+        results.append({'type_visitor' : result.type_visitor, 'start_dow' : result.start_dow, 'start_hour' : result.start_hour, 'count' : result.count })
 
-
-
-
-
-
+      return make_response(jsonify(results)), 200
 
     return app
