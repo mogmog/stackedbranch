@@ -46,6 +46,15 @@ export default {
   },
 
   reducers: {
+
+    clear() {
+      return {
+        visitors : new Purchases({days : [], gender : [], gender_age : []}),
+        workers  : new Purchases({days : [], gender : [], gender_age : []}),
+        loading: true,
+      }
+    },
+
     save_visitors(state, action) {
       return {
         ...state,

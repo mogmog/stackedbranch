@@ -43,6 +43,13 @@ export default class Attraction extends PureComponent {
     });
   }
 
+  componentWillUnmount() {
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'purchase/clear',
+    });
+  }
+
   getGender(feature, type) {
     const { dispatch } = this.props;
 
