@@ -357,13 +357,7 @@ class StoreLayout extends React.PureComponent {
               {this.getNavMenuItems(this.menus)}
             </Menu>
           </Sider>{" "}*/}
-          <GlobalFooter
-            copyright={
-              <div>
-                Copyright <Icon type="copyright" /> 2017 Telefonica
-              </div>
-            }
-          />
+          <GlobalFooter/>
         </Content>
       </Layout>
     );
