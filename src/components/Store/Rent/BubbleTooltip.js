@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './BubbleMock.less';
 
-export default class MultilineTooltip extends Component {
+export default class BubbleTooltip extends Component {
 
   render() {
     const { lines } = this.props;

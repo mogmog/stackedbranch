@@ -25,7 +25,7 @@ export const getStoreNavData = app => [
         category: "Overview",
         description:
           "Know your attraction power from total pedestrians to sales and take a general perspective of target.",
-        icon: "IC-LUCA-STORE.svg",
+        icon: "ic-luca-store.svg",
         path: "store/attraction",
         margin: "24px 24px 0 ",
         component: dynamicWrapper(app, ["districtvisitors", "purchase"], () =>
@@ -37,7 +37,7 @@ export const getStoreNavData = app => [
         name: 'Attraction Power Limited',
         category: "Overview",
         description: '___',
-        icon: 'IC-LUCA-STORE.svg',
+        icon: 'ic-luca-store.svg',
         path: 'store/attraction2',
         margin: '24px 24px 0 ',
         component: dynamicWrapper(app, ['districtvisitors', 'purchase'], () => import('../routes/Store/Attraction/index')),
@@ -48,7 +48,7 @@ export const getStoreNavData = app => [
         category: "Profiles",
         description:
           "Full and detailed profiles in each segment: catchment area, nearby, in-store and sales. It helps you to know your purchase profile compared to potential visitors.",
-        icon: "IC-LUCA-AUDIENCE.svg",
+        icon: "ic-luca-audience.svg",
         path: "store/fullperspective",
         component: dynamicWrapper(app, ["districtvisitors"], () =>
           import("../routes/Store/Attraction/index")
@@ -59,8 +59,8 @@ export const getStoreNavData = app => [
         name: "Comparitive Zones",
         category: "Battleground",
         description:
-          "Know the attraction power of different zones compared to your store for a given profile",
-        icon: "IC-LUCA-STORE.svg",
+          "Know the attraction power of different zones compared to your store for a given profile.",
+        icon: "ic-luca-store.svg",
         path: "store/battleground",
         component: dynamicWrapper(app, ["profile"], () =>
           import("../routes/Store/Battleground/index")
@@ -71,7 +71,7 @@ export const getStoreNavData = app => [
         name: "Something",
         category: "Some Category",
         description: "___",
-        icon: "IC-LUCA-STORE.svg",
+        icon: "ic-luca-store.svg",
         path: "store/buyerprofile",
         component: dynamicWrapper(app, ["districtvisitors"], () =>
           import("../routes/Store/Attraction/index")
@@ -79,15 +79,8 @@ export const getStoreNavData = app => [
       },
 
       {
-        name: 'Battleground',
-        icon: 'IC-LUCA-STORE.svg',
-        path: 'store/battleground',
-        component: dynamicWrapper(app, ['profile'], () => import('../routes/Store/Battleground/index')),
-      },
-
-      {
         name: 'Crossfilter',
-        icon: 'IC-LUCA-STORE.svg',
+        icon: "ic-luca-store.svg",
         path: 'store/crossfilter',
         component: dynamicWrapper(app, ['purchase_affluence'], () => import('../routes/Store/Crossfilter/index')),
       }

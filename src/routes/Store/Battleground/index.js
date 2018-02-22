@@ -8,10 +8,8 @@ import Transition from 'react-motion-ui-pack';
 
 import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-<<<<<<< 7781d735c5593e6c85ae8caaecd94226bd5cf287
-=======
+
 import PageTitle from '../../../components/Common/PageTitle';
->>>>>>> dynamic page icons
 import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
 import BattlegroundSideBar from '../../../components/Store/Battleground/BattelgroundSidebar';
 
@@ -80,16 +78,7 @@ export default class BattleGround extends PureComponent {
 
     const colors = d3.scale.ordinal().domain(['Salamanca', 'Chamartin', 'Chamberi']).range(['#29A5E9', '#7FD6D6', '#83A3AC']);
 
-<<<<<<< 7781d735c5593e6c85ae8caaecd94226bd5cf287
-    const pageHeaderContent = (
-      <div>
 
-        <div style={{'float': 'right'}}>
-          <CalendarSideBar range={[moment('2018/03/01'), moment('2018/03/07')]}/>
-        </div>
-
-        <div>
-=======
     const pageTitleInfo = {
       category: 'Battleground',
       title: 'Comparative Zones',
@@ -97,32 +86,7 @@ export default class BattleGround extends PureComponent {
         'Know the attraction power of different zones compared to your store for a given profile.',
       categoryIcon: 'icBattleground',
     };
->>>>>>> dynamic page icons
 
-          <h1>Battleground  </h1>
-          <small>Know the attraction power of different zones compared to your store for a given proﬁle</small>
-
-<<<<<<< 7781d735c5593e6c85ae8caaecd94226bd5cf287
-          <div style={{'height' : '60px', 'right' : '83px', top : '142px', 'zIndex' : 999, position: 'absolute'}} >
-            <PrintMenu/>
-          </div>
-
-
-        </div>
-
-      </div>
-    );
-
-    const WhichCard = whichcards[type];
-
-    return (
-      <PageHeaderLayout
-        top={null}
-        content={pageHeaderContent}
-        print={true}
-        style={{'padding': '0px 0px 0px 0px'}}
-      >
-=======
     const WhichCard = whichcards[type];
 
     return (
@@ -139,7 +103,6 @@ export default class BattleGround extends PureComponent {
           content={null}
           style={null}
         >
->>>>>>> dynamic page icons
 
           <Row gutter={24} className={styles.battleground}>
 
@@ -194,13 +157,9 @@ export default class BattleGround extends PureComponent {
 
           </Row>
 
-<<<<<<< 7781d735c5593e6c85ae8caaecd94226bd5cf287
-      </PageHeaderLayout>
 
-=======
         </PageHeaderLayout>
       </div>
->>>>>>> dynamic page icons
     );
   }
 }
