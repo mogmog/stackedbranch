@@ -13,22 +13,21 @@ class SideMenu extends PureComponent {
     const {} = this.props;
     return (
       <Menu
-        defaultSelectedKeys={['1']}
-        style={{width: 120, float: 'left'}}
+        style={{paddingLeft : 30, width: 120, float: 'left'}}
       >
-        <Menu.Item key="1">
+        <Menu.Item >
           <Link to="/store/attraction">
             <ReactSVG path={require(`../../../assets/svg/ic-funnel-line.svg`)}/>
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="2">
+        <Menu.Item >
           <Link to="/store/attraction2">
             <ReactSVG path={require(`../../../assets/svg/ic-funnel-line.svg`)}/>
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="3">
+        <Menu.Item >
           <Link to="/store/battleground">
             <ReactSVG path={require(`../../../assets/svg/ic-battleground-line.svg`)}/>
           </Link>

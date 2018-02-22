@@ -6,7 +6,6 @@ import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryBar from '../../../components/Store/Attraction/SummaryCard/SummaryBar';
 import SideMenu from '../../../components/Common/SideMenu';
 import PageTitle from '../../../components/Common/PageTitle';
-import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import BubbleMock from '../../../components/Store/Rent/BubbleMock';
 import VisitorFrequency from '../../../components/Store/Rent/VisitorFrequency/VisitorFrequency';
 
