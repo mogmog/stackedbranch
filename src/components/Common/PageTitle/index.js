@@ -7,7 +7,6 @@ import styles from './index.less';
 class PageTitle extends PureComponent {
   render() {
     const { category, title, description, categoryIcon } = this.props;
-    console.log(categoryIcon);
     return (
       <div className={styles.pageBar}>
         <div className={styles.pageLogoContainer}>

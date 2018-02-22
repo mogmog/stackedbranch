@@ -7,6 +7,7 @@ export default ({ children, wrapperClassName, top, ...restProps }) => (
 	<div className={styles.PageHeaderLayoutWrapper}>
 		{top}
 		<PageHeader {...restProps} linkElement={Link} />
+
 		{children ? <div className={styles.content}>{children}</div> : null}
 	</div>
 );

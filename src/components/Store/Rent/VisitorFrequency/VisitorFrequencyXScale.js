@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import styles from './VisitorFrequency.less';
 
-class VisitorFrequencyScale extends Component {
+class VisitorFrequencyXScale extends Component {
 
   constructor(props) {
     super();
@@ -26,7 +26,7 @@ class VisitorFrequencyScale extends Component {
   }
 }
 
-export default VisitorFrequencyScale;
+export default VisitorFrequencyXScale;
 
 //a scale which maps a width to a key of start_dow + start_hour
 //a scale which maps a height to the maximum count of all entries

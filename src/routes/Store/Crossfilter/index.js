@@ -1,19 +1,11 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'dva';
 import {Row, Col, Radio, Card, Divider, Button, Icon, Spin} from 'antd';
-import moment from 'moment';
-
-import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
+import SideMenu from '../../../components/Common/SideMenu';
+import PageTitle from '../../../components/Common/PageTitle';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-
-import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
-
 import BubbleMock from '../../../components/Store/Rent/BubbleMock';
-
 import VisitorFrequency from '../../../components/Store/Rent/VisitorFrequency/VisitorFrequency';
-
-import styles from './index.less';
-
 
 @connect(state => {
 
@@ -60,7 +52,14 @@ export default class CrossFilter extends PureComponent {
     const {type} = this.state;
     const data = purchaseaffluence;
 
-    console.log(data);
+    const pageTitleInfo = {
+      category: 'Profiles',
+      title: 'Full perspective',
+      description:
+        'Fulland detailed profiles in each segment catchment area nearby in store and sales. It helps you to know your purchases profile compared to the potential visitors',
+      categoryIcon: 'icFunnelAttraction',
+    };
+
 
     const priority_order = ["Alto", "Medio-Alto", "Medio", "Bajo"];
 
@@ -84,32 +83,21 @@ export default class CrossFilter extends PureComponent {
       .rollup(d => d[0].percent)
       .entries(data.gender);
 
-    const pageHeaderContent = (
+    return (
       <div>
 
-        <div style={{'float': 'right'}}>
-          <CalendarSideBar range={[moment('2018/03/01'), moment('2018/03/07')]}/>
-        </div>
+      <PageTitle
+        category={pageTitleInfo.category}
+        title={pageTitleInfo.title}
+        description={pageTitleInfo.description}
+        categoryIcon={pageTitleInfo.categoryIcon}
+      />
 
-        <div>
+      <SideMenu/>
 
-          <h1>Cross filter </h1>
-          <small>blah blah</small>
-
-          <div style={{'height': '60px', 'right': '83px', top: '142px', 'zIndex': 999, position: 'absolute'}}>
-            <PrintMenu/>
-          </div>
-
-
-        </div>
-
-      </div>
-    );
-
-    return (
       <PageHeaderLayout
         top={null}
-        content={pageHeaderContent}
+        content={null}
         print={true}
         style={{'padding': '0px 0px 0px 0px'}}
       >
@@ -155,7 +143,7 @@ export default class CrossFilter extends PureComponent {
         </Card>
 
       </PageHeaderLayout>
-
+      </div>
     );
   }
 }

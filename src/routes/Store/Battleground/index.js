@@ -3,17 +3,14 @@ import { connect } from 'dva';
 import { Row, Col, Radio, Card, Divider, Button, Icon, Spin } from 'antd';
 import _ from 'lodash';
 import * as d3 from 'd3';
-import moment from 'moment';
 import Transition from 'react-motion-ui-pack';
 
-import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
-
+import SideMenu from '../../../components/Common/SideMenu';
 import PageTitle from '../../../components/Common/PageTitle';
 import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
 import BattlegroundSideBar from '../../../components/Store/Battleground/BattelgroundSidebar';
 
-import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
 import DistrictGenderCard     from '../../../components/Store/Battleground/Cards/DistrictGenderCard';
 import DistrictAgeGenderCard  from '../../../components/Store/Battleground/Cards/DistrictAgeGenderCard';
 import DistrictDayGenderCard  from '../../../components/Store/Battleground/Cards/DistrictDayGenderCard';
@@ -97,6 +94,8 @@ export default class BattleGround extends PureComponent {
           description={pageTitleInfo.description}
           categoryIcon={pageTitleInfo.categoryIcon}
         />
+
+        <SideMenu/>
 
         <PageHeaderLayout
           top={null}

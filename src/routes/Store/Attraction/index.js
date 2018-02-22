@@ -1,23 +1,15 @@
 import React, { PureComponent } from 'react';
-import getRouteData from './../../../router';
 import { connect } from 'dva';
 import { Menu, Row, Col, Card, Divider, Button, Icon } from 'antd';
-import ReactSVG from 'react-svg';
-import MotionMenu from '../../../ext/react-motion-menu/src';
 
+import SideMenu from '../../../components/Common/SideMenu';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryBar from '../../../components/Store/Attraction/SummaryCard/SummaryBar';
-import ColorThing from '../../../components/Store/Attraction/SummaryCard/ColorThing';
-
-import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
 
 import PageTitle from '../../../components/Common/PageTitle';
-import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import HourBar from '../../../components/Store/Attraction/HourBar';
 import GenderAge from '../../../components/Store/Attraction/GenderAge';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
-
-import styles from './index.less';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -102,6 +94,8 @@ export default class Attraction extends PureComponent {
           description={pageTitleInfo.description}
           categoryIcon={pageTitleInfo.categoryIcon}
         />
+
+        <SideMenu/>
 
         <PageHeaderLayout
           top={null}

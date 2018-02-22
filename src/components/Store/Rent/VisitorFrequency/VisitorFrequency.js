@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import * as d3 from 'd3';
 import VisitorFrequencyLine from './VisitorFrequencyLine';
-import VisitorFrequencyScale from './VisitorFrequencyScale';
+import VisitorFrequencyXScale from './VisitorFrequencyXScale';
+import VisitorFrequencyYScale from './VisitorFrequencyYScale';
 
 import styles from './VisitorFrequency.less';
 
@@ -68,10 +69,10 @@ class VisitorFrequency extends Component {
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_purcharsers"    types={this.types} values={this.data} />
         </g>
 
-        <VisitorFrequencyYScale yScale={this.x} values={this.data} />
+        {/*<VisitorFrequencyYScale yScale={this.x} values={this.data} />*/}
 
         <g transform={`translate(0, ${this.height + 20 })`}>
-          <VisitorFrequencyScale xScale={this.x} values={this.data} />
+          <VisitorFrequencyXScale xScale={this.x} values={this.data} />
         </g>
 
       </svg>

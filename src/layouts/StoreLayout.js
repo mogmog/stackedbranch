@@ -336,7 +336,7 @@ class StoreLayout extends React.PureComponent {
               <Route component={NotFound} />
             </Switch>
           </div>
-          <Sider
+          {/*<Sider
             theme={"light"}
             trigger={null}
             collapsible
@@ -356,7 +356,7 @@ class StoreLayout extends React.PureComponent {
             >
               {this.getNavMenuItems(this.menus)}
             </Menu>
-          </Sider>{" "}
+          </Sider>{" "}*/}
           <GlobalFooter
             copyright={
               <div>
