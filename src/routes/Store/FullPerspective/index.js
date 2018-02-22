@@ -57,7 +57,7 @@ export default class FullPerspective extends PureComponent {
       title: 'Full perspective',
       description:
         'Fulland detailed profiles in each segment catchment area nearby in store and sales. It helps you to know your purchases profile compared to the potential visitors',
-      categoryIcon: 'icFunnelAttraction',
+      categoryIcon: 'icFullPerspective',
     };
 
 

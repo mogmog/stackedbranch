@@ -83,7 +83,7 @@ export default class Attraction extends PureComponent {
       title: 'Attraction Power',
       description:
         'Know your attraction power from total pedestrians to sales and take a general perspective of target.',
-      categoryIcon: 'icFunnelAttraction',
+      categoryIcon: 'icFunnel',
     };
 
     return (
