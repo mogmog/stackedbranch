@@ -1,13 +1,15 @@
-import React, {PureComponent} from 'react';
-import {connect} from 'dva';
-import {Row, Col, Radio , Card, Divider, Button, Icon, Spin} from 'antd';
+import React, { PureComponent } from 'react';
+import { connect } from 'dva';
+import { Row, Col, Radio, Card, Divider, Button, Icon, Spin } from 'antd';
 import _ from 'lodash';
 import * as d3 from 'd3';
 import moment from 'moment';
-import Transition from 'react-motion-ui-pack'
+import Transition from 'react-motion-ui-pack';
 
 import PrintMenu from '../../../components/Common/Printing/PrintMenu.js';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
+
+import PageTitle from '../../../components/Common/PageTitle';
 import BattlegroundMap from '../../../components/Store/Battleground/BattlegroundMap';
 import BattlegroundSideBar from '../../../components/Store/Battleground/BattelgroundSidebar';
 
@@ -22,151 +24,142 @@ const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 
 const whichcards = {
-  'gender'  : DistrictGenderCard,
-  'age'  : DistrictAgeGenderCard,
-  'day'  : DistrictDayGenderCard,
-}
+  gender: DistrictGenderCard,
+  age: DistrictAgeGenderCard,
+  day: DistrictDayGenderCard,
+};
 
-@connect(state => {
-
+@connect((state) => {
   return {
     profile: state.profile,
-    loading : state.loading
-  }
+    loading: state.loading,
+  };
 })
 
 export default class BattleGround extends PureComponent {
-
   constructor(props) {
     super(props);
 
     this.DEFAULT_TYPE = 'gender';
 
     this.state = {
-      sidebaropen : false,
-      type : this.DEFAULT_TYPE,
-      cards: []
+      sidebaropen: false,
+      type: this.DEFAULT_TYPE,
+      cards: [],
     };
   }
 
   componentDidMount() {
-    const {dispatch} = this.props;
+    const { dispatch } = this.props;
 
     dispatch({
       type: 'profile/fetch',
-      payload: {}
+      payload: {},
     });
   }
 
   districtClick(e) {
-
     if (!_(this.state.cards).includes(e.target.options.data)) {
-      this.setState({sidebaropen : true, cards: [...this.state.cards, e.target.options.data]});
+      this.setState({ sidebaropen: true, cards: [...this.state.cards, e.target.options.data] });
     }
   }
 
   closeSidebar() {
-    this.setState({sidebaropen : false, cards: []});
+    this.setState({ sidebaropen: false, cards: [] });
   }
 
   settingState(e) {
-    this.setState({'type' : e.target.value});
+    this.setState({ type: e.target.value });
   }
 
   render() {
-
     const { loading, profile } = this.props.profile;
     const { cards, type, sidebaropen } = this.state;
 
-    var colors = d3.scale.ordinal().domain(["Salamanca", "Chamartin", "Chamberi" ]).range(["#29A5E9", "#7FD6D6", "#83A3AC"]);
-
-    const pageHeaderContent = (
-      <div>
-
-        <div style={{'float': 'right'}}>
-          <CalendarSideBar range={[moment('2018/03/01'), moment('2018/03/07')]}/>
-        </div>
-
-        <div>
-
-          <h1>Battleground  </h1>
-          <small>Know the attraction power of different zones compared to your store for a given proﬁle</small>
-
-          <div style={{'height' : '60px', 'right' : '83px', top : '142px', 'zIndex' : 999, position: 'absolute'}} >
-            <PrintMenu/>
-          </div>
+    const colors = d3.scale.ordinal().domain(['Salamanca', 'Chamartin', 'Chamberi']).range(['#29A5E9', '#7FD6D6', '#83A3AC']);
 
 
-        </div>
-
-      </div>
-    );
+    const pageTitleInfo = {
+      category: 'Battleground',
+      title: 'Comparative Zones',
+      description:
+        'Know the attraction power of different zones compared to your store for a given profile.',
+      categoryIcon: 'icBattleground',
+    };
 
     const WhichCard = whichcards[type];
 
     return (
-      <PageHeaderLayout
-        top={null}
-        content={pageHeaderContent}
-        print={true}
-        style={{'padding': '0px 0px 0px 0px'}}
-      >
+      <div>
+        <PageTitle
+          category={pageTitleInfo.category}
+          title={pageTitleInfo.title}
+          description={pageTitleInfo.description}
+          categoryIcon={pageTitleInfo.categoryIcon}
+        />
+
+        <PageHeaderLayout
+          top={null}
+          content={null}
+          style={null}
+        >
 
           <Row gutter={24} className={styles.battleground}>
 
             <Col xl={24} lg={24} md={24} sm={24} xs={24}>
 
-                <BattlegroundMap colors={colors} districtClick={this.districtClick.bind(this)}></BattlegroundMap>
+              <BattlegroundMap colors={colors} districtClick={this.districtClick.bind(this)} />
 
-                <BattlegroundSideBar open={sidebaropen}>
+              <BattlegroundSideBar open={sidebaropen}>
 
-                  <Row gutter={24}>
-                    <Col>
-                      <a onClick={this.closeSidebar.bind(this)}><Button>x</Button></a>
-                    </Col>
-                  </Row>
+                <Row gutter={24}>
+                  <Col>
+                    <a onClick={this.closeSidebar.bind(this)}><Button>x</Button></a>
+                  </Col>
+                </Row>
 
-                  <Row>
-                    <Col span={24} >
-                      <RadioGroup style={{'float' : 'right', 'marginRight' : '0.8em'}} defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
-                        <RadioButton value="gender">Gender</RadioButton>
-                        <RadioButton value="age">Age</RadioButton>
-                        <RadioButton value="day">Day</RadioButton>
-                      </RadioGroup>
-                    </Col>
-                  </Row>
+                <Row>
+                  <Col span={24} >
+                    <RadioGroup style={{ float: 'right', marginRight: '0.8em' }} defaultValue={this.DEFAULT_TYPE} onChange={this.settingState.bind(this)}>
+                      <RadioButton value="gender">Gender</RadioButton>
+                      <RadioButton value="age">Age</RadioButton>
+                      <RadioButton value="day">Day</RadioButton>
+                    </RadioGroup>
+                  </Col>
+                </Row>
 
-                  <Transition
-                    component="ul"
+                <Transition
+                  component="ul"
 
-                    enter={{
+                  enter={{
                       opacity: 1,
                     }}
-                    leave={{
+                  leave={{
                       opacity: 0,
                     }}
-                  >
-                    { cards.map((district, i) =>
-                      <li key={i}>
+                >
+                  { cards.map((district, i) =>
+                      (<li key={i}>
                         <Row gutter={24}>
                           <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                            <WhichCard colors={colors} profile={profile} district={district}/>
+                            <WhichCard colors={colors} profile={profile} district={district} />
                           </Col>
 
                         </Row>
-                      </li>
+                       </li>)
                     )
                     }
-                  </Transition>
+                </Transition>
 
-                </BattlegroundSideBar>
+              </BattlegroundSideBar>
 
             </Col>
 
           </Row>
 
-      </PageHeaderLayout>
 
+        </PageHeaderLayout>
+      </div>
     );
   }
 }
