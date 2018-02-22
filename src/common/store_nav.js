@@ -52,7 +52,7 @@ export const getStoreNavData = app => [
         name: 'Full Perspective',
         icon: "ic-luca-store.svg",
         path: 'store/fullperspective',
-        component: dynamicWrapper(app, ['purchase_affluence'], () => import('../routes/Store/FullPerspective/index')),
+        component: dynamicWrapper(app, ['districtvisitors', 'purchase_affluence'], () => import('../routes/Store/FullPerspective/index')),
       },
     ],
   },
