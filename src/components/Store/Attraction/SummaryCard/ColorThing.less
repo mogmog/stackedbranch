@@ -1,21 +1,38 @@
 .arrow_box {
   position: relative;
   background: red;
-  width: 65%;
+  width: calc(~"100%" - 27px);
+  left: 18px;
   min-width:180px;
+  font-size: 12px;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 18px;
+  line-height: 18px;
   color:white;
 }
 .arrow_box_arrow {
-  left: 100%;
-  top: 0%;
-  border: solid transparent;
+  right:0;
+  margin-right:-18px;
+  top: 0;
+  border: solid transparent 9px;
   content: " ";
   height: 0;
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-width: 12px;
+}
+.arrow_box_arrow_tail {
+  left:0;
+  margin-left:-18px;
+  top: 0;
+  border: solid transparent 9px;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
 }
 
 
