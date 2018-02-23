@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import CalendarSideBar from '../../../components/Store/Attraction/CalendarSideBar';
+import PrintMenu from '../../../components/Common/Printing/PrintMenu';
+
 import moment from 'moment';
 
 import styles from './index.less';
@@ -25,6 +27,11 @@ class PageTitle extends PureComponent {
         <small className={styles.pageDescription}>
           {description}
         </small>
+
+        <div style={{'height' : '60px', 'right' : '83px', top : '85px', 'zIndex' : 999, position: 'absolute'}} >
+          <PrintMenu/>
+        </div>
+
       </div>
     );
   }

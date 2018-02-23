@@ -19,6 +19,7 @@ const printDocument = () => {
 
 export default () => (
   <MotionMenu
+    onOpen={()=>{}}
     type="horizontal"
     reverse={true}
     margin={60}
@@ -50,7 +51,7 @@ export default () => (
         </g>
       </svg>
 
-      {/*<ReactSVG path={require('../../../assets/svg/plus-blue-button.svg')}/>*/}
+      {/*<ReactSVG path={require('../../../assets/svg/ic-actions-button-open.svg')}/>*/}
 
 
     </div>
