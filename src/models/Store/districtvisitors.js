@@ -32,7 +32,8 @@ class AttractionTotal {
   }
 
   getValue(key) {
-    return this.keys[key] ? this.keys[key].value : 0;
+    return this.keys[key] ? d3.format(",")(this.keys[key].value) : 0;
+
   }
 
 }
