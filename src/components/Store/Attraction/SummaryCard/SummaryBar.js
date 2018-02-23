@@ -27,7 +27,7 @@ const SummaryBar = ({ attraction_totals, columns }) => {
             title="Sales"
             subtitle={attraction_totals.getValue('Buy')}
             total={attraction_totals.getPercent('Buy')}
-            footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >{attraction_totals.getDifference('Buy')} less -vs- CA</ColorThing>}/>
+            footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >{attraction_totals.getDifference('Buy')} less than CA</ColorThing>}/>
         </Col>
 
       </Row>
@@ -56,7 +56,7 @@ else {
             title="Nearby"
             subtitle={attraction_totals.getValue('Walk bys')}
             total={attraction_totals.getPercent('Walk bys')}
-            footer={<ColorThing color='#477784' text={'#ffffff'}>{attraction_totals.getDifference('Walk bys')} less -vs- CA</ColorThing>}/>
+            footer={<ColorThing color='#477784' text={'#ffffff'}>{attraction_totals.getDifference('Walk bys')} less than CA</ColorThing>}/>
         </Col>
 
         <Col xl={6} lg={6} md={8} sm={8} xs={8}>
@@ -66,7 +66,7 @@ else {
             title="In store"
             subtitle={attraction_totals.getValue('In Store')}
             total={attraction_totals.getPercent('In Store')}
-            footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>{attraction_totals.getDifference('In Store')} less -vs- CA</ColorThing>}/>
+            footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>{attraction_totals.getDifference('In Store')} less than CA</ColorThing>}/>
         </Col>
 
         <Col xl={6} lg={6} md={8} sm={8} xs={8}>
@@ -76,7 +76,7 @@ else {
             title="Sales"
             subtitle={attraction_totals.getValue('Buy')}
             total={attraction_totals.getPercent('Buy')}
-            footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >{attraction_totals.getDifference('Buy')} less -vs- CA</ColorThing>}/>
+            footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >{attraction_totals.getDifference('Buy')} less than CA</ColorThing>}/>
         </Col>
 
       </Row>
