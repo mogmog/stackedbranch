@@ -1,7 +1,40 @@
 @import "~antd/lib/style/themes/default.less";
 @import "../../../luca.less";
 
-ant-menu-item{
-  height: 120px;
-  width: 120px;
+.icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-size: 40px 40px;
+  vertical-align: top;
+  transition: all 0.2s;
+  border-bottom: 1px solid @luca-sidebar-divider;
+  &.icFunnel {
+    background: url(../../../assets/svg/ic-funnel-line.svg) @luca-sidebar-bg no-repeat center center;
+  }
+  &.icBattleground {
+    background: url(../../../assets/svg/ic-battleground-line.svg) @luca-sidebar-bg no-repeat center center;
+  }
+  &.icFullPerspective {
+    background: url(../../../assets/svg/ic-full-perspective-line.svg) @luca-sidebar-bg no-repeat center center;
+  }
+  &:hover {
+    background-color: @luca-accent;
+  }
+  &.active {
+    background-color: @luca-light-bg;
+  }
+}
+.menuContainer {
+  min-height: calc(~"100vh - 150px");
+  width: 80px;
+  overflow: hidden;
+  position: absolute;
+  clear: both;
+  background: @luca-sidebar-bg;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15) ;
 }

@@ -1,44 +1,46 @@
-import {Menu, Icon} from 'antd';
-import React, {PureComponent} from 'react';
-import {Link} from "dva/router";
+import { Menu, Icon } from 'antd';
+import React, { PureComponent } from 'react';
+import { Link } from 'dva/router';
 
-import ReactSVG from "react-svg";
+import ReactSVG from 'react-svg';
 
 import styles from './index.less';
 
-const {SubMenu} = Menu;
+const { SubMenu } = Menu;
 
 class SideMenu extends PureComponent {
   render() {
     const {} = this.props;
     return (
+      <div className={styles.menuContainer}>
       <Menu
-        style={{paddingLeft : 30, width: 120, float: 'left'}}
+        style={{ height: '100%', width: 80, float: 'left', border: 'none' }}
       >
-        <Menu.Item >
+        <Menu.Item style={{ width: 80, height: 80, lineHeight: 80, padding: 0, margin: 0 }}>
           <Link to="/store/attraction">
-            <ReactSVG path={require(`../../../assets/svg/ic-funnel-line.svg`)}/>
+            <div className={[styles.icon, styles.icFunnel].join(' ')} />
           </Link>
         </Menu.Item>
 
-        <Menu.Item >
+        <Menu.Item style={{ width: 80, height: 80, lineHeight: 80, padding: 0, margin: 0 }}>
           <Link to="/store/attraction2">
-            <ReactSVG path={require(`../../../assets/svg/ic-funnel-line.svg`)}/>
+            <div className={[styles.icon, styles.icFunnel].join(' ')} />
           </Link>
         </Menu.Item>
 
-        <Menu.Item >
+        <Menu.Item style={{ width: 80, height: 80, lineHeight: 80, padding: 0, margin: 0 }}>
           <Link to="/store/battleground">
-            <ReactSVG path={require(`../../../assets/svg/ic-battleground-line.svg`)}/>
+            <div className={[styles.icon, styles.icBattleground].join(' ')} />
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="4">
+        <Menu.Item style={{ width: 80, height: 80, lineHeight: 80, padding: 0, margin: 0 }}>
           <Link to="/store/fullperspective">
-            <ReactSVG path={require(`../../../assets/svg/ic-full-perspective-line.svg`)}/>
+            <div className={[styles.icon, styles.icFullPerspective].join(' ')} />
           </Link>
         </Menu.Item>
       </Menu>
+      </div>
     );
   }
 }
