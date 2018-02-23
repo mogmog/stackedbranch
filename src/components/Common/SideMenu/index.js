@@ -13,9 +13,7 @@ class SideMenu extends PureComponent {
     const {} = this.props;
     return (
       <div className={styles.menuContainer}>
-      <Menu
-        style={{ height: '100%', width: 80, float: 'left', border: 'none' }}
-      >
+      <Menu>
         <Menu.Item style={{ width: 80, height: 80, lineHeight: 80, padding: 0, margin: 0 }}>
           <Link to="/store/attraction">
             <div className={[styles.icon, styles.icFunnel].join(' ')} />

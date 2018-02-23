@@ -30,11 +30,20 @@
   }
 }
 .menuContainer {
-  min-height: calc(~"100vh - 150px");
-  width: 80px;
-  overflow: hidden;
-  position: absolute;
-  clear: both;
-  background: @luca-sidebar-bg;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15) ;
+  min-height: calc(~"100vh - 150px") !important;
+  width: 80px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  clear: both !important;
+  background: @luca-sidebar-bg !important;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15) !important;
+
+  ul {
+    height: '100%';
+    width: '80%';
+    float: 'left';
+    border: 'none';
+  }
+
+
 }
