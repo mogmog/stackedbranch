@@ -22,12 +22,12 @@ const SummaryBar = ({ attraction_totals, columns }) => {
 
         <Col xl={12} lg={12} md={12} sm={24} xs={24}>
           <SummaryCard
-            avatar={ <ReactSVG path={require('../../../../assets/svg/ic-basket-sales-store.svg')} /> }
+            avatar={ <ReactSVG path={require('../../../../assets/svg/ic-shop-store.svg')} /> }
             bordered={false}
-            title="Sales"
-            subtitle={attraction_totals.getValue('Buy')}
-            total={attraction_totals.getPercent('Buy')}
-            footer={<ColorThing color={'#BFEAEA'} text={'#4A494A'} >{attraction_totals.getDifference('Buy')} less than CA</ColorThing>}/>
+            title="In store"
+            subtitle={attraction_totals.getValue('In Store')}
+            total={attraction_totals.getPercent('In Store')}
+            footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>{attraction_totals.getDifference('In Store')} less than CA</ColorThing>}/>
         </Col>
 
       </Row>
