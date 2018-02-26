@@ -4,6 +4,7 @@ import _ from 'lodash';
 import styles from './BattlegroundMap.less';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
 import BattlegroundFeatureHighlight from './BattlegroundFeatureHighlight';
+import BattlegroundLabel from './BattlegroundLabel';
 const districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo.json');
 
 
@@ -12,7 +13,6 @@ class BattlegroundMap extends PureComponent {
   state = {highlightedfeature : null};
 
   districtHover(feature) {
-    console.log(feature);
     this.setState({'highlightedfeature' : feature});
   }
 
@@ -35,20 +35,42 @@ class BattlegroundMap extends PureComponent {
     return (
       <div style={{'width' : '100%'}}>
 
-        <Map attributionControl={false} doubleClickZoom={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={13} style={{'height': '100vh'}} >
+        <Map className={styles.test} attributionControl={false} doubleClickZoom={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={13} style={{'height': '100vh'}} >
 
           <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
+
+
+
+          <BattlegroundFeatureHighlight ref={ (map) => this.map = map } highlightedfeature={this.state.highlightedfeature}/>
 
           <FeatureGroup map={this.map}  >
             {
               (districtsToShow).map((feature, idx) =>
-                <GeoJSON onMouseOver={this.districtHover.bind(this)} onClick={districtClick} data={feature} style={getStyle} key={idx}/>)
+                <div>
+                  <GeoJSON data={feature} style={getStyle} key={idx} onMouseOver={(() => {this.districtHover(feature)}).bind(this)}/>
+                  <BattlegroundLabel ref={ (map) => this.map = map } feature={feature}/>
+                </div>
+                  )
+            }
+
+
+          </FeatureGroup>
+
+
+
+          <FeatureGroup map={this.map} >
+            {
+              (districtsToShow).map((feature, idx) =>
+                <div>
+                  <GeoJSON onClick={districtClick} data={feature} style={{'color' : 'white', 'fillOpacity' : 0}} key={'clicktarget_' + idx}/>
+                </div>
+              )
             }
           </FeatureGroup>
 
-          <BattlegroundFeatureHighlight ref={ (map) => this.map = map } highlightedfeature={this.state.highlightedfeature}/>
-
-          <Marker position={[40.432127, -3.671853]} icon={StoreIcon}></Marker>
+          <div className={styles.no_pointer} >
+            <Marker position={[40.432127, -3.671853]} icon={StoreIcon}></Marker>
+          </div>
 
         </Map>
       </div>

@@ -36,7 +36,7 @@ class BubbleMock extends Component {
           <GenderHeadline gender={gender} headline={d3.format('.01%')(headline)} />
         </div>
 
-        <ReactTooltip border id="getContent" className={styles.customTooltip}>
+        <ReactTooltip border id={"getContent" + gender} className={styles.customTooltip}>
           {(this.state.selectedTooltip) ? (<BubbleTooltip lines={this.state.selectedTooltip} />) : (null)}
         </ReactTooltip>
 
@@ -88,7 +88,7 @@ class BubbleMock extends Component {
                       d.values.map((e, j) =>
                         (
                           <g key={j}>
-                            <circle className={styles.bubble} fill={gender === 'm' ? '#F05CB0' : '#FF73FF'} onMouseEnter={(() => { this.setTooltip(e, d); })} data-tip="" data-for="getContent" cx={i * 100} cy={j * 100} r={40 * Math.pow(e.values / largest, 0.75)} />
+                            <circle className={styles.bubble} fill={gender === 'm' ? '#F05CB0' : '#FF73FF'} onMouseEnter={(() => { this.setTooltip(e, d); })} data-tip="" data-for={'getContent' + gender} cx={i * 100} cy={j * 100} r={40 * Math.pow(e.values / largest, 0.75)} />
                           </g>
                         )
                       )

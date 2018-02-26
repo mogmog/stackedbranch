@@ -39,7 +39,7 @@ else {
     return (
       <Row gutter={24}>
 
-        <Col xl={6} lg={6} md={8} sm={8} xs={8}>
+        <Col xl={6} lg={6} md={24} sm={24} xs={24}>
 
           <SummaryCard
             avatar={ <ReactSVG path={require('../../../../assets/svg/ic_city_store.svg')} /> }
@@ -49,7 +49,7 @@ else {
             footer={<ColorThing color='#E90C8B' text={'#ffffff'}>Catchment Area (CA)</ColorThing>}/>
         </Col>
 
-        <Col xl={6} lg={6} md={8} sm={8} xs={8}>
+        <Col xl={6} lg={6} md={24} sm={24} xs={24}>
           <SummaryCard
             avatar={ <ReactSVG path={require('../../../../assets/svg/ic-nearby-camera-store.svg')} /> }
             bordered={false}
@@ -59,7 +59,7 @@ else {
             footer={<ColorThing color='#477784' text={'#ffffff'}>{attraction_totals.getDifference('Walk bys')} less than CA</ColorThing>}/>
         </Col>
 
-        <Col xl={6} lg={6} md={8} sm={8} xs={8}>
+        <Col xl={6} lg={6} md={24} sm={24} xs={24}>
           <SummaryCard
             avatar={ <ReactSVG path={require('../../../../assets/svg/ic-shop-store.svg')} /> }
             bordered={false}
@@ -69,7 +69,7 @@ else {
             footer={<ColorThing color='#7ED6D6' text={'#ffffff'}>{attraction_totals.getDifference('In Store')} less than CA</ColorThing>}/>
         </Col>
 
-        <Col xl={6} lg={6} md={8} sm={8} xs={8}>
+        <Col xl={6} lg={6} md={24} sm={24} xs={24}>
           <SummaryCard
             avatar={ <ReactSVG path={require('../../../../assets/svg/ic-basket-sales-store.svg')} /> }
             bordered={false}

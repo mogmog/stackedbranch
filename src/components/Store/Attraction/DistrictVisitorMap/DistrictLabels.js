@@ -17,7 +17,8 @@ class DistrictLabels extends MapLayer {
       .enter()
       .append("text")
       .attr('font-family', "telefonica_text" )
-      .attr('font-size', 4 )
+      .style({'alignment-baseline': 'middle'})
+      .attr('font-size', 6 )
       .attr("x", (d, i) => {
         return this.projection.latLngToLayerPoint(d.latlng).x
       })
@@ -33,8 +34,6 @@ class DistrictLabels extends MapLayer {
     let {data, districts} = this.props;
     const that = this;
 
-    console.log(this.props);
-
     this.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
       this.svg = svg;
       this.projection = projection;
@@ -48,6 +47,7 @@ class DistrictLabels extends MapLayer {
   }
 
   render() {
+    console.log(1);
     const that = this;
 
     let {data, districts} = this.props;
