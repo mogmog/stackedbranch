@@ -1,63 +1,74 @@
 @import "../../../../node_modules/antd/lib/style/themes/default.less";
+@import "../../../luca.less";
 
 .customTooltip {
 
   ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-  }
-
-  width:210px !important;
-  color: @text-color !important;
-  background-color: white !important;
-  border: 1px @text-color !important;
-  border-style:dotted!important;
-  &.place-top {
-    &:after {
-      border-top-color: orange !important;
-      border-top-style: solid !important;
-      border-top-width: 6px !important;
+    li {
+      strong {
+        display: inline-block;
+        width: 60px;
+      }
     }
   }
+
+  width: 160px !important;
+  padding: 10px;
+  color: @text-color !important;
+  background-color: white !important;
+  border: 1px solid @luca-sidebar-divider !important;
+
+    &.place-top {
+      &:after {
+        border-top-color: white !important;
+        border-top-style: solid !important;
+        border-top-width: 6px !important;
+      }
+    }
 }
 
 .bubblemock {
+  font-family: telefonica_text, sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
 
-  text {
-    font-family: telefonica_text;
-    font-size: 18px;
-  }
 
-  rect {
+  :global(rect) {
     stroke: #ccc;
     fill: none;
   }
 
-  line {
-    stroke: #ccc;
-    fill: none;
-  }
+  //:global(line) {
+  //  stroke: #ccc;
+  //  fill: none;
+  //}
 
-  .grid-line {
+  .gridLine {
     stroke: #ccc;
     stroke-dasharray: 4;
   }
 
-  .axis-tick-label {
-    font-size: 1em;
+  .axisTickLabel {
+    font-family: telefonica_text, sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
   }
 
-  .x-axis-tick-label {
+  .xAxisTickLabel {
     alignment-baseline: top;
     text-anchor: middle;
   }
 
-  .y-axis-tick-label {
+  .yAxisTickLabel {
     alignment-baseline: middle;
     text-anchor: end;
   }
 
-  .x-axis-label,
-  .y-axis-label {
+  .xAxisLabel,
+  .yAxisLabel {
     font-size: 1.6em;
     alignment-baseline: hanging;
     text-anchor: end;
@@ -73,13 +84,7 @@
     opacity: 0.9;
   }
 
-  .set-01>.bubble {
-    fill: #e90d8b;
-  }
 
-  g.set-02 .bubble {
-    fill: #f00;
-  }
 
 }
 
