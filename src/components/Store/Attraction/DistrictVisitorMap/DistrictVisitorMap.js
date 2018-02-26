@@ -12,10 +12,14 @@ var districts = require('json!./../../../../assets/mapping/geojson/madrid_distri
 
 class RegionChooserMap extends PureComponent {
 
-  state = {};
+  state = {zoom : 10};
 
   districtHover(feature) {
     this.setState({'highlightedfeature' : feature});
+  }
+
+  onZoomEvent(e) {
+    this.setState({zoom : e.target.getZoom()});
   }
 
   render() {
@@ -31,9 +35,8 @@ class RegionChooserMap extends PureComponent {
     }
 
     return (
-      <div style={{'width' : '100%'}}>
-
-        <Map attributionControl={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{ 'height': '280px'}}>
+      <div style={{'width' : '100%'}} className={`zoom_${this.state.zoom}`}>
+        <Map  onZoomend={this.onZoomEvent.bind(this)} attributionControl={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{ 'height': '280px'}}>
 
           <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
 
@@ -53,7 +56,7 @@ class RegionChooserMap extends PureComponent {
 
           <Marker position={[40.408527, -3.641853]} icon={StoreIcon}/>
 
-          <DistrictLabels districts={districts}  data={data[type].list} map={this.map}/>
+          <DistrictLabels zoom={ this.state.zoom } districts={districts}  data={data[type].list} map={this.map}/>
 
           <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
 

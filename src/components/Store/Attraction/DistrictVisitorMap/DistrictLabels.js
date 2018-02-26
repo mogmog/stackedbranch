@@ -9,6 +9,7 @@ import polylabel from '@mapbox/polylabel';
 
 class DistrictLabels extends MapLayer {
 
+  zoom = undefined;
   elements = [];
 
   applyAttributes(selection) {
@@ -18,7 +19,7 @@ class DistrictLabels extends MapLayer {
       .append("text")
       .attr('font-family', "telefonica_text" )
       .style({'alignment-baseline': 'middle'})
-      .attr('font-size', 6 )
+      .attr('font-size', 5 )
       .attr("x", (d, i) => {
         return this.projection.latLngToLayerPoint(d.latlng).x
       })
@@ -26,13 +27,15 @@ class DistrictLabels extends MapLayer {
         return this.projection.latLngToLayerPoint(d.latlng).y
       })
       .text((x) => x.text)
-      .attr("opacity", 1);
+      .attr('transform', 'translate(-5, 0)')
+      .attr("opacity", this.zoom /10);
   }
 
   componentWillMount() {
 
-    let {data, districts} = this.props;
+    let {data, districts, zoom} = this.props;
     const that = this;
+    this.zoom = zoom;
 
     this.leafletElement = Leaflet.d3SvgOverlay((svg, projection) => {
       this.svg = svg;
@@ -47,7 +50,6 @@ class DistrictLabels extends MapLayer {
   }
 
   render() {
-    console.log(1);
     const that = this;
 
     let {data, districts} = this.props;
