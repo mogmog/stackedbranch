@@ -57,9 +57,11 @@ class VisitorFrequency extends Component {
     const { } = this.props;
 
     return (
-      <svg height={this.height + 150} width={this.width} viewBox="0 0 1000 400">
+
+      <svg height={this.height + 150} width={this.width} viewBox="0 0 1000 400" className={styles.visitorfrequency}>
 
         <g transform={`translate(50, ${0})`}>
+
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_influence_area" types={this.types} values={this.data} />
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_door_area"      types={this.types} values={this.data} />
           <VisitorFrequencyLine xScale={this.x} yScale={this.y} type="total_in_store"       types={this.types} values={this.data} />

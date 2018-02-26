@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import * as d3 from 'd3';
 
+import styles from './VisitorFrequency.less';
+
 class VisitorFrequencyLine extends Component {
 
   constructor(props) {
@@ -25,8 +27,8 @@ class VisitorFrequencyLine extends Component {
     const { type, values } = this.props;
 
     return (
-      <path stroke={this.color(type)} fill="none" d={this.line(values)} />
-    );
+      <path className={styles[type]} d={this.line(values)} />
+    )
   }
 }
 
