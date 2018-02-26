@@ -1,15 +1,16 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
-import { Menu, Row, Col, Card, Divider, Button, Icon } from 'antd';
+import { Card, Col, Divider, Menu, Row } from 'antd';
+import ReactSVG from 'react-svg';
 
 import SideMenu from '../../../components/Common/SideMenu';
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryBar from '../../../components/Store/Attraction/SummaryCard/SummaryBar';
-
 import PageTitle from '../../../components/Common/PageTitle';
 import HourBar from '../../../components/Store/Attraction/HourBar';
 import GenderAge from '../../../components/Store/Attraction/GenderAge';
 import DistrictVisitorMap from '../../../components/Store/Attraction/DistrictVisitorMap/DistrictVisitorMap';
+import styles from './index.less';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -63,7 +64,7 @@ export default class Attraction extends PureComponent {
       });
     }
 
-    if (type === "Worker") {
+    if (type === 'Worker') {
       dispatch({
         type: 'purchase/fetch',
         payload: {
@@ -102,7 +103,7 @@ export default class Attraction extends PureComponent {
           categoryIcon={pageTitleInfo.categoryIcon}
         />
 
-        <SideMenu/>
+        <SideMenu />
 
         <PageHeaderLayout
           top={null}
@@ -112,19 +113,29 @@ export default class Attraction extends PureComponent {
 
 
           <SummaryBar attraction_totals={attraction_totals} columns={show4Columns ? 4 : 2} />
-
-          <Divider />
+          <div className={styles.spacer} />
           <Row gutter={24}>
             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
 
-              <Card
-                bordered
-                title="Home District"
-              >
+              <Card bordered>
 
                 <Row gutter={24}>
                   <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                    <DistrictVisitorMap type="home" districtClick={(feature => this.getGender(feature, 'Visitor'))} data={districtvisitors} />
+                    <div className={styles.cardTitle}>
+                      <div className={styles.cardTitleIcon}>
+                        <ReactSVG path={require('../../../assets/svg/ic-home.svg')} />
+                      </div>
+                      <div className={styles.cardTitleText}>Home District</div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row gutter={24}>
+                  <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                    <DistrictVisitorMap
+                      type="home"
+                      districtClick={(feature => this.getGender(feature, 'Visitor'))}
+                      data={districtvisitors}
+                    />
                   </Col>
                 </Row>
 
@@ -151,14 +162,24 @@ export default class Attraction extends PureComponent {
 
             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
 
-              <Card
-                bordered
-                title="Work District"
-              >
-
+              <Card bordered >
                 <Row gutter={24}>
                   <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                    <DistrictVisitorMap type="work" districtClick={(feature => this.getGender(feature, 'Worker'))} data={districtvisitors} />
+                    <div className={styles.cardTitle}>
+                      <div className={styles.cardTitleIcon}>
+                        <ReactSVG path={require('../../../assets/svg/ic-work.svg')} />
+                      </div>
+                      <div className={styles.cardTitleText}>Work District</div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row gutter={24}>
+                  <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                    <DistrictVisitorMap
+                      type="work"
+                      districtClick={(feature => this.getGender(feature, 'Worker'))}
+                      data={districtvisitors}
+                    />
                   </Col>
                 </Row>
 
