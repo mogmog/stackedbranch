@@ -26,12 +26,10 @@ class GenderAgeGraphic extends Component {
 
     const {data, gender} = this.props;
 
-    console.log(data.groupedByGender["m"]);
-
-    /*hack - assume same number of buckers*/
+    /*hack - assume same number of buckets*/
     const howManyColours = data.groupedByGender["m"].length;
 
-    /*an aopacity scale */
+    /*an opacity scale */
     const color = d3.scale.ordinal().range([...Array(howManyColours).keys()].map(i => `rgba(102, 34, 136, ${(i + 1) / howManyColours})`));
 
     const arc = d3.svg.arc()
@@ -44,6 +42,7 @@ class GenderAgeGraphic extends Component {
 
     const pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
 
+    const fixage = x => x.toString().split("").splice(0, 2).join("") + "-" + x.toString().split("").splice(2).join("")
 
     return (
       <div>
@@ -68,7 +67,7 @@ class GenderAgeGraphic extends Component {
                         <path d={arc(d)} style={{'fill' : color(d.data.count)}}></path>
 
                         <g transform="translate(5, 10)">
-                          <text fill='gray' textAnchor='middle' transform={`translate(${textarc.centroid(d)})`}>{d.data.age}</text>
+                          <text fill='gray' textAnchor='middle' transform={`translate(${textarc.centroid(d)})`}>{fixage(d.data.age)}</text>
                         </g>
                     </g>
                   ))
