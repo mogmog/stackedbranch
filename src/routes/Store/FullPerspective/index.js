@@ -1,6 +1,7 @@
-import React, {PureComponent} from 'react';
-import {connect} from 'dva';
-import {Row, Col, Radio, Card, Divider, Button, Icon, Spin} from 'antd';
+import React, { PureComponent } from 'react';
+import { connect } from 'dva';
+import { Row, Col, Radio, Card, Divider, Button, Icon, Spin } from 'antd';
+import ReactSVG from 'react-svg';
 
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
 import SummaryBar from '../../../components/Store/Attraction/SummaryCard/SummaryBar';
@@ -8,32 +9,31 @@ import SideMenu from '../../../components/Common/SideMenu';
 import PageTitle from '../../../components/Common/PageTitle';
 import BubbleMock from '../../../components/Store/Rent/BubbleMock';
 import VisitorFrequency from '../../../components/Store/Rent/VisitorFrequency/VisitorFrequency';
+import styles from './index.less';
 
-@connect(state => {
-
+@connect((state) => {
   return {
     purchaseaffluence: state.purchaseaffluence,
     attraction_totals: state.districtvisitors.attraction_totals,
-    loading: state.loading
-  }
+    loading: state.loading,
+  };
 })
 
 export default class FullPerspective extends PureComponent {
-
   constructor(props) {
     super(props);
 
     this.state = {
-      type: 'Visitor'
+      type: 'Visitor',
     };
   }
 
   componentDidMount() {
-    const {dispatch} = this.props;
+    const { dispatch } = this.props;
 
     dispatch({
       type: 'purchaseaffluence/fetch',
-      payload: {'type': 'Visitor'}
+      payload: { type: 'Visitor' },
     });
 
     dispatch({
@@ -43,22 +43,20 @@ export default class FullPerspective extends PureComponent {
   }
 
   changeType(type) {
+    this.setState({ type });
 
-    this.setState({'type': type});
-
-    const {dispatch} = this.props;
+    const { dispatch } = this.props;
 
     dispatch({
       type: 'purchaseaffluence/fetch',
-      payload: {'type': type}
+      payload: { type },
     });
   }
 
   render() {
-
-    const {loading, purchaseaffluence} = this.props.purchaseaffluence;
-    const {attraction_totals} = this.props;
-    const {type} = this.state;
+    const { loading, purchaseaffluence } = this.props.purchaseaffluence;
+    const { attraction_totals } = this.props;
+    const { type } = this.state;
     const data = purchaseaffluence;
 
     const pageTitleInfo = {
@@ -70,7 +68,7 @@ export default class FullPerspective extends PureComponent {
     };
 
 
-    const priority_order = ["Alto", "Medio-Alto", "Medio", "Bajo"];
+    const priority_order = ['Alto', 'Medio-Alto', 'Medio', 'Bajo'];
 
     const groupedByGenderAgeRent = d3.nest()
       .key(d => d.gender)
@@ -78,7 +76,7 @@ export default class FullPerspective extends PureComponent {
       .key(d => d.age)
       .sortKeys(d3.ascending)
       .key(d => d.rent)
-      .sortKeys(function (a, b) {
+      .sortKeys((a, b) => {
         return priority_order.indexOf(a) - priority_order.indexOf(b);
       })
       .rollup(d => d[0].count)
@@ -95,67 +93,79 @@ export default class FullPerspective extends PureComponent {
     return (
       <div>
 
-      <PageTitle
-        category={pageTitleInfo.category}
-        title={pageTitleInfo.title}
-        description={pageTitleInfo.description}
-        categoryIcon={pageTitleInfo.categoryIcon}
-      />
+        <PageTitle
+          category={pageTitleInfo.category}
+          title={pageTitleInfo.title}
+          description={pageTitleInfo.description}
+          categoryIcon={pageTitleInfo.categoryIcon}
+        />
 
-      <SideMenu/>
+        <SideMenu />
 
-      <PageHeaderLayout
-        top={null}
-        content={null}
-        print={true}
-        style={{'padding': '0px 0px 0px 0px'}}
-      >
+        <PageHeaderLayout
+          top={null}
+          content={null}
+          print
+          style={{ padding: '0px 0px 0px 0px' }}
+        >
 
-        <SummaryBar attraction_totals={attraction_totals} columns={4} />
+          <SummaryBar attraction_totals={attraction_totals} columns={4} />
+          <div className={styles.spacer} />
 
-        <Divider />
 
-        <Button onClick={((e) => this.changeType('Resident')).bind(this)}>Resident</Button>
-        <Button onClick={((e) => this.changeType('Visitor')).bind(this)}>Visitor</Button>
-        <Button onClick={((e) => this.changeType('Worker')).bind(this)}>Worker</Button>
+          <Card title={'Affluence by gender > type > rent > age'}>
+            <Button onClick={(e => this.changeType('Resident'))}>Resident</Button>
+            <Button onClick={(e => this.changeType('Visitor'))}>Visitor</Button>
+            <Button onClick={(e => this.changeType('Worker'))}>Worker</Button>
+            <Row gutter={24}>
 
-        <Card title={"Affluence by gender > type > rent > age"}>
-
-          <Row gutter={24}>
-
-            <Col xl={12} lg={12} md={12} sm={24} xs={24}>
-              {
+              <Col xl={12} lg={12} md={12} sm={24} xs={24}>
+                {
                 groupedByGenderAgeRent.length ?
-                  <BubbleMock type={type} largest={largest} gender="m" data={groupedByGenderAgeRent[0]}
-                              headline={groupedByGender[0].values} width={500} height={450}></BubbleMock> :
+                  <BubbleMock
+                    type={type}
+                    largest={largest}
+                    gender="m"
+                    data={groupedByGenderAgeRent[0]}
+                    headline={groupedByGender[0].values}
+                    width={500}
+                    height={450}
+                  /> :
                   <span>no data</span>
               }
 
-            </Col>
+              </Col>
 
-            <Col xl={12} lg={12} md={12} sm={24} xs={24}>
-              {
+              <Col xl={12} lg={12} md={12} sm={24} xs={24}>
+                {
                 groupedByGenderAgeRent.length ?
-                  <BubbleMock type={type} largest={largest} gender="f" data={groupedByGenderAgeRent[1]}
-                              headline={groupedByGender[1].values} width={500} height={450}></BubbleMock> :
+                  <BubbleMock
+                    type={type}
+                    largest={largest}
+                    gender="f"
+                    data={groupedByGenderAgeRent[1]}
+                    headline={groupedByGender[1].values}
+                    width={500}
+                    height={450}
+                  /> :
                   <span>no data</span>
               }
-            </Col>
-          </Row>
+              </Col>
+            </Row>
 
-        </Card>
+          </Card>
 
-        <Card title={"Volume of people"} >
+          <Card title="Volume of people" >
 
-          <Row gutter={24}>
-            <Col span={24}>
-              <VisitorFrequency />
-            </Col>
-          </Row>
+            <Row gutter={24}>
+              <Col span={24}>
+                <VisitorFrequency />
+              </Col>
+            </Row>
 
-        </Card>
+          </Card>
 
-      </PageHeaderLayout>
+        </PageHeaderLayout>
       </div>
     );
   }

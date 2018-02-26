@@ -1,3 +1,6 @@
+@import "./luca.less";
+
+
 html, body, :global(#root) {
   height: 100%;
 }
@@ -11,4 +14,56 @@ body {
 .globalSpin {
   width: 100%;
   margin: 40px 0 !important;
+}
+
+:global(.ant-layout) {
+  min-height: calc(~"100vh");
+  :global(.ant-layout-content)
+  {
+    min-height: calc(~"100vh - 80px")
+  }
+}
+
+:global(.ant-card-bordered)
+{
+  border-radius: 6px;
+  box-shadow: rgba(0,0,0,0.1) 10px 10px 30px;
+  :global(.ant-card-body) {
+    padding:24px;
+  }
+}
+
+.spacer {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+}
+.cardTitle {
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 20px;
+  display: block;
+  .cardTitleIcon {
+    margin-right: 15px;
+    vertical-align: middle;
+
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    div {
+      height: 48px;
+      line-height: 48px;
+      div {
+        height: 48px;
+        line-height: 48px;}}
+  }
+  .cardTitleText {
+    font-family: @font-telefonica-extralight;
+    font-size: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+  }
 }
