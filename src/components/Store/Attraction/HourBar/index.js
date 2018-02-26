@@ -32,7 +32,6 @@ class HourBar extends Component {
         <h4>
           Day of the week
         </h4>
-        <h6>and hour of most frequency</h6>
         {
           days.map((d, i) => {
               if (i <= 2) return (<div key={i}>
