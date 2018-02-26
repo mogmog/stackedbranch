@@ -361,11 +361,9 @@ def create_app(config_name):
       gender_total        = sum(i[1] for i in gender_sql)
       gender_age_total    = sum(i[2] for i in gender_age_sql)
 
-      print (days_total)
-
       days_results = []
       for result in days_sql:
-        days_results.append({ 'start_dow' : result.start_dow, 'count' : result[1], 'percent' : result[1]/days_total, 'total' : days_total})
+        days_results.append({ 'start_dow' : result.start_dow, 'count' : result[1], 'percent' : float(result[1])/float(days_total), 'total' : days_total})
 
       gender_results = []
       for result in gender_sql:
@@ -373,7 +371,7 @@ def create_app(config_name):
 
       gender_age_results = []
       for result in gender_age_sql:
-        gender_age_results.append({'gender' : result.gender, 'age' : result.age, 'count' : result[2], 'percent' : result[2]/gender_age_total})
+        gender_age_results.append({'gender' : result.gender, 'age' : result.age, 'count' : result[2], 'percent' : float(result[2])/float(gender_age_total)})
 
       return make_response(jsonify({'days' : days_results, 'gender' : gender_results, 'gender_age' : gender_age_results})), 200
 
@@ -395,7 +393,7 @@ def create_app(config_name):
 
       gender_results = []
       for result in gender_sql:
-        gender_results.append({'gender' : result.gender, 'count' : result[1], 'percent' : result[1]/gender_total})
+        gender_results.append({'gender' : result.gender, 'count' : result[1], 'percent' : float(result[1])/float(gender_total)})
 
       gender_age_rent_results = []
       for result in gender_age_rent_sql:
