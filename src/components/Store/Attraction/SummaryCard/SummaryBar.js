@@ -13,7 +13,7 @@ const SummaryBar = ({ attraction_totals, columns }) => {
         <Col xl={12} lg={12} md={12} sm={24} xs={24}>
 
           <SummaryCard
-            avatar={ <ReactSVG path={require('../../../../assets/svg/ic_city_store.svg')} /> }
+            avatar={ <ReactSVG path={require('../../../../assets/svg/ic-city-store.svg')} /> }
             bordered={false}
             title="Catchment Area (100%)"
             total={attraction_totals.getValue('Influence area')}
@@ -42,7 +42,7 @@ else {
         <Col xl={6} lg={6} md={8} sm={8} xs={8}>
 
           <SummaryCard
-            avatar={ <ReactSVG path={require('../../../../assets/svg/ic_city_store.svg')} /> }
+            avatar={ <ReactSVG path={require('../../../../assets/svg/ic-city-store.svg')} /> }
             bordered={false}
             title="Catchment Area (100%)"
             total={attraction_totals.getValue('Influence area')}
