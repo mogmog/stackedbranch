@@ -86,7 +86,7 @@ export default class Login extends Component {
     const {count, type} = this.state;
     return (
 
-      <Content style={{padding: '10% 24px 0', height: '100%', background: 'url(' + require('../../assets/img/image-bg.png') + ')', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize : 'cover'  }}>
+      <Content style={{position:'absolute', top:0, padding: '10% 24px 0', height: '100%', background: 'url(' + require('../../assets/img/image-bg.png') + ')', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize : 'cover'  }}>
         <div className="login" >
           <div className={styles.main}  >
 
