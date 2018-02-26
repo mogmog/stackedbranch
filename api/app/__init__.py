@@ -361,9 +361,11 @@ def create_app(config_name):
       gender_total        = sum(i[1] for i in gender_sql)
       gender_age_total    = sum(i[2] for i in gender_age_sql)
 
+      print days_total
+
       days_results = []
       for result in days_sql:
-        days_results.append({ 'start_dow' : result.start_dow, 'count' : result[1], 'percent' : result[1]/days_total})
+        days_results.append({ 'start_dow' : result.start_dow, 'count' : result[1], 'percent' : result[1]/days_total, 'total' : days_total})
 
       gender_results = []
       for result in gender_sql:
