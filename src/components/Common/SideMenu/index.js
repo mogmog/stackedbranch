@@ -13,28 +13,32 @@ class SideMenu extends PureComponent {
     const {} = this.props;
     return (
       <div className={styles.menuContainer}>
-      <Menu>
+      <Menu inlineCollapsed={true}>
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/attraction">
-            <div className={[styles.icon, styles.icFunnel].join(' ')} />
+            <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
+            <span>Attraction Power</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/attraction2">
-            <div className={[styles.icon, styles.icFunnel].join(' ')} />
+            <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
+            <span>Attraction Power 2</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/battleground">
-            <div className={[styles.icon, styles.icBattleground].join(' ')} />
+            <div className={['icon', styles.icon, styles.icBattleground].join(' ')} />
+            <span>Battle ground</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/fullperspective">
-            <div className={[styles.icon, styles.icFullPerspective].join(' ')} />
+            <div className={['icon', styles.icon, styles.icFullPerspective].join(' ')} />
+            <span>Full perspective</span>
           </Link>
         </Menu.Item>
       </Menu>
