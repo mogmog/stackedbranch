@@ -361,7 +361,7 @@ def create_app(config_name):
       gender_total        = sum(i[1] for i in gender_sql)
       gender_age_total    = sum(i[2] for i in gender_age_sql)
 
-      print days_total
+      print (days_total)
 
       days_results = []
       for result in days_sql:
