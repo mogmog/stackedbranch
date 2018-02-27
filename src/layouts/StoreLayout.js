@@ -303,7 +303,9 @@ class StoreLayout extends React.PureComponent {
               onClick={this.toggle}
             />*/}
         <div className={styles.appBar}>
-          <div className={styles.appLogo} />
+          <Link to="/store/home">
+            <div className={styles.appLogo} />
+          </Link>
           <div className={styles.appTitle}>Store</div>
           <div className={styles.appDropdown}>
             <div>

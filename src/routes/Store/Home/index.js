@@ -15,10 +15,10 @@ export default class Home extends PureComponent {
   render() {
 
     const pageTitleInfo = {
-      category: 'Home',
+      category: '',
       title: 'Welcome, Carolina',
       description:
-        'Something something',
+        'This is the landing page of the tool. Here you can see your latest KPIs on recent activity',
       categoryIcon: 'icFunnel',
     };
 
@@ -38,7 +38,7 @@ export default class Home extends PureComponent {
           content={null}
           style={null}
         >
-            Hello
+            <img style={{'cursor' : 'not-allowed'}} src={require('./../../../assets/screenshots/landing_screen.png')}/>
         </PageHeaderLayout>
       </div>
     );

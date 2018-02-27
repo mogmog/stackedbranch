@@ -49,6 +49,14 @@ class SideMenu extends PureComponent {
             <span>Full perspective</span>
           </Link>
         </Menu.Item>
+
+        <Menu.Item className={styles.menuItem}>
+          <Link to="/login">
+            <div className={['icon', styles.icon, styles.icFullPerspective].join(' ')} />
+            <span>Log out</span>
+          </Link>
+        </Menu.Item>
+
       </Menu>
       </div>
     );

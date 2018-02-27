@@ -17,7 +17,9 @@ class PageTitle extends PureComponent {
           />
         </div>
         <div className={styles.pageTitle}>
-          <span className={styles.category}>{category}:</span> {title}
+          {category.length ? (<span className={styles.category}>{category}:</span>) : (<span />)}
+
+          {title}
         </div>
         <div className={styles.pullRight}>
           <CalendarSideBar
