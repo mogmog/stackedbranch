@@ -41,7 +41,7 @@ class BattlegroundLabel extends MapLayer {
         .attr('font-size', 24 )
         .attr('transform', `translate(50, 30)`)
         .attr("fill", "#FFF")
-        .attr("class", styles.battlegroundlabel)
+        .attr("class", styles.battlegroundLabel)
         .attr('x', (d) => this.projection.latLngToLayerPoint([center[1], center[0]]).x)
         .attr('y', (d) => this.projection.latLngToLayerPoint([center[1], center[0]]).y)
     }
