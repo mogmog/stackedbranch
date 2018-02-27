@@ -19,6 +19,14 @@ export const getStoreNavData = app => [
 
     children: [
       {
+        name: "Home",
+        icon: "ic-luca-store.svg",
+        path: "store/home",
+        margin: "24px 24px 0 ",
+        component: dynamicWrapper(app, [], () => import("../routes/Store/Home/index"))
+      },
+
+      {
         name: "Attraction Power",
         icon: "ic-luca-store.svg",
         path: "store/attraction",

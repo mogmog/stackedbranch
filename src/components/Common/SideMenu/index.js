@@ -14,6 +14,14 @@ class SideMenu extends PureComponent {
     return (
       <div className={styles.menuContainer}>
       <Menu inlineCollapsed={true}>
+
+        <Menu.Item className={styles.menuItem}>
+          <Link to="/store/home">
+            <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
+            <span>Home</span>
+          </Link>
+        </Menu.Item>
+
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/attraction">
             <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
@@ -24,7 +32,7 @@ class SideMenu extends PureComponent {
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/attraction2">
             <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
-            <span>Attraction Power 2</span>
+            <span>Attraction Power Funnel</span>
           </Link>
         </Menu.Item>
 
