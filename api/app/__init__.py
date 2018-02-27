@@ -367,7 +367,7 @@ def create_app(config_name):
 
       gender_results = []
       for result in gender_sql:
-        gender_results.append({'gender' : result.gender, 'count' : result[1], 'percent' : result[1]/gender_total})
+        gender_results.append({'gender' : result.gender, 'count' : result[1], 'percent' : float(result[1])/float(gender_total)})
 
       gender_age_results = []
       for result in gender_age_sql:
