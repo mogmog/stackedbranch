@@ -16,7 +16,7 @@ export default class Home extends PureComponent {
 
     const pageTitleInfo = {
       category: '',
-      title: 'Welcome, Carolina',
+      title: 'Welcome, Daniel',
       description:
         'This is the landing page of the tool. Here you can see your latest KPIs on recent activity',
       categoryIcon: 'icFunnel',

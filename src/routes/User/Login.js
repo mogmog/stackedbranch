@@ -50,10 +50,10 @@ export default class Login extends Component {
     const { type } = this.state;
     this.props.form.validateFields({ force: true },
       (err, values) => {
-        if (this.props.form.getFieldValue('userName') === 'graham.bates@biggroup.co.uk') {
+        if (this.props.form.getFieldValue('userName') === 'Daniel.garcia@telefonica.com') {
           this.props.dispatch(routerRedux.push('/store/attraction'));
         } else {
-          this.props.dispatch(routerRedux.push('/store/attraction'));
+          this.props.dispatch(routerRedux.push('/login'));
         }
 
 

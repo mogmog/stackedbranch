@@ -33,7 +33,7 @@ class GenderBar extends Component {
 
                 {/*total label*/}
                 <g transform="translate(0, 14)">
-                  <text x={0} y={0} fontSize="10"> {data[gender]} </text>
+                  <text x={0} y={0} fontSize="16"> {data[gender]} </text>
                 </g>
 
                 <g transform="translate(115, 15)">
