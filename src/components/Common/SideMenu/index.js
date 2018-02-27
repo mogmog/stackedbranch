@@ -31,7 +31,7 @@ class SideMenu extends PureComponent {
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/battleground">
             <div className={['icon', styles.icon, styles.icBattleground].join(' ')} />
-            <span>Battle ground</span>
+            <span>Battleground</span>
           </Link>
         </Menu.Item>
 
