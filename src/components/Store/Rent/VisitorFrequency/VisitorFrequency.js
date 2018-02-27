@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as d3 from 'd3';
 import VisitorFrequencyLine from './VisitorFrequencyLine';
+import VisitorDayDividers from './VisitorDayDividers';
 import VisitorFrequencyXScaleHours from './VisitorFrequencyXScaleHours';
 import VisitorFrequencyXScaleDays from './VisitorFrequencyXScaleDays';
 import VisitorFrequencyYScale from './VisitorFrequencyYScale';
@@ -42,8 +43,9 @@ class VisitorFrequency extends Component {
 
     ];
 
-    this.x = d3.scale.ordinal().domain(this.data.map(x=> `${x.start_dow}_${x.start_hour}`)).rangeRoundBands([0, 1000], 0.1);
-    this.y = d3.scale.linear().domain([0, d3.max(this.data, (d) => d.total_influence_area)]).range([400, 0]);
+    this.dayDividers  = d3.scale.ordinal().domain(this.data.map(x=> x.start_dow)).rangeRoundBands([0, 1000], 0.1);
+    this.x            = d3.scale.ordinal().domain(this.data.map(x=> `${x.start_dow}_${x.start_hour}`)).rangeRoundBands([0, 1000], 0.1);
+    this.y            = d3.scale.linear().domain([0, d3.max(this.data, (d) => d.total_influence_area)]).range([400, 0]);
   }
 
   componentWillMount() {
@@ -78,6 +80,11 @@ class VisitorFrequency extends Component {
 
         <g transform={`translate(40, ${this.height + 50 })`}>
           <VisitorFrequencyXScaleHours xScale={this.x} values={this.data} />
+        </g>
+
+        <g transform={`translate(30, ${this.height })`}>
+          <VisitorDayDividers opacity="1"   color="white" height={this.height} xScale={this.dayDividers} values={this.data} />
+          <VisitorDayDividers opacity="0.05" color="lightgrey" height={this.height} xScale={this.dayDividers} values={this.data} />
         </g>
 
       </svg>
