@@ -47,8 +47,8 @@ class BattlegroundMap extends PureComponent {
             {
               (districtsToShow).map((feature, idx) =>
                 <div>
-                  <GeoJSON data={feature} style={getStyle} key={idx} onMouseOver={(() => {this.districtHover(feature)}).bind(this)}/>
-                  <BattlegroundLabel ref={ (map) => this.map = map } feature={feature}/>
+                  <GeoJSON data={feature} style={getStyle} key={'geo_'+idx} onMouseOver={(() => {this.districtHover(feature)}).bind(this)}/>
+                  <BattlegroundLabel key={'label_'+idx} ref={ (map) => this.map = map } feature={feature}/>
                 </div>
                   )
             }
