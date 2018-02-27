@@ -113,7 +113,7 @@ export default class FullPerspective extends PureComponent {
           <div className={styles.spacer} />
 
 
-          <Card title={'Affluence by gender > type > rent > age'} bordered={false}>
+          <Card className={styles.fullperspectivecard} title={'Affluence by gender > type > rent > age'} bordered>
             <Button onClick={(e => this.changeType('Resident'))}>Resident</Button>
             <Button onClick={(e => this.changeType('Visitor'))}>Visitor</Button>
             <Button onClick={(e => this.changeType('Worker'))}>Worker</Button>
@@ -162,7 +162,9 @@ export default class FullPerspective extends PureComponent {
 
           </Card>
 
-          <Card title="Volume of people" bordered={false} >
+          &nbsp;
+
+          <Card className={styles.fullperspectivecard} title="Volume of people" bordered >
 
             <Row gutter={24}>
               <Col span={24}>
