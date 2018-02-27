@@ -40,7 +40,7 @@ class GenderAgeGraphic extends Component {
       .outerRadius(radius + 40)
       .innerRadius(radius - 10);
 
-    const pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
+    const pie = d3.layout.pie().sort(d3.ascending).value(function(d) { return d.count; });
 
     const fixage = x => x.toString().split("").splice(0, 2).join("") + "-" + x.toString().split("").splice(2).join("")
 
@@ -64,7 +64,7 @@ class GenderAgeGraphic extends Component {
                   pie(data.groupedByGender[gender]).map((d, i) => (
 
                     <g className="arc" key={i} transform="translate(0, 15)">
-                        <path d={arc(d)} style={{'fill' : color(d.data.count)}}></path>
+                        <path d={arc(d)} style={{'fill' : color(d.data.age)}}></path>
 
                         <g transform="translate(5, 10)">
                           <text fill='gray' textAnchor='middle' transform={`translate(${textarc.centroid(d)})`}>{fixage(d.data.age)}</text>
