@@ -117,6 +117,13 @@ export default class FullPerspective extends PureComponent {
             <Button onClick={(e => this.changeType('Resident'))}>Resident</Button>
             <Button onClick={(e => this.changeType('Visitor'))}>Visitor</Button>
             <Button onClick={(e => this.changeType('Worker'))}>Worker</Button>
+
+            <Row gutter={24}>
+              <Col xl={24} lg={24} md={24} sm={24} xs={24}>
+                <Divider />
+              </Col>
+            </Row>
+
             <Row gutter={24}>
 
               <Col xl={12} lg={12} md={12} sm={24} xs={24}>
