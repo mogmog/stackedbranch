@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON, CircleMarker, Marker, Tooltip, Popup} from 'react-leaflet';
-import Choropleth from '../../../Common/Mapping/Choropleth';
 
+import ZoomControl from '../../../Common/Mapping/ZoomControl';
+import Choropleth from '../../../Common/Mapping/Choropleth';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
+
 import DistrictLabels from './DistrictLabels';
 import FeatureHighlight from './FeatureHighlight';
 import styles from './DistrictVisitorMap.less';
@@ -38,7 +40,9 @@ class RegionChooserMap extends PureComponent {
       <div style={{'width' : '100%'}} className={`zoom_${this.state.zoom}`}>
         <Map  onZoomend={this.onZoomEvent.bind(this)} attributionControl={false} ref={ (map) => this.map = map } zoomControl={false} center={[40.458527, -3.691853]} zoom={10} style={{ 'height': '280px'}}>
 
-          <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
+            <ZoomControl map={this.map}/>
+
+            <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
 
             <Choropleth
                         onClick={(feature) => {districtClick(feature)}}
@@ -59,6 +63,10 @@ class RegionChooserMap extends PureComponent {
           <DistrictLabels zoom={ this.state.zoom } districts={districts}  data={data[type].list} map={this.map}/>
 
           <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
+
+          {/*<Control position="topleft">
+            test
+          </Control>*/}
 
         </Map>
       </div>

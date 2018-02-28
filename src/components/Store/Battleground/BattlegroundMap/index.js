@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Map, TileLayer, Marker, GeoJSON, FeatureGroup  } from 'react-leaflet';
 import _ from 'lodash';
 import styles from './BattlegroundMap.less';
+import ZoomControl from '../../../Common/Mapping/ZoomControl';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
 import BattlegroundFeatureHighlight from './BattlegroundFeatureHighlight';
 import BattlegroundLabel from './BattlegroundLabel';
@@ -39,14 +40,14 @@ class BattlegroundMap extends PureComponent {
 
           <TileLayer url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png'/>
 
-
+          <ZoomControl map={this.map}/>
 
           <BattlegroundFeatureHighlight ref={ (map) => this.map = map } highlightedfeature={this.state.highlightedfeature}/>
 
           <FeatureGroup map={this.map}  >
             {
               (districtsToShow).map((feature, idx) =>
-                <div>
+                <div key={idx}>
                   <GeoJSON data={feature} style={getStyle} key={'geo_'+idx} onMouseOver={(() => {this.districtHover(feature)}).bind(this)}/>
                   <BattlegroundLabel key={'label_'+idx} ref={ (map) => this.map = map } feature={feature}/>
                 </div>
@@ -61,7 +62,7 @@ class BattlegroundMap extends PureComponent {
           <FeatureGroup map={this.map} >
             {
               (districtsToShow).map((feature, idx) =>
-                <div>
+                <div key={idx}>
                   <GeoJSON onClick={districtClick} data={feature} style={{'color' : 'white', 'fillOpacity' : 0}} key={'clicktarget_' + idx}/>
                 </div>
               )
