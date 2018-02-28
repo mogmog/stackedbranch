@@ -30,8 +30,8 @@ class PageTitle extends PureComponent {
           {description}
         </small>
 
-        <div style={{'height' : '60px', 'right' : '83px', top : '85px', 'zIndex' : 999, position: 'absolute'}} >
-          <PrintMenu/>
+        <div style={{ height: '60px', right: '90px', top: '89px', zIndex: 999, position: 'absolute' }} >
+          <PrintMenu />
         </div>
 
       </div>

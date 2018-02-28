@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 58" style="enable-background:new 0 0 70 58;" xml:space="preserve">
-    <style type="text/css">
-    .st0 {
-        fill: #FFFFFF;
-    }
-
-    .st1 {
-        fill: #29A5E9;
-    }
-    </style>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="58px" viewBox="0 0 70 58" style="enable-background:new 0 0 70 58;" xml:space="preserve">
     <title>button</title>
     <g id="OVERVIEW:-attraction-power">
-        <path id="path-1" class="st0" d="M61.5,8.5L61.5,8.5C50.2-2.8,32-2.8,20.6,8.5L0.1,29l20.5,20.5c11.3,11.3,29.6,11.3,40.9,0l0,0
+        <path id="path-1" fill="#FFFFFF" d="M61.5,8.5L61.5,8.5C50.2-2.8,32-2.8,20.6,8.5L0.1,29l20.5,20.5c11.3,11.3,29.6,11.3,40.9,0l0,0
         C72.8,38.2,72.8,19.8,61.5,8.5z" />
-        <polygon id="_x2B_" class="st1" points="41.9,19.5 40,19.5 40,28.2 31.5,28.2 31.5,29.8 40,29.8 40.1,38.5 41.9,38.5 41.9,29.8 
+        <polygon id="_x2B_" fill="#29A5E9" points="41.9,19.5 40,19.5 40,28.2 31.5,28.2 31.5,29.8 40,29.8 40.1,38.5 41.9,38.5 41.9,29.8
         50.5,29.8 50.5,28.2 41.9,28.2   " />
     </g>
 </svg>
