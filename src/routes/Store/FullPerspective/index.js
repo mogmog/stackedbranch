@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Row, Col, Radio, Card, Divider, Button, Icon, Spin } from 'antd';
+const RadioButton = Radio.Button;
+const RadioGroup = Radio.Group;
+
 import ReactSVG from 'react-svg';
 
 import PageHeaderLayout from '../../../layouts/PageHeaderLayout';
@@ -43,13 +46,14 @@ export default class FullPerspective extends PureComponent {
   }
 
   changeType(type) {
-    this.setState({ type });
+
+    this.setState({ type : type.target.value });
 
     const { dispatch } = this.props;
 
     dispatch({
       type: 'purchaseaffluence/fetch',
-      payload: { type },
+      payload: { type : type.target.value },
     });
   }
 
@@ -114,9 +118,12 @@ export default class FullPerspective extends PureComponent {
 
 
           <Card className={styles.fullperspectivecard} title={'Affluence by gender > type > rent > age'} bordered>
-            <Button onClick={(e => this.changeType('Resident'))}>Resident</Button>
-            <Button onClick={(e => this.changeType('Visitor'))}>Visitor</Button>
-            <Button onClick={(e => this.changeType('Worker'))}>Worker</Button>
+
+            <RadioGroup onChange={this.changeType.bind(this)} defaultValue={this.state.type}>
+              <RadioButton value="Resident">Resident</RadioButton>
+              <RadioButton value="Visitor">Visitor</RadioButton>
+              <RadioButton value="Worker">Worker</RadioButton>
+            </RadioGroup>
 
             <Row gutter={24}>
               <Col xl={24} lg={24} md={24} sm={24} xs={24}>
