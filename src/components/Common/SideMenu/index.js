@@ -17,14 +17,14 @@ class SideMenu extends PureComponent {
 
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/home">
-            <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
+            <div className={['icon', styles.icon, styles.icBagStore].join(' ')} />
             <span>Home</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/attraction">
-            <div className={['icon', styles.icon, styles.icFunnel].join(' ')} />
+            <div className={['icon', styles.icon, styles.icMagnet].join(' ')} />
             <span>Attraction Power</span>
           </Link>
         </Menu.Item>
@@ -46,14 +46,14 @@ class SideMenu extends PureComponent {
         <Menu.Item className={styles.menuItem}>
           <Link to="/store/fullperspective">
             <div className={['icon', styles.icon, styles.icFullPerspective].join(' ')} />
-            <span>Full perspective</span>
+            <span>Full Perspective</span>
           </Link>
         </Menu.Item>
 
         <Menu.Item className={styles.menuItem}>
           <Link to="/login">
-            <div className={['icon', styles.icon, styles.icFullPerspective].join(' ')} />
-            <span>Log out</span>
+            <div className={['icon', styles.icon, styles.icLogout].join(' ')} />
+            <span>Logout</span>
           </Link>
         </Menu.Item>
 

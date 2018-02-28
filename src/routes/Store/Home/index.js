@@ -18,7 +18,7 @@ export default class Home extends PureComponent {
       title: 'Welcome, Daniel',
       description:
         'This is the landing page of the tool. Here you can see your latest KPIs on recent activity',
-      categoryIcon: 'icFunnel',
+      categoryIcon: 'icBagStore',
     };
 
     return (

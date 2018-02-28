@@ -65,7 +65,7 @@ export default class FullPerspective extends PureComponent {
 
     const pageTitleInfo = {
       category: 'Profiles',
-      title: 'Full perspective',
+      title: 'Full Perspective',
       description:
         'Full and detailed profiles in each segment catchment area nearby in store and sales. It helps you to know your purchases profile compared to the potential visitors',
       categoryIcon: 'icFullPerspective',
