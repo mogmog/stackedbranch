@@ -88,10 +88,10 @@ export default class Attraction extends PureComponent {
 
     const pageTitleInfo = {
       category: 'Overview',
-      title: 'Attraction Power',
+      title: show4Columns ? 'Attraction Power' : 'Attraction Power Funnel',
       description:
         'Know your attraction power from total pedestrians to sales and take a general perspective of target.',
-      categoryIcon: 'icFunnel',
+      categoryIcon: show4Columns ? 'icMagnet' : 'icFunnel',
     };
 
     return (

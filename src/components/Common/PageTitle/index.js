@@ -17,8 +17,7 @@ class PageTitle extends PureComponent {
           />
         </div>
         <div className={styles.pageTitle}>
-          {category.length ? (<span className={styles.category}>{category}:</span>) : (<span />)}
-
+          {category.length ? (<span className={styles.category}>{category}: </span>) : (<span />)}
           {title}
         </div>
         <div className={styles.pullRight}>

@@ -13,13 +13,12 @@ export default class Home extends PureComponent {
   }
 
   render() {
-
     const pageTitleInfo = {
       category: '',
       title: 'Welcome, Daniel',
       description:
         'This is the landing page of the tool. Here you can see your latest KPIs on recent activity',
-      categoryIcon: 'icFunnel',
+      categoryIcon: 'icBagStore',
     };
 
     return (
@@ -38,7 +37,7 @@ export default class Home extends PureComponent {
           content={null}
           style={null}
         >
-            <img style={{'cursor' : 'not-allowed'}} src={require('./../../../assets/screenshots/landing_screen.png')}/>
+          <img style={{ cursor: 'not-allowed', width: '100%' }} src={require('./../../../assets/screenshots/landing_screen@4x.png')} />
         </PageHeaderLayout>
       </div>
     );
