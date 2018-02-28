@@ -5,9 +5,12 @@
 .pageBar {
   background-color: @luca-light-bg;
   height: 120px;
-  overflow: hidden;
+  overflow: visible;
   border-top: 1px solid @luca-accent;
   border-bottom: 1px solid @luca-accent;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) !important;
   .pageLogoContainer {
     height: 120px;
     width: 120px;
