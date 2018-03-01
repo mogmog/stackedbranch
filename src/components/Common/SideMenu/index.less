@@ -12,7 +12,7 @@
   background-size: 40px 40px;
   vertical-align: top;
   transition: all 0.2s;
-  border-bottom: 1px solid @luca-sidebar-divider;
+
   &.icBagStore {
     background: url(../../../assets/svg/ic-bag-store-line.svg) @luca-sidebar-bg no-repeat center center;
   }
@@ -40,31 +40,41 @@
 }
 
 :global(.ant-menu-inline-collapsed-tooltip .icon) {
-  display:none;
+  display: none;
 }
 
-.menuContainer {
-  min-height: calc(~"100vh - 150px") !important;
+.menuContainerOuter {
+  top: 0;
+  z-index: 1;
+  min-height: calc(~"100vh") !important;
   width: 80px !important;
   overflow: hidden !important;
-  position: absolute !important;
+  position: fixed !important;
   clear: both !important;
   background: @luca-sidebar-bg !important;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) !important;
 
-  ul {
-    height: '100%';
-    width: '80%';
-    float: 'left';
-    border: 'none';
+  .menuContainerInner {
+    margin-top: 200px;
 
-    .menuItem {
-      width: 80px !important;
-      height: 80px !important;
-      padding: 0px !important;
-      margin: 0px !important;
+    ul {
+      .menuItem {
+        width: 80px !important;
+        height: 80px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-bottom: 1px solid @luca-sidebar-divider;
+        &:first-child {
+          border-top: 1px solid @luca-sidebar-divider;
+        }
+      }
+      .divider {
+        width: 80px !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-top: 3px solid @luca-sidebar-divider;
+      }
     }
-
   }
-
 }
