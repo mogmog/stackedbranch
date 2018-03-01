@@ -34,7 +34,6 @@ class RegionChooserMap extends PureComponent {
     const style = (x) => {
 
       const v = getMatch(x.properties.name);
-      console.log(v.percentage);
 
      return {
        fillColor: 'white',
@@ -94,13 +93,13 @@ class RegionChooserMap extends PureComponent {
 
           <DistrictVisitorsPopup highlightedfeature={this.state.highlightedfeature}>
             <ul>
-              <li>{this.state.highlightedfeature.properties.name}</li>
+              <li> <strong>Zone: </strong> {this.state.highlightedfeature.properties.name}</li>
 
               {getMatch(this.state.highlightedfeature.properties.name).visitors &&
 
               <span>
-                <li>{getMatch(this.state.highlightedfeature.properties.name).visitors} </li>
-                <li>{d3.format('.1%')(getMatch(this.state.highlightedfeature.properties.name).percentage)} </li>
+                <li><strong>Total Percentage: </strong>{d3.format('.1%')(getMatch(this.state.highlightedfeature.properties.name).percentage)} </li>
+                <li> <strong>Visitors: </strong> {getMatch(this.state.highlightedfeature.properties.name).visitors} </li>
               </span>
               }
 
