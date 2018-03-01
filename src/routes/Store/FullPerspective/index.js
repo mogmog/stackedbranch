@@ -118,11 +118,15 @@ export default class FullPerspective extends PureComponent {
 
           <Card className={styles.fullperspectivecard} title={'Affluence by gender > type > rent > age'} bordered>
 
-            <RadioGroup onChange={this.changeType.bind(this)} defaultValue={this.state.type}>
-              <RadioButton value="Resident">Resident</RadioButton>
-              <RadioButton value="Visitor">Visitor</RadioButton>
-              <RadioButton value="Worker">Worker</RadioButton>
-            </RadioGroup>
+            <Row gutter={24}>
+              <Col span={8} offset={18} >
+                <RadioGroup onChange={this.changeType.bind(this)} defaultValue={this.state.type}>
+                  <RadioButton value="Resident">Resident</RadioButton>
+                  <RadioButton value="Visitor">Visitor</RadioButton>
+                  <RadioButton value="Worker">Worker</RadioButton>
+                </RadioGroup>
+                  </Col>
+            </Row>
 
             <Row gutter={24}>
               <Col xl={24} lg={24} md={24} sm={24} xs={24}>
