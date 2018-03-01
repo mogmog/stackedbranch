@@ -13,15 +13,16 @@ class DistrictVisitorPopup extends PureComponent {
 
     return (
 
-      <Popup
-        options={{'width': '100px'}}
-        key={`popup-${highlightedfeature.properties.cartodb_id}`}
-        position={[(polylabel(highlightedfeature.geometry.coordinates[0]))[1], (polylabel(highlightedfeature.geometry.coordinates[0]))[0]]}>
-        <div className={styles.popup}>
-          {children}
-        </div>
+        <Popup
+          className={styles.popup}
+          options={{'width': '100px'}}
+          key={`popup-${highlightedfeature.properties.cartodb_id}`}
+          position={[(polylabel(highlightedfeature.geometry.coordinates[0]))[1], (polylabel(highlightedfeature.geometry.coordinates[0]))[0]]}>
+          <div>
+            {children}
+          </div>
 
-      </Popup>
+        </Popup>
 
     );
   }
