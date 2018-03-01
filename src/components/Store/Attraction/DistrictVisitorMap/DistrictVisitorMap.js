@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON, CircleMarker, Marker, Tooltip, Popup} from 'react-leaflet';
 import polylabel from '@mapbox/polylabel';
+import * as d3 from 'd3';
 
 import ZoomControl from '../../../Common/Mapping/ZoomControl';
 import Choropleth from '../../../Common/Mapping/Choropleth';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
 
+import DistrictVisitorsPopup from './DistrictVisitorsPopup';
 import DistrictLabels from './DistrictLabels';
 import FeatureHighlight from './FeatureHighlight';
 import styles from './DistrictVisitorMap.less';
@@ -18,7 +20,6 @@ class RegionChooserMap extends PureComponent {
   state = {zoom : 10};
 
   districtHover(feature) {
-    console.log(feature);
     this.setState({'highlightedfeature' : feature});
   }
 
@@ -30,12 +31,33 @@ class RegionChooserMap extends PureComponent {
 
     const {data, type, districtClick, districtHover} = this.props;
 
-    const style = {
-      fillColor: 'white',
-      weight: 2,
-      opacity: 0.7,
-      color: 'white',
-      fillOpacity: 0.7,
+    const style = (x) => {
+
+      const v = getMatch(x.properties.name);
+      console.log(v.percentage);
+
+     return {
+       fillColor: 'white',
+       weight: 2,
+       opacity: 0.5,
+       color: 'white',
+       fillOpacity: v.percentage * 10,
+     };
+    }
+
+    const getMatch = function(name) {
+
+      const sum = _(data[type].list).sumBy(x => x.visitors);
+      let obj = {found : false, name : '', visitors : 0, percentage : 0};
+      const found = data[type].list.find((x) => x.district_name === name);
+      if (found) {
+        obj.found = true;
+        obj.name =  found.name;
+        obj.visitors = found.visitors;
+        obj.percentage = ((found.visitors/sum)) ? (found.visitors/sum) : 0;
+      }
+
+      return obj;
     }
 
     return (
@@ -50,10 +72,10 @@ class RegionChooserMap extends PureComponent {
                         onClick={(feature) => {districtClick(feature)}}
                         onMouseOver={(feature) => this.districtHover(feature)}
                         data={districts}
-                        valueProperty={(feature) => { const match =  data[type].list.find((x) => x.district_name === feature.properties.name); return match ? match.visitors : 0}}
-                        visible={(feature) => { const match =  data[type].list.find((x) => x.district_name === feature.properties.name); return match  }}
+                        valueProperty={(feature) => { return getMatch(feature.properties.name).visitors; }}
+                        visible={(feature) => { return getMatch(feature.properties.name).found;  }}
 
-             scale={['#7F387F', '#FF77FF']}
+             scale={['#FF77FF', '#7F387F' ]}
              steps={20}
              style={style}
              mode='e'
@@ -65,19 +87,27 @@ class RegionChooserMap extends PureComponent {
           <div className={styles.no_pointer} >
             <DistrictLabels zoom={ this.state.zoom } districts={districts}  data={data[type].list} map={this.map}/>
           </div>
+
           <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
 
           {this.state.highlightedfeature &&
-          <Popup
-            key={`popup-${this.state.highlightedfeature.properties.cartodb_id}`}
-            position={[(polylabel(this.state.highlightedfeature.geometry.coordinates[0]))[1], (polylabel(this.state.highlightedfeature.geometry.coordinates[0]))[0] ]}
-          >
-            <div>
-              <p>A pretty CSS3 popup. <br/> Easily customizable.</p>
-            </div>
-          </Popup>
-          }
 
+          <DistrictVisitorsPopup highlightedfeature={this.state.highlightedfeature}>
+            <ul>
+              <li>{this.state.highlightedfeature.properties.name}</li>
+
+              {getMatch(this.state.highlightedfeature.properties.name).visitors &&
+
+              <span>
+                <li>{getMatch(this.state.highlightedfeature.properties.name).visitors} </li>
+                <li>{d3.format('.1%')(getMatch(this.state.highlightedfeature.properties.name).percentage)} </li>
+              </span>
+              }
+
+
+            </ul>
+          </DistrictVisitorsPopup>
+          }
 
         </Map>
       </div>
