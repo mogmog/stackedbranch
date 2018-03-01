@@ -324,7 +324,7 @@ class StoreLayout extends React.PureComponent {
       <Layout>
         {header}
         <Content>
-          <div id="StoreLayoutContent">
+          <div className={styles.storeLayoutContent}>
             <Switch>
               {getRouteData("StoreLayout").map(item => (
                 <Route

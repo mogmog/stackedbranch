@@ -96,6 +96,8 @@ export default class Attraction extends PureComponent {
 
     return (
       <div>
+        <SideMenu />
+
         <PageTitle
           category={pageTitleInfo.category}
           title={pageTitleInfo.title}
@@ -103,15 +105,11 @@ export default class Attraction extends PureComponent {
           categoryIcon={pageTitleInfo.categoryIcon}
         />
 
-        <SideMenu />
-
         <PageHeaderLayout
           top={null}
           content={null}
           style={null}
         >
-
-
           <SummaryBar attraction_totals={attraction_totals} columns={show4Columns ? 4 : 2} />
           <div className={styles.spacer} />
           <Row gutter={24}>

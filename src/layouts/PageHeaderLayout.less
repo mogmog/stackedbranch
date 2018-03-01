@@ -1,11 +1,19 @@
 @import "~antd/lib/style/themes/default.less";
 
   .PageHeaderLayoutWrapper {
-    margin: 20px 20px 20px 140px;
+    position: absolute;
+    width: calc(~"100vw - 160px");
+    top: 120px;
+    margin: 40px 20px 20px 140px;
+    box-sizing: border-box;
   }
 
 @media screen and (max-width: @screen-sm) {
   .PageHeaderLayoutWrapper {
-    margin: 20px 20px 20px 20px;
+    position: absolute;
+    width: calc(~"100vw - 40px");
+    top: 120px;
+    margin: 40px 20px 20px 20px;
+    box-sizing: border-box;
   }
 }
