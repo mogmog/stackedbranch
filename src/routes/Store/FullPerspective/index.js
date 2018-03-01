@@ -96,6 +96,7 @@ export default class FullPerspective extends PureComponent {
 
     return (
       <div>
+        <SideMenu />
 
         <PageTitle
           category={pageTitleInfo.category}
@@ -103,8 +104,6 @@ export default class FullPerspective extends PureComponent {
           description={pageTitleInfo.description}
           categoryIcon={pageTitleInfo.categoryIcon}
         />
-
-        <SideMenu />
 
         <PageHeaderLayout
           top={null}

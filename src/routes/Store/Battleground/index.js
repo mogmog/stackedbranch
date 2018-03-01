@@ -90,14 +90,14 @@ export default class BattleGround extends PureComponent {
 
     return (
       <div>
+        <SideMenu />
+
         <PageTitle
           category={pageTitleInfo.category}
           title={pageTitleInfo.title}
           description={pageTitleInfo.description}
           categoryIcon={pageTitleInfo.categoryIcon}
         />
-
-        <SideMenu/>
 
         <PageHeaderLayout
           top={null}
