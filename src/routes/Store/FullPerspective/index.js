@@ -175,6 +175,7 @@ export default class FullPerspective extends PureComponent {
             <Row gutter={24}>
               <Col span={24}>
                 <VisitorFrequency />
+                <SummaryBar attraction_totals={attraction_totals} columns={4} labelsonly={true} />
               </Col>
             </Row>
 
