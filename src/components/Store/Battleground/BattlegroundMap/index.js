@@ -6,7 +6,7 @@ import ZoomControl from '../../../Common/Mapping/ZoomControl';
 import StoreIcon from '../../../Common/Mapping/StoreIcon';
 import BattlegroundFeatureHighlight from './BattlegroundFeatureHighlight';
 import BattlegroundLabel from './BattlegroundLabel';
-const districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo.json');
+const districts = require('json!./../../../../assets/mapping/geojson/madrid_districts.geo.smaller.json');
 
 
 class BattlegroundMap extends PureComponent {
