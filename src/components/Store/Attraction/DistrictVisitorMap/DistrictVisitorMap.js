@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Map, TileLayer, GeoJSON, CircleMarker, Marker, Tooltip, Popup} from 'react-leaflet';
+import polylabel from '@mapbox/polylabel';
 
 import ZoomControl from '../../../Common/Mapping/ZoomControl';
 import Choropleth from '../../../Common/Mapping/Choropleth';
@@ -17,6 +18,7 @@ class RegionChooserMap extends PureComponent {
   state = {zoom : 10};
 
   districtHover(feature) {
+    console.log(feature);
     this.setState({'highlightedfeature' : feature});
   }
 
@@ -60,13 +62,22 @@ class RegionChooserMap extends PureComponent {
 
           <Marker position={[40.408527, -3.641853]} icon={StoreIcon}/>
 
-          <DistrictLabels zoom={ this.state.zoom } districts={districts}  data={data[type].list} map={this.map}/>
-
+          <div className={styles.no_pointer} >
+            <DistrictLabels zoom={ this.state.zoom } districts={districts}  data={data[type].list} map={this.map}/>
+          </div>
           <FeatureHighlight map={this.map} highlightedfeature={this.state.highlightedfeature}/>
 
-          {/*<Control position="topleft">
-            test
-          </Control>*/}
+          {this.state.highlightedfeature &&
+          <Popup
+            key={`popup-${this.state.highlightedfeature.properties.cartodb_id}`}
+            position={[(polylabel(this.state.highlightedfeature.geometry.coordinates[0]))[1], (polylabel(this.state.highlightedfeature.geometry.coordinates[0]))[0] ]}
+          >
+            <div>
+              <p>A pretty CSS3 popup. <br/> Easily customizable.</p>
+            </div>
+          </Popup>
+          }
+
 
         </Map>
       </div>

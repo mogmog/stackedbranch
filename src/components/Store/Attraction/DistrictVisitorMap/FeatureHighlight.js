@@ -42,21 +42,21 @@ class FeatureHighlight extends MapLayer {
 
       g.append('path').attr('class', 'test').attr('d', projection.pathFromGeojson(highlightedfeature)).attr('fill', 'purple').attr('opacity', 0.5);
 
-      g.append("rect")
+     /* g.append("rect")
         .attr('x', (d) => this.projection.latLngToLayerPoint([center[1], center[0]]).x)
         .attr('y', (d) => this.projection.latLngToLayerPoint([center[1], center[0]]).y)
         .attr('width', highlightedfeature.properties.name.length * 3)
         .attr('height', 6)
-        .attr('transform', `translate(0, 2)`)
+        .attr('transform', `translate(0, 2)`)*/
 
-      g.append('text').text(highlightedfeature.properties.name)
+      /*g.append('text').text(highlightedfeature.properties.name)
         .attr('font-family', "telefonica_text" )
         .attr('font-size', 4 )
         .attr('transform', `translate(${highlightedfeature.properties.name.length /2}, 6)`)
         .attr("fill", "#FFF")
         .attr('x', (d) => this.projection.latLngToLayerPoint([center[1], center[0]]).x)
         .attr('y', (d) => this.projection.latLngToLayerPoint([center[1], center[0]]).y)
-
+*/
     }
     return null;
   }

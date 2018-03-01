@@ -2,3 +2,17 @@
 .greyscale {
   filter: grayscale(100%)
 }
+
+.no_pointer {
+  pointer-events: none;
+}
+
+:global(.leaflet-popup) {
+  pointer-events: none;
+}
+
+
+
+:global(.leaflet-popup-tip) {
+  display:none;
+}
