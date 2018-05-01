@@ -5,6 +5,7 @@ import { Form, Input, Tabs, Button, Icon, Checkbox, Row, Col, Alert } from 'antd
 import styles from './Login.less';
 import { Layout } from 'antd/lib/index';
 import LucaButton from './../../components/LucaUI/Button/LucaButton';
+import DemoStackedThing from './../../components/Store/Sites/DemoStackedThing';
 
 const FormItem = Form.Item;
 const { TabPane } = Tabs;
@@ -85,60 +86,7 @@ export default class Login extends Component {
     const { count, type } = this.state;
     return (
 
-      <Content style={{ position: 'absolute', top: 0, padding: '150px 0', height: '100%', width: '100%', background: `url(${require('../../assets/img/image-bg.png')})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }}>
-        <div className="login" >
-          <div className={styles.main} >
-
-            <div className={styles.borderthing}>
-              <img style={{ width: '100px' }} src={require('../../assets/img/luca.png')} />
-            </div>
-
-            <div style={{ textAlign: 'center', paddingTop: '34px' }}>
-              <h3>Welcome to</h3>
-              <h1 style={{ marginTop: '-24px' }}>Smart Steps</h1>
-            </div>
-            <Form style={{ padding: '5%' }} onSubmit={this.handleSubmit} hideRequiredMark>
-
-              <FormItem label="Username">
-                {getFieldDecorator('userName', {
-                  rules: [{
-                    required: type === 'account', message: 'You must enter a user name',
-                  }],
-                })(
-                  <Input
-                    size="large"
-                    prefix={<Icon type="user" className={styles.prefixIcon} />}
-                    placeholder="user name is an email"
-                  />
-                )}
-              </FormItem>
-              <FormItem label="Password" >
-                {getFieldDecorator('password', {
-                  rules: [{
-                    required: type === 'account', message: 'Enter a password',
-                  }],
-                })(
-                  <Input
-                    size="large"
-                    prefix={<Icon type="lock" className={styles.prefixIcon} />}
-                    type="password"
-                    placeholder="password here"
-                  />
-                )}
-              </FormItem>
-
-              <FormItem style={{ textAlign: 'center' }} className={styles.additional}>
-                <LucaButton size="large" type="primary" htmlType="submit">Sign in</LucaButton>
-              </FormItem>
-
-              <FormItem style={{ textAlign: 'center' }}>
-                <a className="login-form-forgot" href="">Forgot password</a>
-              </FormItem>
-            </Form>
-
-          </div>
-        </div>
-      </Content>
+        <DemoStackedThing></DemoStackedThing>
     );
   }
 }
